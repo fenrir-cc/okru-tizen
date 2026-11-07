@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:tizen="http://tizen.org/ns/tizen" 
+        id="http://tizenbrew.okru.movies" 
+        version="1.0.0" 
+        viewmodes="maximized">
+    
+    <tizen:application id="OkruMovies.OkruMovies" 
+                       package="OkruMovies" 
+                       version="1.0.0" 
+                       app-control="app_control" 
+                       required_version="3.0"/>
+    
+    <content src="app/index.html"/>
+    
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    
+    <icon src="icon.png"/>
+    
+    <name>OK.ru Películas</name>
+    <description>Buscador y reproductor de películas en OK.ru para Samsung Smart TV</description>
+    
+    <!-- Privilegios de Red y Control Remoto -->
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+    
+    <!-- Permitir acceso a servidores de OK.ru y red local sin restricciones -->
+    <access origin="*" subdomains="true"/>
+    
+    <tizen:profile name="tv"/>
+    <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="disable" encryption="disable" install-location="auto"/>
+</widget>

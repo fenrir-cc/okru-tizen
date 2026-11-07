@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OK.ru Películas TV - Clásicos del Cine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Barra Superior -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-accent">OK</span> Cine Clásico
+    </div>
+
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search-input" 
+        class="focusable search-input" 
+        placeholder="Buscar cualquier película en OK.ru..."
+        tabindex="0"
+      />
+      <button id="search-btn" class="focusable btn-search" tabindex="0">Buscar</button>
+      <button id="btn-settings" class="focusable btn-settings" title="Configurar IP del PC servidor" tabindex="0">⚙️</button>
+    </div>
+  </header>
+
+  <!-- Barra de Filtros por Década y Favoritos -->
+  <nav class="categories-bar" id="categories-bar">
+    <button class="focusable category-btn fav-category-btn" data-era="favorites" tabindex="0">❤️ Favoritos (<span id="fav-counter">0</span>)</button>
+    <button class="focusable category-btn active" data-era="all" tabindex="0">🏛️ Todos los Clásicos</button>
+    <button class="focusable category-btn" data-era="20s-30s" tabindex="0">🎞️ Años 20 y 30</button>
+    <button class="focusable category-btn" data-era="40s" tabindex="0">📽️ Años 40</button>
+    <button class="focusable category-btn" data-era="50s" tabindex="0">🎭 Años 50</button>
+    <button class="focusable category-btn" data-era="60s" tabindex="0">🚀 Años 60</button>
+    <button class="focusable category-btn" data-era="70s" tabindex="0">👑 Años 70</button>
+    <button class="focusable category-btn" data-era="80s" tabindex="0">🌆 Años 80</button>
+    <button class="focusable category-btn" data-era="90s" tabindex="0">📼 Años 90</button>
+  </nav>
+
+  <!-- Contenedor Principal / Grilla -->
+  <main class="content-container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title" id="section-title">Grandes Clásicos del Cine que todo cinéfilo debe ver</h2>
+        <p class="section-subtitle" id="section-subtitle">Obras maestras desde 1920 hasta 1999 disponibles en OK.ru</p>
+      </div>
+      <span class="results-count" id="results-count"></span>
+    </div>
+
+    <div class="grid-container" id="movies-grid">
+      <!-- Las tarjetas se generan dinámicamente con app.js -->
+    </div>
+    
+    <div id="status-container" class="status-message hidden">
+      <div id="status-spinner" class="spinner hidden"></div>
+      <div id="status-text"></div>
+    </div>
+  </main>
+
+  <!-- Notificación Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Modal / Reproductor a pantalla completa -->
+  <div id="player-modal" class="player-modal hidden">
+    <div class="player-header">
+      <button id="btn-back" class="focusable btn-back" tabindex="0">⬅ Volver (Atrás)</button>
+      <h2 id="player-title" class="player-title">Título de la película</h2>
+      <button id="btn-player-fav" class="focusable btn-player-fav" tabindex="0">🤍 Favorito</button>
+    </div>
+    <div class="player-wrapper">
+      <iframe 
+        id="okru-iframe" 
+        class="video-frame" 
+        src="" 
+        frameborder="0" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
