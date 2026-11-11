@@ -1,419 +1,696 @@
-/* Reset y estilos base para TV */
+/* ==============================================================
+   ESTILO NETFLIX SMART TV - OK.RU CINE CLÁSICO
+   ============================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  background-color: #0b0d10;
+body.netflix-body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0b0c0f;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  user-select: none;
-  -webkit-user-select: none;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  display: flex;
 }
 
-/* Barra superior */
-.header {
+/* -------------------------------------------------------------
+   BARRA LATERAL IZQUIERDA (DOCK ESTILO NETFLIX)
+   ------------------------------------------------------------- */
+.netflix-sidebar {
+  width: 76px;
+  height: 100vh;
+  background: rgba(11, 12, 15, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  z-index: 100;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.netflix-sidebar:focus-within {
+  width: 210px;
+  background: rgba(11, 12, 15, 0.98);
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.85);
+}
+
+.sidebar-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 48px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(11, 13, 16, 0.8) 100%);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  gap: 8px;
+  margin-bottom: 40px;
 }
 
-.logo {
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-}
-
-.logo-accent {
-  background: linear-gradient(135deg, #01b4e4 0%, #0d253f 100%);
-  color: #ffffff;
-  padding: 4px 12px;
-  border-radius: 8px;
-  margin-right: 8px;
+.logo-n {
+  font-size: 2rem;
   font-weight: 900;
+  color: #e50914; /* Netflix Red */
+  text-shadow: 0 2px 10px rgba(229, 9, 20, 0.6);
+  letter-spacing: -1px;
 }
 
-.search-container {
-  display: flex;
-  gap: 16px;
-  width: 50%;
-}
-
-.search-input {
-  flex: 1;
-  background-color: #171b22;
-  border: 2px solid #272f3c;
-  border-radius: 12px;
-  padding: 12px 20px;
-  color: #ffffff;
-  font-size: 1.15rem;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-search {
-  background: linear-gradient(135deg, #ed812b 0%, #cf6311 100%);
-  border: 2px solid transparent;
-  color: white;
-  padding: 12px 26px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-settings {
-  background-color: #171b22;
-  border: 2px solid #272f3c;
-  color: #94a3b8;
-  padding: 12px 18px;
-  font-size: 1.25rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Barra horizontal de Categorías / Décadas */
-.categories-bar {
-  display: flex;
-  gap: 14px;
-  padding: 12px 48px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  background-color: #0f1217;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.categories-bar::-webkit-scrollbar {
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #f5f5f5;
   display: none;
 }
 
-.category-btn {
-  background-color: #1a202a;
-  border: 2px solid #283344;
-  color: #cbd5e1;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: 600;
+.netflix-sidebar:focus-within .logo-text {
+  display: inline-block;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 24px;
+  background: transparent;
+  border: 2px solid transparent;
+  color: #8c8c8c;
   cursor: pointer;
+  outline: none;
+  border-radius: 8px;
   transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar-icon {
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
-.fav-category-btn {
-  border-color: rgba(239, 68, 68, 0.5);
-  background-color: rgba(239, 68, 68, 0.12);
-  color: #fca5a5;
+.sidebar-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  display: none;
 }
 
-.category-btn.active {
-  background: linear-gradient(135deg, #01b4e4 0%, #0d253f 100%);
-  color: #fff;
-  font-weight: 800;
-  border-color: #38bdf8;
+.netflix-sidebar:focus-within .sidebar-label {
+  display: inline;
+  opacity: 1;
 }
 
-.fav-category-btn.active {
-  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-  color: #fff;
-  border-color: #f87171;
+.sidebar-btn:hover,
+.sidebar-btn:focus {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: scale(1.05);
 }
 
-/* Contenido Principal */
-.content-container {
-  padding: 24px 48px 48px 48px;
+.sidebar-btn.active {
+  color: #e50914;
 }
 
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 24px;
-}
-
-.section-title {
-  font-size: 1.65rem;
-  font-weight: 800;
-  color: #f1f5f9;
-}
-
-.section-subtitle {
-  font-size: 1rem;
-  color: #94a3b8;
-  margin-top: 4px;
-}
-
-.results-count {
-  font-size: 1.15rem;
-  color: #38bdf8;
-  font-weight: 700;
-  background-color: rgba(56, 189, 248, 0.12);
-  padding: 6px 14px;
-  border-radius: 8px;
-}
-
-/* Grilla de películas (Tarjetas 10-foot UI) */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.movie-card {
-  background-color: #14181f;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 3px solid transparent;
-  cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+/* -------------------------------------------------------------
+   CONTENEDOR PRINCIPAL
+   ------------------------------------------------------------- */
+.netflix-main {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
-.thumbnail-wrapper {
+.netflix-main::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* -------------------------------------------------------------
+   HERO BILLBOARD (BANNER GIGANTE SUPERIOR NETFLIX)
+   ------------------------------------------------------------- */
+.hero-billboard {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: #1e2430;
+  height: 56vh;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 40px 48px;
   overflow: hidden;
 }
 
-.home-card .thumbnail-wrapper {
-  aspect-ratio: 16 / 10;
+.billboard-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  z-index: 1;
 }
 
-.movie-poster {
+/* Gradientes cinematográficos de fundido */
+.billboard-vignette-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, #0b0c0f 0%, rgba(11, 12, 15, 0.85) 45%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.billboard-vignette-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(0deg, #0b0c0f 10%, rgba(11, 12, 15, 0.75) 50%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.billboard-content {
+  position: relative;
+  z-index: 5;
+  max-width: 680px;
+}
+
+.badge-series {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #e50914;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.billboard-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+  color: #f8fafc;
+}
+
+.billboard-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.meta-match {
+  color: #46d369; /* Netflix Match Green */
+  font-weight: 800;
+}
+
+.meta-year {
+  color: #cccccc;
+  font-weight: 600;
+}
+
+.meta-rating {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.meta-quality {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: #e5e5e5;
+  font-weight: 700;
+}
+
+.meta-badge {
+  background: rgba(229, 9, 20, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.billboard-overview {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #d1d5db;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+  margin-bottom: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.billboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid transparent;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.play-icon {
+  font-size: 1.1rem;
+}
+
+.btn-play:hover,
+.btn-play:focus {
+  background: #e50914;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.6);
+}
+
+.btn-fav-hero {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(109, 109, 110, 0.7);
+  color: #ffffff;
+  border: 3px solid transparent;
+  padding: 12px 26px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.btn-fav-hero:hover,
+.btn-fav-hero:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  transform: scale(1.08);
+}
+
+.btn-fav-hero.active {
+  background: rgba(229, 9, 20, 0.85);
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------
+   CARRUSELES HORIZONTALES (FILAS ESTILO NETFLIX)
+   ------------------------------------------------------------- */
+.rows-wrapper {
+  padding: 0 0 60px 48px;
+  position: relative;
+  z-index: 10;
+  margin-top: -30px;
+}
+
+.movie-row {
+  margin-bottom: 34px;
+}
+
+.row-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 14px 40px 24px 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: auto;
+}
+
+.row-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* TARJETA DE PELÍCULA VERTICAL CLÁSICA (2:3) */
+.movie-card {
+  flex: 0 0 170px;
+  height: 255px;
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  background-color: #1a1e24;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  outline: none;
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card .movie-poster {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 3px;
 }
 
-/* Botón Corazón de Favoritos en la Tarjeta */
-.btn-fav {
+/* Tag 'N' rojo en la esquina superior */
+.card-n-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 38px;
-  height: 38px;
+  top: 8px;
+  left: 8px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #e50914;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.card-badges {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.card-rating-badge {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.card-year-badge {
+  background: rgba(0, 0, 0, 0.85);
+  color: #e5e5e5;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.card-fav-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
   z-index: 5;
-  color: #ffffff;
 }
 
-.btn-fav:hover,
-.btn-fav:focus {
-  transform: scale(1.15);
-  background: rgba(0, 0, 0, 0.9);
-  border-color: #ef4444;
+.card-fav-btn.active {
+  background: #e50914;
+  border-color: #f87171;
+}
+
+/* ESTADO DE FOCO PARA CONTROL REMOTO SMART TV */
+.movie-card:focus,
+.okru-result-card:focus {
   outline: none;
+  border-color: #ffffff !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.95), 0 0 22px rgba(255, 255, 255, 0.4) !important;
+  z-index: 40 !important;
 }
 
-.heart-svg {
-  width: 20px;
-  height: 20px;
-  transition: fill 0.2s ease, transform 0.2s ease;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2;
+.focusable:focus {
+  outline: none;
+  border-color: #ffffff;
 }
 
-.btn-fav.active {
-  background: rgba(239, 68, 68, 0.25);
-  border-color: #ef4444;
+/* -------------------------------------------------------------
+   VISTA DE BÚSQUEDA (RESULTADOS OK.RU)
+   ------------------------------------------------------------- */
+.search-view {
+  padding: 30px 48px;
+  min-height: 100vh;
+  background: #0b0c0f;
+  position: relative;
+  z-index: 20;
 }
 
-.btn-fav.active .heart-svg {
-  fill: #ef4444;
-  stroke: #ef4444;
-  animation: heartPulse 0.3s ease;
+.search-header {
+  margin-bottom: 24px;
 }
 
-@keyframes heartPulse {
-  0% { transform: scale(0.8); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
-}
-
-/* Insignias de Calidad, Año y Rating */
-.badges-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.search-box {
   display: flex;
-  gap: 6px;
+  align-items: center;
+  background: #191d24;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 6px 14px;
+  max-width: 820px;
+  width: 100%;
+  margin-bottom: 24px;
+  box-sizing: border-box;
 }
 
-.year-badge {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #f59e0b;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  border: 1px solid rgba(245, 158, 11, 0.4);
+.search-box:focus-within {
+  border-color: #e50914;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.35);
 }
 
-.rating-badge {
-  background-color: rgba(1, 180, 228, 0.9);
+.search-box-icon {
+  width: 24px;
+  height: 24px;
+  color: #9ca3af;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none !important;
   color: #ffffff;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 800;
-}
-
-.quality-badge {
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
-}
-
-.badge-4k {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #000;
-}
-
-.badge-2k {
-  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
-  color: #fff;
-}
-
-.badge-1080p {
-  background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
-  color: #fff;
-}
-
-.badge-720p {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #fff;
-}
-
-.badge-480p,
-.badge-sd,
-.badge-360p {
-  background-color: rgba(43, 50, 60, 0.9);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.duration-badge {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  outline: none !important;
+  padding: 8px 6px;
+  min-width: 0;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
-.movie-info {
-  padding: 16px;
+.search-input:focus {
+  outline: none !important;
+  border: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-do-search {
+  background: #e50914;
+  color: #ffffff;
+  border: 2px solid transparent;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 10px;
+  outline: none;
+  transform: none !important;
+  transition: all 0.2s ease;
+}
+
+.btn-close-search {
+  background: rgba(255, 255, 255, 0.15);
+  color: #e5e5e5;
+  border: 2px solid transparent;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 8px;
+  outline: none;
+  transform: none !important;
+  transition: all 0.2s ease;
+}
+
+.btn-do-search:focus,
+.btn-close-search:focus {
+  border-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5) !important;
+}
+
+.search-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.search-count {
+  color: #46d369;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 26px;
+}
+
+/* Tarjeta de resultado OK.ru en cuadrícula */
+.okru-result-card {
+  background: #14181f;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
-.movie-title {
-  font-size: 1.15rem;
+.okru-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1e2430;
+}
+
+.okru-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.okru-quality-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.badge-4k { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #000; }
+.badge-2k { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: #fff; }
+.badge-1080p { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #fff; }
+.badge-720p { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; }
+.badge-sd { background: #374151; color: #9ca3af; }
+
+.okru-duration-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.okru-info {
+  padding: 12px 14px;
+}
+
+.okru-title {
+  font-size: 1.05rem;
   font-weight: 700;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.movie-overview {
-  font-size: 0.88rem;
-  color: #94a3b8;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-
-.movie-meta {
+.okru-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-  color: #94a3b8;
-  margin-top: auto;
+  font-size: 0.82rem;
+  color: #9ca3af;
 }
 
-.tmdb-tag {
-  background-color: rgba(1, 180, 228, 0.15);
-  color: #38bdf8;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 700;
-}
-
-.click-to-search {
-  color: #ed812b;
-  font-weight: 700;
-}
-
-.movie-resolution {
-  color: #64748b;
-  font-size: 0.85rem;
-}
-
-/* Estado de FOCO para Control Remoto */
-.focusable:focus,
-.movie-card:focus,
-.category-btn:focus {
-  outline: none;
-  border-color: #ed812b;
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(237, 129, 43, 0.5);
-  z-index: 10;
-}
-
-/* Mensajes de carga o error */
+/* -------------------------------------------------------------
+   INDICADOR DE ESTADO / SPINNER
+   ------------------------------------------------------------- */
 .status-message {
   text-align: center;
-  font-size: 1.5rem;
-  color: #9aa4b2;
-  margin-top: 80px;
+  font-size: 1.4rem;
+  color: #9ca3af;
+  margin-top: 60px;
 }
 
 .spinner {
   display: inline-block;
   width: 44px;
   height: 44px;
-  border: 4px solid rgba(237, 129, 43, 0.3);
+  border: 4px solid rgba(229, 9, 20, 0.3);
   border-radius: 50%;
-  border-top-color: #ed812b;
+  border-top-color: #e50914;
   animation: spin 1s ease-in-out infinite;
   margin-bottom: 16px;
 }
@@ -422,29 +699,32 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Toast de Notificación */
+/* -------------------------------------------------------------
+   NOTIFICACIÓN TOAST
+   ------------------------------------------------------------- */
 .toast {
   position: fixed;
   bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(20, 20, 20, 0.95);
   color: #f8fafc;
   padding: 14px 28px;
   border-radius: 30px;
   font-size: 1.1rem;
   font-weight: 700;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(229, 9, 20, 0.5);
   z-index: 9999;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .hidden {
   display: none !important;
 }
 
-/* Modal del Reproductor a Pantalla Completa */
+/* -------------------------------------------------------------
+   REPRODUCTOR MODAL A PANTALLA COMPLETA
+   ------------------------------------------------------------- */
 .player-modal {
   position: fixed;
   top: 0;
@@ -452,18 +732,49 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #000000;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.player-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  z-index: 1;
+}
+
+.video-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: #000000;
 }
 
 .player-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 16px 32px;
-  background: rgba(11, 13, 16, 0.95);
+  gap: 24px;
+  padding: 24px 40px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.5) 65%, transparent 100%);
+  z-index: 20;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.player-header.osd-hidden {
+  opacity: 0;
+  transform: translateY(-25px);
+  pointer-events: none;
 }
 
 .btn-back {
@@ -484,12 +795,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .btn-player-fav {
-  background: rgba(239, 68, 68, 0.2);
+  background: rgba(229, 9, 20, 0.2);
   color: #fca5a5;
-  border: 2px solid rgba(239, 68, 68, 0.4);
+  border: 2px solid rgba(229, 9, 20, 0.4);
   padding: 10px 22px;
   font-size: 1.1rem;
   font-weight: 700;
@@ -500,20 +812,7 @@ body {
 }
 
 .btn-player-fav.active {
-  background: #ef4444;
+  background: #e50914;
   color: white;
   border-color: #f87171;
-}
-
-.player-wrapper {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
-
-.video-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
 }

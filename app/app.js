@@ -1,15 +1,17 @@
-// Configuración de endpoints (Auto-detecta si corre en PC o en Smart TV)
+// ==============================================================
+// APP NETFLIX SMART TV - OK.RU CINE CLÁSICO
+// ==============================================================
+
 const DEFAULT_SERVER_URL = 'http://192.168.18.179:3000';
 const SERVER_STORAGE_KEY = 'okru_server_url';
+const FAVORITES_STORAGE_KEY = 'okru_movie_favorites';
 
 function getServerBaseUrl() {
   const custom = localStorage.getItem(SERVER_STORAGE_KEY);
   if (custom && custom.trim().length > 0) return custom.trim();
-  // Si estamos en un navegador en localhost
   if (window.location.protocol.startsWith('http') && window.location.hostname === 'localhost') {
     return window.location.origin;
   }
-  // En Smart TV o empaquetado, usar la IP local del PC servidor
   return DEFAULT_SERVER_URL;
 }
 
@@ -18,54 +20,63 @@ const API = {
   get TMDB_HOME() { return `${getServerBaseUrl()}/api/tmdb-classics`; }
 };
 
-// Clave para almacenamiento local de favoritos
-const FAVORITES_STORAGE_KEY = 'okru_movie_favorites';
-
-// Títulos de las épocas cinematográficas para el Home
-const ERA_TITLES = {
-  'all': 'Grandes Clásicos del Cine (1920 - 1999) - Recomendadas por TMDB',
-  'favorites': 'Mis Películas Favoritas Guardadas',
-  '20s-30s': 'Años 20 y 30: Cine Mudo y la Época Dorada Temprana',
-  '40s': 'Años 40: Cine Negro y Obras Maestras',
-  '50s': 'Años 50: La Era de Oro de Hollywood',
-  '60s': 'Años 60: Revolución Cinematográfica y Suspenso',
-  '70s': 'Años 70: Nuevo Hollywood y Grandes Dramas',
-  '80s': 'Años 80: Cine de Culto, Épicas y Ciencia Ficción',
-  '90s': 'Años 90: La Última Gran Década Clásica'
-};
-
 // Elementos del DOM
+const netflixMain = document.getElementById('netflix-main');
+const heroBillboard = document.getElementById('hero-billboard');
+const billboardBackdrop = document.getElementById('billboard-backdrop');
+const billboardTitle = document.getElementById('billboard-title');
+const billboardMatch = document.getElementById('billboard-match');
+const billboardYear = document.getElementById('billboard-year');
+const billboardRating = document.getElementById('billboard-rating');
+const billboardOverview = document.getElementById('billboard-overview');
+const btnBillboardPlay = document.getElementById('btn-billboard-play');
+const btnBillboardFav = document.getElementById('btn-billboard-fav');
+
+const rowsWrapper = document.getElementById('rows-wrapper');
+const searchView = document.getElementById('search-view');
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
-const categoryButtons = document.querySelectorAll('.category-btn');
+const searchCloseBtn = document.getElementById('search-close-btn');
+const searchTitle = document.getElementById('search-title');
+const searchCount = document.getElementById('search-count');
+const searchGrid = document.getElementById('search-grid');
+
 const favCounter = document.getElementById('fav-counter');
 const toast = document.getElementById('toast');
-
-const moviesGrid = document.getElementById('movies-grid');
-const sectionTitle = document.getElementById('section-title');
-const sectionSubtitle = document.getElementById('section-subtitle');
-const resultsCount = document.getElementById('results-count');
 const statusContainer = document.getElementById('status-container');
 const statusSpinner = document.getElementById('status-spinner');
 const statusText = document.getElementById('status-text');
 
 const playerModal = document.getElementById('player-modal');
+const playerHeader = document.getElementById('player-header');
 const playerTitle = document.getElementById('player-title');
 const okruIframe = document.getElementById('okru-iframe');
 const btnBack = document.getElementById('btn-back');
 const btnPlayerFav = document.getElementById('btn-player-fav');
 
-let lastFocusedElement = null;
-let isHomeView = true;
-let currentEra = 'all';
+// Sidebar buttons
+const navSearch = document.getElementById('nav-search');
+const navHome = document.getElementById('nav-home');
+const navCategories = document.getElementById('nav-categories');
+const navFavorites = document.getElementById('nav-favorites');
+const navSettings = document.getElementById('nav-settings');
+
+// Estado de la aplicación
+let allClassics = [];
+let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
+let lastFocusedElement = null;
 let toastTimeout = null;
+let osdTimeout = null;
+let billboardUpdateTimeout = null;
+let lastNavTime = 0;
+const NAV_THROTTLE_MS = 130;
 
 // SVG del icono de corazón para reusar en tarjetas
 function getHeartSvg(isFav) {
   return `
-    <svg class="heart-svg" viewBox="0 0 24 24">
-      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24">
+      <path fill="${isFav ? '#e50914' : '#ffffff'}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
     </svg>
   `;
 }
@@ -78,7 +89,6 @@ function getFavorites() {
     const raw = localStorage.getItem(FAVORITES_STORAGE_KEY);
     return raw ? JSON.parse(raw) : [];
   } catch (e) {
-    console.error("Error leyendo localStorage:", e);
     return [];
   }
 }
@@ -87,16 +97,15 @@ function saveFavorites(favorites) {
   try {
     localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
     updateFavoritesCounter();
+    renderFavoritesRow();
   } catch (e) {
-    console.error("Error guardando en localStorage:", e);
+    console.error("Error guardando favoritos:", e);
   }
 }
 
 function updateFavoritesCounter() {
   const count = getFavorites().length;
-  if (favCounter) {
-    favCounter.textContent = count;
-  }
+  if (favCounter) favCounter.textContent = count;
 }
 
 function isMovieFavorite(movie) {
@@ -118,47 +127,49 @@ function toggleFavorite(movie, e) {
   let isNowFav = false;
 
   if (existingIndex >= 0) {
-    // Eliminar de favoritos
     favorites.splice(existingIndex, 1);
     saveFavorites(favorites);
-    showToast(`Eliminado de Favoritos 🤍`);
+    showToast(`Eliminado de Mi Lista 🤍`);
   } else {
-    // Agregar a favoritos
     favorites.unshift({
       id: movie.id || '',
       title: movie.title,
       year: movie.year || '',
       rating: movie.rating || '',
-      quality: movie.quality || 'HD',
+      quality: movie.quality || 'FULL HD',
       duration: movie.duration || '',
-      resolution: movie.resolution || '',
       thumbnail: movie.thumbnail || '',
-      overview: movie.overview || '',
-      author: movie.author || '',
-      isHomeMovie: !!movie.isHomeMovie
+      backdrop: movie.backdrop || movie.thumbnail || '',
+      overview: movie.overview || ''
     });
     saveFavorites(favorites);
     isNowFav = true;
-    showToast(`Guardado en Favoritos ❤️`);
+    showToast(`Guardado en Mi Lista ❤️`);
   }
 
-  // Actualizar botones de corazón en la vista actual
-  document.querySelectorAll(`.movie-card[data-title="${movie.title}"] .btn-fav`).forEach(btn => {
-    if (isNowFav) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+  // Actualizar botones de favoritos visuales
+  document.querySelectorAll(`.card-fav-btn[data-title="${escapeAttr(movie.title)}"]`).forEach(btn => {
+    btn.classList.toggle('active', isNowFav);
+    btn.innerHTML = getHeartSvg(isNowFav);
   });
 
-  // Si estamos en la vista de favoritos, refrescar la lista
-  if (currentEra === 'favorites') {
-    loadFavoritesView();
+  if (currentFeaturedMovie && currentFeaturedMovie.title === movie.title) {
+    updateHeroFavButton(isNowFav);
   }
 
-  // Si el reproductor está abierto con esta película, actualizar el botón del player
   if (currentPlayingMovie && currentPlayingMovie.title === movie.title) {
     updatePlayerFavButton(isNowFav);
+  }
+}
+
+function updateHeroFavButton(isFav) {
+  if (!btnBillboardFav) return;
+  if (isFav) {
+    btnBillboardFav.classList.add('active');
+    btnBillboardFav.innerHTML = `<span class="hero-fav-icon">❤️</span> En Mi Lista`;
+  } else {
+    btnBillboardFav.classList.remove('active');
+    btnBillboardFav.innerHTML = `<span class="hero-fav-icon">🤍</span> Mi Lista`;
   }
 }
 
@@ -176,13 +187,24 @@ function showToast(message) {
 // -------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   initRemoteKeys();
-  initCategories();
+  initSidebar();
   updateFavoritesCounter();
+  loadNetflixHome();
 
-  // 1. CARGA INICIAL: Home con las recomendadas de TMDB
-  loadHomeClassics('all');
+  // Botones del Hero Billboard
+  btnBillboardPlay.addEventListener('click', () => {
+    if (currentFeaturedMovie) {
+      searchAndPlayMovie(currentFeaturedMovie);
+    }
+  });
 
-  // 2. BÚSQUEDA LIBRE DIRECTA EN OK.RU
+  btnBillboardFav.addEventListener('click', () => {
+    if (currentFeaturedMovie) {
+      toggleFavorite(currentFeaturedMovie);
+    }
+  });
+
+  // Búsqueda
   searchBtn.addEventListener('click', () => {
     const q = searchInput.value.trim();
     if (q) searchCustomQuery(q);
@@ -195,227 +217,303 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  btnBack.addEventListener('click', closePlayer);
+  searchCloseBtn.addEventListener('click', closeSearchView);
 
+  // Reproductor
+  btnBack.addEventListener('click', closePlayer);
   btnPlayerFav.addEventListener('click', () => {
     if (currentPlayingMovie) {
       toggleFavorite(currentPlayingMovie);
     }
   });
-
-  const btnSettings = document.getElementById('btn-settings');
-  if (btnSettings) {
-    btnSettings.addEventListener('click', configureServerUrl);
-  }
 });
 
-function configureServerUrl() {
-  const current = getServerBaseUrl();
-  const newUrl = prompt("Configurar IP/URL del Servidor PC (ej: http://192.168.18.179:3000):", current);
-  if (newUrl !== null && newUrl.trim() !== '') {
-    const clean = newUrl.trim().replace(/\/+$/, '');
-    localStorage.setItem(SERVER_STORAGE_KEY, clean);
-    showToast(`Servidor configurado: ${clean}`);
-    loadHomeClassics(currentEra);
+// -------------------------------------------------------------
+// CARGA INICIAL: HOME ESTILO NETFLIX CON FILAS
+// -------------------------------------------------------------
+
+// Función para barajar elementos de forma aleatoria (Fisher-Yates)
+function shuffleArray(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
   }
+  return copy;
 }
 
-// Configurar barra de épocas y pestaña de favoritos
-function initCategories() {
-  categoryButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const era = btn.getAttribute('data-era');
-      setActiveCategory(btn);
-      if (era === 'favorites') {
-        loadFavoritesView();
-      } else {
-        loadHomeClassics(era);
-      }
-    });
-
-    btn.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        const era = btn.getAttribute('data-era');
-        setActiveCategory(btn);
-        if (era === 'favorites') {
-          loadFavoritesView();
-        } else {
-          loadHomeClassics(era);
-        }
-      }
-    });
-  });
-}
-
-function setActiveCategory(activeBtn) {
-  categoryButtons.forEach(b => b.classList.remove('active'));
-  if (activeBtn) activeBtn.classList.add('active');
-}
-
-// -------------------------------------------------------------
-// VISTA HOME: RECOMENDADAS CLÁSICAS (TMDB)
-// -------------------------------------------------------------
-async function loadHomeClassics(era = 'all') {
-  isHomeView = true;
-  currentEra = era;
-  sectionTitle.textContent = ERA_TITLES[era] || 'Recomendadas de Cine Clásico';
-  sectionSubtitle.textContent = 'Selecciona cualquier película para buscar todas sus copias y calidades disponibles en OK.ru';
-  resultsCount.textContent = '';
-  moviesGrid.innerHTML = '';
-
-  showStatus('Cargando catálogo recomendado con TMDB...', true);
+async function loadNetflixHome() {
+  showStatus('Cargando catálogo Netflix...', true);
 
   try {
-    const res = await fetch(`${API.TMDB_HOME}?era=${encodeURIComponent(era)}`);
-    const movies = await res.json();
+    const res = await fetch(`${API.TMDB_HOME}?era=all`);
+    allClassics = await res.json();
     hideStatus();
 
-    resultsCount.textContent = `${movies.length} recomendadas`;
-    renderHomeMovies(movies);
+    // 1. Configurar una película aleatoria destacada en el Hero Billboard
+    if (allClassics.length > 0) {
+      const randomIndex = Math.floor(Math.random() * allClassics.length);
+      setFeaturedMovie(allClassics[randomIndex]);
+    }
+
+    // 2. Renderizar carruseles horizontales con orden aleatorio dinámico
+    renderNetflixRows(allClassics);
   } catch (err) {
-    console.error('Error cargando recomendadas de TMDB:', err);
-    showStatus('Error al conectar con el catálogo de TMDB.', false);
+    console.error('Error cargando catálogo:', err);
+    showStatus('Error al conectar con el servidor local.', false);
   }
 }
 
-// Renderizar tarjetas del HOME con botón de corazón
-function renderHomeMovies(movies) {
-  moviesGrid.innerHTML = '';
+// Actualizar dinámicamente el Hero Billboard al pasar sobre una tarjeta
+function setFeaturedMovie(movie) {
+  currentFeaturedMovie = movie;
+  const bgImg = movie.backdrop || movie.thumbnail || '';
+  billboardBackdrop.style.backgroundImage = `url('${bgImg}')`;
+  billboardTitle.textContent = movie.title;
+  billboardYear.textContent = movie.year || '';
+  billboardRating.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
+  
+  // Porcentaje ficticio estilo Netflix (calculado en base al rating)
+  const matchPct = Math.min(99, Math.max(88, Math.round((movie.rating || 8) * 11)));
+  billboardMatch.textContent = `${matchPct}% para ti`;
 
-  movies.forEach(movie => {
-    movie.isHomeMovie = true;
-    const card = document.createElement('div');
-    card.className = 'movie-card focusable home-card';
-    card.tabIndex = 0;
-    card.setAttribute('data-title', movie.title);
+  billboardOverview.textContent = movie.overview || 'Una de las grandes obras maestras de la historia del cine.';
+  updateHeroFavButton(isMovieFavorite(movie));
+}
 
-    const isFav = isMovieFavorite(movie);
+// -------------------------------------------------------------
+// RENDERIZADO DE FILAS Y CARRUSELES ALEATORIOS
+// -------------------------------------------------------------
+function renderNetflixRows(movies) {
+  rowsWrapper.innerHTML = '';
 
-    card.innerHTML = `
-      <div class="thumbnail-wrapper">
-        <img 
-          class="movie-poster" 
-          src="${movie.thumbnail || 'https://via.placeholder.com/500x750/1a1e24/ffffff?text=TMDB'}" 
-          alt="${escapeHtml(movie.title)}" 
-          loading="lazy" 
-        />
-        <div class="badges-container">
-          ${movie.year ? `<span class="year-badge">${movie.year}</span>` : ''}
-          ${movie.rating ? `<span class="rating-badge">⭐ ${movie.rating}</span>` : ''}
-        </div>
-        <button class="btn-fav ${isFav ? 'active' : ''}" title="Guardar en favoritos" aria-label="Favorito">
-          ${getHeartSvg(isFav)}
-        </button>
-      </div>
-      <div class="movie-info">
-        <h3 class="movie-title">${escapeHtml(movie.title)}</h3>
-        <p class="movie-overview">${escapeHtml(movie.overview || '')}</p>
-        <div class="movie-meta">
-          <span class="tmdb-tag">TMDB Clásico</span>
-          <span class="click-to-search">Presiona OK para buscar en OK.ru ➔</span>
-        </div>
-      </div>
-    `;
+  // 1. Tendencias recomendadas aleatorias
+  const trending = shuffleArray(movies).slice(0, 10);
 
-    // Click en el corazón: Alternar favorito
-    const heartBtn = card.querySelector('.btn-fav');
-    heartBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
+  // 2. Obras maestras mejor valoradas (barajadas entre las mejores)
+  const topRated = shuffleArray(
+    movies.filter(m => (m.rating || 0) >= 8.2)
+  );
 
-    // Click en la tarjeta: Buscar en OK.ru (Flujo normal sin TMDB)
-    const onSelect = () => {
-      const searchTerms = movie.year ? `${movie.title} ${movie.year}` : movie.title;
-      searchInput.value = searchTerms;
-      searchCustomQuery(searchTerms);
-    };
+  // 3. Épocas con orden aleatorio en cada carrusel
+  const era20s30s = shuffleArray(movies.filter(m => m.era === '20s-30s'));
+  const era40s50s = shuffleArray(movies.filter(m => m.era === '40s' || m.era === '50s'));
+  const era60s70s = shuffleArray(movies.filter(m => m.era === '60s' || m.era === '70s'));
+  const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
 
-    card.addEventListener('click', onSelect);
-    card.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        e.preventDefault();
-        onSelect();
-      }
-    });
+  // 4. Joyas variadas para descubrir
+  const discover = shuffleArray(movies).slice(0, 10);
 
-    moviesGrid.appendChild(card);
+  const rowsData = [
+    { id: 'row-trending', title: '🔥 Recomendadas y Tendencias de Hoy', list: trending },
+    { id: 'row-favs', title: '❤️ Mi Lista', list: getFavorites(), isFavRow: true },
+    { id: 'row-top', title: '⭐ Obras Maestras Aclamadas por la Crítica', list: topRated },
+    { id: 'row-80-90', title: '🌆 Años 80 y 90: Cine de Culto y Ciencia Ficción', list: era80s90s },
+    { id: 'row-60-70', title: '🚀 Años 60 y 70: Revolución, Suspenso y Nuevo Cine', list: era60s70s },
+    { id: 'row-40-50', title: '📽️ Años 40 y 50: Obras Maestras del Cine Negro y Hollywood', list: era40s50s },
+    { id: 'row-20-30', title: '🎞️ Años 20 y 30: Los Inicios del Cine y Época Dorada', list: era20s30s },
+    { id: 'row-discover', title: '🎲 Joyas Cinematográficas para Descubrir', list: discover }
+  ];
+
+  rowsData.forEach(row => {
+    if (row.isFavRow && row.list.length === 0) return; // No mostrar Mi Lista si está vacía
+    createMovieRow(row);
   });
 
-  const first = moviesGrid.querySelector('.movie-card');
-  if (first && document.activeElement !== searchInput && !document.activeElement.classList.contains('category-btn')) {
-    first.focus();
-  }
+  // Enfocar la primera tarjeta del primer carrusel
+  const firstCard = rowsWrapper.querySelector('.movie-card');
+  if (firstCard) firstCard.focus();
 }
 
-// -------------------------------------------------------------
-// VISTA FAVORITOS (CARGADOS DESDE LOCALSTORAGE)
-// -------------------------------------------------------------
-function loadFavoritesView() {
-  isHomeView = false;
-  currentEra = 'favorites';
-  sectionTitle.textContent = '❤️ Mis Películas Favoritas Guardadas';
-  sectionSubtitle.textContent = 'Películas guardadas de forma local en este dispositivo';
-  resultsCount.textContent = '';
-  moviesGrid.innerHTML = '';
+function createMovieRow(rowData) {
+  const rowEl = document.createElement('div');
+  rowEl.className = 'movie-row';
+  rowEl.id = rowData.id;
 
-  const favorites = getFavorites();
-  hideStatus();
+  const titleEl = document.createElement('h2');
+  titleEl.className = 'row-title';
+  titleEl.textContent = rowData.title;
+  rowEl.appendChild(titleEl);
 
-  if (favorites.length === 0) {
-    showStatus('Aún no tienes películas guardadas en favoritos. Pulsa el corazón ❤️ en cualquier película para agregarla aquí.', false);
-    resultsCount.textContent = '0 favoritas';
+  const carouselEl = document.createElement('div');
+  carouselEl.className = 'row-carousel';
+
+  rowData.list.forEach(movie => {
+    const card = createMovieCard(movie);
+    carouselEl.appendChild(card);
+  });
+
+  rowEl.appendChild(carouselEl);
+  rowsWrapper.appendChild(rowEl);
+}
+
+function createMovieCard(movie) {
+  const card = document.createElement('div');
+  card.className = 'movie-card focusable';
+  card.tabIndex = 0;
+  card.setAttribute('data-title', movie.title);
+
+  const isFav = isMovieFavorite(movie);
+  const fallbackSvg = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Crect width='100%25' height='100%25' fill='%23131720'/%3E%3Ctext x='50%25' y='50%25' fill='%23e50914' font-family='sans-serif' font-size='32' font-weight='bold' text-anchor='middle'%3E" + encodeURIComponent(movie.title) + "%3C/text%3E%3C/svg%3E";
+
+  card.innerHTML = `
+    <img 
+      class="movie-poster" 
+      src="${movie.thumbnail || fallbackSvg}" 
+      alt="${escapeHtml(movie.title)}" 
+      onerror="this.onerror=null; this.src='${fallbackSvg}';"
+    />
+    <div class="card-n-badge">N</div>
+    <div class="card-badges">
+      ${movie.rating ? `<span class="card-rating-badge">⭐ ${movie.rating}</span>` : ''}
+      ${movie.year ? `<span class="card-year-badge">${movie.year}</span>` : ''}
+    </div>
+    <button class="card-fav-btn ${isFav ? 'active' : ''}" data-title="${escapeAttr(movie.title)}" title="Mi Lista">
+      ${getHeartSvg(isFav)}
+    </button>
+  `;
+
+  // Al enfocar una tarjeta: Actualizar Hero Billboard con suave retardo
+  card.addEventListener('focus', () => {
+    if (billboardUpdateTimeout) clearTimeout(billboardUpdateTimeout);
+    billboardUpdateTimeout = setTimeout(() => {
+      setFeaturedMovie(movie);
+    }, 180);
+
+    // Auto-scroll horizontal en el carrusel para centrar la tarjeta
+    card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+  });
+
+  // Click en el corazón de la tarjeta
+  const favBtn = card.querySelector('.card-fav-btn');
+  favBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
+
+  // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru
+  const onSelect = () => searchAndPlayMovie(movie);
+  card.addEventListener('click', onSelect);
+  card.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      onSelect();
+    }
+  });
+
+  return card;
+}
+
+// Refrescar fila de favoritos si cambia
+function renderFavoritesRow() {
+  const existingFavRow = document.getElementById('row-favs');
+  const favs = getFavorites();
+
+  if (favs.length === 0) {
+    if (existingFavRow) existingFavRow.remove();
     return;
   }
 
-  resultsCount.textContent = `${favorites.length} favoritas`;
+  if (existingFavRow) {
+    const carousel = existingFavRow.querySelector('.row-carousel');
+    carousel.innerHTML = '';
+    favs.forEach(movie => {
+      carousel.appendChild(createMovieCard(movie));
+    });
+  } else {
+    // Insertar después de la fila top
+    const rowEl = document.createElement('div');
+    rowEl.className = 'movie-row';
+    rowEl.id = 'row-favs';
+    rowEl.innerHTML = `<h2 class="row-title">❤️ Mi Lista</h2><div class="row-carousel"></div>`;
+    const carousel = rowEl.querySelector('.row-carousel');
+    favs.forEach(movie => {
+      carousel.appendChild(createMovieCard(movie));
+    });
 
-  favorites.forEach(movie => {
+    const rowTop = document.getElementById('row-top');
+    if (rowTop && rowTop.nextSibling) {
+      rowsWrapper.insertBefore(rowEl, rowTop.nextSibling);
+    } else {
+      rowsWrapper.prepend(rowEl);
+    }
+  }
+}
+
+// -------------------------------------------------------------
+// BÚSQUEDA Y TRANSICIÓN A OK.RU
+// -------------------------------------------------------------
+function searchAndPlayMovie(movie) {
+  const query = movie.year ? `${movie.title} ${movie.year}` : movie.title;
+  searchInput.value = query;
+  searchCustomQuery(query);
+}
+
+async function searchCustomQuery(query) {
+  openSearchView();
+  searchTitle.textContent = `Películas completas para: "${query}"`;
+  searchCount.textContent = 'Buscando en OK.ru...';
+  searchGrid.innerHTML = '';
+  showStatus(`Buscando películas completas de "${query}" en OK.ru...`, true);
+
+  try {
+    const res = await fetch(`${API.SEARCH}?q=${encodeURIComponent(query)}`);
+    const movies = await res.json();
+    hideStatus();
+
+    searchCount.textContent = `${movies.length} disponibles`;
+    renderSearchGrid(movies);
+  } catch (err) {
+    console.error('Error buscando:', err);
+    showStatus('Error al conectar con OK.ru. Verifica el servidor local.', false);
+  }
+}
+
+function openSearchView() {
+  heroBillboard.classList.add('hidden');
+  rowsWrapper.classList.add('hidden');
+  searchView.classList.remove('hidden');
+  searchInput.focus();
+}
+
+function closeSearchView() {
+  searchView.classList.add('hidden');
+  heroBillboard.classList.remove('hidden');
+  rowsWrapper.classList.remove('hidden');
+  hideStatus();
+  
+  const firstCard = rowsWrapper.querySelector('.movie-card');
+  if (firstCard) firstCard.focus();
+}
+
+function renderSearchGrid(movies) {
+  searchGrid.innerHTML = '';
+
+  if (!movies || movies.length === 0) {
+    showStatus('No se encontraron copias completas en OK.ru para este título.', false);
+    return;
+  }
+
+  movies.forEach(movie => {
     const card = document.createElement('div');
-    card.className = 'movie-card focusable okru-card';
+    card.className = 'okru-result-card focusable';
     card.tabIndex = 0;
-    card.setAttribute('data-id', movie.id);
-    card.setAttribute('data-title', movie.title);
 
-    const qualityClass = getBadgeClass(movie.quality || '1080p');
+    const qualityClass = getBadgeClass(movie.quality);
 
     card.innerHTML = `
-      <div class="thumbnail-wrapper">
-        <img 
-          class="movie-poster" 
-          src="${movie.thumbnail || 'https://via.placeholder.com/640x360/1a1e24/ffffff?text=Favorita'}" 
-          alt="${escapeHtml(movie.title)}" 
-          loading="lazy" 
-        />
-        <div class="badges-container">
-          ${movie.year ? `<span class="year-badge">${movie.year}</span>` : ''}
-          <span class="quality-badge ${qualityClass}">${movie.quality || 'HD'}</span>
-        </div>
-        ${movie.duration ? `<span class="duration-badge">${movie.duration}</span>` : ''}
-        <button class="btn-fav active" title="Eliminar de favoritos" aria-label="Favorito">
-          ${getHeartSvg(true)}
-        </button>
+      <div class="okru-thumb-wrapper">
+        <img class="okru-thumb" src="${movie.thumbnail || ''}" alt="${escapeHtml(movie.title)}" onerror="this.src='https://via.placeholder.com/640x360/14181f/ffffff?text=OK.ru';" />
+        <span class="okru-quality-tag ${qualityClass}">${movie.quality || 'HD'}</span>
+        ${movie.duration ? `<span class="okru-duration-tag">${movie.duration}</span>` : ''}
       </div>
-      <div class="movie-info">
-        <h3 class="movie-title">${escapeHtml(movie.title)}</h3>
-        <div class="movie-meta">
-          <span>${escapeHtml(movie.author || 'Favoritos')}</span>
-          <span class="click-to-search">Reproducir ➔</span>
+      <div class="okru-info">
+        <h3 class="okru-title">${escapeHtml(movie.title)}</h3>
+        <div class="okru-meta">
+          <span>${escapeHtml(movie.author || 'OK.ru')}</span>
+          <span>${movie.resolution || ''}</span>
         </div>
       </div>
     `;
 
-    const heartBtn = card.querySelector('.btn-fav');
-    heartBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
-
-    const onPlay = () => {
-      if (movie.id && movie.id.length > 5) {
-        openPlayer(movie);
-      } else {
-        // Si fue guardada desde el Home sin ID directo, buscarla en OK.ru
-        const query = movie.year ? `${movie.title} ${movie.year}` : movie.title;
-        searchInput.value = query;
-        searchCustomQuery(query);
-      }
-    };
-
+    const onPlay = () => openPlayer(movie);
     card.addEventListener('click', onPlay);
     card.addEventListener('keydown', (e) => {
       if (e.keyCode === 13) {
@@ -424,216 +522,211 @@ function loadFavoritesView() {
       }
     });
 
-    moviesGrid.appendChild(card);
+    searchGrid.appendChild(card);
   });
 
-  const first = moviesGrid.querySelector('.movie-card');
-  if (first && document.activeElement !== searchInput) {
-    first.focus();
-  }
+  const first = searchGrid.querySelector('.okru-result-card');
+  if (first) first.focus();
 }
 
 // -------------------------------------------------------------
-// VISTA RESULTADOS: 100% OK.RU (SIN USAR TMDB)
+// SIDEBAR VERTICAL
 // -------------------------------------------------------------
-async function searchCustomQuery(query) {
-  isHomeView = false;
-  currentEra = 'search';
-  categoryButtons.forEach(b => b.classList.remove('active'));
-
-  sectionTitle.textContent = `Películas completas encontradas para: "${query}"`;
-  sectionSubtitle.textContent = 'Resultados de OK.ru ordenados de mayor a menor resolución (filtrados videos cortos)';
-  resultsCount.textContent = '';
-  moviesGrid.innerHTML = '';
-
-  showStatus(`Buscando películas completas de "${query}" en OK.ru...`, true);
-
-  try {
-    const response = await fetch(`${API.SEARCH}?q=${encodeURIComponent(query)}`);
-    if (!response.ok) throw new Error(`Status ${response.status}`);
-    const okruMovies = await response.json();
-    hideStatus();
-
-    resultsCount.textContent = `${okruMovies.length} películas completas`;
-    renderOkruResults(okruMovies);
-  } catch (err) {
-    console.error('Error buscando en OK.ru:', err);
-    showStatus('Error al buscar en OK.ru. Verifica que el servidor esté activo.', false);
-  }
-}
-
-function renderOkruResults(movies) {
-  moviesGrid.innerHTML = '';
-
-  if (!movies || movies.length === 0) {
-    showStatus('No se encontraron películas completas para este título en OK.ru.', false);
-    return;
-  }
-
-  movies.forEach(movie => {
-    movie.isHomeMovie = false;
-    const card = document.createElement('div');
-    card.className = 'movie-card focusable okru-card';
-    card.tabIndex = 0;
-    card.setAttribute('data-id', movie.id);
-    card.setAttribute('data-title', movie.title);
-
-    const isFav = isMovieFavorite(movie);
-    const qualityClass = getBadgeClass(movie.quality);
-
-    card.innerHTML = `
-      <div class="thumbnail-wrapper">
-        <img 
-          class="movie-poster" 
-          src="${movie.thumbnail || 'https://via.placeholder.com/640x360/1a1e24/ffffff?text=OK.ru'}" 
-          alt="${escapeHtml(movie.title)}" 
-          loading="lazy" 
-          onerror="this.src='https://via.placeholder.com/640x360/1a1e24/ffffff?text=OK.ru';"
-        />
-        <div class="badges-container">
-          <span class="quality-badge ${qualityClass}">${movie.quality}</span>
-        </div>
-        ${movie.duration ? `<span class="duration-badge">${movie.duration}</span>` : ''}
-        <button class="btn-fav ${isFav ? 'active' : ''}" title="Guardar en favoritos" aria-label="Favorito">
-          ${getHeartSvg(isFav)}
-        </button>
-      </div>
-      <div class="movie-info">
-        <h3 class="movie-title">${escapeHtml(movie.title)}</h3>
-        <div class="movie-meta">
-          <span>${escapeHtml(movie.author || 'OK.ru')}</span>
-          <span class="movie-resolution">${movie.resolution}</span>
-        </div>
-      </div>
-    `;
-
-    const heartBtn = card.querySelector('.btn-fav');
-    heartBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
-
-    card.addEventListener('click', () => openPlayer(movie));
-    card.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        e.preventDefault();
-        openPlayer(movie);
-      }
-    });
-
-    moviesGrid.appendChild(card);
+function initSidebar() {
+  navSearch.addEventListener('click', () => {
+    openSearchView();
   });
 
-  const firstCard = moviesGrid.querySelector('.movie-card');
-  if (firstCard && document.activeElement !== searchInput) {
-    firstCard.focus();
-  }
+  navHome.addEventListener('click', () => {
+    closeSearchView();
+    netflixMain.scrollTo({ top: 0, behavior: 'auto' });
+    const firstCard = rowsWrapper.querySelector('.movie-card');
+    if (firstCard) firstCard.focus();
+  });
+
+  navCategories.addEventListener('click', () => {
+    closeSearchView();
+    const row2030 = document.getElementById('row-20-30');
+    if (row2030) {
+      row2030.scrollIntoView({ behavior: 'auto', block: 'start' });
+      const card = row2030.querySelector('.movie-card');
+      if (card) card.focus();
+    }
+  });
+
+  navFavorites.addEventListener('click', () => {
+    closeSearchView();
+    const rowFavs = document.getElementById('row-favs');
+    if (rowFavs) {
+      rowFavs.scrollIntoView({ behavior: 'auto', block: 'start' });
+      const card = rowFavs.querySelector('.movie-card');
+      if (card) card.focus();
+    } else {
+      showToast('Aún no tienes películas guardadas en Mi Lista ❤️');
+    }
+  });
+
+  navSettings.addEventListener('click', () => {
+    const current = getServerBaseUrl();
+    const newUrl = prompt("Configurar IP del Servidor PC (ej: http://192.168.18.179:3000):", current);
+    if (newUrl !== null && newUrl.trim() !== '') {
+      const clean = newUrl.trim().replace(/\/+$/, '');
+      localStorage.setItem(SERVER_STORAGE_KEY, clean);
+      showToast(`Servidor configurado: ${clean}`);
+      loadNetflixHome();
+    }
+  });
 }
 
 // -------------------------------------------------------------
 // REPRODUCTOR MODAL A PANTALLA COMPLETA
 // -------------------------------------------------------------
+function showPlayerOsd() {
+  if (!playerHeader) return;
+  playerHeader.classList.remove('osd-hidden');
+  if (osdTimeout) clearTimeout(osdTimeout);
+  osdTimeout = setTimeout(() => {
+    if (!playerModal.classList.contains('hidden')) {
+      playerHeader.classList.add('osd-hidden');
+    }
+  }, 3500);
+}
+
 function openPlayer(movie) {
   lastFocusedElement = document.activeElement;
   currentPlayingMovie = movie;
 
-  playerTitle.textContent = `${movie.title} [${movie.quality || 'HD'}]`;
+  playerTitle.textContent = `${movie.title} [${movie.quality || 'FULL HD'}]`;
   okruIframe.src = `https://ok.ru/videoembed/${movie.id}?autoplay=1`;
 
   updatePlayerFavButton(isMovieFavorite(movie));
 
   playerModal.classList.remove('hidden');
+  showPlayerOsd();
   btnBack.focus();
+
+  try {
+    const el = document.documentElement;
+    if (el.requestFullscreen) {
+      el.requestFullscreen().catch(() => {});
+    } else if (el.webkitRequestFullscreen) {
+      el.webkitRequestFullscreen();
+    }
+  } catch (err) {}
 }
 
 function updatePlayerFavButton(isFav) {
   if (!btnPlayerFav) return;
   if (isFav) {
     btnPlayerFav.classList.add('active');
-    btnPlayerFav.textContent = '❤️ En Favoritos';
+    btnPlayerFav.textContent = '❤️ En Mi Lista';
   } else {
     btnPlayerFav.classList.remove('active');
-    btnPlayerFav.textContent = '🤍 Guardar en Favoritos';
+    btnPlayerFav.textContent = '🤍 Mi Lista';
   }
 }
 
 function closePlayer() {
+  if (osdTimeout) clearTimeout(osdTimeout);
+  if (playerHeader) playerHeader.classList.remove('osd-hidden');
+
   okruIframe.src = '';
   playerModal.classList.add('hidden');
   currentPlayingMovie = null;
-  if (lastFocusedElement) {
+
+  try {
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  } catch (err) {}
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
     lastFocusedElement.focus();
-  } else {
-    searchInput.focus();
   }
-}
-
-function getBadgeClass(quality) {
-  switch ((quality || '').toLowerCase()) {
-    case '4k': return 'badge-4k';
-    case '2k': return 'badge-2k';
-    case '1080p': return 'badge-1080p';
-    case '720p': return 'badge-720p';
-    case '480p': return 'badge-480p';
-    default: return 'badge-sd';
-  }
-}
-
-function showStatus(text, isLoading) {
-  statusText.textContent = text;
-  if (isLoading) {
-    statusSpinner.classList.remove('hidden');
-  } else {
-    statusSpinner.classList.add('hidden');
-  }
-  statusContainer.classList.remove('hidden');
-}
-
-function hideStatus() {
-  statusContainer.classList.add('hidden');
-}
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
 }
 
 // -------------------------------------------------------------
-// NAVEGACIÓN ESPACIAL PARA CONTROL REMOTO DE TV (D-PAD)
+// CONTROL REMOTO SMART TV
 // -------------------------------------------------------------
+function registerTizenKeys() {
+  if (window.tizen && window.tizen.tvinputdevice) {
+    const keys = ['Return', 'Exit', 'MediaPlay', 'MediaPause', 'MediaPlayPause', 'MediaStop'];
+    keys.forEach(k => {
+      try { window.tizen.tvinputdevice.registerKey(k); } catch (err) {}
+    });
+  }
+}
+
+function isBackKey(e) {
+  const code = e.keyCode || e.which;
+  const key = e.key;
+  return (
+    code === 10009 ||          // Samsung Tizen Hardware Remote RETURN
+    code === 27 ||             // Escape
+    code === 8 ||              // Backspace
+    code === 461 ||            // LG webOS / Smart TV generic back
+    key === 'GoBack' ||
+    key === 'Back' ||
+    key === 'Escape'
+  );
+}
+
+function handleBackAction() {
+  // 1. Si el reproductor está abierto -> Cerrar reproductor y volver
+  if (!playerModal.classList.contains('hidden')) {
+    closePlayer();
+    return true;
+  }
+
+  // 2. Si la vista de búsqueda está abierta -> Volver al Home de Netflix
+  if (!searchView.classList.contains('hidden')) {
+    closeSearchView();
+    return true;
+  }
+
+  // 3. Si está en el Home -> Salir si corre en Tizen
+  if (window.tizen && window.tizen.application) {
+    try {
+      window.tizen.application.getCurrentApplication().exit();
+      return true;
+    } catch (e) {}
+  }
+
+  return false;
+}
+
 function initRemoteKeys() {
-  window.addEventListener('keydown', (e) => {
-    const key = e.keyCode;
+  registerTizenKeys();
 
-    // Tecla ATRÁS / RETURN de Samsung (10009) o Escape (27)
-    if (key === 10009 || key === 27) {
-      if (!playerModal.classList.contains('hidden')) {
-        e.preventDefault();
-        closePlayer();
-        return;
-      }
+  // Evento nativo de hardware de Samsung Tizen (tizenhwkey)
+  document.addEventListener('tizenhwkey', (e) => {
+    if (e.keyName === 'back' || e.keyName === 'Exit' || e.keyName === 'Return') {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      handleBackAction();
+    }
+  }, true);
 
-      if (!isHomeView) {
-        e.preventDefault();
-        loadHomeClassics('all');
-        const firstCategory = document.querySelector('.category-btn[data-era="all"]');
-        if (firstCategory) setActiveCategory(firstCategory);
-        return;
-      }
+  // Evento keydown capturado una sola vez en window con debounce anti-salto
+  const handleKeydown = (e) => {
+    if (!playerModal.classList.contains('hidden')) {
+      showPlayerOsd();
     }
 
-    // Tecla 'F' o 'f': Alternar favorito en la película actualmente enfocada
-    if (key === 70 || key === 102) {
-      const focusedCard = document.activeElement.closest('.movie-card');
-      if (focusedCard) {
-        const title = focusedCard.getAttribute('data-title');
-        const id = focusedCard.getAttribute('data-id');
-        toggleFavorite({ title, id });
-        return;
-      }
+    if (isBackKey(e)) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      handleBackAction();
+      return;
     }
+
+    const key = e.keyCode || e.which;
 
     const directions = {
       37: 'left',
@@ -648,9 +741,20 @@ function initRemoteKeys() {
       }
 
       e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+
+      const now = Date.now();
+      if (now - lastNavTime < NAV_THROTTLE_MS) {
+        return;
+      }
+      lastNavTime = now;
+
       navigateSpatial(directions[key]);
     }
-  });
+  };
+
+  window.addEventListener('keydown', handleKeydown, true);
 }
 
 function navigateSpatial(direction) {
@@ -722,6 +826,37 @@ function navigateSpatial(direction) {
 
   if (bestCandidate) {
     bestCandidate.focus();
-    bestCandidate.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    bestCandidate.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
   }
+}
+
+function getBadgeClass(quality) {
+  switch ((quality || '').toLowerCase()) {
+    case '4k': return 'badge-4k';
+    case '2k': return 'badge-2k';
+    case '1080p': return 'badge-1080p';
+    case '720p': return 'badge-720p';
+    default: return 'badge-sd';
+  }
+}
+
+function showStatus(text, isLoading) {
+  statusText.textContent = text;
+  if (isLoading) statusSpinner.classList.remove('hidden');
+  else statusSpinner.classList.add('hidden');
+  statusContainer.classList.remove('hidden');
+}
+
+function hideStatus() {
+  statusContainer.classList.add('hidden');
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+
+function escapeAttr(str) {
+  if (!str) return '';
+  return str.replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }
