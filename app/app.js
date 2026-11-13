@@ -327,10 +327,12 @@ async function loadNetflixHome() {
     }
     hideStatus();
 
-    // 1. Configurar una película aleatoria destacada en el Hero Billboard
+    // 1. Configurar una película clásica destacada en el Hero Billboard (priorizando años 30 a 60)
     if (allClassics.length > 0) {
-      const randomIndex = Math.floor(Math.random() * allClassics.length);
-      setFeaturedMovie(allClassics[randomIndex]);
+      const vintagePool = allClassics.filter(m => m.year && m.year <= 1969 && (m.rating || 0) >= 8.2);
+      const featuredPool = vintagePool.length > 0 ? vintagePool : allClassics;
+      const randomIndex = Math.floor(Math.random() * featuredPool.length);
+      setFeaturedMovie(featuredPool[randomIndex]);
     }
 
     // 2. Renderizar carruseles horizontales con orden aleatorio dinámico
@@ -408,25 +410,27 @@ function renderNetflixRows(movies, genreFilter = 'all') {
     return;
   }
 
-  // 2. Modo general (Todos los géneros y colecciones)
-  const trending = shuffleArray(movies).slice(0, 10);
-  const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.2));
+  // 2. Modo general: Destacar el Cine Clásico Antiguo (Años 20, 30, 40, 50 y 60)
+  const vintageTop = shuffleArray(movies.filter(m => m.year && m.year <= 1969)).slice(0, 16);
   const era20s30s = shuffleArray(movies.filter(m => m.era === '20s-30s'));
-  const era40s50s = shuffleArray(movies.filter(m => m.era === '40s' || m.era === '50s'));
-  const era60s70s = shuffleArray(movies.filter(m => m.era === '60s' || m.era === '70s'));
+  const era40s = shuffleArray(movies.filter(m => m.era === '40s'));
+  const era50s = shuffleArray(movies.filter(m => m.era === '50s'));
+  const era60s = shuffleArray(movies.filter(m => m.era === '60s'));
+  const era70s = shuffleArray(movies.filter(m => m.era === '70s'));
   const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
-  const discover = shuffleArray(movies).slice(0, 10);
+  const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.3));
 
   const rowsData = [
-    { id: 'row-trending', title: '🔥 Recomendadas y Tendencias de Hoy', list: trending },
+    { id: 'row-vintage-top', title: '👑 Joyas Clásicas Inmortales (Años 30, 40, 50 y 60)', list: vintageTop },
+    { id: 'row-50s', title: '✨ Años 50: La Era Dorada de Hollywood y el Cine Mundial', list: era50s },
+    { id: 'row-60s', title: '🚀 Años 60: Revolución Cinematográfica, Suspense y Westerns', list: era60s },
+    { id: 'row-40s', title: '📽️ Años 40: Cine Negro, Suspense y Segunda Guerra Mundial', list: era40s },
+    { id: 'row-20-30', title: '🎞️ Años 20 y 30: Los Inicios del Cine y Época Dorada', list: era20s30s },
     { id: 'row-collections', title: '🏛️ Colecciones: Las Mejores Películas por Género', list: allCollections, isCollectionRow: true },
     { id: 'row-favs', title: '❤️ Mi Lista', list: getFavorites(), isFavRow: true },
-    { id: 'row-top', title: '⭐ Obras Maestras Aclamadas por la Crítica', list: topRated },
-    { id: 'row-80-90', title: '🌆 Años 80 y 90: Cine de Culto y Ciencia Ficción', list: era80s90s },
-    { id: 'row-60-70', title: '🚀 Años 60 y 70: Revolución, Suspenso y Nuevo Cine', list: era60s70s },
-    { id: 'row-40-50', title: '📽️ Años 40 y 50: Obras Maestras del Cine Negro y Hollywood', list: era40s50s },
-    { id: 'row-20-30', title: '🎞️ Años 20 y 30: Los Inicios del Cine y Época Dorada', list: era20s30s },
-    { id: 'row-discover', title: '🎲 Joyas Cinematográficas para Descubrir', list: discover }
+    { id: 'row-top', title: '⭐ Obras Maestras con Máxima Calificación Crítica', list: topRated },
+    { id: 'row-70s', title: '🎬 Años 70: El Nuevo Hollywood y Cine de Autor', list: era70s },
+    { id: 'row-80-90', title: '🌆 Años 80 y 90: Cine de Culto y Nueva Generación', list: era80s90s }
   ];
 
   rowsData.forEach(row => {
@@ -912,9 +916,9 @@ function initSidebar() {
   navCategories.addEventListener('click', () => {
     closeSearchView();
     toggleGenresPanel(false);
-    const row2030 = document.getElementById('row-20-30');
-    if (row2030) {
-      const card = row2030.querySelector('.movie-card');
+    const rowTarget = document.getElementById('row-50s') || document.getElementById('row-20-30');
+    if (rowTarget) {
+      const card = rowTarget.querySelector('.movie-card');
       if (card) card.focus();
     }
   });

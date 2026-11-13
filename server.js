@@ -776,47 +776,25 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // 1. ENDPOINT HOME: TMDB Clásicos (SOLO para el Home)
+  // 1. ENDPOINT HOME: TMDB Clásicos (Catálogo expandido 1920 - 1999)
   if (pathname === '/api/tmdb-classics') {
     const era = parsedUrl.query.era || 'all';
 
-    if (TMDB_API_KEY) {
-      try {
-        const eraDates = {
-          'all': { start: '1920-01-01', end: '1999-12-31' },
-          '20s-30s': { start: '1920-01-01', end: '1939-12-31' },
-          '40s': { start: '1940-01-01', end: '1949-12-31' },
-          '50s': { start: '1950-01-01', end: '1959-12-31' },
-          '60s': { start: '1960-01-01', end: '1969-12-31' },
-          '70s': { start: '1970-01-01', end: '1979-12-31' },
-          '80s': { start: '1980-01-01', end: '1989-12-31' },
-          '90s': { start: '1990-01-01', end: '1999-12-31' }
-        };
-        const dates = eraDates[era] || eraDates['all'];
-        const tmdbUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=es-ES&sort_by=vote_count.desc&primary_release_date.gte=${dates.start}&primary_release_date.lte=${dates.end}&vote_count.gte=200`;
-        const rawData = await fetchFollow(tmdbUrl);
-        const parsed = JSON.parse(rawData);
-
-        const liveMovies = (parsed.results || []).map(m => ({
-          id: m.id,
-          title: m.title || m.original_title,
-          original_title: m.original_title,
-          year: m.release_date ? parseInt(m.release_date.split('-')[0], 10) : '',
-          era: era,
-          rating: m.vote_average,
-          overview: m.overview,
-          thumbnail: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : ''
-        }));
-
-        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-        res.end(JSON.stringify(liveMovies));
-        return;
-      } catch (err) {
-        console.warn("Fallback a catálogo TMDB local:", err.message);
+    let classicsData = [];
+    try {
+      const classicsFile = path.join(__dirname, 'tmdb-classics.json');
+      if (fs.existsSync(classicsFile)) {
+        classicsData = JSON.parse(fs.readFileSync(classicsFile, 'utf-8'));
       }
+    } catch (err) {
+      console.error('Error cargando tmdb-classics.json:', err.message);
     }
 
-    let filtered = TMDB_CLASSICS_CATALOG;
+    if (!classicsData || classicsData.length === 0) {
+      classicsData = TMDB_CLASSICS_CATALOG;
+    }
+
+    let filtered = classicsData;
     if (era !== 'all') {
       filtered = filtered.filter(m => m.era === era);
     }
