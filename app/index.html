@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="netflix-body">
-  <!-- Barra lateral vertical izquierda estilo Netflix TV -->
+  <!-- Barra lateral vertical izquierda estilo Smart TV -->
   <aside class="netflix-sidebar" id="netflix-sidebar">
     <div class="sidebar-logo">
-      <span class="logo-n">N</span>
-      <span class="logo-text">CINE</span>
+      <span class="logo-ok">OK</span>
+      <span class="logo-text">.RU</span>
     </div>
 
     <nav class="sidebar-nav">
@@ -25,14 +25,19 @@
         <span class="sidebar-label">Inicio</span>
       </button>
 
-      <button class="focusable sidebar-btn" id="nav-categories" title="Categorías" tabindex="0">
-        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-        <span class="sidebar-label">Épocas</span>
+      <button class="focusable sidebar-btn" id="nav-collections" title="Colecciones" tabindex="0">
+        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+        <span class="sidebar-label">Colecciones</span>
       </button>
 
       <button class="focusable sidebar-btn" id="nav-genres" title="Géneros" tabindex="0">
         <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>
         <span class="sidebar-label">Géneros</span>
+      </button>
+
+      <button class="focusable sidebar-btn" id="nav-categories" title="Épocas" tabindex="0">
+        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
+        <span class="sidebar-label">Épocas</span>
       </button>
 
       <button class="focusable sidebar-btn" id="nav-favorites" title="Mi Lista" tabindex="0">
@@ -147,6 +152,37 @@
       <div id="status-text"></div>
     </div>
   </main>
+
+  <!-- Vista de Colección / Saga de TMDB -->
+  <section class="collection-view hidden" id="collection-view">
+    <div class="collection-backdrop" id="collection-backdrop"></div>
+    <div class="collection-vignette-bottom"></div>
+    <div class="collection-vignette-left"></div>
+
+    <div class="collection-header">
+      <button class="focusable btn-close-collection" id="btn-close-collection" title="Volver al catálogo" tabindex="0">
+        ⬅ Volver al Catálogo (Atrás)
+      </button>
+      <span class="collection-badge-tag">Colección Oficial TMDB</span>
+    </div>
+
+    <div class="collection-content">
+      <div class="collection-info">
+        <h1 class="collection-title" id="collection-title">Saga</h1>
+        <div class="collection-meta">
+          <span class="collection-count" id="collection-count">0 Películas</span>
+          <span class="collection-hint">💡 Selecciona cualquier entrega para reproducir en OK.ru</span>
+        </div>
+        <p class="collection-overview" id="collection-overview"></p>
+      </div>
+
+      <!-- Carrusel de películas que integran la saga -->
+      <div class="collection-parts-wrapper">
+        <h3 class="collection-parts-title">🎬 Películas de la Saga (Orden Cronológico)</h3>
+        <div class="collection-parts-carousel" id="collection-parts-carousel"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Notificación Toast -->
   <div id="toast" class="toast hidden"></div>

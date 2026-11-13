@@ -17,7 +17,8 @@ function getServerBaseUrl() {
 
 const API = {
   get SEARCH() { return `${getServerBaseUrl()}/api/search`; },
-  get TMDB_HOME() { return `${getServerBaseUrl()}/api/tmdb-classics`; }
+  get TMDB_HOME() { return `${getServerBaseUrl()}/api/tmdb-classics`; },
+  get TMDB_COLLECTIONS() { return `${getServerBaseUrl()}/api/tmdb-collections`; }
 };
 
 // Elementos del DOM
@@ -62,6 +63,16 @@ const genresTitle = document.getElementById('genres-title');
 const btnCloseGenres = document.getElementById('btn-close-genres');
 const genrePills = document.querySelectorAll('.genre-pill');
 
+// Elementos de Colecciones TMDB
+const navCollections = document.getElementById('nav-collections');
+const collectionView = document.getElementById('collection-view');
+const collectionBackdrop = document.getElementById('collection-backdrop');
+const collectionTitle = document.getElementById('collection-title');
+const collectionCount = document.getElementById('collection-count');
+const collectionOverview = document.getElementById('collection-overview');
+const collectionPartsCarousel = document.getElementById('collection-parts-carousel');
+const btnCloseCollection = document.getElementById('btn-close-collection');
+
 // Sidebar buttons
 const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
@@ -71,6 +82,7 @@ const navSettings = document.getElementById('nav-settings');
 
 // Estado de la aplicación
 let allClassics = [];
+let allCollections = [];
 let currentGenre = 'all';
 let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
@@ -85,7 +97,7 @@ const NAV_THROTTLE_MS = 130;
 function getHeartSvg(isFav) {
   return `
     <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24">
-      <path fill="${isFav ? '#e50914' : '#ffffff'}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      <path fill="${isFav ? '#ee8208' : '#ffffff'}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
     </svg>
   `;
 }
@@ -229,6 +241,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   searchCloseBtn.addEventListener('click', closeSearchView);
 
+  // Colecciones
+  if (btnCloseCollection) {
+    btnCloseCollection.addEventListener('click', closeCollectionView);
+  }
+
   // Reproductor
   btnBack.addEventListener('click', closePlayer);
   btnPlayerFav.addEventListener('click', () => {
@@ -239,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // -------------------------------------------------------------
-// CARGA INICIAL: HOME ESTILO NETFLIX CON FILAS
+// CARGA INICIAL: HOME ESTILO OK.RU CON FILAS Y COLECCIONES
 // -------------------------------------------------------------
 
 // Función para barajar elementos de forma aleatoria (Fisher-Yates)
@@ -253,11 +270,22 @@ function shuffleArray(arr) {
 }
 
 async function loadNetflixHome() {
-  showStatus('Cargando catálogo Netflix...', true);
+  showStatus('Cargando catálogo OK.ru & Colecciones TMDB...', true);
 
   try {
-    const res = await fetch(`${API.TMDB_HOME}?era=all`);
-    allClassics = await res.json();
+    const [classicsRes, collectionsRes] = await Promise.all([
+      fetch(`${API.TMDB_HOME}?era=all`),
+      fetch(API.TMDB_COLLECTIONS).catch(() => null)
+    ]);
+
+    allClassics = await classicsRes.json();
+    if (collectionsRes && collectionsRes.ok) {
+      try {
+        allCollections = await collectionsRes.json();
+      } catch (e) {
+        allCollections = [];
+      }
+    }
     hideStatus();
 
     // 1. Configurar una película aleatoria destacada en el Hero Billboard
@@ -267,7 +295,7 @@ async function loadNetflixHome() {
     }
 
     // 2. Renderizar carruseles horizontales con orden aleatorio dinámico
-    renderNetflixRows(allClassics);
+    renderNetflixRows(allClassics, currentGenre);
   } catch (err) {
     console.error('Error cargando catálogo:', err);
     showStatus('Error al conectar con el servidor local.', false);
@@ -287,7 +315,7 @@ function setFeaturedMovie(movie) {
     billboardGenres.textContent = movie.genres && movie.genres.length ? movie.genres.join(' • ') : 'Cine Clásico';
   }
 
-  // Porcentaje ficticio estilo Netflix (calculado en base al rating)
+  // Porcentaje estilo OK.ru (calculado en base al rating)
   const matchPct = Math.min(99, Math.max(88, Math.round((movie.rating || 8) * 11)));
   billboardMatch.textContent = `${matchPct}% para ti`;
 
@@ -328,7 +356,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
     return;
   }
 
-  // 2. Modo general (Todos los géneros)
+  // 2. Modo general (Todos los géneros y colecciones)
   const trending = shuffleArray(movies).slice(0, 10);
   const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.2));
   const era20s30s = shuffleArray(movies.filter(m => m.era === '20s-30s'));
@@ -339,6 +367,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
 
   const rowsData = [
     { id: 'row-trending', title: '🔥 Recomendadas y Tendencias de Hoy', list: trending },
+    { id: 'row-collections', title: '🏛️ Grandes Colecciones y Sagas de TMDB', list: allCollections, isCollectionRow: true },
     { id: 'row-favs', title: '❤️ Mi Lista', list: getFavorites(), isFavRow: true },
     { id: 'row-top', title: '⭐ Obras Maestras Aclamadas por la Crítica', list: topRated },
     { id: 'row-80-90', title: '🌆 Años 80 y 90: Cine de Culto y Ciencia Ficción', list: era80s90s },
@@ -349,12 +378,13 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   ];
 
   rowsData.forEach(row => {
-    if (row.isFavRow && row.list.length === 0) return; // No mostrar Mi Lista si está vacía
+    if (row.isFavRow && row.list.length === 0) return;
+    if (row.isCollectionRow && (!row.list || row.list.length === 0)) return;
     createMovieRow(row);
   });
 
   // Enfocar la primera tarjeta del primer carrusel
-  const firstCard = rowsWrapper.querySelector('.movie-card');
+  const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
   if (firstCard) firstCard.focus();
 }
 
@@ -371,10 +401,17 @@ function createMovieRow(rowData) {
   const carouselEl = document.createElement('div');
   carouselEl.className = 'row-carousel';
 
-  rowData.list.forEach(movie => {
-    const card = createMovieCard(movie);
-    carouselEl.appendChild(card);
-  });
+  if (rowData.isCollectionRow) {
+    rowData.list.forEach(col => {
+      const card = createCollectionCard(col);
+      carouselEl.appendChild(card);
+    });
+  } else {
+    rowData.list.forEach(movie => {
+      const card = createMovieCard(movie);
+      carouselEl.appendChild(card);
+    });
+  }
 
   rowEl.appendChild(carouselEl);
   rowsWrapper.appendChild(rowEl);
@@ -387,7 +424,7 @@ function createMovieCard(movie) {
   card.setAttribute('data-title', movie.title);
 
   const isFav = isMovieFavorite(movie);
-  const fallbackSvg = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Crect width='100%25' height='100%25' fill='%23131720'/%3E%3Ctext x='50%25' y='50%25' fill='%23e50914' font-family='sans-serif' font-size='32' font-weight='bold' text-anchor='middle'%3E" + encodeURIComponent(movie.title) + "%3C/text%3E%3C/svg%3E";
+  const fallbackSvg = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Crect width='100%25' height='100%25' fill='%23131720'/%3E%3Ctext x='50%25' y='50%25' fill='%23ee8208' font-family='sans-serif' font-size='32' font-weight='bold' text-anchor='middle'%3E" + encodeURIComponent(movie.title) + "%3C/text%3E%3C/svg%3E";
 
   card.innerHTML = `
     <img 
@@ -396,7 +433,7 @@ function createMovieCard(movie) {
       alt="${escapeHtml(movie.title)}" 
       onerror="this.onerror=null; this.src='${fallbackSvg}';"
     />
-    <div class="card-n-badge">N</div>
+    <div class="card-ok-badge">OK</div>
     <div class="card-badges">
       ${movie.rating ? `<span class="card-rating-badge">⭐ ${movie.rating}</span>` : ''}
       ${movie.year ? `<span class="card-year-badge">${movie.year}</span>` : ''}
@@ -413,7 +450,6 @@ function createMovieCard(movie) {
       setFeaturedMovie(movie);
     }, 180);
 
-    // Auto-scroll horizontal en el carrusel para centrar la tarjeta
     card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
   });
 
@@ -432,6 +468,101 @@ function createMovieCard(movie) {
   });
 
   return card;
+}
+
+// Tarjeta para carrusel de colecciones
+function createCollectionCard(col) {
+  const card = document.createElement('div');
+  card.className = 'collection-card focusable';
+  card.tabIndex = 0;
+  card.setAttribute('data-col-id', col.id);
+
+  const fallbackSvg = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'%3E%3Crect width='100%25' height='100%25' fill='%23131720'/%3E%3Ctext x='50%25' y='50%25' fill='%23ee8208' font-family='sans-serif' font-size='28' font-weight='bold' text-anchor='middle'%3E" + encodeURIComponent(col.name) + "%3C/text%3E%3C/svg%3E";
+
+  card.innerHTML = `
+    <img 
+      class="collection-card-poster" 
+      src="${col.poster || col.backdrop || fallbackSvg}" 
+      alt="${escapeHtml(col.name)}" 
+      onerror="this.onerror=null; this.src='${fallbackSvg}';"
+    />
+    <div class="collection-card-gradient"></div>
+    <div class="collection-card-info">
+      <span class="collection-card-count">⭐ Saga • ${col.count} Películas</span>
+      <h3 class="collection-card-title">${escapeHtml(col.name)}</h3>
+    </div>
+  `;
+
+  card.addEventListener('focus', () => {
+    card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+  });
+
+  const onOpen = () => openCollectionView(col);
+  card.addEventListener('click', onOpen);
+  card.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      onOpen();
+    }
+  });
+
+  return card;
+}
+
+// -------------------------------------------------------------
+// VISTA Y REPRODUCCIÓN DE COLECCIÓN TMDB
+// -------------------------------------------------------------
+function openCollectionView(col) {
+  lastFocusedElement = document.activeElement;
+  currentCollection = col;
+
+  if (collectionBackdrop) {
+    collectionBackdrop.style.backgroundImage = `url('${col.backdrop || col.poster || ''}')`;
+  }
+  if (collectionTitle) {
+    collectionTitle.textContent = col.name;
+  }
+  if (collectionCount) {
+    collectionCount.textContent = `⭐ ${col.count} Películas en la saga`;
+  }
+  if (collectionOverview) {
+    collectionOverview.textContent = col.overview || 'Explora todas las entregas de esta legendaria franquicia.';
+  }
+
+  // Renderizar las entregas de la colección
+  if (collectionPartsCarousel) {
+    collectionPartsCarousel.innerHTML = '';
+    col.movies.forEach(movie => {
+      const card = createMovieCard(movie);
+      collectionPartsCarousel.appendChild(card);
+    });
+  }
+
+  if (collectionView) {
+    collectionView.classList.remove('hidden');
+    collectionView.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  // Enfocar primera entrega o botón volver
+  const firstMovie = collectionPartsCarousel ? collectionPartsCarousel.querySelector('.movie-card') : null;
+  if (firstMovie) {
+    firstMovie.focus();
+  } else if (btnCloseCollection) {
+    btnCloseCollection.focus();
+  }
+}
+
+function closeCollectionView() {
+  if (collectionView) {
+    collectionView.classList.add('hidden');
+  }
+  currentCollection = null;
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+    lastFocusedElement.focus();
+  } else {
+    const first = rowsWrapper.querySelector('.movie-card, .collection-card');
+    if (first) first.focus();
+  }
 }
 
 // Refrescar fila de favoritos si cambia
@@ -501,6 +632,7 @@ async function searchCustomQuery(query) {
 
 function openSearchView() {
   if (genresPanel) genresPanel.classList.add('hidden');
+  if (collectionView) collectionView.classList.add('hidden');
   heroBillboard.classList.add('hidden');
   rowsWrapper.classList.add('hidden');
   searchView.classList.remove('hidden');
@@ -513,7 +645,7 @@ function closeSearchView() {
   rowsWrapper.classList.remove('hidden');
   hideStatus();
   
-  const firstCard = rowsWrapper.querySelector('.movie-card');
+  const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
   if (firstCard) firstCard.focus();
 }
 
@@ -647,18 +779,36 @@ function initSidebar() {
 
   navHome.addEventListener('click', () => {
     closeSearchView();
+    closeCollectionView();
     if (currentGenre !== 'all') {
       selectGenre('all');
     }
     toggleGenresPanel(false);
     netflixMain.scrollTo({ top: 0, behavior: 'auto' });
-    const firstCard = rowsWrapper.querySelector('.movie-card');
+    const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
     if (firstCard) firstCard.focus();
   });
+
+  if (navCollections) {
+    navCollections.addEventListener('click', () => {
+      closeSearchView();
+      toggleGenresPanel(false);
+      closeCollectionView();
+      const rowCol = document.getElementById('row-collections');
+      if (rowCol) {
+        rowCol.scrollIntoView({ behavior: 'auto', block: 'start' });
+        const card = rowCol.querySelector('.collection-card');
+        if (card) card.focus();
+      } else {
+        showToast('🏛️ Sagas y Colecciones de TMDB');
+      }
+    });
+  }
 
   if (navGenres) {
     navGenres.addEventListener('click', () => {
       closeSearchView();
+      closeCollectionView();
       toggleGenresPanel();
     });
   }
@@ -803,24 +953,30 @@ function handleBackAction() {
     return true;
   }
 
-  // 2. Si la vista de búsqueda está abierta -> Volver al Home de Netflix
+  // 2. Si la vista de colección está abierta -> Volver al Home
+  if (collectionView && !collectionView.classList.contains('hidden')) {
+    closeCollectionView();
+    return true;
+  }
+
+  // 3. Si la vista de búsqueda está abierta -> Volver al Home
   if (!searchView.classList.contains('hidden')) {
     closeSearchView();
     return true;
   }
 
-  // 3. Si el panel de géneros está abierto o hay un filtro de género activo -> resetear filtro y cerrar panel
+  // 4. Si el panel de géneros está abierto o hay un filtro de género activo -> resetear filtro y cerrar panel
   if (genresPanel && (!genresPanel.classList.contains('hidden') || currentGenre !== 'all')) {
     if (currentGenre !== 'all') {
       selectGenre('all');
     }
     toggleGenresPanel(false);
-    const firstCard = rowsWrapper.querySelector('.movie-card');
+    const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
     if (firstCard) firstCard.focus();
     return true;
   }
 
-  // 4. Si está en el Home -> Salir si corre en Tizen
+  // 5. Si está en el Home -> Salir si corre en Tizen
   if (window.tizen && window.tizen.application) {
     try {
       window.tizen.application.getCurrentApplication().exit();
@@ -897,7 +1053,11 @@ function navigateSpatial(direction) {
       if (!playerModal.classList.contains('hidden')) {
         return inPlayer;
       }
-      return !inPlayer && el.offsetParent !== null;
+      const inColView = el.closest('#collection-view');
+      if (collectionView && !collectionView.classList.contains('hidden')) {
+        return inColView && el.offsetParent !== null;
+      }
+      return !inPlayer && !inColView && el.offsetParent !== null;
     });
 
   if (!focusables.length) return;

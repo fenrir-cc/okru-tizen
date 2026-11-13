@@ -830,6 +830,36 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  // 1.5. ENDPOINT DE COLECCIONES Y SAGAS DE TMDB
+  if (pathname === '/api/tmdb-collections') {
+    let collectionsData = [];
+    try {
+      const colFile = path.join(__dirname, 'tmdb-collections.json');
+      if (fs.existsSync(colFile)) {
+        collectionsData = JSON.parse(fs.readFileSync(colFile, 'utf-8'));
+      }
+    } catch (err) {
+      console.error('Error cargando tmdb-collections.json:', err.message);
+    }
+
+    const colId = parsedUrl.query.id;
+    if (colId) {
+      const single = collectionsData.find(c => c.id == colId);
+      if (single) {
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify(single));
+      } else {
+        res.writeHead(404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Colección no encontrada' }));
+      }
+      return;
+    }
+
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+    res.end(JSON.stringify(collectionsData));
+    return;
+  }
+
   // 2. ENDPOINT BÚSQUEDA Y RESULTADOS: 100% OK.ru (SIN TMDB)
   // Con filtrado de videos de minutos y ordenado por resolución descendente
   if (pathname === '/api/search') {
