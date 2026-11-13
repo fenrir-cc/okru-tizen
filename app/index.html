@@ -30,6 +30,11 @@
         <span class="sidebar-label">Épocas</span>
       </button>
 
+      <button class="focusable sidebar-btn" id="nav-genres" title="Géneros" tabindex="0">
+        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>
+        <span class="sidebar-label">Géneros</span>
+      </button>
+
       <button class="focusable sidebar-btn" id="nav-favorites" title="Mi Lista" tabindex="0">
         <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         <span class="sidebar-label">Mi Lista (<span id="fav-counter">0</span>)</span>
@@ -63,6 +68,7 @@
           <span class="meta-rating" id="billboard-rating">⭐ 8.2</span>
           <span class="meta-quality">FULL HD</span>
           <span class="meta-badge">OK.ru</span>
+          <span class="meta-genres" id="billboard-genres">Drama • Ciencia ficción</span>
         </div>
 
         <p class="billboard-overview" id="billboard-overview">
@@ -77,6 +83,30 @@
             <span class="hero-fav-icon">🤍</span> Mi Lista
           </button>
         </div>
+      </div>
+    </section>
+
+    <!-- Panel de Filtro por Géneros estilo Netflix Pills -->
+    <section class="genres-panel hidden" id="genres-panel">
+      <div class="genres-header">
+        <div class="genres-title-wrap">
+          <span class="genres-badge">CATEGORÍAS</span>
+          <h2 class="genres-title" id="genres-title">Filtrar por Género</h2>
+        </div>
+        <button class="focusable btn-close-genres" id="btn-close-genres" tabindex="0">✖ Volver a Todos</button>
+      </div>
+      <div class="genres-pills-container" id="genres-pills">
+        <button class="focusable genre-pill active" data-genre="all" tabindex="0">🎬 Todos</button>
+        <button class="focusable genre-pill" data-genre="Ciencia ficción" tabindex="0">🚀 Ciencia Ficción</button>
+        <button class="focusable genre-pill" data-genre="Terror" tabindex="0">👻 Terror</button>
+        <button class="focusable genre-pill" data-genre="Suspense" tabindex="0">🔍 Suspense / Misterio</button>
+        <button class="focusable genre-pill" data-genre="Crimen" tabindex="0">🕵️ Crimen / Mafia</button>
+        <button class="focusable genre-pill" data-genre="Drama" tabindex="0">🎭 Drama</button>
+        <button class="focusable genre-pill" data-genre="Comedia" tabindex="0">😂 Comedia</button>
+        <button class="focusable genre-pill" data-genre="Acción" tabindex="0">💥 Acción / Aventura</button>
+        <button class="focusable genre-pill" data-genre="Bélica" tabindex="0">🎖️ Bélica / Historia</button>
+        <button class="focusable genre-pill" data-genre="Romance" tabindex="0">❤️ Romance</button>
+        <button class="focusable genre-pill" data-genre="Western" tabindex="0">🤠 Western</button>
       </div>
     </section>
 

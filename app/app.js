@@ -54,6 +54,14 @@ const okruIframe = document.getElementById('okru-iframe');
 const btnBack = document.getElementById('btn-back');
 const btnPlayerFav = document.getElementById('btn-player-fav');
 
+// Elementos de Géneros y Billboard
+const billboardGenres = document.getElementById('billboard-genres');
+const navGenres = document.getElementById('nav-genres');
+const genresPanel = document.getElementById('genres-panel');
+const genresTitle = document.getElementById('genres-title');
+const btnCloseGenres = document.getElementById('btn-close-genres');
+const genrePills = document.querySelectorAll('.genre-pill');
+
 // Sidebar buttons
 const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
@@ -63,6 +71,7 @@ const navSettings = document.getElementById('nav-settings');
 
 // Estado de la aplicación
 let allClassics = [];
+let currentGenre = 'all';
 let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
 let lastFocusedElement = null;
@@ -188,6 +197,7 @@ function showToast(message) {
 document.addEventListener('DOMContentLoaded', () => {
   initRemoteKeys();
   initSidebar();
+  initGenrePills();
   updateFavoritesCounter();
   loadNetflixHome();
 
@@ -273,6 +283,10 @@ function setFeaturedMovie(movie) {
   billboardYear.textContent = movie.year || '';
   billboardRating.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
   
+  if (billboardGenres) {
+    billboardGenres.textContent = movie.genres && movie.genres.length ? movie.genres.join(' • ') : 'Cine Clásico';
+  }
+
   // Porcentaje ficticio estilo Netflix (calculado en base al rating)
   const matchPct = Math.min(99, Math.max(88, Math.round((movie.rating || 8) * 11)));
   billboardMatch.textContent = `${matchPct}% para ti`;
@@ -284,24 +298,43 @@ function setFeaturedMovie(movie) {
 // -------------------------------------------------------------
 // RENDERIZADO DE FILAS Y CARRUSELES ALEATORIOS
 // -------------------------------------------------------------
-function renderNetflixRows(movies) {
+function renderNetflixRows(movies, genreFilter = 'all') {
   rowsWrapper.innerHTML = '';
 
-  // 1. Tendencias recomendadas aleatorias
+  // 1. Si hay filtro de género activo
+  if (genreFilter && genreFilter !== 'all') {
+    const listToUse = movies.filter(m => m.genres && m.genres.some(g => g.toLowerCase() === genreFilter.toLowerCase()));
+    
+    if (listToUse.length === 0) {
+      rowsWrapper.innerHTML = `<div class="status-message">No hay películas clásicas en el catálogo para el género "${genreFilter}".</div>`;
+      return;
+    }
+
+    const topInGenre = [...listToUse].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    const randomInGenre = shuffleArray(listToUse);
+
+    const rowsData = [
+      { id: 'row-genre-top', title: `⭐ Obras Maestras de ${genreFilter}`, list: topInGenre },
+      { id: 'row-genre-all', title: `🎬 Todos los Clásicos de ${genreFilter} (${listToUse.length})`, list: randomInGenre }
+    ];
+
+    rowsData.forEach(row => createMovieRow(row));
+
+    // Destacar la mejor película del género en el Billboard
+    setFeaturedMovie(topInGenre[0]);
+
+    const firstCard = rowsWrapper.querySelector('.movie-card');
+    if (firstCard) firstCard.focus();
+    return;
+  }
+
+  // 2. Modo general (Todos los géneros)
   const trending = shuffleArray(movies).slice(0, 10);
-
-  // 2. Obras maestras mejor valoradas (barajadas entre las mejores)
-  const topRated = shuffleArray(
-    movies.filter(m => (m.rating || 0) >= 8.2)
-  );
-
-  // 3. Épocas con orden aleatorio en cada carrusel
+  const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.2));
   const era20s30s = shuffleArray(movies.filter(m => m.era === '20s-30s'));
   const era40s50s = shuffleArray(movies.filter(m => m.era === '40s' || m.era === '50s'));
   const era60s70s = shuffleArray(movies.filter(m => m.era === '60s' || m.era === '70s'));
   const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
-
-  // 4. Joyas variadas para descubrir
   const discover = shuffleArray(movies).slice(0, 10);
 
   const rowsData = [
@@ -467,6 +500,7 @@ async function searchCustomQuery(query) {
 }
 
 function openSearchView() {
+  if (genresPanel) genresPanel.classList.add('hidden');
   heroBillboard.classList.add('hidden');
   rowsWrapper.classList.add('hidden');
   searchView.classList.remove('hidden');
@@ -481,6 +515,80 @@ function closeSearchView() {
   
   const firstCard = rowsWrapper.querySelector('.movie-card');
   if (firstCard) firstCard.focus();
+}
+
+function toggleGenresPanel(show = null) {
+  if (!genresPanel) return;
+  const shouldOpen = show !== null ? show : genresPanel.classList.contains('hidden');
+  if (shouldOpen) {
+    genresPanel.classList.remove('hidden');
+    genresPanel.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+    const activePill = genresPanel.querySelector('.genre-pill.active') || genresPanel.querySelector('.genre-pill');
+    if (activePill) activePill.focus();
+  } else {
+    genresPanel.classList.add('hidden');
+  }
+}
+
+function updateGenrePillsUI(activeGenre) {
+  if (!genrePills) return;
+  genrePills.forEach(pill => {
+    const g = pill.getAttribute('data-genre');
+    if (g === activeGenre) {
+      pill.classList.add('active');
+    } else {
+      pill.classList.remove('active');
+    }
+  });
+}
+
+function selectGenre(genre) {
+  currentGenre = genre;
+  updateGenrePillsUI(genre);
+  renderNetflixRows(allClassics, genre);
+  if (genre === 'all') {
+    showToast('Mostrando todos los géneros');
+  } else {
+    showToast(`Filtrado por: ${genre}`);
+  }
+}
+
+function initGenrePills() {
+  if (!genrePills) return;
+
+  genrePills.forEach(pill => {
+    const g = pill.getAttribute('data-genre');
+    const onSelect = () => {
+      selectGenre(g);
+    };
+
+    pill.addEventListener('click', onSelect);
+    pill.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        onSelect();
+      }
+    });
+  });
+
+  if (btnCloseGenres) {
+    const onClose = () => {
+      toggleGenresPanel(false);
+      if (currentGenre !== 'all') {
+        selectGenre('all');
+      }
+      const firstCard = rowsWrapper.querySelector('.movie-card');
+      if (firstCard) firstCard.focus();
+    };
+
+    btnCloseGenres.addEventListener('click', onClose);
+    btnCloseGenres.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        onClose();
+      }
+    });
+  }
 }
 
 function renderSearchGrid(movies) {
@@ -539,13 +647,25 @@ function initSidebar() {
 
   navHome.addEventListener('click', () => {
     closeSearchView();
+    if (currentGenre !== 'all') {
+      selectGenre('all');
+    }
+    toggleGenresPanel(false);
     netflixMain.scrollTo({ top: 0, behavior: 'auto' });
     const firstCard = rowsWrapper.querySelector('.movie-card');
     if (firstCard) firstCard.focus();
   });
 
+  if (navGenres) {
+    navGenres.addEventListener('click', () => {
+      closeSearchView();
+      toggleGenresPanel();
+    });
+  }
+
   navCategories.addEventListener('click', () => {
     closeSearchView();
+    toggleGenresPanel(false);
     const row2030 = document.getElementById('row-20-30');
     if (row2030) {
       row2030.scrollIntoView({ behavior: 'auto', block: 'start' });
@@ -556,6 +676,7 @@ function initSidebar() {
 
   navFavorites.addEventListener('click', () => {
     closeSearchView();
+    toggleGenresPanel(false);
     const rowFavs = document.getElementById('row-favs');
     if (rowFavs) {
       rowFavs.scrollIntoView({ behavior: 'auto', block: 'start' });
@@ -688,7 +809,18 @@ function handleBackAction() {
     return true;
   }
 
-  // 3. Si está en el Home -> Salir si corre en Tizen
+  // 3. Si el panel de géneros está abierto o hay un filtro de género activo -> resetear filtro y cerrar panel
+  if (genresPanel && (!genresPanel.classList.contains('hidden') || currentGenre !== 'all')) {
+    if (currentGenre !== 'all') {
+      selectGenre('all');
+    }
+    toggleGenresPanel(false);
+    const firstCard = rowsWrapper.querySelector('.movie-card');
+    if (firstCard) firstCard.focus();
+    return true;
+  }
+
+  // 4. Si está en el Home -> Salir si corre en Tizen
   if (window.tizen && window.tizen.application) {
     try {
       window.tizen.application.getCurrentApplication().exit();

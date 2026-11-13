@@ -261,6 +261,13 @@ body.netflix-body {
   font-weight: 800;
 }
 
+.meta-genres {
+  color: #93c5fd;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
 .billboard-overview {
   font-size: 1.05rem;
   line-height: 1.5;
@@ -334,6 +341,114 @@ body.netflix-body {
 .btn-fav-hero.active {
   background: rgba(229, 9, 20, 0.85);
   color: #ffffff;
+}
+
+/* -------------------------------------------------------------
+   PANEL DE FILTRO POR GÉNEROS (ESTILO NETFLIX PILLS)
+   ------------------------------------------------------------- */
+.genres-panel {
+  padding: 16px 48px;
+  position: relative;
+  z-index: 15;
+  margin-top: -24px;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, rgba(11, 12, 15, 0.96) 0%, rgba(11, 12, 15, 0.8) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.genres-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.genres-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.genres-badge {
+  background: #e50914;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.genres-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
+}
+
+.btn-close-genres {
+  background: rgba(255, 255, 255, 0.12);
+  color: #d1d5db;
+  border: 2px solid transparent;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.btn-close-genres:focus {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.genres-pills-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 4px 14px 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: auto;
+}
+
+.genres-pills-container::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-pill {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.genre-pill:hover,
+.genre-pill:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff !important;
+  color: #ffffff;
+  transform: scale(1.06) !important;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.4) !important;
+}
+
+.genre-pill.active {
+  background: #e50914 !important;
+  border-color: #f87171 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4) !important;
 }
 
 /* -------------------------------------------------------------

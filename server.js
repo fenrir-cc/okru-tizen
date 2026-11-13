@@ -24,7 +24,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "En una megalópolis del año 2026, la sociedad se divide en pensadores y trabajadores.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
+    "genres": [
+      "Drama",
+      "Ciencia ficción"
+    ]
   },
   {
     "id": 653,
@@ -35,7 +39,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.7,
     "overview": "El conde Orlok, un vampiro de los Cárpatos, compra una finca en Wisborg.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/z45rXmIF0zl4uxRc5XcSfz6hYO6.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/cA9iGtvjRGJHzDBfrq48l0eyCvA.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/cA9iGtvjRGJHzDBfrq48l0eyCvA.jpg",
+    "genres": [
+      "Terror",
+      "Fantasía"
+    ]
   },
   {
     "id": 3082,
@@ -46,7 +54,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+    "genres": [
+      "Comedia",
+      "Drama",
+      "Romance"
+    ]
   },
   {
     "id": 901,
@@ -57,7 +70,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+    "genres": [
+      "Comedia",
+      "Drama",
+      "Romance"
+    ]
   },
   {
     "id": 832,
@@ -68,7 +86,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.1,
     "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
+    "genres": [
+      "Drama",
+      "Suspense",
+      "Crimen"
+    ]
   },
   {
     "id": 630,
@@ -79,7 +102,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.6,
     "overview": "Dorothy es transportada por un tornado a la fantástica tierra de Oz.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/ymUY2iIm8IuSYuIX1SsABgPyB48.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/g1OvTd1eF346vmx8qsJnjaiooZ6.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/g1OvTd1eF346vmx8qsJnjaiooZ6.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía",
+      "Familia"
+    ]
   },
   {
     "id": 770,
@@ -90,7 +118,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.9,
     "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+    "genres": [
+      "Drama",
+      "Bélica",
+      "Romance"
+    ]
   },
   {
     "id": 289,
@@ -101,7 +134,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "En la Segunda Guerra Mundial, Rick Blaine debe elegir entre su amor por Ilsa y ayudar a la resistencia.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/a7EjycGNSYw6QqJqDooD9eQGZ4r.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ]
   },
   {
     "id": 15,
@@ -112,7 +149,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8,
     "overview": "Un grupo de periodistas intenta desentrañar el significado de la última palabra del magnate Kane: Rosebud.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/w7V0bv38Z0q0DgHmMfcGM4WRNTv.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/ruF3Lmd4A8MHbnEBE6lxPMbsHGL.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/ruF3Lmd4A8MHbnEBE6lxPMbsHGL.jpg",
+    "genres": [
+      "Misterio",
+      "Drama"
+    ]
   },
   {
     "id": 914,
@@ -123,7 +164,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Un barbero judío amnésico es confundido con el dictador Adenoid Hynkel.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
+    "genres": [
+      "Comedia",
+      "Bélica"
+    ]
   },
   {
     "id": 1580,
@@ -134,7 +179,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.9,
     "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
+    "genres": [
+      "Suspense",
+      "Crimen",
+      "Drama"
+    ]
   },
   {
     "id": 5156,
@@ -145,7 +195,10 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "En la Roma de posguerra, a un obrero le roban la bicicleta imprescindible para trabajar.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/hjo6BPzCuhUkpSzxElOQ68mydrx.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/kTUUiKGKrdRhJsCcYT3Ivtfuuzh.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/kTUUiKGKrdRhJsCcYT3Ivtfuuzh.jpg",
+    "genres": [
+      "Drama"
+    ]
   },
   {
     "id": 389,
@@ -156,7 +209,10 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Un jurado debe decidir la condena a muerte de un joven. Solo uno duda de su culpabilidad.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/t88XfoxO5cX3f0qaSxWsBS0Lc3.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+    "genres": [
+      "Drama"
+    ]
   },
   {
     "id": 567,
@@ -167,7 +223,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Un fotógrafo con una pierna rota espía a sus vecinos y cree presenciar un asesinato.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+    "genres": [
+      "Suspense",
+      "Misterio",
+      "Drama"
+    ]
   },
   {
     "id": 426,
@@ -178,7 +239,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Un detective retirado con acrofobia es contratado para vigilar a una misteriosa mujer.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/t4kvoLhrVHW5w5Ku7AQBniVExjN.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+    "genres": [
+      "Misterio",
+      "Romance",
+      "Suspense"
+    ]
   },
   {
     "id": 346,
@@ -189,7 +255,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Una aldea de campesinos contrata a siete samuráis sin amo para defenderse de unos bandidos.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+    "genres": [
+      "Acción",
+      "Drama"
+    ]
   },
   {
     "id": 872,
@@ -200,7 +270,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Hollywood enfrenta la revolucionaria transición del cine mudo al sonoro.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/5r8jD5R6EzpQ5VLodbzTNhvKcGw.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
+    "genres": [
+      "Comedia",
+      "Romance"
+    ]
   },
   {
     "id": 430,
@@ -211,7 +285,10 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Un guionista endeudado se refugia en la mansión de una antigua estrella del cine mudo.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/toTjc11iO3tgdKLAIeLGse1LTk9.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/4safDVSZx7a4I1TQoSyz6E1agzM.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/4safDVSZx7a4I1TQoSyz6E1agzM.jpg",
+    "genres": [
+      "Comedia"
+    ]
   },
   {
     "id": 539,
@@ -222,7 +299,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.4,
     "overview": "Marion Crane huye con dinero robado y se hospeda en el aislado motel de Norman Bates.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "genres": [
+      "Terror",
+      "Suspense",
+      "Misterio"
+    ]
   },
   {
     "id": 62,
@@ -233,7 +315,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.1,
     "overview": "Una expedición a Júpiter se ve amenazada por la inteligencia artificial HAL 9000.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/pGabanxaE2YvN4jhZuSN3oXO0mi.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/w5IDXtifKntw0ajv2co7jFlTQDM.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Misterio",
+      "Aventura"
+    ]
   },
   {
     "id": 429,
@@ -244,7 +331,10 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Tres pistoleros buscan un tesoro enterrado en medio de la Guerra de Secesión estadounidense.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+    "genres": [
+      "Western"
+    ]
   },
   {
     "id": 871,
@@ -255,7 +345,13 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.7,
     "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura",
+      "Drama",
+      "Acción"
+    ]
   },
   {
     "id": 238,
@@ -266,7 +362,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.7,
     "overview": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su hijo menor.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+    "genres": [
+      "Drama",
+      "Crimen"
+    ]
   },
   {
     "id": 103,
@@ -277,7 +377,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Travis Bickle, un veterano con insomnio, trabaja de taxista nocturno en una Nueva York decadente.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/9G26DnAeMbA4sp58Gi0Vze6eQv4.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
+    "genres": [
+      "Crimen",
+      "Drama"
+    ]
   },
   {
     "id": 348,
@@ -288,7 +392,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.1,
     "overview": "La tripulación del Nostromo despierta para investigar una misteriosa señal en un planeta desolado.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+    "genres": [
+      "Terror",
+      "Ciencia ficción"
+    ]
   },
   {
     "id": 28,
@@ -299,7 +407,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Durante la guerra de Vietnam, el capitán Willard recibe la orden de eliminar al coronel Kurtz.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/zJXRrkJTlcb5x87v4VWN1zZX0Xk.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg",
+    "genres": [
+      "Drama",
+      "Bélica"
+    ]
   },
   {
     "id": 185,
@@ -310,7 +422,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Alex DeLarge, un joven ultraviolento, es encarcelado y sometido al experimento de rehabilitación Ludovico.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Crimen"
+    ]
   },
   {
     "id": 78,
@@ -321,7 +437,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 7.9,
     "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Drama",
+      "Suspense"
+    ]
   },
   {
     "id": 694,
@@ -332,7 +453,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Una familia cuida un hotel aislado durante el invierno mientras fuerzas siniestras acechan.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+    "genres": [
+      "Terror",
+      "Suspense"
+    ]
   },
   {
     "id": 11216,
@@ -343,7 +468,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Un cineasta recuerda su infancia en un pequeño pueblo italiano y su amistad con el proyeccionista.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/hHwsr3t5n7VVUbPyU8VZswn0jkL.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ]
   },
   {
     "id": 111,
@@ -354,7 +483,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Drama"
+    ]
   },
   {
     "id": 105,
@@ -365,7 +499,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Marty McFly viaja accidentalmente a 1955 en un DeLorean construido por Doc Brown.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+    "genres": [
+      "Aventura",
+      "Comedia",
+      "Ciencia ficción"
+    ]
   },
   {
     "id": 680,
@@ -376,7 +515,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "genres": [
+      "Suspense",
+      "Crimen",
+      "Comedia"
+    ]
   },
   {
     "id": 274,
@@ -387,7 +531,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.3,
     "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+    "genres": [
+      "Crimen",
+      "Suspense",
+      "Drama"
+    ]
   },
   {
     "id": 278,
@@ -398,7 +547,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.7,
     "overview": "Andy Dufresne es condenado a cadena perpetua y forja una esperanza inquebrantable en prisión.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+    "genres": [
+      "Drama",
+      "Crimen"
+    ]
   },
   {
     "id": 603,
@@ -409,7 +562,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.2,
     "overview": "Un hacker descubre que la realidad es una simulación creada por máquinas dominantes.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/tpW2X2DvxtTHJ61iJ7zNYYrJihs.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+    "genres": [
+      "Acción",
+      "Ciencia ficción"
+    ]
   },
   {
     "id": 424,
@@ -420,7 +577,12 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.6,
     "overview": "Oskar Schindler salva a más de mil judíos del holocausto empleándolos en su fábrica.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "genres": [
+      "Drama",
+      "Historia",
+      "Bélica"
+    ]
   },
   {
     "id": 769,
@@ -431,7 +593,11 @@ const TMDB_CLASSICS_CATALOG = [
     "rating": 8.5,
     "overview": "Henry Hill asciende en la jerarquía de la mafia italoamericana a lo largo de tres décadas.",
     "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg"
+    "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+    "genres": [
+      "Drama",
+      "Crimen"
+    ]
   }
 ];
 
@@ -652,7 +818,11 @@ const server = http.createServer(async (req, res) => {
 
     let filtered = TMDB_CLASSICS_CATALOG;
     if (era !== 'all') {
-      filtered = TMDB_CLASSICS_CATALOG.filter(m => m.era === era);
+      filtered = filtered.filter(m => m.era === era);
+    }
+    const genre = parsedUrl.query.genre;
+    if (genre && genre !== 'all') {
+      filtered = filtered.filter(m => m.genres && m.genres.some(g => g.toLowerCase() === genre.toLowerCase()));
     }
 
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
