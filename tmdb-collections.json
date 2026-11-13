@@ -1,941 +1,1316 @@
 [
   {
-    "id": 230,
-    "name": "El padrino - Colección",
-    "overview": "La historia comienza con \"Don\" Vito Corleone, la cabeza de una \"familia\" de la mafia de Nueva York, mientras celebra la boda de su hija. De la guerra ha regresado su amado hijo Michael, quien no desea formar parte del negocio de su padre. A través de la vida de Michael la naturaleza del negocio familiar se vuelve clara. Este se asemeja al propio jefe de la familia, amable y benevolente con los que lo respetan, pero dado a la violencia cruel cuando alguien se opone a sus intereses. Don Vito vive su vida a la manera antigua, pero los tiempos están cambiando y algunos no quieren seguir las viejas reglas y velar por la comunidad y por la \"familia\". Un recién llegado rival de la familia Corleone quiere empezar a vender drogas en Nueva York y necesita las influencias del Don para afianzar sus planes. El choque entre los viejos valores del Don y los nuevos cobrará un precio terrible, especialmente para Michael, todo por el bien de la familia.",
-    "poster": "https://image.tmdb.org/t/p/w500/1eXdkw2e5flhOZfphUe8XByVacz.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/28eqCQ51SuLfkbzhQE7jCmTfYfy.jpg",
-    "count": 3,
-    "movies": [
-      {
-        "id": 238,
-        "title": "El padrino",
-        "original_title": "The Godfather",
-        "year": 1972,
-        "rating": 8.7,
-        "overview": "Don Vito Corleone, conocido dentro de los círculos del hampa como \"El Padrino\", es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York (Estados Unidos) durante la década de 1940. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando Vito reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg"
-      },
-      {
-        "id": 240,
-        "title": "El padrino II",
-        "original_title": "The Godfather Part II",
-        "year": 1974,
-        "rating": 8.6,
-        "overview": "Continuación de la saga de los Corleone con dos historias paralelas: la elección de Michael Corleone como jefe de los negocios familiares y los orígenes del patriarca, el ya fallecido Don Vito, primero en Sicilia y luego en Estados Unidos, donde, empezando desde abajo, llegó a ser un poderosísimo jefe de la mafia de Nueva York.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mbry0W5PRylSUHsYzdiY2FSJwze.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/pGzqRKrYeK4LogoysNro0vG8d8N.jpg"
-      },
-      {
-        "id": 242,
-        "title": "El padrino III",
-        "original_title": "The Godfather Part III",
-        "year": 1990,
-        "rating": 7.4,
-        "overview": "Michael Corleone, heredero del imperio de don Vito Corleone, intenta rehabilitarse socialmente y legitimar todas las posesiones de la familia negociando con el Vaticano. Después de luchar toda su vida se encuentra cansado y centra todas sus esperanzas en encontrar un sucesor que se haga cargo de los negocios. Vincent, el hijo ilegítimo de su hermano Sonny, parece ser el elegido.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/l2D8Gzuzw8hN41UthdqM9Osu9I3.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zNnjHLDtV8Ti3aworltaeaLMov4.jpg"
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "name": "La guerra de las galaxias - Colección",
-    "overview": "La colección de las 9 películas del director , escritor y productor George Lucas. Con Luke Skywalker, Princesa Leia, Darth Vader, C3PO, R2D2 y más personajes de la saga de la Guerra de las Galaxias.",
-    "poster": "https://image.tmdb.org/t/p/w500/b8FzGmDRm8E1revfJGLbJb33BkO.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/iY2ujEY2m68OTTlPFTiHub9joHS.jpg",
-    "count": 9,
-    "movies": [
-      {
-        "id": 11,
-        "title": "La guerra de las galaxias",
-        "original_title": "Star Wars",
-        "year": 1977,
-        "rating": 8.2,
-        "overview": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las malévolas Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del emperador. El intrépido Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial \"El Halcón Milenario\", y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo y rescatar a la princesa para volver a instaurar la justicia en el seno de la Galaxia.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4hOUzmButYUeON0prG3RpbqS7ag.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg"
-      },
-      {
-        "id": 1891,
-        "title": "El imperio contraataca",
-        "original_title": "The Empire Strikes Back",
-        "year": 1980,
-        "rating": 8.4,
-        "overview": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg"
-      },
-      {
-        "id": 1892,
-        "title": "El retorno del Jedi",
-        "original_title": "Return of the Jedi",
-        "year": 1983,
-        "rating": 7.9,
-        "overview": "Luke Skywalker y la princesa Leia deben viajar a Tatooine para liberar a Han Solo. Para conseguirlo, deben infiltrarse en la peligrosa guarida de Jabba the Hutt, el gángster más temido de la galaxia. Una vez reunidos, el equipo recluta a tribus de Ewoks para combatir a las fuerzas imperiales en los bosques de la luna de Endor. Mientras tanto, el Emperador y Darth Vader conspiran para convertir a Luke al lado oscuro, pero el joven Skywalker, por su parte, está decidido a reavivar el espíritu del Jedi en su padre. La guerra civil galáctica culmina en un último enfrentamiento entre las fuerzas rebeldes unificadas y una segunda Estrella de la Muerte, indefensa e incompleta, en una batalla que decidirá el destino de la galaxia.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/rKMmXzdm7eRgmlwYo7iq3klT7wJ.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg"
-      },
-      {
-        "id": 1893,
-        "title": "La guerra de las galaxias. Episodio I: La amenaza fantasma",
-        "original_title": "Star Wars: Episode I - The Phantom Menace",
-        "year": 1999,
-        "rating": 6.6,
-        "overview": "La Federación de Comercio ha bloqueado el pequeño planeta de Naboo, gobernado por la joven Reina Amidala, como parte de un plan ideado por Sith Darth Sidious, que manteniéndose en el anonimato dirige a los neimoidianos, que están al mando de la Federación. Amidala es convencida por los Jedis Qui-Gon Jinn y su aprendiz, o padawan, Obi-Wan Kenobi a viajar hasta Coruscant, capital de la República y sede del Consejo Jedi para intentar mediar esta amenaza. Pero esquivando el bloqueo, la nave real resulta dañada, obligando a la tripulación a aterrizar en el desértico y remoto planeta de Tatooine...",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4rjatbWmGGmu0DZs6WNpXaUWqWN.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg"
-      },
-      {
-        "id": 1894,
-        "title": "La guerra de las galaxias. Episodio II: El ataque de los clones",
-        "original_title": "Star Wars: Episode II - Attack of the Clones",
-        "year": 2002,
-        "rating": 6.6,
-        "overview": "Corren tenebrosos tiempos para la República. Ésta continúa envuelta en luchas y sumida en el caos. Un movimiento separatista, formado por centenares de planetas y poderosas alianzas y y lideradas por el misterioso conde Dooku, abre nuevas amenazas para la galaxia, a la que ni siquiera los Jedi parecen poder poner freno. Estas maniobras, planeadas hace mucho por una poderosa fuerza, conducen al estallido de las guerras clones y al principio del fin de la República. Para allanar el camino, los separatistas intentan asesinar a la senadora Padme Amidala. Para evitar futuros atentados, su seguridad es encomendada a dos caballeros Jedi...",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pwwBIUqVSWrCBuUAvbaNdf7VajF.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cxvr2IOTwHcQa3EqMoQ8RHCkqBG.jpg"
-      },
-      {
-        "id": 1895,
-        "title": "La guerra de las galaxias. Episodio III: La venganza de los Sith",
-        "original_title": "Star Wars: Episode III - Revenge of the Sith",
-        "year": 2005,
-        "rating": 7.5,
-        "overview": "Último capítulo de la saga de Star Wars, en el que Anakin Skywalker definitivamente se pasa al lado oscuro. En el Episodio III aparecerá el General Grievous, un ser implacable mitad-alien mitad-robot, el líder del ejército separatista Droid. Los Sith son los amos del lado oscuro de la Fuerza y los enemigos de los Jedi. Ellos fueron prácticamente exterminados por los Jedi hace mil años, pero la orden del mal sobrevivió en la clandestinidad.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5dj0ERxM8NxoiWBdlY6TT9PJmKi.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5vDuLrjJXFS9PTF7Q1xzobmYKR9.jpg"
-      },
-      {
-        "id": 140607,
-        "title": "Star Wars: El despertar de la fuerza",
-        "original_title": "Star Wars: The Force Awakens",
-        "year": 2015,
-        "rating": 7.2,
-        "overview": "Treinta años después de la victoria de la Alianza Rebelde sobre la segunda Estrella de la Muerte, la galaxia está todavía en guerra. Una nueva República se ha constituido, pero una siniestra organización, la Primera Orden, ha resurgido de las cenizas del Imperio Galáctico. A los héroes de antaño, que luchan ahora en la Resistencia, se suman nuevos héroes: Poe Dameron, un piloto de caza, Finn, un desertor de la Primera Orden, Rey, una joven chatarrera, y BB-8, un androide rodante. Todos ellos luchan contra las fuerzas del Mal: el Capitán Phasma, de la Primera Orden, y Kylo Ren, un temible y misterioso personaje que empuña un sable de luz roja.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vI86GLIkT5pP3ZfNs2EvmTrBLBm.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg"
-      },
-      {
-        "id": 181808,
-        "title": "Star Wars: Los últimos Jedi",
-        "original_title": "Star Wars: The Last Jedi",
-        "year": 2017,
-        "rating": 6.7,
-        "overview": "La malvada Primera Orden se ha vuelto más poderosa y tiene contra las cuerdas a la Resistencia, liderada por la General Leia Organa. El piloto Poe Dameron encabeza una misión para intentar destruir un acorazado de la Primera Orden. Mientras tanto, la joven Rey tendrá que definir su futuro y su vocación, y el viejo jedi Luke Skywalker revaluar el significado de su vida.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/7SNzh1fY3YJ8Y8MX93pZF5cJHaH.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg"
-      },
-      {
-        "id": 181812,
-        "title": "Star Wars: El ascenso de Skywalker",
-        "original_title": "Star Wars: The Rise of Skywalker",
-        "year": 2019,
-        "rating": 6.2,
-        "overview": "Los restos de la Resistencia se enfrentan una vez más a la Primera Orden, involucrando conflictos del pasado y del presente. Mientras tanto, el antiguo conflicto entre los Jedi y los Sith llegará a su clímax, lo que llevará a la saga de los Skywalker a un final definitivo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oeQxq6If4DcW6ADIYCF9SQwKov.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/auJKGst3vXpJozHZh4nMFs0xWIU.jpg"
-      }
-    ]
-  },
-  {
-    "id": 264,
-    "name": "Regreso al futuro - Colección",
-    "overview": "Marty McFly, un estudiante de secundaria de 17 años, es enviado accidentalmente treinta años al pasado en un DeLorean que viaja en el tiempo, inventado por su gran amigo, el excéntrico científico Doc Brown.",
-    "poster": "https://image.tmdb.org/t/p/w500/rX5M1zsxtmysqPzXBmWTJRi4DNI.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/c9C9Pg2QctyjZHRmS0P8rZg1OTA.jpg",
-    "count": 3,
-    "movies": [
-      {
-        "id": 105,
-        "title": "Regreso al futuro",
-        "original_title": "Back to the Future",
-        "year": 1985,
-        "rating": 8.3,
-        "overview": "El adolescente Marty McFly es amigo de Doc, un científico al que todos toman por loco. Cuando Doc crea una máquina para viajar en el tiempo, un error fortuito hace que Marty llegue a 1955, año en el que sus futuros padres aún no se habían conocido. Después de impedir su primer encuentro, deberá conseguir que se conozcan y se casen; de lo contrario, su existencia no sería posible.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg"
-      },
-      {
-        "id": 165,
-        "title": "Regreso al futuro II",
-        "original_title": "Back to the Future Part II",
-        "year": 1989,
-        "rating": 7.8,
-        "overview": "Aunque a Marty McFly todavía le falta tiempo para asimilar el hecho de estar viviendo dentro de la familia perfecta gracias a su anterior viaje en el tiempo, no le queda ni espacio para respirar cuando su amigo Doc aparece de improviso con la máquina del tiempo (mucho más modernizada), e insta a que le acompañen él y su novia a viajar al futuro para solucionar un problema con la ley que tendrá uno de sus futuros hijos. En la tremenda vorágine futurista, con todo lo que ello conlleva, del Hill Valley de 2015, la presencia de tales viajeros temporales causará un efecto mayor que el que iban a arreglar. Un almanaque deportivo y la posesión del secreto de la existencia de la máquina del tiempo por parte del siempre villano Biff Tannen, serán los ingredientes que conjugarán una causa-efecto en el pasado, en el presente y en el propio futuro, que hará que Marty y Doc se tengan que emplear a fondo para poner fin a la catástrofe a la que les lleva el destino.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oTiQdzBOP5biNvzvrSPAvPxiSKH.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/w6tPctxWAsHoQXeKxxNOT6lYKpx.jpg"
-      },
-      {
-        "id": 196,
-        "title": "Regreso al futuro III",
-        "original_title": "Back to the Future Part III",
-        "year": 1990,
-        "rating": 7.5,
-        "overview": "Marty McFly sigue en 1955 y su amigo Doc ha retrocedido al año 1885, la época del salvaje oeste. Éste le envía una carta donde comenta que la máquina del tiempo está averiada, y que es imposible repararla. Sin embargo no le preocupa estar atrapado en el pasado, pues allí es muy feliz trabajando de herrero aunque convive con malhechores. Pero Marty descubre una vieja tumba en la que lee que Doc murió en 1885 y, sin pensárselo dos veces, irá a rescatar a su amigo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/yamBr3ihlWFF9jh3oOODSvjDY2e.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/AtF7TESJEMmImBRUj9Z7HmW2ZH0.jpg"
-      }
-    ]
-  },
-  {
-    "id": 84,
-    "name": "Indiana Jones - Colección",
-    "overview": "La saga completa de Indiana Jones, del director George Lucas y protagonizada por Harrison Ford como el arqueólogo Henry Indiana Jones.",
-    "poster": "https://image.tmdb.org/t/p/w500/z1ZuPmh4gdwfDbCJmzbe8WJgZ0m.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/6kh59mZizZsttZPR0HAdXk6Ve2n.jpg",
-    "count": 5,
-    "movies": [
-      {
-        "id": 85,
-        "title": "En busca del arca perdida",
-        "original_title": "Raiders of the Lost Ark",
-        "year": 1981,
-        "rating": 7.9,
-        "overview": "Año 1936, Indiana Jones es un profesor de arqueología, dispuesto a correr peligrosas aventuras con tal de conseguir valiosas reliquias históricas. Después de una infructuosa misión en Sudamérica, el gobierno estadounidense le encarga la búsqueda del Arca de la Alianza, donde se conservan las Tablas de la Ley que Dios entregó a Moisés. Según la leyenda, quien las posea tendrá un poder absoluto, razón por la cual también la buscan los nazis.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tECLVwLCMexSkls33RTCwedRZ6d.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zPACwR32amTNvzId9qyapCWXYDJ.jpg"
-      },
-      {
-        "id": 87,
-        "title": "Indiana Jones y el templo maldito",
-        "original_title": "Indiana Jones and the Temple of Doom",
-        "year": 1984,
-        "rating": 7.3,
-        "overview": "1935. Shanghai. El intrépido arqueólogo Indiana Jones, tras meterse en jaleos en un local nocturno, consigue escapar junto a una bella cantante y su joven acompañante. Tras un accidentado vuelo, los tres acaban en la India, donde intentarán ayudar a los habitantes de un pequeño poblado, cuyos niños han sido raptados.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tLEaz41vKyKY7AgCTGgijLGWzbk.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/f133nWlU6yUkZqqwcCXCbTEJWHr.jpg"
-      },
-      {
-        "id": 89,
-        "title": "Indiana Jones y la última cruzada",
-        "original_title": "Indiana Jones and the Last Crusade",
-        "year": 1989,
-        "rating": 7.9,
-        "overview": "En 1938, dos años después de encontrar el Arca de la Alianza, Indiana Jones es convencido por un millonario para que lo ayude a encontrar el Santo Grial antes de que caiga en manos del ejército nazi. Sin embargo, el verdadero motivo para involucrarse es encontrar a su padre, el doctor Henry Jones, con quien ha mantenido una fría relación desde su juventud y que ha desaparecido mientras seguía la pista del tesoro bíblico.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5h45gK147AAJpLLC7Cicr597urz.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/7KGdTzKux4fp5sW7hUM33NWqBU1.jpg"
-      },
-      {
-        "id": 217,
-        "title": "Indiana Jones y el reino de la calavera de cristal",
-        "original_title": "Indiana Jones and the Kingdom of the Crystal Skull",
-        "year": 2008,
-        "rating": 6,
-        "overview": "Indiana Jones y el joven Mutt se proponen encontrar la Calavera de Cristal de Akator. Los agentes soviéticos tienen ese mismo objetivo. Liderados por la bella Irina Spalko, creen que el artilugio ayudará a su país a dominar el mundo si consiguen descifrar su secreto.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/caC98g0VyWVztBStLu46rpKlbGw.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/p96949hcwUG2BwE6MgKmw0uYNCx.jpg"
-      },
-      {
-        "id": 335977,
-        "title": "Indiana Jones y el dial del destino",
-        "original_title": "Indiana Jones and the Dial of Destiny",
-        "year": 2023,
-        "rating": 6.5,
-        "overview": "El arqueólogo Indiana Jones deberá emprender otra aventura contra el tiempo para intentar recuperar un dial legendario que puede cambiar el curso de la historia. Acompañado por su ahijada, Jones pronto se encuentra enfrentándose a Jürgen Voller, un ex nazi que trabaja para la NASA.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vb6NkmZbOtdNj4ZbmHwNsiyaHMc.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/57JocxmicOoAMhkUSmdKBlpZWMT.jpg"
-      }
-    ]
-  },
-  {
-    "id": 8091,
-    "name": "Alien - Colección",
-    "overview": "Películas de terror de ciencia ficción, que se centran en el teniente Ellen Ripley y su batalla con una forma de vida extraterrestre, comúnmente conocido como «alien». Producida por la 20th Century Fox, la serie comenzó con la película Alien de 1979, que dio lugar a tres secuelas de la película, además de numerosos libros, cómics y escisiones de videojuegos.",
-    "poster": "https://image.tmdb.org/t/p/w500/jIAKsVHZA210iSesqoy8pUAvLql.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
-    "count": 4,
-    "movies": [
-      {
-        "id": 348,
-        "title": "Alien: El octavo pasajero",
-        "original_title": "Alien",
-        "year": 1979,
-        "rating": 8.2,
-        "overview": "De regreso a la Tierra, la nave de carga Nostromo interrumpe su viaje y despierta a sus siete tripulantes. El ordenador central, MADRE, ha detectado la misteriosa transmisión de una forma de vida desconocida, procedente de un planeta cercano aparentemente deshabitado. La nave se dirige entonces al extraño planeta para investigar el origen de la comunicación.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg"
-      },
-      {
-        "id": 679,
-        "title": "Aliens: El regreso",
-        "original_title": "Aliens",
-        "year": 1986,
-        "rating": 8,
-        "overview": "Alien es un organismo perfecto, una máquina de matar cuya superioridad física sólo puede competir con su agresividad. La oficial Ripley y la tripulación de la nave «Nostromo» se habían enfrentado, en el pasado, a esa monstruosa criatura. Y sólo Ripley sobrevivió a la masacre. Después de vagar por el espacio durante varios años, Ripley fue rescatada. Durante ese tiempo, el planeta de Alien ha sido colonizado. Pero, de repente, se pierde la comunicación con la colonia y, para investigar los motivos, se envía una expedición de marines espaciales, capitaneados por Ripley. Allí les esperan miles de espeluznantes criaturas. Alien se ha reproducido y esta vez la lucha es por la supervivencia de la Humanidad.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/3QU9EP8BFLnTh6w9ycDSCvhqbRU.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg"
-      },
-      {
-        "id": 8077,
-        "title": "Alien III",
-        "original_title": "Alien³",
-        "year": 1992,
-        "rating": 6.4,
-        "overview": "Tras conseguir escapar con Newt, Hicks y Bishop de un planeta alienígena, la teniente Ellen Ripley recala accidentalmente en Fiorina 161, una remota cárcel galáctica cuyos peligrosos reclusos están absolutamente abandonados a su suerte.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oBBdeybjF1dUxE7GFxurp2TxiT3.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/lU0zVj8KcQVkPczdGGraYGiRC72.jpg"
-      },
-      {
-        "id": 8078,
-        "title": "Alien: Resurrección",
-        "original_title": "Alien Resurrection",
-        "year": 1997,
-        "rating": 6.2,
-        "overview": "Más de doscientos años después de su muerte, Ellen Ripley vuelve a la vida gracias al empleo de técnicas avanzadas de clonación. Pero, durante el proceso, el ADN de Ripley se ha mezclado con el de la Reina Alien, por lo que Ripley empieza a desarrollar ciertas características de la peligrosa alienígena.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/6MLQ5ehGD3b8E0JZ9K2G4cZeFaI.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ikr0UILfvRerzMNoBTtJtyuWAEV.jpg"
-      }
-    ]
-  },
-  {
-    "id": 528,
-    "name": "Terminator - Colección",
-    "overview": "La colección de Terminator incluye las películas de ciencia ficción lanzadas en las salas de proyección, sobre el conflicto futurista entre los humanos, liderados por John Connor y los cyborgs hechos y controlados por Skynet, un súper ordenador con consciencia de sí mismo que comenzó el Armagedón y que puede llevar al fin de la humanidad para siempre. Las películas incluidas son la serie original de Terminator (1-3) protagonizada por Arnold Schwarzenegger, la cuarta entrega, Terminator: salvación del 2009 protagonizada por Christian Bale como John Connor de adulto. Y Terminator: destino oculto 2019.",
-    "poster": "https://image.tmdb.org/t/p/w500/2DdRQER3D5QjBFAXXgVG7QgBYp2.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/sCnBEw2Yu6foEjs4Xb4eMddYHRo.jpg",
-    "count": 6,
-    "movies": [
-      {
-        "id": 218,
-        "title": "Terminator",
-        "original_title": "The Terminator",
-        "year": 1984,
-        "rating": 7.7,
-        "overview": "Un cyborg ha sido enviado desde el futuro en una misión mortal: eliminar a Sarah Connor, una joven cuya vida tendrá una gran importancia en los próximos años. Sarah tiene sólo un protector —Kyle Reese— también enviado desde el futuro. El Terminator utiliza su inteligencia excepcional y fuerza para encontrar a Sarah, pero ¿hay alguna forma de detener al cyborg aparentemente indestructible?",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9KI49SBnwAOzGcMw1onIki7vd2.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ffdqHMWkh1h9MABwIfbfRJhgFW6.jpg"
-      },
-      {
-        "id": 280,
-        "title": "Terminator 2: El juicio final",
-        "original_title": "Terminator 2: Judgment Day",
-        "year": 1991,
-        "rating": 8.2,
-        "overview": "Ha pasado once años desde que Sarah Connor fue marcada como objetivo para ser eliminada por un cyborg del futuro. Ahora su hijo John, el futuro líder de la resistencia, es el objetivo de un Terminator más moderno, más mortífero. Una vez más, la resistencia se las ha ingeniado para enviar un protector de vuelta al pasado para intentar salvar a John y a su madre Sarah.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/10xtoK2SFv6ADIeWxr3mcrjko72.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg"
-      },
-      {
-        "id": 296,
-        "title": "Terminator 3: La rebelión de las máquinas",
-        "original_title": "Terminator 3: Rise of the Machines",
-        "year": 2003,
-        "rating": 6.2,
-        "overview": "Ha pasado una década desde que John Connor salvara a la humanidad de la destrucción. En la actualidad John tiene 25 años y vive en la clandestinidad: no hay ninguna prueba documental de su existencia. Así evita ser rastreado por Skynet, la sofisticada corporación de máquinas que una vez intentó acabar con su vida. Pero, ahora, desde el futuro, ha sido enviado el T-X, la máquina destructora cyborg más desarrollada de Skynet. Su misión es completar el trabajo que no pudo terminar su predecesor, el T-1000. El T-X es una máquina tan implacable como bello su aspecto humano. Ahora la única esperanza de sobrevivir para Connnor es Terminator.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ugVNhnnH3DKUZZ3JtzRkViIh4L9.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/voVkSwgFYv9GOpRNfUAwj6qYRTL.jpg"
-      },
-      {
-        "id": 534,
-        "title": "Terminator Salvation",
-        "original_title": "Terminator Salvation",
-        "year": 2009,
-        "rating": 6.1,
-        "overview": "Nueva entrega de la saga de Terminator, que transcurre en un post-apocalíptico 2018, tras el día del Juicio Final. John Connor es el hombre destinado a liderar la resistencia de los humanos contra Skynet y su ejército de Terminators. Pero el futuro en el que a Connor le enseñaron a creer se ve alterado en parte por la aparición de Marcus Wright, un extraño cuyo último recuerdo es haber estado en el corredor de la muerte, y que afirma haber estado con Kyle Reese, el padre de John. Connor debe decidir si Marcus ha sido enviado desde el futuro o rescatado del pasado, todo en una carrera contrareloj mientras la Resistencia prepara su ataque final contra el corazón del centro de operaciones de Skynet.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/qPORLTWsJrqB27xXCkJRMjMl7fk.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/uifaXfJxjTMeNttw5u04nHx1G5w.jpg"
-      },
-      {
-        "id": 87101,
-        "title": "Terminator Génesis",
-        "original_title": "Terminator Genisys",
-        "year": 2015,
-        "rating": 6,
-        "overview": "Año 2032. La guerra del futuro se está librando y un grupo de rebeldes humanos tiene el sistema de inteligencia artificial Skynet contra las cuerdas. John Connor es el líder de la resistencia, y Kyle Reese es su fiel soldado, criado en las ruinas de una postapocalíptica California. Para salvaguardar el futuro, Connor envía a Reese a 1984 para salvar a su madre, Sarah de un Terminator programado para matarla con el fin de que no llegue a dar a luz a John. Pero lo que Reese encuentra en el otro lado no es como él esperaba.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vky6H7mCBjSsg1GMGJtJpGUeVS1.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/wvlIoof1FnKPLv9jAYanuP31V0C.jpg"
-      },
-      {
-        "id": 290859,
-        "title": "Terminator: Destino oscuro",
-        "original_title": "Terminator: Dark Fate",
-        "year": 2019,
-        "rating": 6.4,
-        "overview": "Sarah Connor une todas sus fuerzas con una mujer cyborg para proteger a una joven de un extremadamente poderoso y nuevo Terminator.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/k7PuHoj2oE7nEHExwliF2FSXFnr.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/a6cDxdwaQIFjSkXf7uskg78ZyTq.jpg"
-      }
-    ]
-  },
-  {
-    "id": 328,
-    "name": "Jurassic Park - Colección",
-    "overview": "Una serie de películas de aventura norteamericanas de ciencia ficción basadas en la novela del mismo nombre de Michael Crichton. Las películas se centran en la ficticia Isla Nublar cerca de Costa Rica en la costa del Pacífico de América Central, donde un filántropo multimillonario y un pequeño equipo de científicos en genética han creado un parque de atracciones de los dinosaurios clonados.",
-    "poster": "https://image.tmdb.org/t/p/w500/cn1D5g7dFCNCcXiO070H89JuvnE.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/njFixYzIxX8jsn6KMSEtAzi4avi.jpg",
+    "id": "col-scifi",
+    "name": "Colección: Joyas de la Ciencia Ficción",
+    "genre": "Ciencia ficción",
+    "tagline": "Obras maestras futuristas, distopías y viajes espaciales",
+    "overview": "Una selección curada con las más grandes obras de la ciencia ficción cinematográfica: desde la visión pionera de Metrópolis y 2001 Odisea del Espacio, hasta el ciberpunk de Blade Runner, Matrix y el impacto de Terminator 2 y Alien.",
+    "poster": "https://image.tmdb.org/t/p/w500/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/e731b5uSsp0g7M5L2d9lqE57H4C.jpg",
     "count": 8,
     "movies": [
       {
-        "id": 1714034,
-        "title": "Untitled Jurassic World Rebirth Sequel",
-        "original_title": "Untitled Jurassic World Rebirth Sequel",
-        "year": null,
-        "rating": 7.5,
-        "overview": "",
-        "thumbnail": "",
-        "backdrop": ""
-      },
-      {
-        "id": 329,
-        "title": "Jurassic Park (Parque Jurásico)",
-        "original_title": "Jurassic Park",
-        "year": 1993,
-        "rating": 8,
-        "overview": "El multimillonario John Hammond tiene una idea para un espectacular parque temático: una isla retirada donde los visitantes puedan observar dinosaurios reales. Con la última tecnología en el desarrollo de ADN, los científicos pueden clonar braquiosaurios, triceratops, velociraptors y un tiranosaurio rex, utilizando para ello la sangre fosilizada en ámbar contenida en insectos que los mordieron hace millones de años. Los paleontólogos Alan Grant, Ellie Sattler y Ian Malcolm visitan el parque y quedan muy sorprendidos con los resultados obtenidos. Pero cuando un problemático empleado manipula el sofisticado sistema de seguridad los dinosaurios escapan, obligando a los visitantes a luchar por su supervivencia.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/1r8TWaAExHbFRzyqT3Vcbq1XZQb.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/f082quUW2kAtZXFZVGEfhwacZoG.jpg"
-      },
-      {
-        "id": 330,
-        "title": "El mundo perdido: Jurassic Park",
-        "original_title": "The Lost World: Jurassic Park",
-        "year": 1997,
-        "rating": 6.6,
-        "overview": "Han pasado cuatro años desde la devastación del Parque Jurásico, y el Dr Malcom está a punto de descubrir que algo ha sobrevivido. En una isla de Costa Rica perteneciente a la Costa de las Cinco Muertes, los dinosaurios viven y se reproducen en libertad. Se trata de la llamada zona B: el lugar que servía como laboratorio genético. Después de que John Hammond llevara a la empresa a la bancarrota, su sobrino Peter ha tomado las riendas y está dispuesto a levantar la compañía explotando la peligrosa zona.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/80pXV9DEd81rBGqmlPBLbvr6h9a.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/A4rYaPdzgocCjQ0n9LUSYUxyvpS.jpg"
-      },
-      {
-        "id": 331,
-        "title": "Jurassic Park III (Parque Jurásico III)",
-        "original_title": "Jurassic Park III",
-        "year": 2001,
-        "rating": 6.2,
-        "overview": "El doctor Alan Grant, ansioso por conseguir fondos que financien su estudio sobre la inteligencia del velociraptor, acepta la oferta de pareja de millonarios, Paul y Amanda Kirby, para sobrevolar la Isla Sorna, en Puerto Rico, poblada por dinosaurios creados genéticamente para un parque recreativo. Tras producirse un aterrizaje forzoso en la isla, Alan descubre que los Kirby estaban buscando a su hijo adolescente, perdido en la isla tras un accidente de parapente.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5GM4Nqc79PFE3IOqNKwmOxAWkX1.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/8v8x4vVbRgrsdU3M4drnD7HQbfe.jpg"
-      },
-      {
-        "id": 135397,
-        "title": "Jurassic World",
-        "original_title": "Jurassic World",
-        "year": 2015,
-        "rating": 6.7,
-        "overview": "Veintidós años después de lo ocurrido en Jurassic Park, la isla Nublar ha sido transformada en un parque temático, Jurassic Wold, con versiones «domesticadas» de algunos de los dinosaurios más conocidos. Cuando todo parece ir a la perfección y ser el negocio del siglo, un nuevo dinosaurio de especie todavía desconocida y que es mucho más inteligente de lo que se pensaba, comienza a causar estragos entre los visitantes del Parque.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sOgfattHPWE5sWdVCGHQ08GEbaP.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/dF6FjTZzRTENfB4R17HDN20jLT2.jpg"
-      },
-      {
-        "id": 351286,
-        "title": "Jurassic World: El reino caído",
-        "original_title": "Jurassic World: Fallen Kingdom",
-        "year": 2018,
-        "rating": 6.5,
-        "overview": "Tras cuatro años de abandono del complejo turístico Jurassic World, la isla Nublar sólo está habitada por los dinosaurios supervivientes. Cuando el volcán inactivo de la isla comienza a cobrar vida, Owen y Claire montan una campaña para rescatar a los dinosaurios restantes en la isla.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/yHa2I7qxZvZUASLHrIR8vQLmZ4B.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg"
-      },
-      {
-        "id": 507086,
-        "title": "Jurassic World: Dominion",
-        "original_title": "Jurassic World Dominion",
-        "year": 2022,
-        "rating": 6.6,
-        "overview": "Cuatro años después de la destrucción de Isla Nublar, los dinosaurios conviven – y cazan – con los seres humanos en todo el mundo. Este frágil equilibrio cambiará el futuro y decidirá, de una vez por todas, si los seres humanos seguirán en la cúspide de los depredadores en un planeta que comparten con los animales más temibles de la creación.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sXeWfpT1EhG7f4uBouqraOhmouH.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/9hk5iiycq7ukRAAXQiJT9HZX3SX.jpg"
-      },
-      {
-        "id": 1234821,
-        "title": "Jurassic World: El renacer",
-        "original_title": "Jurassic World Rebirth",
-        "year": 2025,
-        "rating": 6.2,
-        "overview": "Cinco años después de los eventos de \"Dominion\", la ecología del planeta ha demostrado ser insoportable para los dinosaurios, donde los pocos que quedan viven aislados en las regiones ecuatoriales. Zora Bennett es contratada para dirigir a un equipo de especialistas cuyo objetivo es conseguir el material genético de las tres criaturas más grandes, las cuales tienen en su ADN la clave para fabricar un medicamento que aportará grandes beneficios a la humanidad. Pero la operación se cruzará con una familia cuyo barco volcó y todos acabarán en una isla prohibida ocupada por dinosaurios de numerosas especies, donde tendrán que hacer lo imposible para sobrevivir.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/2sbGd7kDhMicDkT097FR9a2JyGU.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zNriRTr0kWwyaXPzdg1EIxf0BWk.jpg"
-      }
-    ]
-  },
-  {
-    "id": 1575,
-    "name": "Rocky - Colección",
-    "overview": "Nunca te rindas. Y nunca dejes de creer.",
-    "poster": "https://image.tmdb.org/t/p/w500/lfVbfFIvlaSsm2KqW3YVdmP9tVM.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/yaXXemxz3ePNSrqNtc4ZAbuxJRv.jpg",
-    "count": 6,
-    "movies": [
-      {
-        "id": 1366,
-        "title": "Rocky",
-        "original_title": "Rocky",
-        "year": 1976,
-        "rating": 7.8,
-        "overview": "Rocky Balboa es un desconocido boxeador a quien se le ofrece la posibilidad de pelear por el título mundial de los pesos pesados. Con mucha fuerza de voluntad, Rocky se preparará concienzudamente para este combate, y también para los cambios que producirá en su vida.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/yyoGappf3WxXRrHz23yNbH2MffI.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg"
-      },
-      {
-        "id": 1367,
-        "title": "Rocky II",
-        "original_title": "Rocky II",
-        "year": 1979,
-        "rating": 7.3,
-        "overview": "Rocky Balboa, el boxeador de Philadelphia, disfruta de su efímera fama después de estar a punto de derrotar al campeón mundial de los pesos pesados Apollo Creed. Las ofertas publicitarias para el anuncio de productos no van bien debido a la limitada educación y falta de sofisticación del púgil. Por ello, y debido a la falta de dinero y al embarazo de su mujer Adrian, acepta la demanda de revancha del \"casi derrotado\" Creed.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/nMaiiu0CzT77U4JZkUYV7KqdAjK.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/78jvhi792WFjk1zSwqpfDOudO78.jpg"
-      },
-      {
-        "id": 1371,
-        "title": "Rocky III",
-        "original_title": "Rocky III",
-        "year": 1982,
-        "rating": 6.9,
-        "overview": "Tras haber defendido el título diez veces, el campeón mundial de boxeo Rocky Balboa ha decidido retirarse. Sin embargo Clubber Lang, un boxeador muy agresivo que ha ido escalando puestos a base de destrozar a sus rivales, desea arrebatarle el título. Pese a la negativa de Rocky, Clubber consigue provocarle para que acepte el desafío, y esta vez el resultado del combate se presume bastante incierto.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5Mn0xgB8w9mi2Ifo7WdS8aSgA7V.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ljOHSIyTbxdkQFjcJyWKfGm2i2r.jpg"
-      },
-      {
-        "id": 1374,
-        "title": "Rocky IV",
-        "original_title": "Rocky IV",
+        "id": 105,
+        "title": "Volver al Futuro",
+        "original_title": "Back to the Future",
         "year": 1985,
-        "rating": 7.1,
-        "overview": "Nuevas aventuras tanto personales como deportivas del boxeador Rocky Balboa, que en esta ocasión debe enfrentarse a un duro y frío boxeador soviético, llamado Ivan Drago.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/2MHUit4H6OK5adcOjnCN6suCKOl.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/uiUb4KJ6tadldqlJme49TW1r3jA.jpg"
+        "era": "80s",
+        "rating": 8.3,
+        "overview": "Marty McFly viaja accidentalmente a 1955 en un DeLorean construido por Doc Brown.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+        "genres": [
+          "Aventura",
+          "Comedia",
+          "Ciencia ficción"
+        ]
       },
       {
-        "id": 1375,
-        "title": "Rocky V",
-        "original_title": "Rocky V",
-        "year": 1990,
-        "rating": 5.8,
-        "overview": "Rocky, arruinado y retirado del boxeo, se ve obligado a volver a su barrio de siempre. Allí conoce a un joven con aptitudes para boxear y decide entrenarle.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/kbt9oSpAX8TkmpV2T72p0Cl41vR.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zG8sOSReFKlBVz7k8hOXPjwoPxH.jpg"
+        "id": 19,
+        "title": "Metrópolis",
+        "original_title": "Metropolis",
+        "year": 1927,
+        "era": "20s-30s",
+        "rating": 8.2,
+        "overview": "En una megalópolis del año 2026, la sociedad se divide en pensadores y trabajadores.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
+        "genres": [
+          "Drama",
+          "Ciencia ficción"
+        ]
       },
       {
-        "id": 1246,
-        "title": "Rocky Balboa",
-        "original_title": "Rocky Balboa",
-        "year": 2006,
-        "rating": 6.9,
-        "overview": "El mundo del boxeo está tan devaluado que el campeón Mason Dixon no encuentra un rival a su altura. Han pasado 30 años desde que a Rocky Balboa, un hombre sin futuro, se le presentó la oportunidad de boxear y enfrentarse contra el gran campeón Apollo Creed. El coraje y perseverancia de Rocky, tanto en la vida como en el ring, alimentó las esperanzas de millones de personas. Ahora, ya retirado, se pasa las tardes contando viejas historias a los clientes del Adrian's, el restaurante que lleva el nombre de su esposa, por la que todavía guarda un silencioso luto. Apenas ve a su hijo, que está demasiado centrado en su propia vida. El paso del tiempo y los golpes recibidos lo han hecho más humilde y lo han envejecido, pero en el fondo aún sigue siendo un luchador.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8oN30JAimKk2LcLOusSYpGvMPgG.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/fsJn2mPXMhauXsEpNTtFqDdjSQt.jpg"
-      }
-    ]
-  },
-  {
-    "id": 1570,
-    "name": "La jungla de cristal - Colección",
-    "overview": "Una serie de películas de acción centrado en el personaje de John McClane, un detective de policía de la ciudad de Nueva York, que se encuentra luchando contra un grupo de terroristas en cada película.",
-    "poster": "https://image.tmdb.org/t/p/w500/As8l0i21dtha874Tr0GYWsSGShW.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/nKShbIW0wJnSbl3t8uPje0QhTb7.jpg",
-    "count": 5,
-    "movies": [
-      {
-        "id": 562,
-        "title": "Jungla de cristal",
-        "original_title": "Die Hard",
-        "year": 1988,
-        "rating": 7.8,
-        "overview": "John McClane, un duro policía neoyorquino, acude a Los Angeles para pasar unos días de vacaciones con sus hijos y su esposa Holly. En el transcurso de la fiesta navideña que la empresa de Holly da en el moderno edificio Nakatoni, éste es asaltado por un supuesto grupo terrorista liderado por un megalómano llamado Hans Gruber.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/m54tK4wKjc1w2dp7QInG0munGao.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/bvk2AAH64lP2YZs02Q3jskfHT8j.jpg"
+        "id": 185,
+        "title": "La Naranja Mecánica",
+        "original_title": "A Clockwork Orange",
+        "year": 1971,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Alex DeLarge, un joven ultraviolento, es encarcelado y sometido al experimento de rehabilitación Ludovico.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Crimen"
+        ]
       },
-      {
-        "id": 1573,
-        "title": "La jungla 2: Alerta roja",
-        "original_title": "Die Hard 2",
-        "year": 1990,
-        "rating": 7,
-        "overview": "Es Navidad. El policía del departamento de Los Angeles, teniente John McLane, espera en el aeropuerto de Dulles de Washington a que aterrice el avión en el que viaja su esposa. Mientras tanto, el coronel del ejército Stuart, un militar bien entrando, expulsado del congreso, junto con otros mercenarios profesionales, montan una base de operaciones cerca de dicho aeropuerto, con el objetivo de liberar a un dictador sudamericano derrocado, considerado el mayor traficante del mundo, y que dentro de 58 minutos aterrizará en Dulles en calidad de prisionero político. Stuart anula todos los sistemas que permiten aterrizar a los demás aviones, condenados a permanecer en el aire con el riesgo de agotárseles el combustible. Exige, además, que un Boeing 747 esté a su disposición para huir con el dictador una vez liberado, pero McClane intentará que no prospere...",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/19PBdteqhLAgN6rZUDIU0Ka6qLH.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cDtefl7KGnKrDziEUXetMnztvqr.jpg"
-      },
-      {
-        "id": 1572,
-        "title": "Jungla de cristal: la venganza",
-        "original_title": "Die Hard: With a Vengeance",
-        "year": 1995,
-        "rating": 7.3,
-        "overview": "Un hombre que se llama a sí mismo 'Simon' inicia una oleada de terror por las calles de Nueva York. Hará detonar una serie de bombas por la ciudad a menos que el agente John McClane acceda a jugar a un juego llamado 'Simón dice'. Con la ayuda de Zeus, un electricista del Harlem, comienza una trepidante carrera para averiguar las adivinanzas y las intenciones del terrorista.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/uLVcPispwVVa5LMpAWwQngFcm8.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/fBvSfLetWlAMevQVHa0nBDV1Fon.jpg"
-      },
-      {
-        "id": 1571,
-        "title": "La jungla 4.0",
-        "original_title": "Live Free or Die Hard",
-        "year": 2007,
-        "rating": 6.6,
-        "overview": "En Estados Unidos, la infraestructura de ordenadores que controla todo tipo de comunicaciones, transportes y energías sufre un devastador parón por parte de un grupo terrorista. El cerebro que se esconde tras esta trama ha tenido en cuenta hasta el más mínimo detalle de este devastador plan. Con lo que no había contado era con John McClane (Bruce Willis), un policía de la vieja escuela que conoce una o dos cosas acerca de cómo frustrar amenazas terroristas, el hombre adecuado para este tipo de trabajos...",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8jC7C4dAohb2CdWrEmAPyeTMT3f.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/aRqTPOPt8BOHE0ngppM9jnuuaeS.jpg"
-      },
-      {
-        "id": 47964,
-        "title": "La jungla de cristal V. Un buen día para morir",
-        "original_title": "A Good Day to Die Hard",
-        "year": 2013,
-        "rating": 5.3,
-        "overview": "Conservando la destreza y la actitud perseverante características de las anteriores entregas, que le han convertido en el mayor rival de todos los criminales que atentan contra la libertad de la humanidad y que han permitiendo la salvación de ésta en distintas situaciones y circunstancias, John McClane deberá viajar a Rusia para rescatar a su hijo que se encuentra encerrado en una prisión bajo las órdenes de un déspota líder ruso.  Padre e hijo tendrán que unir fuerzas para luchar contra su adversario, conseguir liberarse y mantenerse con vida. Así, los protagonistas se verán envueltos en una sucesión de extrema hostilidad que no solo pondrá su vida en peligro, también la del resto de ciudadanos. Su deber será hacer todo lo posible por conservar algo tan esencial en la sociedad actual como es la democracia, una libertad de la que el perverso y autoritario líder antagonista querrá apoderarse.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/1WQ3EWu8P3mML3pV9D3PKbvfwxb.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/wFUkS5cnMf3I8ysIPWzIXpTsuR7.jpg"
-      }
-    ]
-  },
-  {
-    "id": 2344,
-    "name": "Matrix - Colección",
-    "overview": "No estamos aquí porque seamos libres, si estamos aquí es porque no lo somos.",
-    "poster": "https://image.tmdb.org/t/p/w500/roEEKejljtahGx75nYwSlYougS9.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/bRm2DEgUiYciDw3myHuYFInD7la.jpg",
-    "count": 4,
-    "movies": [
       {
         "id": 603,
         "title": "Matrix",
         "original_title": "The Matrix",
         "year": 1999,
-        "rating": 8.3,
-        "overview": "Thomas Anderson lleva una doble vida: por el día es programador en una importante empresa de software, y por la noche un hacker informático llamado Neo. Su vida no volverá a ser igual cuando unos misteriosos personajes le inviten a descubrir la respuesta a la pregunta que no le deja dormir: ¿qué es Matrix?",
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Un hacker descubre que la realidad es una simulación creada por máquinas dominantes.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tpW2X2DvxtTHJ61iJ7zNYYrJihs.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg"
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+        "genres": [
+          "Acción",
+          "Ciencia ficción"
+        ]
       },
       {
-        "id": 604,
-        "title": "Matrix Reloaded",
-        "original_title": "The Matrix Reloaded",
-        "year": 2003,
-        "rating": 7.1,
-        "overview": "Las máquinas avanzan imparables hacia Zion en su afán por destruir a toda la humanidad y todas las naves se preparan para la dura batalla. Neo junto con Morfeo y Trinity buscan el camino del elegido dentro de Matrix para vencer a las máquinas y se encuentran con dificultades inesperadas: el agente Smith ha vuelto y no sólo eso, otros programas dentro de Matrix intentarán acabar con su misión. Mientras tanto Neo se tendrá que adaptar a la vida real y a la fama de ser el elegido.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/7IZk3Xp3HIpRJGXFYNvzmyRwDlt.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ihOJcrorpDQtHTzIOrobbOhpJsj.jpg"
+        "id": 62,
+        "title": "2001: Odisea del Espacio",
+        "original_title": "2001: A Space Odyssey",
+        "year": 1968,
+        "era": "60s",
+        "rating": 8.1,
+        "overview": "Una expedición a Júpiter se ve amenazada por la inteligencia artificial HAL 9000.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pGabanxaE2YvN4jhZuSN3oXO0mi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Misterio",
+          "Aventura"
+        ]
       },
       {
-        "id": 605,
-        "title": "Matrix Revolutions",
-        "original_title": "The Matrix Revolutions",
-        "year": 2003,
-        "rating": 6.8,
-        "overview": "Quedan veinte horas para la irrupción de las máquinas en Sión, el último bastión de los humanos libres. Mientras el cuerpo de Neo permanece en coma, su consciencia se encuentra en tierra de nadie, en un lugar entre el mundo humano y el de las máquinas.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zi1UMF9jIM2JnQz0u2AyUw8QFZi.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/533xAMhhVyjTy8hwMUFEt5TuDfR.jpg"
-      },
-      {
-        "id": 624860,
-        "title": "Matrix Resurrections",
-        "original_title": "The Matrix Resurrections",
-        "year": 2021,
-        "rating": 6.3,
-        "overview": "En un mundo compuesto por dos realidades, lo cotidiano y lo oculto tras ella, Thomas Anderson se ve obligado de nuevo a ir tras el conejo blanco. Dicha elección continúa siendo la vía de acceso a Matrix, que esta vez es más poderosa e intrincada que en ocasiones anteriores.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dLIwpCTf4QoW01pp85KP9jcfTpu.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg"
-      }
-    ]
-  },
-  {
-    "id": 8945,
-    "name": "Mad Max - Colección",
-    "overview": "Mad Max es una franquicia australiana de películas de acción distópica. Las referencias de Mad Max están profundamente arraigadas en la cultura popular; referencias a sus temas distópicos, apocalípticos y postapocalípticos y paisajes extraños e imágenes desoladas del páramo.",
-    "poster": "https://image.tmdb.org/t/p/w500/pk5CE0GbxKom47ePGIa8yE2ALvv.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/zI0q2ENcQOLECbe0gAEGlncVh2j.jpg",
-    "count": 6,
-    "movies": [
-      {
-        "id": 340023,
-        "title": "Mad Max: The Wasteland",
-        "original_title": "Mad Max: The Wasteland",
-        "year": null,
-        "rating": 7.5,
-        "overview": "",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zviMeR3CqbX3x3loO8xoSHCkiSs.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/zviMeR3CqbX3x3loO8xoSHCkiSs.jpg"
-      },
-      {
-        "id": 9659,
-        "title": "Mad Max. Salvajes de la autopista",
-        "original_title": "Mad Max",
+        "id": 348,
+        "title": "Alien: El Octavo Pasajero",
+        "original_title": "Alien",
         "year": 1979,
-        "rating": 6.7,
-        "overview": "En las autopistas desiertas de una Australia desconocida, tiene lugar una guerra sin merced entre motoristas forajidos y policías Interceptor, que intentan triunfar sobre la gentuza al volante de coches con motores trucados. En un mundo en plena decadencia, la moral se difuminará en el escenario post apocalíptico donde lo único que tiene valor es el bien más preciado: la gasolina. La depravación, crueldad y salvajismo reinan en las bandas que no dudarán en perseguir y acabar con cualquiera que se ponga entre ellos y su ansia destruir y ser los amos de la carretera. Max se cruzará en su camino y lo que empieza como un acto de justicia no tardará en tornarse una lucha personal para acabar con ellos.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vWa1DEwV5RbAOiuAm0WNXD3Aydw.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/mWQg2INejtX1PCWRAN4vseadA6H.jpg"
+        "era": "70s",
+        "rating": 8.1,
+        "overview": "La tripulación del Nostromo despierta para investigar una misteriosa señal en un planeta desolado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+        "genres": [
+          "Terror",
+          "Ciencia ficción"
+        ]
       },
       {
-        "id": 8810,
-        "title": "Mad Max II. El guerrero de la carretera",
-        "original_title": "Mad Max 2",
-        "year": 1981,
-        "rating": 7.4,
-        "overview": "Tras el holocausto nuclear, la gasolina se ha convertido en un bien escaso y muy codiciado. Mad Max, héroe solitario, inicia una lucha sin cuartel para ayudar a una colonia de supervivientes constantemente atacada por un grupo de violentos guerreros que intenta arrebatarle un tanque de gasolina. Max decide ayudar a los defensores del tanque utilizando un enorme camión como trampa. La banda de guerreros persigue al camión, pensando que transporta miles de litros de gasolina.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/udpVgRB3xz5ZN553apthn4TyT6G.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/MMSI9WzRmOdqXarevQ3Kqnytrx.jpg"
+        "id": 78,
+        "title": "Blade Runner",
+        "original_title": "Blade Runner",
+        "year": 1982,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Drama",
+          "Suspense"
+        ]
       },
-      {
-        "id": 9355,
-        "title": "Mad Max III. Más allá de la cúpula del trueno",
-        "original_title": "Mad Max Beyond Thunderdome",
-        "year": 1985,
-        "rating": 6.2,
-        "overview": "Tras la catástrofe nuclear, Mad Max cruza un desierto donde pierde su caravana de camellos. Llega a una ciudad donde le proponen cambiárselos a cambio de que ataque al tirano de la ciudad subterránea, un enano que fabrica gas metano con excrementos de cerdo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/u9gVwCajHkJpVAaVRau2xSOeHcl.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cO8zcdPhLT3UdykkXCvfhIVrgHK.jpg"
-      },
-      {
-        "id": 76341,
-        "title": "Mad Max: Furia en la carretera",
-        "original_title": "Mad Max: Fury Road",
-        "year": 2015,
-        "rating": 7.6,
-        "overview": "Perseguido por su turbulento pasado, Mad Max cree que la mejor forma de sobrevivir es ir solo por el mundo. Sin embargo, se ve arrastrado a formar parte de un grupo que huye a través del desierto en un War Rig conducido por una Emperatriz de élite: Furiosa. Escapan de una Ciudadela tiranizada por Immortan Joe, a quien han arrebatado algo irreemplazable. Enfurecido, el Señor de la Guerra moviliza a todas sus bandas y persigue implacablemente a los rebeldes en una 'guerra de la carretera' de altas revoluciones.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fnY0VRsb31A5RLVCBjuR6EFUlo2.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg"
-      },
-      {
-        "id": 786892,
-        "title": "Furiosa: De la saga Mad Max",
-        "original_title": "Furiosa: A Mad Max Saga",
-        "year": 2024,
-        "rating": 7.4,
-        "overview": "En un mundo postapocalíptico donde todo ha perdido su valor, los pocos supervivientes se guían por la ley del más fuerte. Sin aprecio por la vida, lo único que despierta un brutal interés es la gasolina, sinónimo de poder y objetivo de bandas armadas hasta los dientes y sin escrúpulos. En este contexto conoceremos la  historia de la arrebatadoramente despiadada, salvaje y joven Furiosa, quien cae en manos de una horda de motoristas y debe sobrevivir a muchas pruebas mientras reúne los medios para encontrar el camino de vuelta a casa. Precuela de 'Mad Max: Furia en la carretera' (2015).",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tGHUlykWn9V2IIQ4ZaATIAq9VLB.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/raph7qjAGTMXaIjVxt6ZDSXRzUr.jpg"
-      }
-    ]
-  },
-  {
-    "id": 120794,
-    "name": "Batman - Colección",
-    "overview": "La serie de películas de la tetralogía de Tim Burton y Joel Schumacher del personaje de DC Comics Batman.",
-    "poster": "https://image.tmdb.org/t/p/w500/mdg6YKzq4KeBiekFw4KF92LjnAb.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/4UHZWw5lV3ZoadTjXuVOakdH32L.jpg",
-    "count": 4,
-    "movies": [
-      {
-        "id": 268,
-        "title": "Batman",
-        "original_title": "Batman",
-        "year": 1989,
-        "rating": 7.2,
-        "overview": "Atormentado por haber visto morir a sus padres delante suyo, Bruce Wayne se enfunda cada noche en el traje de Batman, adopta la terrorífica forma de un murciélago y surca los tejados de Gotham City combatiendo el crimen y manteniendo a raya la corrupción de su ciudad. Pero esta vez Batman tendrá que enfrentarse a su más terrible enemigo, El Joker, que pretende someter a toda la ciudad bajo los deseos de su mente perturbada.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fpY5cNPIbKYpdBtukCMtBMMt1s3.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/rhc7OF7tC9HPu0X8DBKQJzaGRbu.jpg"
-      },
-      {
-        "id": 364,
-        "title": "Batman vuelve",
-        "original_title": "Batman Returns",
-        "year": 1992,
-        "rating": 7,
-        "overview": "Gotham City se enfrenta a dos nuevos y peculiares criminales: el diabólico y siniestro Pingüino, una criatura solitaria y extrañamente deformada, y la hermosa y seductora -aunque letalmente peligrosa- Catwoman. Batman se deberá enfrentar a Pingüino, que quiere convertirse en el amo de la ciudad.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/i5xLIx2vkisiLPQqaeI3uiSaG1b.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/7x4SNxO5HWArighxxFeet5sn3il.jpg"
-      },
-      {
-        "id": 414,
-        "title": "Batman Forever",
-        "original_title": "Batman Forever",
-        "year": 1995,
-        "rating": 5.5,
-        "overview": "La ciudad de Gotham está amenazada de nuevo. Esta vez, se trata de una maligna pareja compuesta por Dos Caras y Enigma, que procurarán alterar la paz de sus conciudadanos y del mundo entero para siempre. Por este motivo, Bruce Wayne deberá enfundarse otra vez el traje de Batman y luchar contra ellos; pero esta vez no estará solo, ya que será acompañado por el joven Robin.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/wg6BN76E9iIEtiawMJnCecY0zgY.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/snlu32RmjldF9b068UURJg8sQtn.jpg"
-      },
-      {
-        "id": 415,
-        "title": "Batman y Robin",
-        "original_title": "Batman & Robin",
-        "year": 1997,
-        "rating": 4.4,
-        "overview": "Unos experimentos de criogenia han convertido al Dr. Victor Fries en el malvado Mr. Freeze, un villano que necesita mantener su cuerpo a temperaturas gélidas y que, por ello, intentará congelar a todos los habitantes de la ciudad de Gotham. Por otro lado, la tímida botánica Pamela Isley se transformará en el transcurso de un experimento en la terrible Hiedra Venenosa, que querrá asesinar a todos los seres humanos de la tierra, para que las plantas recuperen su hegemonía sobre el planeta. Por este motivo, Batman y Robin deberán enfrentarse a ellos y detener sus siniestros planes.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/gJAvyXHdIjeKHS07Dlim7LETBEK.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/kEuQWHte2erRpAICrYqkAZaZAAY.jpg"
-      }
-    ]
-  },
-  {
-    "id": 9743,
-    "name": "Hannibal Lecter - Colección",
-    "overview": "Hannibal Lecter es una serie de películas de suspenso psicológico estadounidense, adaptada de la novela de Thomas Harris del mismo nombre. Hannibal es una secuela de la película ganadora del Premio de la Academia de 1991 El silencio de los corderos que devuelve a Anthony Hopkins a su papel icónico como el asesino en serie Hannibal Lecter. Julianne Moore coprotagoniza, reemplazando a Jodie Foster en el papel de la agente del FBI Clarice Starling. La precuela de Red Dragon está protagonizada por Edward Norton como el agente del FBI Will Graham. Manhunter original y Hannibal Rising sin Hopkins.",
-    "poster": "https://image.tmdb.org/t/p/w500/dhXQvL1rkShIP5dpoevZliIONsA.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/yiwhEr1BV3K9fCsZuFxUHtZezHZ.jpg",
-    "count": 3,
-    "movies": [
-      {
-        "id": 274,
-        "title": "El silencio de los corderos",
-        "original_title": "The Silence of the Lambs",
-        "year": 1991,
-        "rating": 8.3,
-        "overview": "Clarice Starling, del FBI, se aventura a una prisión de máxima seguridad para analizar el cerebro enfermo de Hannibal Lecter, un psiquiatra convertido en caníbal.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg"
-      },
-      {
-        "id": 9740,
-        "title": "Hannibal",
-        "original_title": "Hannibal",
-        "year": 2001,
-        "rating": 6.8,
-        "overview": "Han pasado diez años desde que el doctor Hannibal, después de su entrevista con la agente del FBI Clarice Starling, escapara del hospital de máxima seguridad en el que estaba recluido. Lecter vive ahora en Italia, pero Starling no ha podido olvidar sus encuentros con él: su fría voz sigue resonando en sus sueños. Mason Verger también recuerda a Lecter: fue su sexta víctima y, pese a quedar horriblemente desfigurado, logró sobrevivir. Tras heredar una fortuna, Verger decide emplearla para satisfacer sus deseos de venganza. Pero pronto se da cuenta de que, para sacar a Lecter de su escondrijo, debe ponerle delante un cebo irresistible: Clarice Starling.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/v5wAZwRqpGWmyAaaJ8BBHYuNXnj.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/3Nb9AQaq3elLNCUBxG8VprmqfhZ.jpg"
-      },
-      {
-        "id": 9533,
-        "title": "El dragón rojo",
-        "original_title": "Red Dragon",
-        "year": 2002,
-        "rating": 7.1,
-        "overview": "Un investigador del FBI especializado en analizar la mente y el comportamiento de los asesinos en serie se ve obligado a recurrir a Hannibal Lecter, a quien mandó a la cárcel, para que le ayude en el caso de un asesino de familias, cuyo patrón de conducta le resulta imposible desentrañar.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/y6wmFX2hY3GS1rWpCwh5MnsMzLa.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/7c65xpnYlea6VITznLLRS9cTuwS.jpg"
-      }
-    ]
-  },
-  {
-    "id": 1709,
-    "name": "El planeta de los simios (Original) - Colección",
-    "overview": "Estas cuentan la caída de la raza humana y al ascensión de una raza de simios inteligentes a través de los puntos de vista de los astronautas George Taylor (Charlton Heston) y John Brent (James Franciscus), la simio Zira (Kim Hunter) y el simio Cornelius (Roddy McDowall) y su hijo César (también interpretado por McDowall).",
-    "poster": "https://image.tmdb.org/t/p/w500/umKb8njr1lZljV2UvPmiCqk7vtn.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/wBiFfCAuYzuSOl0sFnkQMB5BEZx.jpg",
-    "count": 5,
-    "movies": [
       {
         "id": 871,
-        "title": "El planeta de los simios",
+        "title": "El Planeta de los Simios",
         "original_title": "Planet of the Apes",
         "year": 1968,
+        "era": "60s",
         "rating": 7.7,
-        "overview": "George Taylor forma parte de una tripulación de astronautas a bordo de una nave espacial -en una misión de larga duración- que se estrella en un planeta desconocido y aparentemente carente de vida inteligente. Sin embargo, pronto se da cuenta de que el lugar está gobernado por una raza de simios inteligentes que esclavizan a los seres humanos, que carecen de la facultad del habla. Cuando su líder, el doctor Zaius, descubre con horror la facultad de hablar de Taylor, decide que lo mejor es exterminarlo.",
+        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg"
-      },
-      {
-        "id": 1685,
-        "title": "Regreso al planeta de los simios",
-        "original_title": "Beneath the Planet of the Apes",
-        "year": 1970,
-        "rating": 6.1,
-        "overview": "Una nueva nave procedente del espacio y del tiempo aterriza al mando del astronauta Brent, que acude en busca del desaparecido George Taylor. Vuelve a encontrarse con los simios que dominan el mundo, relegando a los humanos a la esclavitud. Sin embargo, con la ayuda de la doctora Zira seguirá las huellas de Taylor hasta la Zona Prohibida, en cuyas catacumbas, lo que son las ruinas del metro de Nueva York, encuentra a una raza humana mutante con poderes telepáticos.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/wNh22vYIfd2Xr6zBoh8ZQGivt1L.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/gxz2lWaekGbVu8ODCi2qeZyBX1g.jpg"
-      },
-      {
-        "id": 1687,
-        "title": "Huida del planeta de los simios",
-        "original_title": "Escape from the Planet of the Apes",
-        "year": 1971,
-        "rating": 6.4,
-        "overview": "Tres simios, la doctora Zira, Cornelius y el doctor Milo, han conseguido sobrevivir al desastre nuclear en su planeta y, tras arreglar la nave de los humanos, viajan en el tiempo hasta llegar a la Tierra de finales del siglo XX. Al llegar, mientras son estudiados en un centro de investigación para determinar su nivel de inteligencia, se niegan a revelar lo que saben sobre la civilización humana.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mCbFub0UiNQi3SBSOjwGNLhEroc.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/7GVWNxz7fN0yK61NGSPjBWZPt1J.jpg"
-      },
-      {
-        "id": 1688,
-        "title": "La rebelión de los simios",
-        "original_title": "Conquest of the Planet of the Apes",
-        "year": 1972,
-        "rating": 6.2,
-        "overview": "Estados Unidos, 1991. Tras una epidemia que mató a todos los gatos y perros de la Tierra, los hombres decidieron adoptar como mascotas a los monos, que acabaron convertidos en sirvientes. Se creó entonces un centro para civilizar a los ejemplares salvajes, por medio de la violencia. Armando ha criado en secreto a César, el hijo de dos simios parlantes: Zira y Cornelius. Cuando César comprueba lo que los hombres están haciendo con los de su especie, manifiesta públicamente su desacuerdo y, desde ese momento, se ve obligado a ocultarse. Al descubrir que puede comunicarse con los suyos telepáticamente, empieza a tramar una insurrección: incita a la desobediencia general, arma a los suyos y empieza a entender que la inteligencia es poder.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/J80xXgT6Mw8EiiQeHcEdJ4LfxC.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/3yazPBvuE1u07ljHFTPRaK2AHOt.jpg"
-      },
-      {
-        "id": 1705,
-        "title": "La conquista del planeta de los simios",
-        "original_title": "Battle for the Planet of the Apes",
-        "year": 1973,
-        "rating": 5.7,
-        "overview": "César, el simio que capitaneó la revuelta contra la raza humana, es un benévolo gobernante que fomenta la convivencia con los hombres, a pesar de la oposición del general Aldo, jefe militar de los simios. No obstante, los hombres que han sobrevivido al holocausto nuclear son considerados ciudadanos de segunda clase. César decide realizar un viaje a la \"Ciudad Prohibida\" con MacDonald y el sabio Virgil, en busca de unas cintas en las que estaría grabada la muerte de sus padres. Durante el viaje, es observado por un grupo de hombres mutantes que viven en la devastada zona de guerra. Éste es el motivo por el que el General Aldo desafiará la autoridad de César y, además, provocará un enfrentamiento entre simios y hombres, para dirimir quién gobernará el planeta.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9kQ0wmBzoL4EZEF2jTft58AhBuv.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/3ap6vhJN7q87mziDP6EltPGQ0hW.jpg"
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Aventura",
+          "Drama",
+          "Acción"
+        ]
       }
     ]
   },
   {
-    "id": 119,
-    "name": "El señor de los anillos - Colección",
-    "overview": "Trilogía del director Peter Jackson basada en las famosas novelas de JRR Tolkien",
-    "poster": "https://image.tmdb.org/t/p/w500/yAonjcMRitkztnvRjrLqwpKgbXS.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg",
-    "count": 3,
+    "id": "col-crime",
+    "name": "Colección: Obras Cumbre de Crimen & Mafia",
+    "genre": "Crimen",
+    "tagline": "Las mejores historias del bajo mundo, cine negro y la mafia",
+    "overview": "La cumbre del cine criminal y gansteril: la inolvidable saga de El Padrino, la maestría estilística de Pulp Fiction, el vértigo nocturno de Taxi Driver y la cacería legendaria en M el vampiro de Düsseldorf.",
+    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+    "count": 10,
     "movies": [
       {
-        "id": 120,
-        "title": "El señor de los anillos: La comunidad del anillo",
-        "original_title": "The Lord of the Rings: The Fellowship of the Ring",
-        "year": 2001,
-        "rating": 8.5,
-        "overview": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9xtH1RmAzQ0rrMBNUMXstb2s3er.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/oiwc338EoBgS4sEI2ixAny4KQKg.jpg"
+        "id": 238,
+        "title": "El Padrino",
+        "original_title": "The Godfather",
+        "year": 1972,
+        "era": "70s",
+        "rating": 8.7,
+        "overview": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su hijo menor.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
       },
       {
-        "id": 121,
-        "title": "El señor de los anillos: Las dos torres",
-        "original_title": "The Lord of the Rings: The Two Towers",
-        "year": 2002,
-        "rating": 8.4,
-        "overview": "La Compañía del Anillo se ha disuelto. El portador del anillo Frodo y su fiel amigo Sam se dirigen hacia Mordor para destruir el Anillo Único y acabar con el poder de Sauron. Mientras, y tras la dura batalla contra los orcos donde cayó Boromir, el hombre Aragorn, el elfo Legolas y el enano Gimli intentan rescatar a los medianos Merry y Pipin, secuestrados por los ogros de Mordor. Por su parte, Saurón y el traidor Sarumán continúan con sus planes en Mordor, en espera de la guerra contra las razas libres de la Tierra Media.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/up6gIHZlfEQZkHIfQwcOOaGOzOt.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/6G73mNyooWAEQTpckPSnFxFoNmc.jpg"
+        "id": 278,
+        "title": "Cadena Perpetua (Sueños de Fuga)",
+        "original_title": "The Shawshank Redemption",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.7,
+        "overview": "Andy Dufresne es condenado a cadena perpetua y forja una esperanza inquebrantable en prisión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
       },
       {
-        "id": 122,
-        "title": "El señor de los anillos: El retorno del rey",
-        "original_title": "The Lord of the Rings: The Return of the King",
-        "year": 2003,
+        "id": 680,
+        "title": "Pulp Fiction (Tiempos Violentos)",
+        "original_title": "Pulp Fiction",
+        "year": 1994,
+        "era": "90s",
         "rating": 8.5,
-        "overview": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ctiw6FZK4N36LmkjSklWEbuvlq9.jpg"
+        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Comedia"
+        ]
+      },
+      {
+        "id": 769,
+        "title": "Buenos Muchachos (Goodfellas)",
+        "original_title": "GoodFellas",
+        "year": 1990,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Henry Hill asciende en la jerarquía de la mafia italoamericana a lo largo de tres décadas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 274,
+        "title": "El Silencio de los Inocentes",
+        "original_title": "The Silence of the Lambs",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+        "genres": [
+          "Crimen",
+          "Suspense",
+          "Drama"
+        ]
+      },
+      {
+        "id": 103,
+        "title": "Taxi Driver",
+        "original_title": "Taxi Driver",
+        "year": 1976,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Travis Bickle, un veterano con insomnio, trabaja de taxista nocturno en una Nueva York decadente.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9G26DnAeMbA4sp58Gi0Vze6eQv4.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
+        "genres": [
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 185,
+        "title": "La Naranja Mecánica",
+        "original_title": "A Clockwork Orange",
+        "year": 1971,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Alex DeLarge, un joven ultraviolento, es encarcelado y sometido al experimento de rehabilitación Ludovico.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 111,
+        "title": "Scarface (Cara Cortada)",
+        "original_title": "Scarface",
+        "year": 1983,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+        "genres": [
+          "Acción",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 832,
+        "title": "M, el vampiro de Düsseldorf",
+        "original_title": "M",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.1,
+        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
+        "genres": [
+          "Drama",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 1580,
+        "title": "La Soga",
+        "original_title": "Rope",
+        "year": 1948,
+        "era": "40s",
+        "rating": 7.9,
+        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Drama"
+        ]
       }
     ]
   },
   {
-    "id": 2980,
-    "name": "Los Cazafantasmas - Colección",
-    "overview": "En 1984 Ivan Reitman se inventó, en colaboración con dos de sus principales intérpretes Dan Aykroyd y Harold Ramis, que hicieron el guion, una nueva comedia en la que mezclaba algo de fantasía y comicidad con algunos toques de ficción, con 'Los Cazafantasmas', protagonizada por los dos actores citados junto a Sigourney Weaver y otro cómico más Rick Moranis. Ni que decir tiene que el éxito hizo que se convirtiera en la comedia más taquillera de la década y que surgiera una secuela cinco años más tarde, 'Cazafantasmas 2' (1989) y hasta una versión femenina 'Cazafantasmas' (2016), que ya no ha tenido el mismo éxito que las dos primeras. En 2021 se estreno el reboot 'Cazafantasmas: Más Allá' con los actores originales.",
-    "poster": "https://image.tmdb.org/t/p/w500/xMIU7Z0EwU3nSJM4imcFKSUJGXt.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/guigdRPHN65fsgZHmvVvBOyiArf.jpg",
+    "id": "col-horror",
+    "name": "Colección: Maestros del Terror Clásico",
+    "genre": "Terror",
+    "tagline": "El horror psicológico, atmosférico y monstruos eternos",
+    "overview": "Las películas fundamentales que dieron forma al terror cinematográfico: el vampirismo expresionista de Nosferatu, la locura asfixiante de El Resplandor, el suspense aterrador de Psicosis y el horror cósmico en Alien.",
+    "poster": "https://image.tmdb.org/t/p/w500/yz45KMr4GQGUGum0umSd7Z98LDH.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/x4Awh8U95C6X8n2oW3Bv96k8uM4.jpg",
     "count": 4,
     "movies": [
       {
-        "id": 620,
-        "title": "Los Cazafantasmas",
-        "original_title": "Ghostbusters",
-        "year": 1984,
-        "rating": 7.5,
-        "overview": "Los Drs. Venkman, Stantz y Epengler, son tres doctores en parapsicología que se quedan sin empleo tras quedar excluidos de una beca universitaria de investigación. Entonces deciden formar la empresa Cazafantasmas, dedicada a limpiar Nueva York de ectoplasmas. El aumento repentino de apariciones espectrales en la Gran Manzana será el presagio de la llegada de un peligroso y poderoso demonio.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/7eZUL4fvjVkmNPbD8IxQT4X9emt.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/c6yfABGVKuB5cjoOwdX4AJMlzUz.jpg"
+        "id": 539,
+        "title": "Psicosis",
+        "original_title": "Psycho",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.4,
+        "overview": "Marion Crane huye con dinero robado y se hospeda en el aislado motel de Norman Bates.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+        "genres": [
+          "Terror",
+          "Suspense",
+          "Misterio"
+        ]
       },
       {
-        "id": 2978,
-        "title": "Cazafantasmas II",
-        "original_title": "Ghostbusters II",
-        "year": 1989,
-        "rating": 6.6,
-        "overview": "Han pasado cinco años desde que los Cazafantasmas entraron por última vez en acción. El doctor Peter Venkman, notable parapsicólogo de persuasivos encantos, ha quedado relegado a maestro de ceremonias de un programa de televisión donde se discuten fenómenos psíquicos. Ray Stantz y su colega Winston Zeddemore se ganan la vida entreteniendo a niños en fiestas infantiles, y el mago tecnológico Egon Spengler continúa sus investigaciones sobre los efectos de las emociones humanas en el campo de energía psicomagnética. La relación de Dana Barrett con Venkman se disolvió; ella se casó con otro hombre y tuvo un hijo, pero el matrimonio fracasó. Ahora Dana vive sola en Nueva York, criando a Oscar, su bebé de ocho meses, y trabajando como restauradora de cuadros en el Museo de arte de Manhattan, junto a un excéntrico experto en pinturas del periodo romántico, Janosz Poha. Todo parece normal hasta que el cochecito de Oscar rueda por sí solo y se mete entre el peligroso tráfico de la ciudad.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tqFgvP61lOFegzsCiJOaeRfkogJ.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tgHO1DdnaS0xHcRxBHxE4kOQeIm.jpg"
+        "id": 694,
+        "title": "El Resplandor",
+        "original_title": "The Shining",
+        "year": 1980,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Una familia cuida un hotel aislado durante el invierno mientras fuerzas siniestras acechan.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+        "genres": [
+          "Terror",
+          "Suspense"
+        ]
       },
       {
-        "id": 425909,
-        "title": "Cazafantasmas: Más allá",
-        "original_title": "Ghostbusters: Afterlife",
-        "year": 2021,
-        "rating": 7.3,
-        "overview": "Al quedarse sin opciones y dinero, Callie, madre soltera, pone un pie en la pequeña ciudad de Summerville, Oklahoma, con sus dos hijos adolescentes, Phoebe y Trevor. Y ahora ya no hay vuelta atrás. Mientras la familia intenta establecerse en la destartalada casa del excéntrico difunto padre de Callie, secretos inesperados escondidos a plena vista, equipos misteriosos y un extraño vehículo pudriéndose en el granero parecen estar relacionados con la desconcertante actividad sísmica de la zona, y algo aún más impactante: el olvidado incidente del Hombre Malvavisco Stay-Puft en la ciudad de Nueva York de los años 80. Pero no ha habido ni un solo avistamiento de fantasmas desde los extraños acontecimientos de Los Cazafantasmas II (1989). ¿Se está repitiendo la historia? ¿Phoebe conectará los puntos, le dará voz a su abuelo y descubrirá la conexión de la familia con los Cazafantasmas originales (1984)?",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/1jy2R4irQMZEaHvGkKoyuaKJPJO.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/EnDlndEvw6Ptpp8HIwmRcSSNKQ.jpg"
+        "id": 348,
+        "title": "Alien: El Octavo Pasajero",
+        "original_title": "Alien",
+        "year": 1979,
+        "era": "70s",
+        "rating": 8.1,
+        "overview": "La tripulación del Nostromo despierta para investigar una misteriosa señal en un planeta desolado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+        "genres": [
+          "Terror",
+          "Ciencia ficción"
+        ]
       },
       {
-        "id": 967847,
-        "title": "Cazafantasmas: Imperio helado",
-        "original_title": "Ghostbusters: Frozen Empire",
-        "year": 2024,
-        "rating": 6.4,
-        "overview": "Después de los eventos de Oklahoma, el equipo de Cazafantasmas regresa a donde comenzó todo: ¡Nueva York! La historia de la familia Spengler continúa con un nuevo grupo de Cazafantasmas.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fIUqk6Pjo3uf5RiOGT19KQ53ekq.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5cCfqeUH2f5Gnu7Lh9xepY9TB6x.jpg"
+        "id": 653,
+        "title": "Nosferatu",
+        "original_title": "Nosferatu, eine Symphonie des Grauens",
+        "year": 1922,
+        "era": "20s-30s",
+        "rating": 7.7,
+        "overview": "El conde Orlok, un vampiro de los Cárpatos, compra una finca en Wisborg.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/z45rXmIF0zl4uxRc5XcSfz6hYO6.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/cA9iGtvjRGJHzDBfrq48l0eyCvA.jpg",
+        "genres": [
+          "Terror",
+          "Fantasía"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-suspense",
+    "name": "Colección: Grandes del Suspense & Intriga",
+    "genre": "Suspense",
+    "tagline": "Tensión psicológica, enigmas criminales y maestría visual",
+    "overview": "El arte de mantener al espectador al borde del asiento: las obras maestras de Alfred Hitchcock como Psicosis y La ventana indiscreta, junto a joyas como Vértigo, Taxi Driver y Pulp Fiction.",
+    "poster": "https://image.tmdb.org/t/p/w500/5vHssvG4kZ1hQ7c9t29v6g0kF8C.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1916guXd2AM9GipNJID3.jpg",
+    "count": 9,
+    "movies": [
+      {
+        "id": 680,
+        "title": "Pulp Fiction (Tiempos Violentos)",
+        "original_title": "Pulp Fiction",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Comedia"
+        ]
+      },
+      {
+        "id": 539,
+        "title": "Psicosis",
+        "original_title": "Psycho",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.4,
+        "overview": "Marion Crane huye con dinero robado y se hospeda en el aislado motel de Norman Bates.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+        "genres": [
+          "Terror",
+          "Suspense",
+          "Misterio"
+        ]
+      },
+      {
+        "id": 567,
+        "title": "La Ventana Indiscreta",
+        "original_title": "Rear Window",
+        "year": 1954,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Un fotógrafo con una pierna rota espía a sus vecinos y cree presenciar un asesinato.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+        "genres": [
+          "Suspense",
+          "Misterio",
+          "Drama"
+        ]
+      },
+      {
+        "id": 274,
+        "title": "El Silencio de los Inocentes",
+        "original_title": "The Silence of the Lambs",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+        "genres": [
+          "Crimen",
+          "Suspense",
+          "Drama"
+        ]
+      },
+      {
+        "id": 426,
+        "title": "Vértigo",
+        "original_title": "Vertigo",
+        "year": 1958,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Un detective retirado con acrofobia es contratado para vigilar a una misteriosa mujer.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/t4kvoLhrVHW5w5Ku7AQBniVExjN.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+        "genres": [
+          "Misterio",
+          "Romance",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 694,
+        "title": "El Resplandor",
+        "original_title": "The Shining",
+        "year": 1980,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Una familia cuida un hotel aislado durante el invierno mientras fuerzas siniestras acechan.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+        "genres": [
+          "Terror",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 832,
+        "title": "M, el vampiro de Düsseldorf",
+        "original_title": "M",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.1,
+        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
+        "genres": [
+          "Drama",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 1580,
+        "title": "La Soga",
+        "original_title": "Rope",
+        "year": 1948,
+        "era": "40s",
+        "rating": 7.9,
+        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 78,
+        "title": "Blade Runner",
+        "original_title": "Blade Runner",
+        "year": 1982,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Drama",
+          "Suspense"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-drama",
+    "name": "Colección: Obras Maestras del Drama",
+    "genre": "Drama",
+    "tagline": "Historias humanas conmovedoras aclamadas por la crítica",
+    "overview": "El cine en su máxima expresión emocional: El Padrino, la tragedia humana de La Lista de Schindler, la nostalgia de Cinema Paradiso, la épica moral de Casablanca y el lirismo de Ciudadano Kane.",
+    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/kGzFbGhp99zvaRiVDZCc3ucEbtm.jpg",
+    "count": 23,
+    "movies": [
+      {
+        "id": 238,
+        "title": "El Padrino",
+        "original_title": "The Godfather",
+        "year": 1972,
+        "era": "70s",
+        "rating": 8.7,
+        "overview": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su hijo menor.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 278,
+        "title": "Cadena Perpetua (Sueños de Fuga)",
+        "original_title": "The Shawshank Redemption",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.7,
+        "overview": "Andy Dufresne es condenado a cadena perpetua y forja una esperanza inquebrantable en prisión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 424,
+        "title": "La Lista de Schindler",
+        "original_title": "Schindler's List",
+        "year": 1993,
+        "era": "90s",
+        "rating": 8.6,
+        "overview": "Oskar Schindler salva a más de mil judíos del holocausto empleándolos en su fábrica.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+        "genres": [
+          "Drama",
+          "Historia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 389,
+        "title": "12 Hombres en Pugna",
+        "original_title": "12 Angry Men",
+        "year": 1957,
+        "era": "50s",
+        "rating": 8.5,
+        "overview": "Un jurado debe decidir la condena a muerte de un joven. Solo uno duda de su culpabilidad.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/t88XfoxO5cX3f0qaSxWsBS0Lc3.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "id": 346,
+        "title": "Los Siete Samuráis",
+        "original_title": "Shichinin no Samurai",
+        "year": 1954,
+        "era": "50s",
+        "rating": 8.5,
+        "overview": "Una aldea de campesinos contrata a siete samuráis sin amo para defenderse de unos bandidos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+        "genres": [
+          "Acción",
+          "Drama"
+        ]
+      },
+      {
+        "id": 11216,
+        "title": "Cinema Paradiso",
+        "original_title": "Nuovo Cinema Paradiso",
+        "year": 1988,
+        "era": "80s",
+        "rating": 8.5,
+        "overview": "Un cineasta recuerda su infancia en un pequeño pueblo italiano y su amistad con el proyeccionista.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hHwsr3t5n7VVUbPyU8VZswn0jkL.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 769,
+        "title": "Buenos Muchachos (Goodfellas)",
+        "original_title": "GoodFellas",
+        "year": 1990,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Henry Hill asciende en la jerarquía de la mafia italoamericana a lo largo de tres décadas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 3082,
+        "title": "Tiempos Modernos",
+        "original_title": "Modern Times",
+        "year": 1936,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 901,
+        "title": "Luces de la Ciudad",
+        "original_title": "City Lights",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 567,
+        "title": "La Ventana Indiscreta",
+        "original_title": "Rear Window",
+        "year": 1954,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Un fotógrafo con una pierna rota espía a sus vecinos y cree presenciar un asesinato.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+        "genres": [
+          "Suspense",
+          "Misterio",
+          "Drama"
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Apocalypse Now",
+        "original_title": "Apocalypse Now",
+        "year": 1979,
+        "era": "70s",
+        "rating": 8.3,
+        "overview": "Durante la guerra de Vietnam, el capitán Willard recibe la orden de eliminar al coronel Kurtz.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zJXRrkJTlcb5x87v4VWN1zZX0Xk.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg",
+        "genres": [
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 274,
+        "title": "El Silencio de los Inocentes",
+        "original_title": "The Silence of the Lambs",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+        "genres": [
+          "Crimen",
+          "Suspense",
+          "Drama"
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Metrópolis",
+        "original_title": "Metropolis",
+        "year": 1927,
+        "era": "20s-30s",
+        "rating": 8.2,
+        "overview": "En una megalópolis del año 2026, la sociedad se divide en pensadores y trabajadores.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
+        "genres": [
+          "Drama",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 289,
+        "title": "Casablanca",
+        "original_title": "Casablanca",
+        "year": 1942,
+        "era": "40s",
+        "rating": 8.2,
+        "overview": "En la Segunda Guerra Mundial, Rick Blaine debe elegir entre su amor por Ilsa y ayudar a la resistencia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/a7EjycGNSYw6QqJqDooD9eQGZ4r.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 5156,
+        "title": "Ladrón de Bicicletas",
+        "original_title": "Ladri di biciclette",
+        "year": 1948,
+        "era": "40s",
+        "rating": 8.2,
+        "overview": "En la Roma de posguerra, a un obrero le roban la bicicleta imprescindible para trabajar.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hjo6BPzCuhUkpSzxElOQ68mydrx.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/kTUUiKGKrdRhJsCcYT3Ivtfuuzh.jpg",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "id": 103,
+        "title": "Taxi Driver",
+        "original_title": "Taxi Driver",
+        "year": 1976,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Travis Bickle, un veterano con insomnio, trabaja de taxista nocturno en una Nueva York decadente.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9G26DnAeMbA4sp58Gi0Vze6eQv4.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
+        "genres": [
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 111,
+        "title": "Scarface (Cara Cortada)",
+        "original_title": "Scarface",
+        "year": 1983,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+        "genres": [
+          "Acción",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 832,
+        "title": "M, el vampiro de Düsseldorf",
+        "original_title": "M",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.1,
+        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
+        "genres": [
+          "Drama",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 15,
+        "title": "Ciudadano Kane",
+        "original_title": "Citizen Kane",
+        "year": 1941,
+        "era": "40s",
+        "rating": 8,
+        "overview": "Un grupo de periodistas intenta desentrañar el significado de la última palabra del magnate Kane: Rosebud.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/w7V0bv38Z0q0DgHmMfcGM4WRNTv.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/ruF3Lmd4A8MHbnEBE6lxPMbsHGL.jpg",
+        "genres": [
+          "Misterio",
+          "Drama"
+        ]
+      },
+      {
+        "id": 770,
+        "title": "Lo que el viento se llevó",
+        "original_title": "Gone with the Wind",
+        "year": 1939,
+        "era": "20s-30s",
+        "rating": 7.9,
+        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+        "genres": [
+          "Drama",
+          "Bélica",
+          "Romance"
+        ]
+      },
+      {
+        "id": 1580,
+        "title": "La Soga",
+        "original_title": "Rope",
+        "year": 1948,
+        "era": "40s",
+        "rating": 7.9,
+        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 78,
+        "title": "Blade Runner",
+        "original_title": "Blade Runner",
+        "year": 1982,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 871,
+        "title": "El Planeta de los Simios",
+        "original_title": "Planet of the Apes",
+        "year": 1968,
+        "era": "60s",
+        "rating": 7.7,
+        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Aventura",
+          "Drama",
+          "Acción"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-comedy",
+    "name": "Colección: Leyendas de la Comedia y Sátira",
+    "genre": "Comedia",
+    "tagline": "El genio del humor clásico, el slapstick y la sátira política",
+    "overview": "La comedia que trasciende generaciones: las obras maestras de Charles Chaplin como Tiempos Modernos y El Gran Dictador, la magia musical de Cantando bajo la lluvia y el humor negro de Pulp Fiction.",
+    "poster": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+    "count": 7,
+    "movies": [
+      {
+        "id": 680,
+        "title": "Pulp Fiction (Tiempos Violentos)",
+        "original_title": "Pulp Fiction",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+        "genres": [
+          "Suspense",
+          "Crimen",
+          "Comedia"
+        ]
+      },
+      {
+        "id": 3082,
+        "title": "Tiempos Modernos",
+        "original_title": "Modern Times",
+        "year": 1936,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 901,
+        "title": "Luces de la Ciudad",
+        "original_title": "City Lights",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 914,
+        "title": "El Gran Dictador",
+        "original_title": "The Great Dictator",
+        "year": 1940,
+        "era": "40s",
+        "rating": 8.3,
+        "overview": "Un barbero judío amnésico es confundido con el dictador Adenoid Hynkel.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 430,
+        "title": "El Ocaso de una Vida (Sunset Boulevard)",
+        "original_title": "Sunset Boulevard",
+        "year": 1950,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Un guionista endeudado se refugia en la mansión de una antigua estrella del cine mudo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/toTjc11iO3tgdKLAIeLGse1LTk9.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4safDVSZx7a4I1TQoSyz6E1agzM.jpg",
+        "genres": [
+          "Comedia"
+        ]
+      },
+      {
+        "id": 105,
+        "title": "Volver al Futuro",
+        "original_title": "Back to the Future",
+        "year": 1985,
+        "era": "80s",
+        "rating": 8.3,
+        "overview": "Marty McFly viaja accidentalmente a 1955 en un DeLorean construido por Doc Brown.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+        "genres": [
+          "Aventura",
+          "Comedia",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 872,
+        "title": "Cantando bajo la Lluvia",
+        "original_title": "Singin' in the Rain",
+        "year": 1952,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Hollywood enfrenta la revolucionaria transición del cine mudo al sonoro.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5r8jD5R6EzpQ5VLodbzTNhvKcGw.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
+        "genres": [
+          "Comedia",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-action",
+    "name": "Colección: Épica, Aventura & Acción",
+    "genre": "Acción",
+    "tagline": "Persecuciones inolvidables, duelos legendarios y viajes en el tiempo",
+    "overview": "La adrenalina y el dinamismo del mejor cine: el duelo supremo de Los Siete Samuráis, la adrenalina revolucionaria de Terminator 2 y Matrix, y la travesía temporal de Volver al Futuro.",
+    "poster": "https://image.tmdb.org/t/p/w500/5M0j0B18abtBI5em2mTrFMG4nW.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/xKb6mtdHUq55q9b9090u7g9m10o.jpg",
+    "count": 4,
+    "movies": [
+      {
+        "id": 346,
+        "title": "Los Siete Samuráis",
+        "original_title": "Shichinin no Samurai",
+        "year": 1954,
+        "era": "50s",
+        "rating": 8.5,
+        "overview": "Una aldea de campesinos contrata a siete samuráis sin amo para defenderse de unos bandidos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+        "genres": [
+          "Acción",
+          "Drama"
+        ]
+      },
+      {
+        "id": 111,
+        "title": "Scarface (Cara Cortada)",
+        "original_title": "Scarface",
+        "year": 1983,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+        "genres": [
+          "Acción",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 603,
+        "title": "Matrix",
+        "original_title": "The Matrix",
+        "year": 1999,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Un hacker descubre que la realidad es una simulación creada por máquinas dominantes.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tpW2X2DvxtTHJ61iJ7zNYYrJihs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+        "genres": [
+          "Acción",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 871,
+        "title": "El Planeta de los Simios",
+        "original_title": "Planet of the Apes",
+        "year": 1968,
+        "era": "60s",
+        "rating": 7.7,
+        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Aventura",
+          "Drama",
+          "Acción"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-war",
+    "name": "Colección: Cine Bélico & Grandes Crónicas",
+    "genre": "Bélica",
+    "tagline": "La crudeza del combate, el heroísmo y la historia humana",
+    "overview": "Historias que marcaron la historia: el desgarrador drama del Holocausto en La Lista de Schindler, el delirio bélico de Apocalypse Now y el mensaje pacifista en El Gran Dictador.",
+    "poster": "https://image.tmdb.org/t/p/w500/c8vdEGquITFjCpsv2djupak7c30.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "count": 4,
+    "movies": [
+      {
+        "id": 424,
+        "title": "La Lista de Schindler",
+        "original_title": "Schindler's List",
+        "year": 1993,
+        "era": "90s",
+        "rating": 8.6,
+        "overview": "Oskar Schindler salva a más de mil judíos del holocausto empleándolos en su fábrica.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+        "genres": [
+          "Drama",
+          "Historia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 914,
+        "title": "El Gran Dictador",
+        "original_title": "The Great Dictator",
+        "year": 1940,
+        "era": "40s",
+        "rating": 8.3,
+        "overview": "Un barbero judío amnésico es confundido con el dictador Adenoid Hynkel.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Apocalypse Now",
+        "original_title": "Apocalypse Now",
+        "year": 1979,
+        "era": "70s",
+        "rating": 8.3,
+        "overview": "Durante la guerra de Vietnam, el capitán Willard recibe la orden de eliminar al coronel Kurtz.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zJXRrkJTlcb5x87v4VWN1zZX0Xk.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg",
+        "genres": [
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 770,
+        "title": "Lo que el viento se llevó",
+        "original_title": "Gone with the Wind",
+        "year": 1939,
+        "era": "20s-30s",
+        "rating": 7.9,
+        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+        "genres": [
+          "Drama",
+          "Bélica",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-romance",
+    "name": "Colección: Grandes Romances del Cine",
+    "genre": "Romance",
+    "tagline": "Amor inmortal, pasión dorada y despedidas inolvidables",
+    "overview": "Las historias de amor más icónicas de la pantalla grande: el reencuentro en Casablanca, la belleza poética de Cinema Paradiso, el amor mudo de Luces de la Ciudad y el ardor de Lo que el viento se llevó.",
+    "poster": "https://image.tmdb.org/t/p/w500/5K7cOHoay2mZusSLezBOY0Qxh8a.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/eZ34pYy29mY9YhH4nQ2w7B7y7q.jpg",
+    "count": 7,
+    "movies": [
+      {
+        "id": 11216,
+        "title": "Cinema Paradiso",
+        "original_title": "Nuovo Cinema Paradiso",
+        "year": 1988,
+        "era": "80s",
+        "rating": 8.5,
+        "overview": "Un cineasta recuerda su infancia en un pequeño pueblo italiano y su amistad con el proyeccionista.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hHwsr3t5n7VVUbPyU8VZswn0jkL.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 3082,
+        "title": "Tiempos Modernos",
+        "original_title": "Modern Times",
+        "year": 1936,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 901,
+        "title": "Luces de la Ciudad",
+        "original_title": "City Lights",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 289,
+        "title": "Casablanca",
+        "original_title": "Casablanca",
+        "year": 1942,
+        "era": "40s",
+        "rating": 8.2,
+        "overview": "En la Segunda Guerra Mundial, Rick Blaine debe elegir entre su amor por Ilsa y ayudar a la resistencia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/a7EjycGNSYw6QqJqDooD9eQGZ4r.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 426,
+        "title": "Vértigo",
+        "original_title": "Vertigo",
+        "year": 1958,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Un detective retirado con acrofobia es contratado para vigilar a una misteriosa mujer.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/t4kvoLhrVHW5w5Ku7AQBniVExjN.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+        "genres": [
+          "Misterio",
+          "Romance",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 872,
+        "title": "Cantando bajo la Lluvia",
+        "original_title": "Singin' in the Rain",
+        "year": 1952,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Hollywood enfrenta la revolucionaria transición del cine mudo al sonoro.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5r8jD5R6EzpQ5VLodbzTNhvKcGw.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
+        "genres": [
+          "Comedia",
+          "Romance"
+        ]
+      },
+      {
+        "id": 770,
+        "title": "Lo que el viento se llevó",
+        "original_title": "Gone with the Wind",
+        "year": 1939,
+        "era": "20s-30s",
+        "rating": 7.9,
+        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+        "genres": [
+          "Drama",
+          "Bélica",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "col-western",
+    "name": "Colección: Leyendas del Western",
+    "genre": "Western",
+    "tagline": "Duelos al sol, forajidos y la épica de Sergio Leone",
+    "overview": "La máxima obra cumbre del Spaghetti Western y el cine del Salvaje Oeste: El Bueno, el Malo y el Feo de Sergio Leone con Clint Eastwood y la inolvidable música de Ennio Morricone.",
+    "poster": "https://image.tmdb.org/t/p/w500/bX2xnavhTYSvdEg9ipOiJaSN09Z.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/eoCSp75lxnDc6VmPyPZjq5Nu474.jpg",
+    "count": 1,
+    "movies": [
+      {
+        "id": 429,
+        "title": "El Bueno, el Malo y el Feo",
+        "original_title": "Il buono, il brutto, il cattivo",
+        "year": 1966,
+        "era": "60s",
+        "rating": 8.5,
+        "overview": "Tres pistoleros buscan un tesoro enterrado en medio de la Guerra de Secesión estadounidense.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+        "genres": [
+          "Western"
+        ]
       }
     ]
   }

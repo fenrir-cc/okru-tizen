@@ -370,7 +370,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
 
   const rowsData = [
     { id: 'row-trending', title: '🔥 Recomendadas y Tendencias de Hoy', list: trending },
-    { id: 'row-collections', title: '🏛️ Grandes Colecciones y Sagas de TMDB', list: allCollections, isCollectionRow: true },
+    { id: 'row-collections', title: '🏛️ Colecciones: Las Mejores Películas por Género', list: allCollections, isCollectionRow: true },
     { id: 'row-favs', title: '❤️ Mi Lista', list: getFavorites(), isFavRow: true },
     { id: 'row-top', title: '⭐ Obras Maestras Aclamadas por la Crítica', list: topRated },
     { id: 'row-80-90', title: '🌆 Años 80 y 90: Cine de Culto y Ciencia Ficción', list: era80s90s },
@@ -498,7 +498,7 @@ function createCollectionCard(col) {
     />
     <div class="collection-card-gradient"></div>
     <div class="collection-card-info">
-      <span class="collection-card-count">⭐ Saga • ${col.count} Películas</span>
+      <span class="collection-card-count">⭐ ${col.count} Obras Maestras</span>
       <h3 class="collection-card-title">${escapeHtml(col.name)}</h3>
     </div>
   `;
@@ -538,13 +538,13 @@ function openCollectionView(col) {
     collectionTitle.textContent = col.name;
   }
   if (collectionCount) {
-    collectionCount.textContent = `⭐ ${col.count} Películas en la saga`;
+    collectionCount.textContent = `⭐ ${col.count} Obras Maestras Seleccionadas por Crítica y Rating`;
   }
   if (collectionOverview) {
-    collectionOverview.textContent = col.overview || 'Explora todas las entregas de esta legendaria franquicia.';
+    collectionOverview.textContent = col.overview || col.tagline || 'Las mejores películas clásicas que definieron este género.';
   }
 
-  // Renderizar las entregas de la colección
+  // Renderizar las obras maestras de la colección ordenadas por rating
   if (collectionPartsCarousel) {
     collectionPartsCarousel.innerHTML = '';
     col.movies.forEach(movie => {
