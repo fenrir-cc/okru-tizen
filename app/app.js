@@ -216,8 +216,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Botones del Hero Billboard
   btnBillboardPlay.addEventListener('focus', () => {
-    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
-    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    if (window.innerWidth > 768) {
+      if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+      if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    }
   });
 
   btnBillboardPlay.addEventListener('click', () => {
@@ -227,8 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnBillboardFav.addEventListener('focus', () => {
-    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
-    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    if (window.innerWidth > 768) {
+      if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+      if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    }
   });
 
   btnBillboardFav.addEventListener('click', () => {
@@ -237,17 +241,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Prevenir que WebKit desplace accidentalmente los contenedores en vertical
+  // Prevenir que WebKit desplace accidentalmente los contenedores en vertical (Solo en TV/Desktop)
   if (rowsWrapper) {
     rowsWrapper.addEventListener('scroll', () => {
-      if (rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+      if (window.innerWidth > 768 && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
     }, { passive: true });
   }
   const netflixMainEl = document.getElementById('netflix-main');
   if (netflixMainEl) {
     netflixMainEl.addEventListener('scroll', () => {
-      // Solo forzar scrollTop = 0 cuando la vista principal de carruseles (Home) esté activa
-      if (rowsWrapper && !rowsWrapper.classList.contains('hidden')) {
+      // Solo forzar scrollTop = 0 cuando la vista principal de carruseles (Home) esté activa en TV
+      if (window.innerWidth > 768 && rowsWrapper && !rowsWrapper.classList.contains('hidden')) {
         if (netflixMainEl.scrollTop !== 0) netflixMainEl.scrollTop = 0;
       }
     }, { passive: true });
@@ -381,7 +385,7 @@ function setFeaturedMovie(movie) {
 function renderNetflixRows(movies, genreFilter = 'all') {
   const container = rowsSlider || rowsWrapper;
   container.innerHTML = '';
-  if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+  if (window.innerWidth > 768 && rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
 
   // 1. Si hay filtro de género activo
   if (genreFilter && genreFilter !== 'all') {
@@ -490,11 +494,13 @@ function scrollCardIntoCarouselView(card) {
     behavior: 'smooth'
   });
 
-  // Prevenir que ningún contenedor vertical se mueva de scrollTop = 0
-  if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
-  const netflixMain = document.getElementById('netflix-main');
-  if (netflixMain && netflixMain.scrollTop !== 0) netflixMain.scrollTop = 0;
-  if (window.scrollY !== 0) window.scrollTo(0, 0);
+  // Prevenir que ningún contenedor vertical se mueva de scrollTop = 0 (Solo en modo TV/Desktop)
+  if (window.innerWidth > 768) {
+    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    const netflixMain = document.getElementById('netflix-main');
+    if (netflixMain && netflixMain.scrollTop !== 0) netflixMain.scrollTop = 0;
+    if (window.scrollY !== 0) window.scrollTo(0, 0);
+  }
 }
 
 function createMovieCard(movie) {
@@ -533,12 +539,14 @@ function createMovieCard(movie) {
     // Desplazamiento horizontal seguro en carrusel
     scrollCardIntoCarouselView(card);
 
-    // Desplazamiento dinámico para que la fila activa quede visible bajo el billboard
-    const parentRow = card.closest('.movie-row');
-    if (parentRow && rowsSlider) {
-      rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+    // Desplazamiento dinámico para que la fila activa quede visible bajo el billboard (Solo TV/Desktop)
+    if (window.innerWidth > 768) {
+      const parentRow = card.closest('.movie-row');
+      if (parentRow && rowsSlider) {
+        rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+      }
+      if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
     }
-    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
   });
 
   // Click en el corazón de la tarjeta
@@ -585,11 +593,13 @@ function createCollectionCard(col) {
   card.addEventListener('focus', () => {
     scrollCardIntoCarouselView(card);
 
-    const parentRow = card.closest('.movie-row');
-    if (parentRow && rowsSlider) {
-      rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+    if (window.innerWidth > 768) {
+      const parentRow = card.closest('.movie-row');
+      if (parentRow && rowsSlider) {
+        rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+      }
+      if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
     }
-    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
   });
 
   const onOpen = () => openCollectionView(col);
@@ -741,8 +751,10 @@ function closeSearchView() {
   rowsWrapper.classList.remove('hidden');
   hideStatus();
   
-  const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
-  if (firstCard) firstCard.focus();
+  if (window.innerWidth > 768) {
+    const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
+    if (firstCard) firstCard.focus();
+  }
 }
 
 function toggleGenresPanel(show = null) {
@@ -884,10 +896,16 @@ function initSidebar() {
       selectGenre('all');
     }
     toggleGenresPanel(false);
-    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
-    if (rowsWrapper) rowsWrapper.scrollTop = 0;
-    const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
-    if (firstCard) firstCard.focus();
+    if (window.innerWidth > 768) {
+      if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+      if (rowsWrapper) rowsWrapper.scrollTop = 0;
+      const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
+      if (firstCard) firstCard.focus();
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const mainEl = document.getElementById('netflix-main');
+      if (mainEl) mainEl.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 
   if (navCollections) {
@@ -897,8 +915,12 @@ function initSidebar() {
       closeCollectionView();
       const rowCol = document.getElementById('row-collections');
       if (rowCol) {
-        const card = rowCol.querySelector('.collection-card');
-        if (card) card.focus();
+        if (window.innerWidth <= 768) {
+          rowCol.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          const card = rowCol.querySelector('.collection-card');
+          if (card) card.focus();
+        }
       } else {
         showToast('🏛️ Sagas y Colecciones de TMDB');
       }
@@ -918,8 +940,12 @@ function initSidebar() {
     toggleGenresPanel(false);
     const rowTarget = document.getElementById('row-50s') || document.getElementById('row-20-30');
     if (rowTarget) {
-      const card = rowTarget.querySelector('.movie-card');
-      if (card) card.focus();
+      if (window.innerWidth <= 768) {
+        rowTarget.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        const card = rowTarget.querySelector('.movie-card');
+        if (card) card.focus();
+      }
     }
   });
 
@@ -928,8 +954,12 @@ function initSidebar() {
     toggleGenresPanel(false);
     const rowFavs = document.getElementById('row-favs');
     if (rowFavs) {
-      const card = rowFavs.querySelector('.movie-card');
-      if (card) card.focus();
+      if (window.innerWidth <= 768) {
+        rowFavs.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        const card = rowFavs.querySelector('.movie-card');
+        if (card) card.focus();
+      }
     } else {
       showToast('Aún no tienes películas guardadas en Mi Lista ❤️');
     }

@@ -1273,3 +1273,431 @@ body.netflix-body {
   color: white;
   border-color: #ffaa4d;
 }
+
+/* =============================================================
+   DISEÑO RESPONSIVO PARA DISPOSITIVOS MÓVILES Y TABLETS
+   ============================================================= */
+
+@media (max-width: 768px) {
+  body.netflix-body {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+
+  /* BARRA LATERAL CONVERTIDA EN BARRA INFERIOR DE NAVEGACIÓN MÓVIL */
+  .netflix-sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 4px !important;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(11, 13, 18, 0.96) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7) !important;
+    z-index: 1000;
+  }
+
+  .netflix-sidebar:focus-within {
+    width: 100% !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .sidebar-logo {
+    display: none !important;
+  }
+
+  .sidebar-nav {
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 2px !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-btn {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5px 4px !important;
+    gap: 2px !important;
+    width: auto !important;
+    flex: 1 1 0px !important;
+    min-width: 44px !important;
+    border-radius: 6px !important;
+  }
+
+  .sidebar-btn:hover,
+  .sidebar-btn:focus {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .sidebar-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .sidebar-label {
+    display: block !important;
+    opacity: 1 !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  /* CONTENEDOR PRINCIPAL FLUIDO CON SCROLL VERTICAL TÁCTIL */
+  .netflix-main {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-bottom: 74px; /* Espacio para que el contenido no quede oculto por la barra inferior */
+  }
+
+  /* HERO BILLBOARD RESPONSIVO */
+  .hero-billboard {
+    height: 48vh;
+    min-height: 290px;
+    padding: 0 16px 16px 16px;
+    margin-bottom: 0;
+  }
+
+  .billboard-backdrop {
+    width: 100% !important;
+    background-position: center top !important;
+  }
+
+  .billboard-vignette-left {
+    width: 100% !important;
+    background: linear-gradient(180deg, rgba(11, 13, 18, 0.25) 0%, rgba(11, 13, 18, 0.85) 60%, #0b0d12 100%) !important;
+  }
+
+  .billboard-vignette-bottom {
+    height: 75% !important;
+    background: linear-gradient(0deg, #0b0d12 15%, rgba(11, 13, 18, 0.8) 65%, transparent 100%) !important;
+  }
+
+  .billboard-content {
+    max-width: 100% !important;
+  }
+
+  .badge-series {
+    font-size: 0.72rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .billboard-title {
+    font-size: 1.55rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .billboard-meta {
+    gap: 8px !important;
+    font-size: 0.8rem !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 8px !important;
+  }
+
+  .billboard-overview {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    -webkit-line-clamp: 2 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .billboard-actions {
+    gap: 8px !important;
+  }
+
+  .btn-play {
+    padding: 8px 16px !important;
+    font-size: 0.92rem !important;
+    border-radius: 6px !important;
+  }
+
+  .btn-fav-hero {
+    padding: 8px 14px !important;
+    font-size: 0.92rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* PANEL DE GÉNEROS MÓVIL */
+  .genres-panel {
+    padding: 12px 16px !important;
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .genres-title {
+    font-size: 1.1rem !important;
+  }
+
+  .genre-pill {
+    padding: 6px 14px !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* CONTENEDOR DE FILAS Y CARRUSELES FLUIDOS */
+  .rows-wrapper {
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 0 20px 14px !important;
+  }
+
+  .rows-slider {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .movie-row {
+    margin-bottom: 18px !important;
+  }
+
+  .row-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+    padding-right: 14px;
+  }
+
+  .row-carousel {
+    padding: 8px 16px 12px 2px !important;
+    gap: 10px !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x;
+  }
+
+  /* TARJETAS DE PELÍCULAS PROPORCIONALES PARA MÓVIL */
+  .movie-card {
+    flex: 0 0 115px !important;
+    width: 115px !important;
+    height: 172px !important;
+    border-radius: 6px !important;
+  }
+
+  .movie-card:hover,
+  .movie-card:focus {
+    transform: scale(1.04) !important;
+  }
+
+  .card-ok-badge {
+    font-size: 0.65rem !important;
+    padding: 1px 4px !important;
+    top: 5px !important;
+    left: 5px !important;
+  }
+
+  .card-rating-badge,
+  .card-year-badge {
+    font-size: 0.65rem !important;
+    padding: 1px 4px !important;
+  }
+
+  .card-badges {
+    top: 5px !important;
+    right: 5px !important;
+    gap: 3px !important;
+  }
+
+  .card-fav-btn {
+    width: 28px !important;
+    height: 28px !important;
+    bottom: 6px !important;
+    right: 6px !important;
+  }
+
+  .card-fav-btn svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  /* TARJETAS DE COLECCIONES / SAGAS EN MÓVIL */
+  .collection-card {
+    flex: 0 0 170px !important;
+    width: 170px !important;
+    height: 172px !important;
+    border-radius: 6px !important;
+  }
+
+  .collection-card:hover,
+  .collection-card:focus {
+    transform: scale(1.04) !important;
+  }
+
+  .collection-card-info {
+    padding: 8px 10px !important;
+  }
+
+  .collection-card-count {
+    font-size: 0.65rem !important;
+    padding: 1px 5px !important;
+  }
+
+  .collection-card-title {
+    font-size: 0.85rem !important;
+  }
+
+  /* VISTA DE BÚSQUEDA ADAPTADA A MÓVIL CON CUADRÍCULA DE 2 COLUMNAS */
+  .search-view {
+    padding: 16px 12px 84px 12px !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: visible !important;
+  }
+
+  .search-box {
+    padding: 6px 10px !important;
+    margin-bottom: 16px !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .search-box-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 6px !important;
+  }
+
+  .search-input {
+    font-size: 0.95rem !important;
+    flex: 1 1 180px !important;
+  }
+
+  .btn-do-search,
+  .btn-close-search {
+    padding: 6px 14px !important;
+    font-size: 0.88rem !important;
+    margin-left: 0 !important;
+  }
+
+  .search-title {
+    font-size: 1.15rem !important;
+  }
+
+  .search-count {
+    font-size: 0.85rem !important;
+  }
+
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .okru-result-info {
+    padding: 8px 10px !important;
+  }
+
+  .okru-result-title {
+    font-size: 0.82rem !important;
+    -webkit-line-clamp: 2 !important;
+  }
+
+  /* VISTA MODAL DE COLECCIÓN TMDB EN MÓVIL */
+  .collection-view {
+    padding-bottom: 74px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .collection-header {
+    padding: 14px 16px 0 16px !important;
+  }
+
+  .collection-main {
+    padding: 14px 16px 40px 16px !important;
+    margin-top: 6vh !important;
+  }
+
+  .collection-title {
+    font-size: 1.6rem !important;
+  }
+
+  .collection-overview {
+    font-size: 0.85rem !important;
+  }
+
+  .collection-movie-card {
+    flex: 0 0 115px !important;
+    height: 172px !important;
+  }
+
+  /* REPRODUCTOR DE VIDEO A PANTALLA COMPLETA */
+  .player-header {
+    padding: 10px 14px !important;
+    gap: 8px !important;
+  }
+
+  .btn-back,
+  .btn-player-fav {
+    padding: 6px 12px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .player-title {
+    font-size: 0.92rem !important;
+  }
+
+  /* TOAST NOTIFICACIÓN */
+  .toast {
+    bottom: 74px !important;
+    font-size: 0.85rem !important;
+    padding: 10px 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-btn {
+    padding: 4px 2px !important;
+  }
+
+  .sidebar-label {
+    font-size: 0.58rem !important;
+  }
+
+  .hero-billboard {
+    height: 44vh !important;
+    min-height: 260px !important;
+  }
+
+  .billboard-title {
+    font-size: 1.35rem !important;
+  }
+
+  .movie-card {
+    flex: 0 0 105px !important;
+    width: 105px !important;
+    height: 158px !important;
+  }
+
+  .collection-card {
+    flex: 0 0 150px !important;
+    width: 150px !important;
+    height: 158px !important;
+  }
+
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+}
