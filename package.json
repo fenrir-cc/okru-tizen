@@ -1,6 +1,6 @@
 {
   "name": "tizenbrew-okru-movies",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Buscador y reproductor de películas de OK.ru para Samsung Tizen TV con estilo OK.ru, colecciones de TMDB y verificación de calidad",
   "main": "server.js",
   "scripts": {

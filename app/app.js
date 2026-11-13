@@ -34,6 +34,7 @@ const btnBillboardPlay = document.getElementById('btn-billboard-play');
 const btnBillboardFav = document.getElementById('btn-billboard-fav');
 
 const rowsWrapper = document.getElementById('rows-wrapper');
+const rowsSlider = document.getElementById('rows-slider');
 const searchView = document.getElementById('search-view');
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
@@ -327,14 +328,16 @@ function setFeaturedMovie(movie) {
 // RENDERIZADO DE FILAS Y CARRUSELES ALEATORIOS
 // -------------------------------------------------------------
 function renderNetflixRows(movies, genreFilter = 'all') {
-  rowsWrapper.innerHTML = '';
+  const container = rowsSlider || rowsWrapper;
+  container.innerHTML = '';
+  if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
 
   // 1. Si hay filtro de género activo
   if (genreFilter && genreFilter !== 'all') {
     const listToUse = movies.filter(m => m.genres && m.genres.some(g => g.toLowerCase() === genreFilter.toLowerCase()));
     
     if (listToUse.length === 0) {
-      rowsWrapper.innerHTML = `<div class="status-message">No hay películas clásicas en el catálogo para el género "${genreFilter}".</div>`;
+      container.innerHTML = `<div class="status-message">No hay películas clásicas en el catálogo para el género "${genreFilter}".</div>`;
       return;
     }
 
@@ -351,7 +354,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
     // Destacar la mejor película del género en el Billboard
     setFeaturedMovie(topInGenre[0]);
 
-    const firstCard = rowsWrapper.querySelector('.movie-card');
+    const firstCard = container.querySelector('.movie-card');
     if (firstCard) firstCard.focus();
     return;
   }
@@ -384,7 +387,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   });
 
   // Enfocar la primera tarjeta del primer carrusel
-  const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
+  const firstCard = container.querySelector('.movie-card, .collection-card');
   if (firstCard) firstCard.focus();
 }
 
@@ -414,7 +417,8 @@ function createMovieRow(rowData) {
   }
 
   rowEl.appendChild(carouselEl);
-  rowsWrapper.appendChild(rowEl);
+  const targetContainer = rowsSlider || rowsWrapper;
+  targetContainer.appendChild(rowEl);
 }
 
 function createMovieCard(movie) {
@@ -443,14 +447,20 @@ function createMovieCard(movie) {
     </button>
   `;
 
-  // Al enfocar una tarjeta: Actualizar Hero Billboard con suave retardo
+  // Al enfocar una tarjeta: Actualizar Hero Billboard y desplazar fila hacia arriba
   card.addEventListener('focus', () => {
     if (billboardUpdateTimeout) clearTimeout(billboardUpdateTimeout);
     billboardUpdateTimeout = setTimeout(() => {
       setFeaturedMovie(movie);
-    }, 180);
+    }, 120);
 
     card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+
+    // Desplazamiento dinámico para que la fila activa quede visible bajo el billboard
+    const parentRow = card.closest('.movie-row');
+    if (parentRow && rowsSlider) {
+      rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+    }
   });
 
   // Click en el corazón de la tarjeta
@@ -495,6 +505,11 @@ function createCollectionCard(col) {
 
   card.addEventListener('focus', () => {
     card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+
+    const parentRow = card.closest('.movie-row');
+    if (parentRow && rowsSlider) {
+      rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
+    }
   });
 
   const onOpen = () => openCollectionView(col);
@@ -987,6 +1002,96 @@ function handleBackAction() {
   return false;
 }
 
+// -------------------------------------------------------------
+// NAVEGACIÓN INTELIGENTE ENTRE FILAS Y CARRUSELES
+// -------------------------------------------------------------
+function handleCardNavigation(card, direction) {
+  const currentRow = card.closest('.movie-row');
+  if (!currentRow) return false;
+
+  if (direction === 'left') {
+    const prevCard = card.previousElementSibling;
+    if (prevCard && (prevCard.classList.contains('movie-card') || prevCard.classList.contains('collection-card'))) {
+      prevCard.focus();
+      return true;
+    } else {
+      // Ir a la barra lateral izquierda
+      if (navHome) {
+        navHome.focus();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  if (direction === 'right') {
+    const nextCard = card.nextElementSibling;
+    if (nextCard && (nextCard.classList.contains('movie-card') || nextCard.classList.contains('collection-card'))) {
+      nextCard.focus();
+      return true;
+    }
+    return true; // Límite derecho
+  }
+
+  if (direction === 'down') {
+    let nextRow = currentRow.nextElementSibling;
+    while (nextRow && !nextRow.classList.contains('movie-row')) {
+      nextRow = nextRow.nextElementSibling;
+    }
+    if (nextRow) {
+      const cardsInNext = Array.from(nextRow.querySelectorAll('.movie-card, .collection-card'));
+      if (cardsInNext.length > 0) {
+        const cardRect = card.getBoundingClientRect();
+        let closestCard = cardsInNext[0];
+        let minDiff = Infinity;
+        cardsInNext.forEach(c => {
+          const diff = Math.abs(c.getBoundingClientRect().left - cardRect.left);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestCard = c;
+          }
+        });
+        closestCard.focus();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  if (direction === 'up') {
+    let prevRow = currentRow.previousElementSibling;
+    while (prevRow && !prevRow.classList.contains('movie-row')) {
+      prevRow = prevRow.previousElementSibling;
+    }
+    if (prevRow) {
+      const cardsInPrev = Array.from(prevRow.querySelectorAll('.movie-card, .collection-card'));
+      if (cardsInPrev.length > 0) {
+        const cardRect = card.getBoundingClientRect();
+        let closestCard = cardsInPrev[0];
+        let minDiff = Infinity;
+        cardsInPrev.forEach(c => {
+          const diff = Math.abs(c.getBoundingClientRect().left - cardRect.left);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestCard = c;
+          }
+        });
+        closestCard.focus();
+        return true;
+      }
+    } else {
+      // Fila 0: Subir a los botones del Hero Billboard
+      if (btnBillboardPlay) {
+        btnBillboardPlay.focus();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  return false;
+}
+
 function initRemoteKeys() {
   registerTizenKeys();
 
@@ -1037,6 +1142,32 @@ function initRemoteKeys() {
         return;
       }
       lastNavTime = now;
+
+      // 1. Navegación directa en tarjetas de carrusel (Películas y Colecciones)
+      const current = document.activeElement;
+      if (current && (current.classList.contains('movie-card') || current.classList.contains('collection-card'))) {
+        const inCollectionModal = current.closest('#collection-view');
+        if (!inCollectionModal) {
+          const handled = handleCardNavigation(current, directions[key]);
+          if (handled) return;
+        }
+      }
+
+      // 2. Navegación desde botones del Billboard hacia abajo
+      if (current === btnBillboardPlay || current === btnBillboardFav) {
+        if (directions[key] === 'down') {
+          const firstCard = (rowsSlider || rowsWrapper).querySelector('.movie-card, .collection-card');
+          if (firstCard) {
+            firstCard.focus();
+            return;
+          }
+        } else if (directions[key] === 'left') {
+          if (navHome) {
+            navHome.focus();
+            return;
+          }
+        }
+      }
 
       navigateSpatial(directions[key]);
     }
