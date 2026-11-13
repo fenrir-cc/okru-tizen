@@ -7,8 +7,8 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const STATIC_DIR = path.join(__dirname, 'app');
 
-// Clave opcional de TMDB
-const TMDB_API_KEY = process.env.TMDB_API_KEY || null;
+// Clave de TMDB oficial (con respaldo activo)
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '8476a7ab80ad76f0936744df0430e67c';
 
 // Duración mínima para considerar que un video es una película completa (45 minutos)
 const MIN_MOVIE_DURATION_MS = 45 * 60 * 1000;

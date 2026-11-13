@@ -4,19 +4,34 @@
     "name": "Colección: Joyas de la Ciencia Ficción",
     "genre": "Ciencia ficción",
     "tagline": "Obras maestras futuristas, distopías y viajes espaciales",
-    "overview": "Una selección curada con las más grandes obras de la ciencia ficción cinematográfica: desde la visión pionera de Metrópolis y 2001 Odisea del Espacio, hasta el ciberpunk de Blade Runner, Matrix y el impacto de Terminator 2 y Alien.",
-    "poster": "https://image.tmdb.org/t/p/w500/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
-    "count": 8,
+    "poster": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+    "count": 18,
     "movies": [
       {
+        "id": 1891,
+        "title": "El imperio contraataca",
+        "original_title": "The Empire Strikes Back",
+        "year": 1980,
+        "era": "80s",
+        "rating": 8.4,
+        "overview": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+        "genres": [
+          "Aventura",
+          "Acción",
+          "Ciencia ficción"
+        ]
+      },
+      {
         "id": 105,
-        "title": "Volver al Futuro",
+        "title": "Regreso al futuro",
         "original_title": "Back to the Future",
         "year": 1985,
         "era": "80s",
         "rating": 8.3,
-        "overview": "Marty McFly viaja accidentalmente a 1955 en un DeLorean construido por Doc Brown.",
+        "overview": "El adolescente Marty McFly es amigo de Doc, un científico al que todos toman por loco. Cuando Doc crea una máquina para viajar en el tiempo, un error fortuito hace que Marty llegue a 1955, año en el que sus futuros padres aún no se habían conocido. Después de impedir su primer encuentro, deberá conseguir que se conozcan y se casen; de lo contrario, su existencia no sería posible.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
         "genres": [
@@ -26,33 +41,21 @@
         ]
       },
       {
-        "id": 19,
-        "title": "Metrópolis",
-        "original_title": "Metropolis",
-        "year": 1927,
-        "era": "20s-30s",
-        "rating": 8.2,
-        "overview": "En una megalópolis del año 2026, la sociedad se divide en pensadores y trabajadores.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
+        "id": 18491,
+        "title": "Neon Genesis Evangelion: The End of Evangelion",
+        "original_title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
+        "year": 1997,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Seele ordena un ataque sin cuartel contra NERV con el objetivo de destruir los Evas antes de que Gendo pueda provocar el Tercer Impacto y la unión de las almas humanas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9jbxvKB937BWeYAmMKZTqPxBLsk.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg",
         "genres": [
-          "Drama",
-          "Ciencia ficción"
-        ]
-      },
-      {
-        "id": 185,
-        "title": "La Naranja Mecánica",
-        "original_title": "A Clockwork Orange",
-        "year": 1971,
-        "era": "70s",
-        "rating": 8.2,
-        "overview": "Alex DeLarge, un joven ultraviolento, es encarcelado y sometido al experimento de rehabilitación Ludovico.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
-        "genres": [
+          "Animación",
           "Ciencia ficción",
-          "Crimen"
+          "Drama",
+          "Fantasía",
+          "Acción"
         ]
       },
       {
@@ -61,8 +64,8 @@
         "original_title": "The Matrix",
         "year": 1999,
         "era": "90s",
-        "rating": 8.2,
-        "overview": "Un hacker descubre que la realidad es una simulación creada por máquinas dominantes.",
+        "rating": 8.3,
+        "overview": "Thomas Anderson lleva una doble vida: por el día es programador en una importante empresa de software, y por la noche un hacker informático llamado Neo. Su vida no volverá a ser igual cuando unos misteriosos personajes le inviten a descubrir la respuesta a la pregunta que no le deja dormir: ¿qué es Matrix?",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tpW2X2DvxtTHJ61iJ7zNYYrJihs.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
         "genres": [
@@ -71,13 +74,121 @@
         ]
       },
       {
+        "id": 11,
+        "title": "La guerra de las galaxias",
+        "original_title": "Star Wars",
+        "year": 1977,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las malévolas Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del emperador. El intrépido Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial \"El Halcón Milenario\", y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo y rescatar a la princesa para volver a instaurar la justicia en el seno de la Galaxia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/4hOUzmButYUeON0prG3RpbqS7ag.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+        "genres": [
+          "Aventura",
+          "Acción",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 280,
+        "title": "Terminator 2: El juicio final",
+        "original_title": "Terminator 2: Judgment Day",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Ha pasado once años desde que Sarah Connor fue marcada como objetivo para ser eliminada por un cyborg del futuro. Ahora su hijo John, el futuro líder de la resistencia, es el objetivo de un Terminator más moderno, más mortífero. Una vez más, la resistencia se las ha ingeniado para enviar un protector de vuelta al pasado para intentar salvar a John y a su madre Sarah.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/10xtoK2SFv6ADIeWxr3mcrjko72.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+        "genres": [
+          "Acción",
+          "Suspense",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 348,
+        "title": "Alien: El octavo pasajero",
+        "original_title": "Alien",
+        "year": 1979,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "De regreso a la Tierra, la nave de carga Nostromo interrumpe su viaje y despierta a sus siete tripulantes. El ordenador central, MADRE, ha detectado la misteriosa transmisión de una forma de vida desconocida, procedente de un planeta cercano aparentemente deshabitado. La nave se dirige entonces al extraño planeta para investigar el origen de la comunicación.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+        "genres": [
+          "Terror",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 185,
+        "title": "La naranja mecánica",
+        "original_title": "A Clockwork Orange",
+        "year": 1971,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Gran Bretaña, en un futuro indeterminado. Alex es un joven muy agresivo que tiene dos pasiones: la violencia desaforada y Beethoven. Es el jefe de la banda de los drugos, que dan rienda suelta a sus instintos más salvajes apaleando, violando y aterrorizando a la población. Cuando esa escalada de terror llega hasta el asesinato, Alex es detenido y, en prisión, se someterá voluntariamente a una innovadora experiencia de reeducación que pretende anular drásticamente cualquier atisbo de conducta antisocial.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Metrópolis",
+        "original_title": "Metropolis",
+        "year": 1927,
+        "era": "20s-30s",
+        "rating": 8.1,
+        "overview": "En una megalópolis del año 2000, los obreros están condenados a vivir recluidos en un gueto subterráneo, donde se encuentra el corazón industrial de la ciudad. Sin embargo, incitados por un robot, se rebelan contra la clase dominante y amenazan con destruir la ciudad exterior. Freder (Gustav Frölich), el hijo del soberano de Metrópolis, y María, una muchacha de origen humilde, intentarán evitar la destrucción apelando a los sentimientos y al amor.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
+        "genres": [
+          "Drama",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 1091,
+        "title": "La cosa (El enigma de otro mundo)",
+        "original_title": "The Thing",
+        "year": 1982,
+        "era": "80s",
+        "rating": 8.1,
+        "overview": "En una estación experimental de la Antártida, un equipo de investigadores descubre a un ente extraño venido del espacio, que según todos los indicios ha permanecido enterrado en la nieve durante más de 100.000 años. Al descongelarse, experimenta una metamorfosis sorprendente...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5hkM27bPdkgQli5g5zR5pp9bkNZ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+        "genres": [
+          "Terror",
+          "Misterio",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 1398,
+        "title": "Stalker",
+        "original_title": "Сталкер",
+        "year": 1979,
+        "era": "70s",
+        "rating": 8.1,
+        "overview": "En un lugar de Rusia llamado \"La Zona\", hace algunos años se estrelló un meteorito. A pesar de que el acceso a este lugar está prohibido, los \"stalkers\" se dedican a guiar a quienes se atreven a aventurarse en este inquietante paraje.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/c6lF6PYnq6rtYTUM8me0D0DCpwa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6yrbWzzrPp7pwz6zHdifspJk8t3.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Drama"
+        ]
+      },
+      {
         "id": 62,
-        "title": "2001: Odisea del Espacio",
+        "title": "2001. Una odisea del espacio",
         "original_title": "2001: A Space Odyssey",
         "year": 1968,
         "era": "60s",
-        "rating": 8.1,
-        "overview": "Una expedición a Júpiter se ve amenazada por la inteligencia artificial HAL 9000.",
+        "rating": 8,
+        "overview": "Mientras investigan la aparición de misteriosos monolitos en el universo, dos astronautas luchan contra la inteligencia artificial de su nave.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pGabanxaE2YvN4jhZuSN3oXO0mi.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
         "genres": [
@@ -87,18 +198,68 @@
         ]
       },
       {
-        "id": 348,
-        "title": "Alien: El Octavo Pasajero",
-        "original_title": "Alien",
-        "year": 1979,
-        "era": "70s",
-        "rating": 8.1,
-        "overview": "La tripulación del Nostromo despierta para investigar una misteriosa señal en un planeta desolado.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+        "id": 329,
+        "title": "Jurassic Park (Parque Jurásico)",
+        "original_title": "Jurassic Park",
+        "year": 1993,
+        "era": "90s",
+        "rating": 8,
+        "overview": "El multimillonario John Hammond tiene una idea para un espectacular parque temático: una isla retirada donde los visitantes puedan observar dinosaurios reales. Con la última tecnología en el desarrollo de ADN, los científicos pueden clonar braquiosaurios, triceratops, velociraptors y un tiranosaurio rex, utilizando para ello la sangre fosilizada en ámbar contenida en insectos que los mordieron hace millones de años. Los paleontólogos Alan Grant, Ellie Sattler y Ian Malcolm visitan el parque y quedan muy sorprendidos con los resultados obtenidos. Pero cuando un problemático empleado manipula el sofisticado sistema de seguridad los dinosaurios escapan, obligando a los visitantes a luchar por su supervivencia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/1r8TWaAExHbFRzyqT3Vcbq1XZQb.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/f082quUW2kAtZXFZVGEfhwacZoG.jpg",
         "genres": [
-          "Terror",
+          "Aventura",
           "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 679,
+        "title": "Aliens: El regreso",
+        "original_title": "Aliens",
+        "year": 1986,
+        "era": "80s",
+        "rating": 8,
+        "overview": "Alien es un organismo perfecto, una máquina de matar cuya superioridad física sólo puede competir con su agresividad. La oficial Ripley y la tripulación de la nave «Nostromo» se habían enfrentado, en el pasado, a esa monstruosa criatura. Y sólo Ripley sobrevivió a la masacre. Después de vagar por el espacio durante varios años, Ripley fue rescatada. Durante ese tiempo, el planeta de Alien ha sido colonizado. Pero, de repente, se pierde la comunicación con la colonia y, para investigar los motivos, se envía una expedición de marines espaciales, capitaneados por Ripley. Allí les esperan miles de espeluznantes criaturas. Alien se ha reproducido y esta vez la lucha es por la supervivencia de la Humanidad.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3QU9EP8BFLnTh6w9ycDSCvhqbRU.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg",
+        "genres": [
+          "Acción",
+          "Suspense",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 10386,
+        "title": "El gigante de hierro",
+        "original_title": "The Iron Giant",
+        "year": 1999,
+        "era": "90s",
+        "rating": 8,
+        "overview": "En 1957, en la pequeña localidad de Rockwell, alguien ha visto cómo un enorme hombre metálico caía al mar. Un imaginativo niño descubre que se trata de un robot gigante, cuyo apetito de metal es insaciable. Entre ambos nace una fuerte amistad, pero el gobierno envía a un agente para investigar los hechos. El niño esconde a su nuevo compañero en la chatarrería de un amigo. Pero los habitantes del pueblo comienzan a sentirse aterrados porque creen que es una nueva amenaza en plena Guerra Fría.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/voPAzJFyopCnLEwaBWpoX8uDvGI.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gZ78dyRH9hXeH94ASjuvD9Vw4b5.jpg",
+        "genres": [
+          "Animación",
+          "Drama",
+          "Familia",
+          "Ciencia ficción",
+          "Aventura"
+        ]
+      },
+      {
+        "id": 149,
+        "title": "Akira",
+        "original_title": "AKIRA",
+        "year": 1988,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Corre el año 2019. Un estado policial, políticos tramposos, sectas religiosas, revolucionarios y un proyecto científico secreto se combinan para causar una atmósfera explosiva en Neo-Tokyo. Todos los grupos rivales quieren controlar a Akira, un chico con extraños poderes psíquicos que ha sido mantenido bajo custodia criogénica por más de 30 años. En medio de esta tensa atmósfera, un joven psíquico llamado Tetsuo libera a Akira.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2WvrGAnKtHrb20nHLd38RyhIj0Q.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/fK40VGYIm7hmKrLJ26fgPQU0qRG.jpg",
+        "genres": [
+          "Animación",
+          "Ciencia ficción",
+          "Acción"
         ]
       },
       {
@@ -108,7 +269,7 @@
         "year": 1982,
         "era": "80s",
         "rating": 7.9,
-        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
+        "overview": "A principios del siglo XXI, la Tyrell Corporation desarrolló un nuevo tipo de robot llamado Nexus, un ser virtualmente idéntico al hombre y conocido como Replicante.  Los Replicantes Nexus-6 eran superiores en fuerza y agilidad, y al menos iguales en inteligencia, a los ingenieros de genética que los crearon.  En el espacio exterior, los Replicantes fueron usados como trabajadores esclavos en la arriesgada exploración y colonización de otros planetas.  Después de la sangrienta rebelión de un equipo de combate de Nexus-6 en una colonia sideral, los Replicantes fueron declarados proscritos en la Tierra bajo pena de muerte.  Brigadas de policías especiales, con el nombre de Unidades de Blade Runners, tenían órdenes de tirar a matar al ver a cualquier Replicante invasor.  A esto no se le llamó ejecución, se le llamó retiro.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
         "genres": [
@@ -118,20 +279,19 @@
         ]
       },
       {
-        "id": 871,
-        "title": "El Planeta de los Simios",
-        "original_title": "Planet of the Apes",
-        "year": 1968,
-        "era": "60s",
-        "rating": 7.7,
-        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+        "id": 9323,
+        "title": "Ghost in the Shell",
+        "original_title": "GHOST IN THE SHELL / 攻殻機動隊",
+        "year": 1995,
+        "era": "90s",
+        "rating": 7.9,
+        "overview": "En un futuro no muy lejano, un grupo de agentes especiales se disponen a encontrar a un hacker misterioso conocido como \"Puppet Master\". En la búsqueda descubrirán alarmantes secretos acerca de la evolución de la inteligencia artificial. La película fue una gran inspiración para la trilogía de Matrix.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mo4PUj0SWiX33uQMgxyzE2ZOPBK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/jIpagj2Dud9g3ZVJFvaWikEWsYz.jpg",
         "genres": [
-          "Ciencia ficción",
-          "Aventura",
-          "Drama",
-          "Acción"
+          "Acción",
+          "Animación",
+          "Ciencia ficción"
         ]
       }
     ]
@@ -141,34 +301,18 @@
     "name": "Colección: Obras Cumbre de Crimen & Mafia",
     "genre": "Crimen",
     "tagline": "Las mejores historias del bajo mundo, cine negro y la mafia",
-    "overview": "La cumbre del cine criminal y gansteril: la inolvidable saga de El Padrino, la maestría estilística de Pulp Fiction, el vértigo nocturno de Taxi Driver y la cacería legendaria en M el vampiro de Düsseldorf.",
-    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
-    "count": 10,
+    "poster": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+    "count": 18,
     "movies": [
       {
-        "id": 238,
-        "title": "El Padrino",
-        "original_title": "The Godfather",
-        "year": 1972,
-        "era": "70s",
-        "rating": 8.7,
-        "overview": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su hijo menor.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
-        "genres": [
-          "Drama",
-          "Crimen"
-        ]
-      },
-      {
         "id": 278,
-        "title": "Cadena Perpetua (Sueños de Fuga)",
+        "title": "Cadena perpetua",
         "original_title": "The Shawshank Redemption",
         "year": 1994,
         "era": "90s",
         "rating": 8.7,
-        "overview": "Andy Dufresne es condenado a cadena perpetua y forja una esperanza inquebrantable en prisión.",
+        "overview": "Acusado del asesinato de su mujer, Andrew Dufresne, tras ser condenado a cadena perpetua, es enviado a la prisión de Shawshank. Con el paso de los años conseguirá ganarse la confianza del director del centro y el respeto de sus compañeros presidiarios, especialmente de Red, el jefe de la mafia de los sobornos.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
         "genres": [
@@ -177,13 +321,59 @@
         ]
       },
       {
+        "id": 238,
+        "title": "El padrino",
+        "original_title": "The Godfather",
+        "year": 1972,
+        "era": "70s",
+        "rating": 8.7,
+        "overview": "Don Vito Corleone, conocido dentro de los círculos del hampa como \"El Padrino\", es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York (Estados Unidos) durante la década de 1940. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando Vito reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 240,
+        "title": "El padrino II",
+        "original_title": "The Godfather Part II",
+        "year": 1974,
+        "era": "70s",
+        "rating": 8.6,
+        "overview": "Continuación de la saga de los Corleone con dos historias paralelas: la elección de Michael Corleone como jefe de los negocios familiares y los orígenes del patriarca, el ya fallecido Don Vito, primero en Sicilia y luego en Estados Unidos, donde, empezando desde abajo, llegó a ser un poderosísimo jefe de la mafia de Nueva York.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mbry0W5PRylSUHsYzdiY2FSJwze.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/pGzqRKrYeK4LogoysNro0vG8d8N.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 497,
+        "title": "La milla verde",
+        "original_title": "The Green Mile",
+        "year": 1999,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "En el sur de los Estados Unidos, en plena Depresión, Paul Edgecomb es un vigilante penitenciario a cargo de la Milla Verde, un pasillo que separa las celdas de los reclusos condenados a la silla eléctrica. Esperando su ejecución está John Coffey, un gigantesco negro acusado de asesinar brutalmente a dos hermanas de nueve años. Tras una personalidad ingenua, Coffey esconde un don sobrenatural prodigioso. A medida que transcurre la historia, Paul Edgecomb aprende que los milagros ocurren... incluso en los lugares más insospechados.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aBQiJRxGRrX0mXFMjxyzWYFtEnf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+        "genres": [
+          "Fantasía",
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
         "id": 680,
-        "title": "Pulp Fiction (Tiempos Violentos)",
+        "title": "Pulp Fiction",
         "original_title": "Pulp Fiction",
         "year": 1994,
         "era": "90s",
         "rating": 8.5,
-        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "overview": "Jules y Vincent, dos asesinos a sueldo con muy pocas luces, trabajan para Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra. Su misión: recuperar un misterioso maletín.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
         "genres": [
@@ -194,12 +384,12 @@
       },
       {
         "id": 769,
-        "title": "Buenos Muchachos (Goodfellas)",
+        "title": "Uno de los nuestros",
         "original_title": "GoodFellas",
         "year": 1990,
         "era": "90s",
         "rating": 8.5,
-        "overview": "Henry Hill asciende en la jerarquía de la mafia italoamericana a lo largo de tres décadas.",
+        "overview": "Henry, un niño de trece años de Brooklyn, vive fascinado con el mundo de los gángsters. Su sueño se hace realidad cuando entra a formar parte de la familia Pauline, dueña absoluta de la zona, que lo educan como un miembro más de la banda convirtiéndole en un destacado mafioso.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
         "genres": [
@@ -208,13 +398,61 @@
         ]
       },
       {
+        "id": 12493,
+        "title": "El infierno del odio",
+        "original_title": "天国と地獄",
+        "year": 1963,
+        "era": "60s",
+        "rating": 8.4,
+        "overview": "En un momento crucial de su vida financiera, Gondo, un hombre de negocios, recibe la noticia de que su hijo ha sido secuestrado, y el rescate exigido es una cantidad de dinero similar a la que necesita para cerrar una importante negociación. Gondo está dispuesto a pagar el rescate hasta que comprende que los secuestradores se han equivocado y se han llevado al hijo del chófer. Ahora deberá decidir si el dinero es más importante que la vida del niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9c87PSaPcoZzAGbJKQLAcYiqGRy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/i1NjlccZcuqbgDCS92RHdhEnx59.jpg",
+        "genres": [
+          "Drama",
+          "Crimen",
+          "Suspense",
+          "Misterio"
+        ]
+      },
+      {
+        "id": 807,
+        "title": "Seven",
+        "original_title": "Se7en",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "El teniente Somerset, del departamento de homicidios, está a punto de jubilarse y ser reemplazado por el ambicioso y brillante detective David Mills. Ambos tendrán que colaborar en la resolución de una serie de asesinatos cometidos por un psicópata que toma como base la relación de los siete pecados capitales: gula, pereza, soberbia, avaricia, envidia, lujuria e ira. Los cuerpos de las víctimas, sobre los que el asesino se ensaña de manera impúdica, se convertirán para los policías en un enigma que les obligará a viajar al horror y la barbarie más absoluta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/uVPcVz4b2hnSGrXYLdIGRXwcivs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/jwBs4djVIe9Kz3Vu9rsI9aEEKWU.jpg",
+        "genres": [
+          "Crimen",
+          "Misterio",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 311,
+        "title": "Érase una vez en América",
+        "original_title": "Once Upon a Time in America",
+        "year": 1984,
+        "era": "80s",
+        "rating": 8.4,
+        "overview": "David Aaronson \"Noodles\", un pobre joven judío, conoce en los suburbios de principios del siglo XX de Manhattan, Nueva York, a Maximilian Bercovicz \"Max\", otro joven de origen hebreo dispuesto a llegar lejos por cualquier método. Entablan una gran amistad y forman, con los 3 colegas de \"Noodles\", Patrick Goldberg \"Patsy\", Philip Stein \"Cockeye\", y Dominic una banda que prospera rápidamente. Desgraciadamente, son perseguidos por Bugsy, el tipo para el que Noodles y sus amigos trabajaban anteriormente, y en uno de sus asaltos, mata a Dominic. Rápidamente Noodles se tira encima suyo y le mata, por lo que pasará 12 años en prisión. Cuando Noodles sale de prisión le recibe Max, que sigue con su banda junto a los otros 2 amigos, Patsy y Cockeye. Rápidamente, entre los 4, llegan a convertirse, en tiempos de la prohibición, en unos de los mayores gánsteres de todo el país.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/u4VnqaxINtKVscmdldZsBojU6jm.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/xlDUjb0Q5Dv6jPQRF5VE4IMjIy.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
         "id": 274,
-        "title": "El Silencio de los Inocentes",
+        "title": "El silencio de los corderos",
         "original_title": "The Silence of the Lambs",
         "year": 1991,
         "era": "90s",
         "rating": 8.3,
-        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
+        "overview": "Clarice Starling, del FBI, se aventura a una prisión de máxima seguridad para analizar el cerebro enfermo de Hannibal Lecter, un psiquiatra convertido en caníbal.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
         "genres": [
@@ -224,28 +462,93 @@
         ]
       },
       {
-        "id": 103,
-        "title": "Taxi Driver",
-        "original_title": "Taxi Driver",
-        "year": 1976,
-        "era": "70s",
-        "rating": 8.2,
-        "overview": "Travis Bickle, un veterano con insomnio, trabaja de taxista nocturno en una Nueva York decadente.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9G26DnAeMbA4sp58Gi0Vze6eQv4.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
+        "id": 101,
+        "title": "El profesional (Léon)",
+        "original_title": "Léon",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Stan es un corrupto agente de la DEA cuya codicia le lleva a cometer asesinatos en las calles de Nueva York. El mortal juego del gato y el ratón empieza cuando se cruza en su camino un solitario hombre, llamado León. León es asesino a sueldo, un personaje indestructible e indocumentado, que sólo bebe leche y se ocupa de sus plantas. En medio se encuentra una huerfanita de 12 años, que no puede olvidar al hombre que asesinó a su familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9Ztxqq9mAeGiXDkyqXJPaACUcbd.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
         "genres": [
           "Crimen",
-          "Drama"
+          "Drama",
+          "Acción"
+        ]
+      },
+      {
+        "id": 9702,
+        "title": "Sangre por sangre",
+        "original_title": "Bound by Honor",
+        "year": 1993,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Tres primos crecen como hermanos en medio de la violencia de las bandas del este de Los Ángeles. Con el tiempo sus vidas siguen caminos muy diferentes: uno trabaja para la brigada antidroga de la Policía, otro cae en las redes de las brutales bandas de San Quintín y el tercero se deja arrastrar por el sórdido mundo de la drogadiccion. Pero el sentido del honor y sobre todo los lazos de sangre los mantendrán siempre unidos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Wc4S6rFHKJ7jyghOdZVWVVC49j.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9xjUZjuYyehv2qnqMH0oR9nSTft.jpg",
+        "genres": [
+          "Crimen",
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 29259,
+        "title": "La evasión",
+        "original_title": "Le Trou",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "Francia, 1947. Gaspard Claude ha sido acusado del intento de asesinato de su mujer, pero es inocente. Una vez en la cárcel, comparte celda con cuatro duros criminales que han decidido escapar de la prisión construyendo un laborioso túnel. A duras penas, convencen al joven para que se una al plan de fuga y participe en la construcción del túnel.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Al1F9o6fDkOBRngeG2FTJ0f9xTv.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/f72GEQF2lKsdmEULSI9bWCbQylH.jpg",
+        "genres": [
+          "Drama",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 37257,
+        "title": "Testigo de cargo",
+        "original_title": "Witness for the Prosecution",
+        "year": 1957,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Leonard Vole, un hombre joven y atractivo, es acusado del asesinato de la señora French, una rica anciana con quien mantenía una relacion de carácter amistoso. El presunto móvil del crimen era la posibilidad de heredar los bienes de la difunta. A pesar de que las pruebas en su contra son demoledoras, Sir Wilfrid Roberts, un prestigioso abogado criminalista londinense, se hace cargo de su defensa.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zvhSdC8NmanfKdmE2em57Eei5TG.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/evUB9YKE5IPPtQOchcEF6hS90BO.jpg",
+        "genres": [
+          "Drama",
+          "Misterio",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 15804,
+        "title": "Un día de verano",
+        "original_title": "牯嶺街少年殺人事件",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Taiwan, años '60. Los jóvenes taiwaneses, aunque dominados por China, se sienten deslumbrados por los Estados Unidos y organizan bandas para afirmar su identidad. La versión original duraba 237 minutos, pero por motivos comerciales Yang la recortó para su exhibición hasta los 188 minutos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/gXvyDspzokDAjG0C3rSrszTj12j.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
+        "genres": [
+          "Crimen",
+          "Drama",
+          "Romance"
         ]
       },
       {
         "id": 185,
-        "title": "La Naranja Mecánica",
+        "title": "La naranja mecánica",
         "original_title": "A Clockwork Orange",
         "year": 1971,
         "era": "70s",
         "rating": 8.2,
-        "overview": "Alex DeLarge, un joven ultraviolento, es encarcelado y sometido al experimento de rehabilitación Ludovico.",
+        "overview": "Gran Bretaña, en un futuro indeterminado. Alex es un joven muy agresivo que tiene dos pasiones: la violencia desaforada y Beethoven. Es el jefe de la banda de los drugos, que dan rienda suelta a sus instintos más salvajes apaleando, violando y aterrorizando a la población. Cuando esa escalada de terror llega hasta el asesinato, Alex es detenido y, en prisión, se someterá voluntariamente a una innovadora experiencia de reeducación que pretende anular drásticamente cualquier atisbo de conducta antisocial.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/p40pYh2EBPoyVyqw6qy2PAZkFVA.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
         "genres": [
@@ -254,49 +557,33 @@
         ]
       },
       {
+        "id": 629,
+        "title": "Sospechosos habituales",
+        "original_title": "The Usual Suspects",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Dave Kujan (Chazz Palminteri), un agente especial que trabaja para el servicio de aduanas de EEUU, está investigando las consecuencias de un incendio a bordo de un barco en el puerto de San Pedro de Los Ángeles, con un balance de 27 víctimas mortales -todas aparentemente asesinadas-. La única fuente de información de Kujan es Roger Kint (Kevin Spacey), un estafador lisiado que sobrevivió al incendio. En comisaría, Kint cuenta que todo comenzó 6 semanas atrás en Nueva York, cuando 5 delincuentes, 5 \"sospechosos habituales\", fueron detenidos para una rueda de reconocimiento referente al robo de un camión de armas...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zI2ESVtVBJTo68aWuwCku78q4dZ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+        "genres": [
+          "Drama",
+          "Crimen",
+          "Suspense"
+        ]
+      },
+      {
         "id": 111,
-        "title": "Scarface (Cara Cortada)",
+        "title": "El precio del poder",
         "original_title": "Scarface",
         "year": 1983,
         "era": "80s",
         "rating": 8.2,
-        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
+        "overview": "Un emigrante cubano frío y sanguinario, Tony Montana, llega de Cuba para instalarse en Miami, donde se propone hacerse con un nombre dentro del crimen organizado de Florida. Junto a su amigo, Manny Rivera, inicia una ascendente carrera delictiva.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
         "genres": [
           "Acción",
-          "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 832,
-        "title": "M, el vampiro de Düsseldorf",
-        "original_title": "M",
-        "year": 1931,
-        "era": "20s-30s",
-        "rating": 8.1,
-        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
-        "genres": [
-          "Drama",
-          "Suspense",
-          "Crimen"
-        ]
-      },
-      {
-        "id": 1580,
-        "title": "La Soga",
-        "original_title": "Rope",
-        "year": 1948,
-        "era": "40s",
-        "rating": 7.9,
-        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
-        "genres": [
-          "Suspense",
           "Crimen",
           "Drama"
         ]
@@ -307,11 +594,10 @@
     "id": "col-horror",
     "name": "Colección: Maestros del Terror Clásico",
     "genre": "Terror",
-    "tagline": "El horror psicológico, atmosférico y monstruos eternos",
-    "overview": "Las películas fundamentales que dieron forma al terror cinematográfico: el vampirismo expresionista de Nosferatu, la locura asfixiante de El Resplandor, el suspense aterrador de Psicosis y el horror cósmico en Alien.",
+    "tagline": "Escalofríos eternos, monstruos y el mejor cine de horror",
     "poster": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
     "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
-    "count": 4,
+    "count": 18,
     "movies": [
       {
         "id": 539,
@@ -320,7 +606,7 @@
         "year": 1960,
         "era": "60s",
         "rating": 8.4,
-        "overview": "Marion Crane huye con dinero robado y se hospeda en el aislado motel de Norman Bates.",
+        "overview": "Una joven secretaria, tras cometer un robo, se marcha de la ciudad y conduce durante horas, parando para descansar en un pequeño motel de carretera regentado por un joven llamado Norman. Todo parece normal y tranquilo en el apartado motel y en la casa de al lado en la que viven Norman y su madre pero, mientras está en la ducha, la joven es asesinada salvajemente a cuchilladas.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
         "genres": [
@@ -331,12 +617,12 @@
       },
       {
         "id": 694,
-        "title": "El Resplandor",
+        "title": "El resplandor",
         "original_title": "The Shining",
         "year": 1980,
         "era": "80s",
         "rating": 8.2,
-        "overview": "Una familia cuida un hotel aislado durante el invierno mientras fuerzas siniestras acechan.",
+        "overview": "Jack Torrance se traslada, junto a su mujer y a su hijo, al impresionante hotel Overlook, en Colorado, para encargarse del mantenimiento del mismo durante la temporada invernal, en la que permanece cerrado y aislado por la nieve. Su idea es escribir su novela al tiempo que cuida de las instalaciones durante esos largos y solitarios meses de invierno, pero desde su llegada al hotel, Jack comienza a padecer inquietantes transtornos de personalidad, al mismo tiempo que en el lugar comienzan a suceder diversos fenómenos paranormales.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
         "genres": [
@@ -345,13 +631,30 @@
         ]
       },
       {
+        "id": 25237,
+        "title": "Masacre (Ven y mira)",
+        "original_title": "Иди и смотри",
+        "year": 1985,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Tras encontrar un viejo rifle, un joven se une a las fuerzas de la resistencia soviética, que lucha por expulsar a las fuerzas nazis del frente oriental. Allí, será testigo de algunos los mayores horrores cometidos en la Segunda Guerra Mundial.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/j2hzNkmwYT184eP9qYdjViiYxCO.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3Na31ta8vDuKOgQuPLdSZLs8bCB.jpg",
+        "genres": [
+          "Drama",
+          "Bélica",
+          "Terror",
+          "Historia"
+        ]
+      },
+      {
         "id": 348,
-        "title": "Alien: El Octavo Pasajero",
+        "title": "Alien: El octavo pasajero",
         "original_title": "Alien",
         "year": 1979,
         "era": "70s",
-        "rating": 8.1,
-        "overview": "La tripulación del Nostromo despierta para investigar una misteriosa señal en un planeta desolado.",
+        "rating": 8.2,
+        "overview": "De regreso a la Tierra, la nave de carga Nostromo interrumpe su viaje y despierta a sus siete tripulantes. El ordenador central, MADRE, ha detectado la misteriosa transmisión de una forma de vida desconocida, procedente de un planeta cercano aparentemente deshabitado. La nave se dirige entonces al extraño planeta para investigar el origen de la comunicación.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pZ9cAe5FxexJjpCaeiETbXzz3Fs.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
         "genres": [
@@ -360,18 +663,227 @@
         ]
       },
       {
-        "id": 653,
-        "title": "Nosferatu",
-        "original_title": "Nosferatu, eine Symphonie des Grauens",
-        "year": 1922,
-        "era": "20s-30s",
-        "rating": 7.7,
-        "overview": "El conde Orlok, un vampiro de los Cárpatos, compra una finca en Wisborg.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/z45rXmIF0zl4uxRc5XcSfz6hYO6.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cA9iGtvjRGJHzDBfrq48l0eyCvA.jpg",
+        "id": 1091,
+        "title": "La cosa (El enigma de otro mundo)",
+        "original_title": "The Thing",
+        "year": 1982,
+        "era": "80s",
+        "rating": 8.1,
+        "overview": "En una estación experimental de la Antártida, un equipo de investigadores descubre a un ente extraño venido del espacio, que según todos los indicios ha permanecido enterrado en la nieve durante más de 100.000 años. Al descongelarse, experimenta una metamorfosis sorprendente...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5hkM27bPdkgQli5g5zR5pp9bkNZ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
         "genres": [
           "Terror",
-          "Fantasía"
+          "Misterio",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 234,
+        "title": "El gabinete del doctor Caligari",
+        "original_title": "Das Cabinet des Dr. Caligari",
+        "year": 1920,
+        "era": "20s-30s",
+        "rating": 7.9,
+        "overview": "Sentado en un banco de un parque, Francis anima a su compañero Alan para que vayan a Holstenwall, una ciudad del norte de Alemania, a ver el espectáculo ambulante del doctor Caligari. Un empleado municipal que le niega al doctor el permiso para actuar, aparece asesinado al día siguiente. Francis y Alan acuden a ver al doctor Caligari y a Cesare, su ayudante sonámbulo, que le anuncia a Alan su porvenir: vivirá hasta el amanecer.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xehDbRVWuS31FBU73AUIoiVePIe.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/sLq72hBx8Xs2IISVsZJqgjOd31b.jpg",
+        "genres": [
+          "Drama",
+          "Terror",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 10728,
+        "title": "Fausto",
+        "original_title": "Faust - Eine deutsche Volkssage",
+        "year": 1926,
+        "era": "20s-30s",
+        "rating": 7.9,
+        "overview": "Relata la historia de un célebre pensador que después de buscar sin descanso la esencia del conocimiento y la verdad oculta de las cosas, es tentado por el diablo y vende su alma.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/cF5zH7UoRVQDnsvO3mJvWx1ocNw.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/dQbnFqsbtyHS7OD108vuFJiUyzy.jpg",
+        "genres": [
+          "Fantasía",
+          "Drama",
+          "Terror"
+        ]
+      },
+      {
+        "id": 10242,
+        "title": "¿Qué fue de Baby Jane?",
+        "original_title": "What Ever Happened to Baby Jane?",
+        "year": 1962,
+        "era": "60s",
+        "rating": 7.9,
+        "overview": "Baby Jane fue una niña estrella en su juventud, años despues su carrera fracasa mientras su hermana Blanche triunfa como actriz. En el presente ambas hermanas, ya de avanzada edad, viven juntas. Blanche, que está paralítica por un extraño accidente que sucedió en el pasado, vive prácticamente secuestrada y maltratada por Jane, que sufre grandes transtornos psicológicos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hNvM9dKmWlbLTXR92D3ASpQsm8K.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gkXL5ka6ciU4A4KYSvLIAXtvh7k.jpg",
+        "genres": [
+          "Terror",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 805,
+        "title": "La semilla del diablo",
+        "original_title": "Rosemary's Baby",
+        "year": 1968,
+        "era": "60s",
+        "rating": 7.8,
+        "overview": "Una joven pareja, Rosemary y Guy, se muda a un infame edificio de apartamentos de Nueva York, conocido por aterradoras leyendas y misteriosos sucesos, con el propósito de formar una familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/1PbbUmtP8SnGRCTvTzqfj5aj0xK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qszuXKhzYR24oRpsmh7eZaPbvL8.jpg",
+        "genres": [
+          "Drama",
+          "Terror",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 18352,
+        "title": "El incinerador de cadáveres",
+        "original_title": "Spalovač mrtvol",
+        "year": 1969,
+        "era": "60s",
+        "rating": 7.8,
+        "overview": "El señor Karel domina a sus familiares, amigos y empleados. Sólo está preocupado porque el tránsito de los difuntos hacia el más allá sea lo más limpio y rápido posible, todo mediante la incineración de cadáveres en el cementerio que regenta. (FILMAFFINITY)",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/kwl7MNooVsyXzKARZvBBd1tKFJW.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/fMjdPM3pdc7T0NVoVqXtXEuJvG2.jpg",
+        "genres": [
+          "Terror",
+          "Drama",
+          "Crimen",
+          "Comedia"
+        ]
+      },
+      {
+        "id": 14282,
+        "title": "Ninja Scroll",
+        "original_title": "獣兵衛忍風帖",
+        "year": 1993,
+        "era": "90s",
+        "rating": 7.8,
+        "overview": "Tras interminables años de guerra civil, el Japón feudal tiembla ante una terrible amenaza: la aparición del Shogun de las Tinieblas, que con su ejército de criaturas demoníacas y sanguinarios guerreros, pretende convertir a todo Japón en sangre y fuego. Un poderoso guerrero errante llamado Jubei estará dispuesto a enfrentarse al Shogun de las Tinieblas y acabar con él cueste lo que cueste. Jubei es un legendario samurai cuyas técnicas de combate le permiten derrotar a cualquier enemigo. Durante una pelea, salvará la vida de la joven ninja Kagero y ésta será decisiva en la batalla final: el enfrentamiento contra los ocho demonios de Kimon.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pepgQDbKDMATqQff6xVTgH5rXig.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mOd8oNCNyKOXs58FzdD1pPygWD.jpg",
+        "genres": [
+          "Fantasía",
+          "Animación",
+          "Acción",
+          "Terror"
+        ]
+      },
+      {
+        "id": 136,
+        "title": "La parada de los monstruos",
+        "original_title": "Freaks",
+        "year": 1932,
+        "era": "20s-30s",
+        "rating": 7.8,
+        "overview": "En un circo lleno de seres deformes, tullidos y personas con diversas amputaciones, Hans, uno de los enanos, hereda una fortuna. A partir de ese momento, Cleopatra, una bella contorsionista, intentará seducirlo para hacerse con su dinero. Para lograr su objetivo, traza un plan contando con la complicidad de Hércules, el forzudo del circo...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2FfobmyEH4rLACOeAqA8L7VJGEC.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/r18vpGFsNf6n984x4KdJmAAWKkP.jpg",
+        "genres": [
+          "Drama",
+          "Terror"
+        ]
+      },
+      {
+        "id": 22137,
+        "title": "Riget",
+        "original_title": "Riget",
+        "year": 1994,
+        "era": "90s",
+        "rating": 7.8,
+        "overview": "Una de las grandes obras maestras de la historia del cine.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/61RzGgWT6kFatyeu6mqtIJWxMbS.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/nQ1woqbLcKjkpfEbfAEoAey6W3n.jpg",
+        "genres": [
+          "Drama",
+          "Fantasía",
+          "Terror",
+          "Misterio"
+        ]
+      },
+      {
+        "id": 9552,
+        "title": "El exorcista",
+        "original_title": "The Exorcist",
+        "year": 1973,
+        "era": "70s",
+        "rating": 7.8,
+        "overview": "Regan es una niña de doce años víctima de fenómenos paranormales como la levitación o la manifestación de una fuerza sobrehumana. Su madre, aterrorizada, tras someter a su hija a múltiples análisis médicos que no ofrecen ningún resultado, acude a un sacerdote con estudios de psiquiatría. Éste está convencido de que el mal no es físico sino espiritual, es decir, que la niña es víctima de una posesión diabólica. Por eso, con la ayuda de otro sacerdote decide practicar un exorcismo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hwJvgHQ4tf9eRQec1ouAgg33dPV.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/xcjJ5khg2yzOa282mza39Lbrm7j.jpg",
+        "genres": [
+          "Terror"
+        ]
+      },
+      {
+        "id": 30959,
+        "title": "El más allá",
+        "original_title": "怪談",
+        "year": 1965,
+        "era": "60s",
+        "rating": 7.7,
+        "overview": "Filme basado en cuatro historias del escritor Lafcadio Hearn. \"Pelo negro\": un samurái no soporta a su mujer y la abandona por una princesa. Años después vuelve a casa para realizar un terrible descubrimiento. \"La mujer en la nieve\": dos leñadores se refugian de una tormenta de nieve en lo que parece ser un cobertizo abandonado. \"Hoichi\": el fantasma de un samurái le pide a un músico ciego que toque una balada en la tumba de su señor. \"En la taza de té\": un samurái se asusta ante la visión de un hombre reflejado en su taza de té.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/l22SG9evZiz3wp7E29dpl16XSO5.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9GAU0z2wVA8M2D2w36CaloWYYgv.jpg",
+        "genres": [
+          "Terror",
+          "Fantasía",
+          "Drama"
+        ]
+      },
+      {
+        "id": 58129,
+        "title": "La carreta fantasma",
+        "original_title": "Körkarlen",
+        "year": 1921,
+        "era": "20s-30s",
+        "rating": 7.7,
+        "overview": "Es Nochevieja. Tres borrachos evocan una leyenda según la cual si un gran pecador es la última persona que muere al terminar el año, entonces tendrá que conducir durante un año entero la Carreta Fantasma que recoge las almas de los muertos. David Holm, uno de los tres borrachos, muere cuando suena la última campanada de la medianoche...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/cViRi9KUS06qfDKG89BuDoXa2hn.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zMqJoVJXQPvkjZ1SZ03e4EuKMfm.jpg",
+        "genres": [
+          "Drama",
+          "Fantasía",
+          "Terror"
+        ]
+      },
+      {
+        "id": 12561,
+        "title": "Godzilla vs Destoroyah",
+        "original_title": "ゴジラvsデストロイア",
+        "year": 1995,
+        "era": "90s",
+        "rating": 7.7,
+        "overview": "Algo a destruido Birth Island, hogar de Godzilla y su hijo y pronto se descubre que la energía nuclear de Godzilla está fuera de control. Temiendo que Godzilla explote, la Fuerza G intenta congelarlo. Pero un nuevo problema surge al aparecer una horda de criaturas del tamaño de los humanos, creados por una combinación de las células de Godzilla y del arma que destruyo al Godzilla original.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oilV4OOGCDZvgsd9ouQa7HGUMOH.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mTL72rHXjdwQYsfnuJC1Szbcckg.jpg",
+        "genres": [
+          "Acción",
+          "Ciencia ficción",
+          "Terror"
+        ]
+      },
+      {
+        "id": 20126,
+        "title": "Rojo oscuro",
+        "original_title": "Profondo rosso",
+        "year": 1975,
+        "era": "70s",
+        "rating": 7.7,
+        "overview": "Un compositor inglés (Hemmings) presencia en Roma el brutal asesinato de una médium, e inmediatamente trata de localizar al sádico asesino.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2QTU0JCmcgLhhDvxy58fPkPLkpM.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3hvygFCUYB0A4Q1uu6DJ5M1GmpU.jpg",
+        "genres": [
+          "Terror",
+          "Misterio",
+          "Suspense"
         ]
       }
     ]
@@ -380,20 +892,19 @@
     "id": "col-suspense",
     "name": "Colección: Grandes del Suspense & Intriga",
     "genre": "Suspense",
-    "tagline": "Tensión psicológica, enigmas criminales y maestría visual",
-    "overview": "El arte de mantener al espectador al borde del asiento: las obras maestras de Alfred Hitchcock como Psicosis y La ventana indiscreta, junto a joyas como Vértigo, Taxi Driver y Pulp Fiction.",
+    "tagline": "Misterio, paranoia y giros inolvidables de Hitchcock a Fincher",
     "poster": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
     "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-    "count": 9,
+    "count": 18,
     "movies": [
       {
         "id": 680,
-        "title": "Pulp Fiction (Tiempos Violentos)",
+        "title": "Pulp Fiction",
         "original_title": "Pulp Fiction",
         "year": 1994,
         "era": "90s",
         "rating": 8.5,
-        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "overview": "Jules y Vincent, dos asesinos a sueldo con muy pocas luces, trabajan para Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra. Su misión: recuperar un misterioso maletín.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
         "genres": [
@@ -403,13 +914,28 @@
         ]
       },
       {
+        "id": 550,
+        "title": "El club de la lucha",
+        "original_title": "Fight Club",
+        "year": 1999,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "Un hombre consumido por el insomnio y una vida sin sentido conoce a Tyler Durden, un carismático anarquista que lo arrastra a un club secreto donde el dolor despierta algo dormido. Lo que comienza como liberación pronto se convierte en una guerra contra el sistema…",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sgTAWJFaB2kBvdQxRGabYFiQqEK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+        "genres": [
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
         "id": 539,
         "title": "Psicosis",
         "original_title": "Psycho",
         "year": 1960,
         "era": "60s",
         "rating": 8.4,
-        "overview": "Marion Crane huye con dinero robado y se hospeda en el aislado motel de Norman Bates.",
+        "overview": "Una joven secretaria, tras cometer un robo, se marcha de la ciudad y conduce durante horas, parando para descansar en un pequeño motel de carretera regentado por un joven llamado Norman. Todo parece normal y tranquilo en el apartado motel y en la casa de al lado en la que viven Norman y su madre pero, mientras está en la ducha, la joven es asesinada salvajemente a cuchilladas.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xFbnc2QPG5H5gYWsGbZT4q8Akya.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
         "genres": [
@@ -419,29 +945,46 @@
         ]
       },
       {
-        "id": 567,
-        "title": "La Ventana Indiscreta",
-        "original_title": "Rear Window",
-        "year": 1954,
-        "era": "50s",
-        "rating": 8.3,
-        "overview": "Un fotógrafo con una pierna rota espía a sus vecinos y cree presenciar un asesinato.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+        "id": 12493,
+        "title": "El infierno del odio",
+        "original_title": "天国と地獄",
+        "year": 1963,
+        "era": "60s",
+        "rating": 8.4,
+        "overview": "En un momento crucial de su vida financiera, Gondo, un hombre de negocios, recibe la noticia de que su hijo ha sido secuestrado, y el rescate exigido es una cantidad de dinero similar a la que necesita para cerrar una importante negociación. Gondo está dispuesto a pagar el rescate hasta que comprende que los secuestradores se han equivocado y se han llevado al hijo del chófer. Ahora deberá decidir si el dinero es más importante que la vida del niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9c87PSaPcoZzAGbJKQLAcYiqGRy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/i1NjlccZcuqbgDCS92RHdhEnx59.jpg",
         "genres": [
+          "Drama",
+          "Crimen",
           "Suspense",
+          "Misterio"
+        ]
+      },
+      {
+        "id": 807,
+        "title": "Seven",
+        "original_title": "Se7en",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "El teniente Somerset, del departamento de homicidios, está a punto de jubilarse y ser reemplazado por el ambicioso y brillante detective David Mills. Ambos tendrán que colaborar en la resolución de una serie de asesinatos cometidos por un psicópata que toma como base la relación de los siete pecados capitales: gula, pereza, soberbia, avaricia, envidia, lujuria e ira. Los cuerpos de las víctimas, sobre los que el asesino se ensaña de manera impúdica, se convertirán para los policías en un enigma que les obligará a viajar al horror y la barbarie más absoluta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/uVPcVz4b2hnSGrXYLdIGRXwcivs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/jwBs4djVIe9Kz3Vu9rsI9aEEKWU.jpg",
+        "genres": [
+          "Crimen",
           "Misterio",
-          "Drama"
+          "Suspense"
         ]
       },
       {
         "id": 274,
-        "title": "El Silencio de los Inocentes",
+        "title": "El silencio de los corderos",
         "original_title": "The Silence of the Lambs",
         "year": 1991,
         "era": "90s",
         "rating": 8.3,
-        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
+        "overview": "Clarice Starling, del FBI, se aventura a una prisión de máxima seguridad para analizar el cerebro enfermo de Hannibal Lecter, un psiquiatra convertido en caníbal.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
         "genres": [
@@ -451,13 +994,153 @@
         ]
       },
       {
+        "id": 567,
+        "title": "La ventana indiscreta",
+        "original_title": "Rear Window",
+        "year": 1954,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Un reportero fotográfico se ve obligado a permanecer en reposo con una pierna escayolada. A pesar de la compañía de su novia y de su enfermera, procura escapar al tedio, observando desde la ventana de su apartamento con unos prismáticos lo que ocurre en las viviendas de enfrente. Debido a una serie de extrañas circunstancias empieza a sospechar de un vecino cuya mujer ha desaparecido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+        "genres": [
+          "Suspense",
+          "Misterio",
+          "Drama"
+        ]
+      },
+      {
+        "id": 10494,
+        "title": "Perfect Blue",
+        "original_title": "PERFECT BLUE",
+        "year": 1998,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Tras años siendo una ídolo juvenil que forma parte del exitoso trío musical CHAM!, Mima Kirigoe decide abandonar el grupo para perseguir su sueño de convertirse en actriz. Alentada por su entorno, decide romper con su imagen de niña buena y acepta un papel en una serie policíaca subida de tono, lo que provoca la ira de muchos de sus fans. Pronto descubre que alguien está escribiendo un blog en internet en el que explica detalles íntimos sobre su vida y además su misterioso acosador pasa a la acción amenazando a sus seres queridos. Mientras los cadáveres comienzan a acumularse a su alrededor, la realidad y las alucinaciones se mezclan en un mundo terrorífico en el que no hay lugar para la inocencia y los sueños se convierten en pesadillas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/kk8p22JheV6MB0fBXOOUgZK9UWQ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg",
+        "genres": [
+          "Animación",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 9702,
+        "title": "Sangre por sangre",
+        "original_title": "Bound by Honor",
+        "year": 1993,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Tres primos crecen como hermanos en medio de la violencia de las bandas del este de Los Ángeles. Con el tiempo sus vidas siguen caminos muy diferentes: uno trabaja para la brigada antidroga de la Policía, otro cae en las redes de las brutales bandas de San Quintín y el tercero se deja arrastrar por el sórdido mundo de la drogadiccion. Pero el sentido del honor y sobre todo los lazos de sangre los mantendrán siempre unidos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Wc4S6rFHKJ7jyghOdZVWVVC49j.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9xjUZjuYyehv2qnqMH0oR9nSTft.jpg",
+        "genres": [
+          "Crimen",
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 29259,
+        "title": "La evasión",
+        "original_title": "Le Trou",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "Francia, 1947. Gaspard Claude ha sido acusado del intento de asesinato de su mujer, pero es inocente. Una vez en la cárcel, comparte celda con cuatro duros criminales que han decidido escapar de la prisión construyendo un laborioso túnel. A duras penas, convencen al joven para que se una al plan de fuga y participe en la construcción del túnel.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Al1F9o6fDkOBRngeG2FTJ0f9xTv.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/f72GEQF2lKsdmEULSI9bWCbQylH.jpg",
+        "genres": [
+          "Drama",
+          "Suspense",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 16672,
+        "title": "La mujer de la arena",
+        "original_title": "砂の女",
+        "year": 1964,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "Un entomólogo en busca de insectos en un desierto de arena se ve de repente atrapado conviviendo con una mujer que vive sola en una vieja casa, y con la que establecerá una extraña relación.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8HXTSiDquKF9g88rSK5XHCcC1TJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/dxfFh9pTKDaYH2B6PwcR6ohCM1L.jpg",
+        "genres": [
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 694,
+        "title": "El resplandor",
+        "original_title": "The Shining",
+        "year": 1980,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Jack Torrance se traslada, junto a su mujer y a su hijo, al impresionante hotel Overlook, en Colorado, para encargarse del mantenimiento del mismo durante la temporada invernal, en la que permanece cerrado y aislado por la nieve. Su idea es escribir su novela al tiempo que cuida de las instalaciones durante esos largos y solitarios meses de invierno, pero desde su llegada al hotel, Jack comienza a padecer inquietantes transtornos de personalidad, al mismo tiempo que en el lugar comienzan a suceder diversos fenómenos paranormales.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+        "genres": [
+          "Terror",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 26451,
+        "title": "Investigación sobre un ciudadano libre de toda sospecha",
+        "original_title": "Indagine su un cittadino al di sopra di ogni sospetto",
+        "year": 1970,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "Roma, Italia. Después de cometer un crimen atroz, un alto oficial de la policía expone pruebas que le incriminan directamente porque su compromiso moral le impide eludir la ley y el orden social que esta protege.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5eUBcyilUy0sy6AcqNpjgXQX4A4.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7SUT9mYb7SD88Gz7rFeLbjC2YeG.jpg",
+        "genres": [
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 280,
+        "title": "Terminator 2: El juicio final",
+        "original_title": "Terminator 2: Judgment Day",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Ha pasado once años desde que Sarah Connor fue marcada como objetivo para ser eliminada por un cyborg del futuro. Ahora su hijo John, el futuro líder de la resistencia, es el objetivo de un Terminator más moderno, más mortífero. Una vez más, la resistencia se las ha ingeniado para enviar un protector de vuelta al pasado para intentar salvar a John y a su madre Sarah.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/10xtoK2SFv6ADIeWxr3mcrjko72.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+        "genres": [
+          "Acción",
+          "Suspense",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 629,
+        "title": "Sospechosos habituales",
+        "original_title": "The Usual Suspects",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Dave Kujan (Chazz Palminteri), un agente especial que trabaja para el servicio de aduanas de EEUU, está investigando las consecuencias de un incendio a bordo de un barco en el puerto de San Pedro de Los Ángeles, con un balance de 27 víctimas mortales -todas aparentemente asesinadas-. La única fuente de información de Kujan es Roger Kint (Kevin Spacey), un estafador lisiado que sobrevivió al incendio. En comisaría, Kint cuenta que todo comenzó 6 semanas atrás en Nueva York, cuando 5 delincuentes, 5 \"sospechosos habituales\", fueron detenidos para una rueda de reconocimiento referente al robo de un camión de armas...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zI2ESVtVBJTo68aWuwCku78q4dZ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+        "genres": [
+          "Drama",
+          "Crimen",
+          "Suspense"
+        ]
+      },
+      {
         "id": 426,
         "title": "Vértigo",
         "original_title": "Vertigo",
         "year": 1958,
         "era": "50s",
-        "rating": 8.2,
-        "overview": "Un detective retirado con acrofobia es contratado para vigilar a una misteriosa mujer.",
+        "rating": 8.1,
+        "overview": "Scottie Fergusson es un detective de la policía de San Francisco que padece de vértigo. Cuando un compañero cae al vacío desde una cornisa mientras persiguen a un delincuente, Scottie decide retirarse. Gavin Elster, un viejo amigo del colegio, lo contrata para que vigile a su esposa Madeleine, una bella mujer que está obsesionada con su pasado.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/t4kvoLhrVHW5w5Ku7AQBniVExjN.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
         "genres": [
@@ -467,65 +1150,32 @@
         ]
       },
       {
-        "id": 694,
-        "title": "El Resplandor",
-        "original_title": "The Shining",
-        "year": 1980,
-        "era": "80s",
-        "rating": 8.2,
-        "overview": "Una familia cuida un hotel aislado durante el invierno mientras fuerzas siniestras acechan.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+        "id": 500,
+        "title": "Reservoir Dogs",
+        "original_title": "Reservoir Dogs",
+        "year": 1992,
+        "era": "90s",
+        "rating": 8.1,
+        "overview": "Una banda organizada formada por seis individuos es contratada para dar un golpe. Anteriormente varios de los miembros no se conocían entre sí, por lo que entre ellos usan nombres en clave. El objetivo: atracar una empresa para llevarse unos diamantes. Pero, antes de que suene la alarma, la policía ya está allí. Algunos mueren en el atraco, y el resto se reúne en el lugar convenido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hxmJqXFFnXLlvPIdCW2k3UGLCgZ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg",
         "genres": [
-          "Terror",
+          "Crimen",
           "Suspense"
         ]
       },
       {
-        "id": 832,
-        "title": "M, el vampiro de Düsseldorf",
-        "original_title": "M",
-        "year": 1931,
-        "era": "20s-30s",
-        "rating": 8.1,
-        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
-        "genres": [
-          "Drama",
-          "Suspense",
-          "Crimen"
-        ]
-      },
-      {
-        "id": 1580,
-        "title": "La Soga",
-        "original_title": "Rope",
-        "year": 1948,
+        "id": 996,
+        "title": "Perdición",
+        "original_title": "Double Indemnity",
+        "year": 1944,
         "era": "40s",
-        "rating": 7.9,
-        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
+        "rating": 8.1,
+        "overview": "MacMurray es un vendedor de seguros que, en connivencia con Barbara Stanwyck, elabora un plan para asesinar al marido de ella y quedarse con el dinero de su seguro. Obra cumbre del género, uno de los ejercicios de suspense más fascinantes de todos los tiempos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wiFsjxbmlyP7O8PMASPh18ftRez.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/byQdu1nzQLI9t1VeoP1xuQfru3L.jpg",
         "genres": [
-          "Suspense",
           "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 78,
-        "title": "Blade Runner",
-        "original_title": "Blade Runner",
-        "year": 1982,
-        "era": "80s",
-        "rating": 7.9,
-        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
-        "genres": [
-          "Ciencia ficción",
-          "Drama",
           "Suspense"
         ]
       }
@@ -536,34 +1186,18 @@
     "name": "Colección: Obras Maestras del Drama",
     "genre": "Drama",
     "tagline": "Historias humanas conmovedoras aclamadas por la crítica",
-    "overview": "El cine en su máxima expresión emocional: El Padrino, la tragedia humana de La Lista de Schindler, la nostalgia de Cinema Paradiso, la épica moral de Casablanca y el lirismo de Ciudadano Kane.",
-    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
-    "count": 23,
+    "poster": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+    "count": 18,
     "movies": [
       {
-        "id": 238,
-        "title": "El Padrino",
-        "original_title": "The Godfather",
-        "year": 1972,
-        "era": "70s",
-        "rating": 8.7,
-        "overview": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su hijo menor.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
-        "genres": [
-          "Drama",
-          "Crimen"
-        ]
-      },
-      {
         "id": 278,
-        "title": "Cadena Perpetua (Sueños de Fuga)",
+        "title": "Cadena perpetua",
         "original_title": "The Shawshank Redemption",
         "year": 1994,
         "era": "90s",
         "rating": 8.7,
-        "overview": "Andy Dufresne es condenado a cadena perpetua y forja una esperanza inquebrantable en prisión.",
+        "overview": "Acusado del asesinato de su mujer, Andrew Dufresne, tras ser condenado a cadena perpetua, es enviado a la prisión de Shawshank. Con el paso de los años conseguirá ganarse la confianza del director del centro y el respeto de sus compañeros presidiarios, especialmente de Red, el jefe de la mafia de los sobornos.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uRRTV7p6l2ivtODWJVVAMRrwTn2.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
         "genres": [
@@ -572,13 +1206,57 @@
         ]
       },
       {
+        "id": 238,
+        "title": "El padrino",
+        "original_title": "The Godfather",
+        "year": 1972,
+        "era": "70s",
+        "rating": 8.7,
+        "overview": "Don Vito Corleone, conocido dentro de los círculos del hampa como \"El Padrino\", es el patriarca de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York (Estados Unidos) durante la década de 1940. Don Corleone tiene cuatro hijos: una chica, Connie, y tres varones; Sonny, Michael y Fredo. Cuando Vito reclina intervenir en el negocio de estupefacientes, empieza una cruenta lucha de violentos episodios entre las distintas familias del crimen organizado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5HlLUsmsv60cZVTzVns9ICZD6zU.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 389,
+        "title": "Doce hombres sin piedad",
+        "original_title": "12 Angry Men",
+        "year": 1957,
+        "era": "50s",
+        "rating": 8.6,
+        "overview": "Tras escuchar todos los testimonios y valorar las pruebas presentadas, un jurado popular compuesto por doce hombres tiene que decidir, por unanimidad, si absuelve o condena a muerte a un joven acusado de haber matado a su padre. Al principio, once están completamente convencidos de su culpabilidad y se inclinan por la condena, pero el que discrepa empieza a plantear dudas razonables que, poco a poco, van resquebrajando la inicial seguridad de los demás.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/t88XfoxO5cX3f0qaSxWsBS0Lc3.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "id": 240,
+        "title": "El padrino II",
+        "original_title": "The Godfather Part II",
+        "year": 1974,
+        "era": "70s",
+        "rating": 8.6,
+        "overview": "Continuación de la saga de los Corleone con dos historias paralelas: la elección de Michael Corleone como jefe de los negocios familiares y los orígenes del patriarca, el ya fallecido Don Vito, primero en Sicilia y luego en Estados Unidos, donde, empezando desde abajo, llegó a ser un poderosísimo jefe de la mafia de Nueva York.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mbry0W5PRylSUHsYzdiY2FSJwze.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/pGzqRKrYeK4LogoysNro0vG8d8N.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
         "id": 424,
-        "title": "La Lista de Schindler",
+        "title": "La lista de Schindler",
         "original_title": "Schindler's List",
         "year": 1993,
         "era": "90s",
         "rating": 8.6,
-        "overview": "Oskar Schindler salva a más de mil judíos del holocausto empleándolos en su fábrica.",
+        "overview": "Oskar Schindler, un hombre de enorme astucia y talento para las relaciones públicas, organiza un ambicioso plan para ganarse la simpatía de los nazis. Después de la invasión de Polonia por los alemanes, consigue, gracias a sus relaciones con los nazis, la propiedad de una fábrica de Cracovia. Allí emplea a cientos de operarios judíos, cuya explotación le hace prosperar rápidamente. Su gerente, también judío, es el verdadero director en la sombra, pues Schindler no tiene el menor conocimiento industrial.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
         "genres": [
@@ -588,31 +1266,142 @@
         ]
       },
       {
-        "id": 389,
-        "title": "12 Hombres en Pugna",
-        "original_title": "12 Angry Men",
-        "year": 1957,
-        "era": "50s",
+        "id": 497,
+        "title": "La milla verde",
+        "original_title": "The Green Mile",
+        "year": 1999,
+        "era": "90s",
         "rating": 8.5,
-        "overview": "Un jurado debe decidir la condena a muerte de un joven. Solo uno duda de su culpabilidad.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/t88XfoxO5cX3f0qaSxWsBS0Lc3.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+        "overview": "En el sur de los Estados Unidos, en plena Depresión, Paul Edgecomb es un vigilante penitenciario a cargo de la Milla Verde, un pasillo que separa las celdas de los reclusos condenados a la silla eléctrica. Esperando su ejecución está John Coffey, un gigantesco negro acusado de asesinar brutalmente a dos hermanas de nueve años. Tras una personalidad ingenua, Coffey esconde un don sobrenatural prodigioso. A medida que transcurre la historia, Paul Edgecomb aprende que los milagros ocurren... incluso en los lugares más insospechados.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aBQiJRxGRrX0mXFMjxyzWYFtEnf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
         "genres": [
-          "Drama"
+          "Fantasía",
+          "Drama",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 19404,
+        "title": "Un amor contra viento y marea",
+        "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Los Singh son una familia india con grandes convicciones culturales de su nación de origen, que emigraron a Reino Unido antes de nacer sus primeros hijos. Uno de ellos querrá casarse con una mujer ajena a su cultura y para ello deberá hacer todos los esfuerzos por convencer a su familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7VDLEHli74eLsYLNcq9djn1Gw76.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 14537,
+        "title": "Harakiri",
+        "original_title": "切腹",
+        "year": 1962,
+        "era": "60s",
+        "rating": 8.5,
+        "overview": "Un samurái pide permiso para practicarse el Seppuku (o Harakiri), ceremonia durante la cual se quitará la vida abriéndose el estómago al tiempo que otro samurái lo decapitará. Solicita también poder contar la historia que le ha llevado a tomar tan trágica decisión.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/6Cw2LJzt6jRALHystjzWazeB4Pg.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+        "genres": [
+          "Acción",
+          "Drama",
+          "Historia"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump",
+        "original_title": "Forrest Gump",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Forrest Gump es un chico con deficiencias mentales no muy profundas y con alguna incapacidad motora que, a pesar de todo, llegará a convertirse, entre otras cosas, en un héroe durante la Guerra del Vietnam. Su persistencia y bondad le llevarán a conseguir una gran fortuna, ser objeto del clamor popular y a codearse con las más altas esferas sociales y políticas del país. Siempre sin olvidar a Jenny, su gran amor desde que era niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oiqKEhEfxl9knzWXvWecJKN3aj6.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 769,
+        "title": "Uno de los nuestros",
+        "original_title": "GoodFellas",
+        "year": 1990,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Henry, un niño de trece años de Brooklyn, vive fascinado con el mundo de los gángsters. Su sueño se hace realidad cuando entra a formar parte de la familia Pauline, dueña absoluta de la zona, que lo educan como un miembro más de la banda convirtiéndole en un destacado mafioso.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
         ]
       },
       {
         "id": 346,
-        "title": "Los Siete Samuráis",
-        "original_title": "Shichinin no Samurai",
+        "title": "Los siete samuráis",
+        "original_title": "七人の侍",
         "year": 1954,
         "era": "50s",
         "rating": 8.5,
-        "overview": "Una aldea de campesinos contrata a siete samuráis sin amo para defenderse de unos bandidos.",
+        "overview": "Una banda de forajidos atemorizan a los habitantes de un pequeño pueblo, saqueándolos periódicamente sin piedad. Para repeler estos ataques, los aldeanos deciden contratar a mercenarios. Finalmente, consiguen los servicios de 7 guerreros, 7 samurais dispuestos a defenderlos a cambio, tan solo, de cobijo y comida.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
         "genres": [
           "Acción",
+          "Drama"
+        ]
+      },
+      {
+        "id": 12477,
+        "title": "La tumba de las luciérnagas",
+        "original_title": "火垂るの墓",
+        "year": 1988,
+        "era": "80s",
+        "rating": 8.4,
+        "overview": "Verano de 1945. La aviación estadounidense somete las ciudades japonesas a continuos ataques aéreos. En uno de ellos, una incursión con bombas incendiarias convierte la ciudad de Kōbe en un infierno humeante, para los dos protagonistas (Seita, de 14 años, y su hermanita Setsuko, de 5). El joven Seita y su pequeña hermana Setsuko son hijos de un oficial de la marina japonesa. Durante la Segunda Guerra Mundial, ambos viven con su madre, pero un día, tras un bombardeo, ellos se retrasan y no consiguen llegar al búnker donde ella los espera.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xTPa9c7Bgdq1BlZee24QeIx0jyR.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg",
+        "genres": [
+          "Animación",
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 550,
+        "title": "El club de la lucha",
+        "original_title": "Fight Club",
+        "year": 1999,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "Un hombre consumido por el insomnio y una vida sin sentido conoce a Tyler Durden, un carismático anarquista que lo arrastra a un club secreto donde el dolor despierta algo dormido. Lo que comienza como liberación pronto se convierte en una guerra contra el sistema…",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sgTAWJFaB2kBvdQxRGabYFiQqEK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+        "genres": [
+          "Drama",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 637,
+        "title": "La vida es bella",
+        "original_title": "La vita è bella",
+        "year": 1997,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo, en la Toscana, con la intención de abrir una librería. Allí conoce a la encantadora Dora y, a pesar de que es la prometida del fascista Rodolfo, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aZ7MFlKPfB02Lr9NwZQ4vsYRgcy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+        "genres": [
+          "Comedia",
           "Drama"
         ]
       },
@@ -622,8 +1411,8 @@
         "original_title": "Nuovo Cinema Paradiso",
         "year": 1988,
         "era": "80s",
-        "rating": 8.5,
-        "overview": "Un cineasta recuerda su infancia en un pequeño pueblo italiano y su amistad con el proyeccionista.",
+        "rating": 8.4,
+        "overview": "En un pequeño pueblo siciliano durante los años previos a la llegada de la televisión (justo al finalizar la Segunda Guerra Mundial) el joven Toto vivía fascinado por el cine. Toto trata de entablar amistad con Alfredo, el proyeccionista del cine local, una persona muy irritable pero con un gran corazón. Todos estos hechos se presentan en forma de nostálgicos recuerdos de Toto que ha crecido hasta convertirse en un cineasta de éxito, y que revive a su infancia cuando recibe la noticia de que Alfredo ha muerto.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hHwsr3t5n7VVUbPyU8VZswn0jkL.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
         "genres": [
@@ -632,268 +1421,49 @@
         ]
       },
       {
-        "id": 769,
-        "title": "Buenos Muchachos (Goodfellas)",
-        "original_title": "GoodFellas",
-        "year": 1990,
-        "era": "90s",
-        "rating": 8.5,
-        "overview": "Henry Hill asciende en la jerarquía de la mafia italoamericana a lo largo de tres décadas.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/3Yy0zBO9AlyAZH1cTI8Ko2ouCi.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
-        "genres": [
-          "Drama",
-          "Crimen"
-        ]
-      },
-      {
-        "id": 3082,
-        "title": "Tiempos Modernos",
-        "original_title": "Modern Times",
-        "year": 1936,
-        "era": "20s-30s",
-        "rating": 8.3,
-        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
-        "genres": [
-          "Comedia",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "id": 901,
-        "title": "Luces de la Ciudad",
-        "original_title": "City Lights",
-        "year": 1931,
-        "era": "20s-30s",
-        "rating": 8.3,
-        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
-        "genres": [
-          "Comedia",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "id": 567,
-        "title": "La Ventana Indiscreta",
-        "original_title": "Rear Window",
-        "year": 1954,
-        "era": "50s",
-        "rating": 8.3,
-        "overview": "Un fotógrafo con una pierna rota espía a sus vecinos y cree presenciar un asesinato.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
-        "genres": [
-          "Suspense",
-          "Misterio",
-          "Drama"
-        ]
-      },
-      {
-        "id": 28,
-        "title": "Apocalypse Now",
-        "original_title": "Apocalypse Now",
-        "year": 1979,
+        "id": 510,
+        "title": "Alguien voló sobre el nido del cuco",
+        "original_title": "One Flew Over the Cuckoo's Nest",
+        "year": 1975,
         "era": "70s",
-        "rating": 8.3,
-        "overview": "Durante la guerra de Vietnam, el capitán Willard recibe la orden de eliminar al coronel Kurtz.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zJXRrkJTlcb5x87v4VWN1zZX0Xk.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg",
-        "genres": [
-          "Drama",
-          "Bélica"
-        ]
-      },
-      {
-        "id": 274,
-        "title": "El Silencio de los Inocentes",
-        "original_title": "The Silence of the Lambs",
-        "year": 1991,
-        "era": "90s",
-        "rating": 8.3,
-        "overview": "Clarice Starling consulta al caníbal Hannibal Lecter para atrapar a otro asesino en serie.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
-        "genres": [
-          "Crimen",
-          "Suspense",
-          "Drama"
-        ]
-      },
-      {
-        "id": 19,
-        "title": "Metrópolis",
-        "original_title": "Metropolis",
-        "year": 1927,
-        "era": "20s-30s",
-        "rating": 8.2,
-        "overview": "En una megalópolis del año 2026, la sociedad se divide en pensadores y trabajadores.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/eeMoFKxjjiCi6iep2GEZtSAMYIr.jpg",
-        "genres": [
-          "Drama",
-          "Ciencia ficción"
-        ]
-      },
-      {
-        "id": 289,
-        "title": "Casablanca",
-        "original_title": "Casablanca",
-        "year": 1942,
-        "era": "40s",
-        "rating": 8.2,
-        "overview": "En la Segunda Guerra Mundial, Rick Blaine debe elegir entre su amor por Ilsa y ayudar a la resistencia.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/a7EjycGNSYw6QqJqDooD9eQGZ4r.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
-        "genres": [
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "id": 5156,
-        "title": "Ladrón de Bicicletas",
-        "original_title": "Ladri di biciclette",
-        "year": 1948,
-        "era": "40s",
-        "rating": 8.2,
-        "overview": "En la Roma de posguerra, a un obrero le roban la bicicleta imprescindible para trabajar.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/hjo6BPzCuhUkpSzxElOQ68mydrx.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/kTUUiKGKrdRhJsCcYT3Ivtfuuzh.jpg",
+        "rating": 8.4,
+        "overview": "Randle McMurphy (Jack Nicholson), un violador de espíritu libre, que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/lBYmCynNEPt7HVaJvuXgfHvLhbJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
         "genres": [
           "Drama"
         ]
       },
       {
-        "id": 103,
-        "title": "Taxi Driver",
-        "original_title": "Taxi Driver",
-        "year": 1976,
-        "era": "70s",
-        "rating": 8.2,
-        "overview": "Travis Bickle, un veterano con insomnio, trabaja de taxista nocturno en una Nueva York decadente.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9G26DnAeMbA4sp58Gi0Vze6eQv4.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/9uddYYTNcLWpzUkl5iw1RUYhLhY.jpg",
-        "genres": [
-          "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 111,
-        "title": "Scarface (Cara Cortada)",
-        "original_title": "Scarface",
-        "year": 1983,
-        "era": "80s",
-        "rating": 8.2,
-        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
-        "genres": [
-          "Acción",
-          "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 832,
-        "title": "M, el vampiro de Düsseldorf",
-        "original_title": "M",
-        "year": 1931,
-        "era": "20s-30s",
-        "rating": 8.1,
-        "overview": "Un asesino de niñas siembra el terror en la ciudad; criminales y policías se unen para cazarlo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/drwll2kXZpmRYBEtWMWZbHcFkJF.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5Pk1rGAtyblh9Xaq72T7ARCQSDQ.jpg",
-        "genres": [
-          "Drama",
-          "Suspense",
-          "Crimen"
-        ]
-      },
-      {
-        "id": 15,
-        "title": "Ciudadano Kane",
-        "original_title": "Citizen Kane",
-        "year": 1941,
-        "era": "40s",
-        "rating": 8,
-        "overview": "Un grupo de periodistas intenta desentrañar el significado de la última palabra del magnate Kane: Rosebud.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/w7V0bv38Z0q0DgHmMfcGM4WRNTv.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/ruF3Lmd4A8MHbnEBE6lxPMbsHGL.jpg",
-        "genres": [
-          "Misterio",
-          "Drama"
-        ]
-      },
-      {
-        "id": 770,
-        "title": "Lo que el viento se llevó",
-        "original_title": "Gone with the Wind",
-        "year": 1939,
-        "era": "20s-30s",
-        "rating": 7.9,
-        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
-        "genres": [
-          "Drama",
-          "Bélica",
-          "Romance"
-        ]
-      },
-      {
-        "id": 1580,
-        "title": "La Soga",
-        "original_title": "Rope",
-        "year": 1948,
-        "era": "40s",
-        "rating": 7.9,
-        "overview": "Dos estudiantes cometen el asesinato perfecto y dan una fiesta con el cadáver escondido.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/25ScofCCdU4XtkiGv8nhbZ7nIX5.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/81LX4wktTXWEXjLNlkHTmJm7tRu.jpg",
-        "genres": [
-          "Suspense",
-          "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 78,
-        "title": "Blade Runner",
-        "original_title": "Blade Runner",
-        "year": 1982,
-        "era": "80s",
-        "rating": 7.9,
-        "overview": "Rick Deckard debe retirar a cuatro replicantes fugitivos en un Los Ángeles futurista.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pBA2J6iQMiP5Zd4ewMKdOWfq1HV.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
-        "genres": [
-          "Ciencia ficción",
-          "Drama",
-          "Suspense"
-        ]
-      },
-      {
-        "id": 871,
-        "title": "El Planeta de los Simios",
-        "original_title": "Planet of the Apes",
-        "year": 1968,
+        "id": 12493,
+        "title": "El infierno del odio",
+        "original_title": "天国と地獄",
+        "year": 1963,
         "era": "60s",
-        "rating": 7.7,
-        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
+        "rating": 8.4,
+        "overview": "En un momento crucial de su vida financiera, Gondo, un hombre de negocios, recibe la noticia de que su hijo ha sido secuestrado, y el rescate exigido es una cantidad de dinero similar a la que necesita para cerrar una importante negociación. Gondo está dispuesto a pagar el rescate hasta que comprende que los secuestradores se han equivocado y se han llevado al hijo del chófer. Ahora deberá decidir si el dinero es más importante que la vida del niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9c87PSaPcoZzAGbJKQLAcYiqGRy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/i1NjlccZcuqbgDCS92RHdhEnx59.jpg",
         "genres": [
-          "Ciencia ficción",
-          "Aventura",
           "Drama",
-          "Acción"
+          "Crimen",
+          "Suspense",
+          "Misterio"
+        ]
+      },
+      {
+        "id": 311,
+        "title": "Érase una vez en América",
+        "original_title": "Once Upon a Time in America",
+        "year": 1984,
+        "era": "80s",
+        "rating": 8.4,
+        "overview": "David Aaronson \"Noodles\", un pobre joven judío, conoce en los suburbios de principios del siglo XX de Manhattan, Nueva York, a Maximilian Bercovicz \"Max\", otro joven de origen hebreo dispuesto a llegar lejos por cualquier método. Entablan una gran amistad y forman, con los 3 colegas de \"Noodles\", Patrick Goldberg \"Patsy\", Philip Stein \"Cockeye\", y Dominic una banda que prospera rápidamente. Desgraciadamente, son perseguidos por Bugsy, el tipo para el que Noodles y sus amigos trabajaban anteriormente, y en uno de sus asaltos, mata a Dominic. Rápidamente Noodles se tira encima suyo y le mata, por lo que pasará 12 años en prisión. Cuando Noodles sale de prisión le recibe Max, que sigue con su banda junto a los otros 2 amigos, Patsy y Cockeye. Rápidamente, entre los 4, llegan a convertirse, en tiempos de la prohibición, en unos de los mayores gánsteres de todo el país.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/u4VnqaxINtKVscmdldZsBojU6jm.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/xlDUjb0Q5Dv6jPQRF5VE4IMjIy.jpg",
+        "genres": [
+          "Drama",
+          "Crimen"
         ]
       }
     ]
@@ -902,20 +1472,35 @@
     "id": "col-comedy",
     "name": "Colección: Leyendas de la Comedia y Sátira",
     "genre": "Comedia",
-    "tagline": "El genio del humor clásico, el slapstick y la sátira política",
-    "overview": "La comedia que trasciende generaciones: las obras maestras de Charles Chaplin como Tiempos Modernos y El Gran Dictador, la magia musical de Cantando bajo la lluvia y el humor negro de Pulp Fiction.",
-    "poster": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
-    "count": 7,
+    "tagline": "Del humor visual de Chaplin a la sátira mordaz",
+    "poster": "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/7VDLEHli74eLsYLNcq9djn1Gw76.jpg",
+    "count": 18,
     "movies": [
       {
+        "id": 19404,
+        "title": "Un amor contra viento y marea",
+        "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Los Singh son una familia india con grandes convicciones culturales de su nación de origen, que emigraron a Reino Unido antes de nacer sus primeros hijos. Uno de ellos querrá casarse con una mujer ajena a su cultura y para ello deberá hacer todos los esfuerzos por convencer a su familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7VDLEHli74eLsYLNcq9djn1Gw76.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
         "id": 680,
-        "title": "Pulp Fiction (Tiempos Violentos)",
+        "title": "Pulp Fiction",
         "original_title": "Pulp Fiction",
         "year": 1994,
         "era": "90s",
         "rating": 8.5,
-        "overview": "Las vidas de dos sicarios, un boxeador y la esposa de un gángster se entrelazan de forma violenta.",
+        "overview": "Jules y Vincent, dos asesinos a sueldo con muy pocas luces, trabajan para Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra. Su misión: recuperar un misterioso maletín.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
         "genres": [
@@ -925,15 +1510,15 @@
         ]
       },
       {
-        "id": 3082,
-        "title": "Tiempos Modernos",
-        "original_title": "Modern Times",
-        "year": 1936,
-        "era": "20s-30s",
-        "rating": 8.3,
-        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+        "id": 13,
+        "title": "Forrest Gump",
+        "original_title": "Forrest Gump",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Forrest Gump es un chico con deficiencias mentales no muy profundas y con alguna incapacidad motora que, a pesar de todo, llegará a convertirse, entre otras cosas, en un héroe durante la Guerra del Vietnam. Su persistencia y bondad le llevarán a conseguir una gran fortuna, ser objeto del clamor popular y a codearse con las más altas esferas sociales y políticas del país. Siempre sin olvidar a Jenny, su gran amor desde que era niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oiqKEhEfxl9knzWXvWecJKN3aj6.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
         "genres": [
           "Comedia",
           "Drama",
@@ -941,58 +1526,28 @@
         ]
       },
       {
-        "id": 901,
-        "title": "Luces de la Ciudad",
-        "original_title": "City Lights",
-        "year": 1931,
-        "era": "20s-30s",
-        "rating": 8.3,
-        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "id": 637,
+        "title": "La vida es bella",
+        "original_title": "La vita è bella",
+        "year": 1997,
+        "era": "90s",
+        "rating": 8.4,
+        "overview": "En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo, en la Toscana, con la intención de abrir una librería. Allí conoce a la encantadora Dora y, a pesar de que es la prometida del fascista Rodolfo, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aZ7MFlKPfB02Lr9NwZQ4vsYRgcy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
         "genres": [
           "Comedia",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "id": 914,
-        "title": "El Gran Dictador",
-        "original_title": "The Great Dictator",
-        "year": 1940,
-        "era": "40s",
-        "rating": 8.3,
-        "overview": "Un barbero judío amnésico es confundido con el dictador Adenoid Hynkel.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
-        "genres": [
-          "Comedia",
-          "Bélica"
-        ]
-      },
-      {
-        "id": 430,
-        "title": "El Ocaso de una Vida (Sunset Boulevard)",
-        "original_title": "Sunset Boulevard",
-        "year": 1950,
-        "era": "50s",
-        "rating": 8.3,
-        "overview": "Un guionista endeudado se refugia en la mansión de una antigua estrella del cine mudo.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/toTjc11iO3tgdKLAIeLGse1LTk9.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/4safDVSZx7a4I1TQoSyz6E1agzM.jpg",
-        "genres": [
-          "Comedia"
+          "Drama"
         ]
       },
       {
         "id": 105,
-        "title": "Volver al Futuro",
+        "title": "Regreso al futuro",
         "original_title": "Back to the Future",
         "year": 1985,
         "era": "80s",
         "rating": 8.3,
-        "overview": "Marty McFly viaja accidentalmente a 1955 en un DeLorean construido por Doc Brown.",
+        "overview": "El adolescente Marty McFly es amigo de Doc, un científico al que todos toman por loco. Cuando Doc crea una máquina para viajar en el tiempo, un error fortuito hace que Marty llegue a 1955, año en el que sus futuros padres aún no se habían conocido. Después de impedir su primer encuentro, deberá conseguir que se conozcan y se casen; de lo contrario, su existencia no sería posible.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/owk40tn1sFJmC7bhamEpmhdZPKa.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
         "genres": [
@@ -1002,86 +1557,369 @@
         ]
       },
       {
+        "id": 3082,
+        "title": "Tiempos modernos",
+        "original_title": "Modern Times",
+        "year": 1936,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motín, gracias a lo cual queda en libertad. Una vez fuera, reemprende la lucha por la supervivencia en compañía de una joven huérfana a la que conoce en la calle.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 914,
+        "title": "El gran dictador",
+        "original_title": "The Great Dictator",
+        "year": 1940,
+        "era": "40s",
+        "rating": 8.3,
+        "overview": "Un humilde barbero judío tiene un parecido asombroso con el dictador de la nación Tomania, que promete sacar adelante y que culpa a los judíos de la situación del país. El dictador ataca al país fronterizo, pero es confundido con el barbero por sus propios guardias, siendo ingresado en un campo de concentración. Simultáneamente, el pobre barbero es confundido con el dictador...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 42269,
+        "title": "Una mujer y tres hombres",
+        "original_title": "C'eravamo tanto amati",
+        "year": 1974,
+        "era": "70s",
+        "rating": 8.3,
+        "overview": "Amarga crónica de la historia de Italia, desde la posguerra hasta los años setenta, narrada a través de un grupo de amigos de izquierdas que se conocieron cuando en 1944 lucharon contra los nazis. Este retrato del idealismo, pero también de la inevitable pérdida de las ilusiones a causa del acomodamiento burgués, fue el primer éxito internacional del realizador italiano Ettore Scola.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oz9q8fI9j5dcxowuFagFzhaiK2z.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2Kkqmy3EpXqBDqv1vvsNXX3pwww.jpg",
+        "genres": [
+          "Drama",
+          "Comedia"
+        ]
+      },
+      {
+        "id": 901,
+        "title": "Luces de la ciudad",
+        "original_title": "City Lights",
+        "year": 1931,
+        "era": "20s-30s",
+        "rating": 8.3,
+        "overview": "Un pobre vagabundo (Charles Chaplin) pasa mil y un avatares para conseguir dinero y ayudar a una pobre chica ciega (Virginia Cherill) de la que se ha enamorado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 24188,
+        "title": "La escapada",
+        "original_title": "Il sorpasso",
+        "year": 1962,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "Bruno Cortona, un simpático juerguista, encuentra casualmente a Roberto, un tímido estudiante, y lo invita a pasar con él un día de vacaciones fuera de Roma. Durante el viaje, el joven se siente cada vez más atraído por la alocada forma de vida de su maduro compañero. Tras permanecer unas horas en compañía de la familia de su nuevo amigo, el viaje continúa hacia un final inesperado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dvSRwMYHrIZ8VIHB3NAMseFsoiP.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/uUrV5KSjnZx47Dq7e6STr73iN4N.jpg",
+        "genres": [
+          "Drama",
+          "Comedia",
+          "Aventura"
+        ]
+      },
+      {
+        "id": 284,
+        "title": "El apartamento",
+        "original_title": "The Apartment",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "C.C. Baxter es un modesto pero ambicioso empleado de una compañía de seguros de Manhattan. Está soltero y vive solo en un discreto apartamento que presta ocasionalmente a sus superiores para sus citas amorosas. Tiene la esperanza de que estos favores le sirvan para mejorar su posición en la empresa. Pero la situación cambia cuando se enamora de una ascensorista que resulta ser la amante de uno de los jefes que usan su apartamento.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2kJMgHi8vNY8a0UJiBU3HEyiqOa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/vRTKNKNWLZ22fAgPa5kY8wT2b1F.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 37165,
+        "title": "El show de Truman",
+        "original_title": "The Truman Show",
+        "year": 1998,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Truman Burbank es un hombre corriente y algo ingenuo que ha vivido toda su vida en uno de esos pueblos donde nunca pasa nada. Sin embargo, de repente, unos extraños sucesos le hacen sospechar que algo anormal está ocurriendo. Todos sus amigos son actores, toda su ciudad es un plató, toda su vida está siendo filmada y emitida como el reality más ambicioso de la historia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8eWVXQZ6yqKfkuHhWD5RcdHnszT.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+        "genres": [
+          "Comedia",
+          "Drama"
+        ]
+      },
+      {
+        "id": 10098,
+        "title": "El chico",
+        "original_title": "The Kid",
+        "year": 1921,
+        "era": "20s-30s",
+        "rating": 8.1,
+        "overview": "Una mujer londinense, sumamente pobre, se ve en la necesidad de abandonar a su hijo en una casa de millonarios, aunque por una serie de circustancias el niño terminará siendo cuidado por un vagabundo que se convierte así en su padre. Cinco años después, y con la madre convertida en una popular cantante, el destino tratará de separarlos...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/we8AMv9ufyoXgmOlfX0SmubKOrd.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/yJvv7kDmeWT18jUSW2ZugZmYg0i.jpg",
+        "genres": [
+          "Comedia",
+          "Drama"
+        ]
+      },
+      {
         "id": 872,
-        "title": "Cantando bajo la Lluvia",
+        "title": "Cantando bajo la lluvia",
         "original_title": "Singin' in the Rain",
         "year": 1952,
         "era": "50s",
-        "rating": 8.2,
-        "overview": "Hollywood enfrenta la revolucionaria transición del cine mudo al sonoro.",
+        "rating": 8.1,
+        "overview": "Antes de conocer a la aspirante a actriz Cathy Seldon, el ídolo del cine mudo Don Lockwood pensaba que lo tenía todo; fama, fortuna y éxito. Pero, tras conocerla, se da cuenta de que ella es lo que realmente faltaba en su vida. Con el nacimiento del cine sonoro, Don quiere filmar los musicales con Kathy, pero entre ambos se interpone la reina del cine mudo Lina Lamont.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5r8jD5R6EzpQ5VLodbzTNhvKcGw.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
         "genres": [
           "Comedia",
           "Romance"
         ]
+      },
+      {
+        "id": 935,
+        "title": "¿Teléfono rojo? Volamos hacia Moscú",
+        "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "year": 1964,
+        "era": "60s",
+        "rating": 8.1,
+        "overview": "Convencido de que los comunistas están contaminando los Estados Unidos, un general ordena, en un acceso de locura, un ataque aéreo nuclear sorpresa contra la Unión Soviética. Su ayudante, el capitán Mandrake, trata de encontrar la fórmula para impedir el bombardeo. Por su parte, el presidente de los EE.UU. se pone en contacto con Moscú para convencer al gobierno soviético de que el ataque no es más que un estúpido error. Mientras tanto, el asesor estadounidense, un antiguo científico nazi, el doctor Strangelove, confirma la existencia de la «Máquina del Juicio Final», un dispositivo de represalia soviético capaz de acabar con la humanidad para siempre.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/snsOoRb1d4WD6q62PRfBuGLJ8xr.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 38288,
+        "title": "“I Corti” di Aldo, Giovanni e Giacomo",
+        "original_title": "“I Corti” di Aldo, Giovanni e Giacomo",
+        "year": 1996,
+        "era": "90s",
+        "rating": 8.1,
+        "overview": "Una de las grandes obras maestras de la historia del cine.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/y3hEulMYSTQuvmI5jBTyWrcvJQX.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mFVGzW8a2Z37NphnuB6liChiuRv.jpg",
+        "genres": [
+          "Comedia"
+        ]
+      },
+      {
+        "id": 100,
+        "title": "Lock & Stock",
+        "original_title": "Lock, Stock and Two Smoking Barrels",
+        "year": 1998,
+        "era": "90s",
+        "rating": 8.1,
+        "overview": "Eddie convence a tres amigos para jugarse sus ahorros en una partida de cartas contra Harry el Hacha, un mafioso del barrio. La partida está amañada, y Eddie no sólo pierde todo el dinero sino que contrae una deuda de medio millón de libras, que debe pagar en el plazo de una semana. El mafioso pretende quedarse con el local de su padre para resarcirse de la deuda, pero los cuatro amigos planean saldarla de una forma mucho más arriesgada.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/prewFR5HkUNpU1tNGUBPMal20rI.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/qQz3DeR9PxrMBtVGMnH3EqvMlVU.jpg",
+        "genres": [
+          "Comedia",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 20914,
+        "title": "Habitación para cuatro",
+        "original_title": "Amici miei",
+        "year": 1975,
+        "era": "70s",
+        "rating": 8.1,
+        "overview": "Cuatro amigos cincuentones, que llevan toda la vida juntos, se pasan el día organizando bromas pesadas para burlarse de los demás. Son el periodista Giorgio Perozzi, perseguido por la reprobación de su hijo y su ex-mujer; el arquitecto Rambaldo Melandri, sensible a los asuntos del corazón; el barman Guido Necchi, propietario del bar en el que el grupo se reúne cada noche; y el conde Mascetti, un noble venido a menos, obligado a vivir en un sótano, que no tiene ningún escrúpulo a la hora de alejar a su mujer y su hija para disfrutar de una relación clandestina con su joven amante, Titti. Todos ellos, conscientes de que les ayuda a seguir unidos, recurren a las bromas para prolongar su juventud y defenderse de las penas de la vida.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/nLwubjxL3NpEo1rMAf1V7E5X0eM.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3q6XHCXII7qRZOx5EqU5NfYkVx8.jpg",
+        "genres": [
+          "Comedia"
+        ]
       }
     ]
   },
   {
-    "id": "col-action",
+    "id": "col-adventure",
     "name": "Colección: Épica, Aventura & Acción",
     "genre": "Acción",
-    "tagline": "Persecuciones inolvidables, duelos legendarios y viajes en el tiempo",
-    "overview": "La adrenalina y el dinamismo del mejor cine: el duelo supremo de Los Siete Samuráis, la adrenalina revolucionaria de Terminator 2 y Matrix, y la travesía temporal de Volver al Futuro.",
-    "poster": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
-    "count": 4,
+    "tagline": "Hazañas memorables, expediciones y combates legendarios",
+    "poster": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+    "count": 18,
     "movies": [
       {
-        "id": 346,
-        "title": "Los Siete Samuráis",
-        "original_title": "Shichinin no Samurai",
-        "year": 1954,
-        "era": "50s",
-        "rating": 8.5,
-        "overview": "Una aldea de campesinos contrata a siete samuráis sin amo para defenderse de unos bandidos.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zr4DkzWIMjaWtj6hlsbN6dnNeTX.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
-        "genres": [
-          "Acción",
-          "Drama"
-        ]
-      },
-      {
-        "id": 111,
-        "title": "Scarface (Cara Cortada)",
-        "original_title": "Scarface",
-        "year": 1983,
+        "id": 1891,
+        "title": "El imperio contraataca",
+        "original_title": "The Empire Strikes Back",
+        "year": 1980,
         "era": "80s",
-        "rating": 8.2,
-        "overview": "Tony Montana, un refugiado cubano, construye un sanguinario imperio de la droga en Miami.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/iDABT5GD9OQmFiXM3wR0DJIxtkY.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+        "rating": 8.4,
+        "overview": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
         "genres": [
-          "Acción",
-          "Crimen",
-          "Drama"
-        ]
-      },
-      {
-        "id": 603,
-        "title": "Matrix",
-        "original_title": "The Matrix",
-        "year": 1999,
-        "era": "90s",
-        "rating": 8.2,
-        "overview": "Un hacker descubre que la realidad es una simulación creada por máquinas dominantes.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tpW2X2DvxtTHJ61iJ7zNYYrJihs.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
-        "genres": [
+          "Aventura",
           "Acción",
           "Ciencia ficción"
         ]
       },
       {
+        "id": 11,
+        "title": "La guerra de las galaxias",
+        "original_title": "Star Wars",
+        "year": 1977,
+        "era": "70s",
+        "rating": 8.2,
+        "overview": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las malévolas Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del emperador. El intrépido Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial \"El Halcón Milenario\", y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo y rescatar a la princesa para volver a instaurar la justicia en el seno de la Galaxia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/4hOUzmButYUeON0prG3RpbqS7ag.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+        "genres": [
+          "Aventura",
+          "Acción",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 1059,
+        "title": "La fortaleza escondida",
+        "original_title": "隠し砦の三悪人",
+        "year": 1958,
+        "era": "50s",
+        "rating": 8,
+        "overview": "En el Japón feudal, durante una sangrienta guerra entre clanes, dos campesinos cobardes y codiciosos, soldados de un ejército derrotado, tropiezan con un hombre misterioso que les guía hasta una fortaleza oculta en las montañas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qqW9ILhtVN29Bkr4ZNTjw29Q6nL.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/aYD6bR1xs9OAK3lA5WHbvIX2gMN.jpg",
+        "genres": [
+          "Drama",
+          "Acción",
+          "Aventura"
+        ]
+      },
+      {
+        "id": 10515,
+        "title": "El castillo en el cielo",
+        "original_title": "天空の城ラピュタ",
+        "year": 1986,
+        "era": "80s",
+        "rating": 8,
+        "overview": "La huérfana Sheeta ha heredado un misterioso cristal que la une al mítico reino de las nubes de Laputa. Con la ayuda del  ingenioso Pazu y una graciosa banda de piratas del cielo, dirige su camino hacia las ruinas de la que fué, una gran civilización. Sheeta y Pazu deben ser más listos que el malvado Muska, quien planea usar la tecnología de Laputa para dominar el mundo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/6EkloGi5FUtPLZl5NtGvVGIfX0B.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg",
+        "genres": [
+          "Aventura",
+          "Fantasía",
+          "Animación",
+          "Acción",
+          "Familia"
+        ]
+      },
+      {
+        "id": 85,
+        "title": "En busca del arca perdida",
+        "original_title": "Raiders of the Lost Ark",
+        "year": 1981,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Año 1936, Indiana Jones es un profesor de arqueología, dispuesto a correr peligrosas aventuras con tal de conseguir valiosas reliquias históricas. Después de una infructuosa misión en Sudamérica, el gobierno estadounidense le encarga la búsqueda del Arca de la Alianza, donde se conservan las Tablas de la Ley que Dios entregó a Moisés. Según la leyenda, quien las posea tendrá un poder absoluto, razón por la cual también la buscan los nazis.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tECLVwLCMexSkls33RTCwedRZ6d.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zPACwR32amTNvzId9qyapCWXYDJ.jpg",
+        "genres": [
+          "Aventura",
+          "Acción"
+        ]
+      },
+      {
+        "id": 1892,
+        "title": "El retorno del Jedi",
+        "original_title": "Return of the Jedi",
+        "year": 1983,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "Luke Skywalker y la princesa Leia deben viajar a Tatooine para liberar a Han Solo. Para conseguirlo, deben infiltrarse en la peligrosa guarida de Jabba the Hutt, el gángster más temido de la galaxia. Una vez reunidos, el equipo recluta a tribus de Ewoks para combatir a las fuerzas imperiales en los bosques de la luna de Endor. Mientras tanto, el Emperador y Darth Vader conspiran para convertir a Luke al lado oscuro, pero el joven Skywalker, por su parte, está decidido a reavivar el espíritu del Jedi en su padre. La guerra civil galáctica culmina en un último enfrentamiento entre las fuerzas rebeldes unificadas y una segunda Estrella de la Muerte, indefensa e incompleta, en una batalla que decidirá el destino de la galaxia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/rKMmXzdm7eRgmlwYo7iq3klT7wJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+        "genres": [
+          "Aventura",
+          "Acción",
+          "Ciencia ficción"
+        ]
+      },
+      {
+        "id": 89,
+        "title": "Indiana Jones y la última cruzada",
+        "original_title": "Indiana Jones and the Last Crusade",
+        "year": 1989,
+        "era": "80s",
+        "rating": 7.9,
+        "overview": "En 1938, dos años después de encontrar el Arca de la Alianza, Indiana Jones es convencido por un millonario para que lo ayude a encontrar el Santo Grial antes de que caiga en manos del ejército nazi. Sin embargo, el verdadero motivo para involucrarse es encontrar a su padre, el doctor Henry Jones, con quien ha mantenido una fría relación desde su juventud y que ha desaparecido mientras seguía la pista del tesoro bíblico.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5h45gK147AAJpLLC7Cicr597urz.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7KGdTzKux4fp5sW7hUM33NWqBU1.jpg",
+        "genres": [
+          "Aventura",
+          "Acción"
+        ]
+      },
+      {
+        "id": 21835,
+        "title": "西遊記大結局之仙履奇緣",
+        "original_title": "西遊記大結局之仙履奇緣",
+        "year": 1995,
+        "era": "90s",
+        "rating": 7.7,
+        "overview": "Una de las grandes obras maestras de la historia del cine.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jkVPiecmpgrKEIyB3yBjb2ddbKf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hbZT53Kng9UXWAq2oHaPPbp4B83.jpg",
+        "genres": [
+          "Acción",
+          "Aventura",
+          "Fantasía",
+          "Comedia",
+          "Romance",
+          "Drama"
+        ]
+      },
+      {
+        "id": 525,
+        "title": "Granujas a todo ritmo (The Blues Brothers)",
+        "original_title": "The Blues Brothers",
+        "year": 1980,
+        "era": "80s",
+        "rating": 7.7,
+        "overview": "Tras pasar años en la cárcel por robo a mano armada, Jake Blues es puesto en libertad por buen comportamiento. Sale de prisión vestido de la misma forma en la que entró: traje y sombrero negro y gafas oscuras. En la puerta le espera su hermano Elwood vestido de idéntica manera. Ahora, el único hogar que conocieron está en peligro. El orfelinato de Santa Elena necesita una gran cantidad de dinero. Los hermanos se ponen manos a la obra.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/rAeF8BlfaWnOBBI52x4hYztiDxY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/bk2fTuIhQIvdAA3RbnrnvLvuaTc.jpg",
+        "genres": [
+          "Música",
+          "Comedia",
+          "Acción",
+          "Aventura"
+        ]
+      },
+      {
         "id": 871,
-        "title": "El Planeta de los Simios",
+        "title": "El planeta de los simios",
         "original_title": "Planet of the Apes",
         "year": 1968,
         "era": "60s",
         "rating": 7.7,
-        "overview": "Un astronauta aterriza en un planeta donde los simios inteligentes dominan a los humanos.",
+        "overview": "George Taylor forma parte de una tripulación de astronautas a bordo de una nave espacial -en una misión de larga duración- que se estrella en un planeta desconocido y aparentemente carente de vida inteligente. Sin embargo, pronto se da cuenta de que el lugar está gobernado por una raza de simios inteligentes que esclavizan a los seres humanos, que carecen de la facultad del habla. Cuando su líder, el doctor Zaius, descubre con horror la facultad de hablar de Taylor, decide que lo mejor es exterminarlo.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pMLpuzyeXFsttiW0dHzJLH5FXyK.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/5t6ImiTApy90YJ2QgYOCkjeav58.jpg",
         "genres": [
@@ -1089,6 +1927,137 @@
           "Aventura",
           "Drama",
           "Acción"
+        ]
+      },
+      {
+        "id": 18,
+        "title": "El quinto elemento",
+        "original_title": "Le Cinquième Élément",
+        "year": 1997,
+        "era": "90s",
+        "rating": 7.6,
+        "overview": "Cada 5.000 años se abre una puerta entre las dimensiones. En una dimensión existe el Universo y la vida. En la otra dimensión existe un elemento que no está hecho ni de tierra, ni de fuego, ni de aire, ni de agua, sino que es una anti-energía, la anti-vida: es el quinto elemento.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wnps5IL8YpeJpZvciDRXt7yZF8a.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/jW21PoKwqs79wk6bfiYezox63mK.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Acción",
+          "Aventura"
+        ]
+      },
+      {
+        "id": 1654,
+        "title": "Doce del patíbulo",
+        "original_title": "The Dirty Dozen",
+        "year": 1967,
+        "era": "60s",
+        "rating": 7.6,
+        "overview": "El comandante Reisman es un oficial estadounidense que se ha distinguido en la campaña de Italia, durante la Segunda Guerra Mundial. A pesar de ello, su mayor virtud no es la disciplina; de ahí que las relaciones con sus superiores sean más bien tensas. Sin embargo, debido a su brillante historial militar, no dudan en encargarle una misión suicida: asaltar una fortaleza nazi y matar a sus ocupantes, todos ellos altos mandos del régimen. Para ello debe someter a un duro entrenamiento a doce presidiarios.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/lXYSPzIqjQxKnI0YgAVHjp1t3wK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2hABgVIhalvUB30Z2kIPVv8YX9n.jpg",
+        "genres": [
+          "Acción",
+          "Aventura",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 106,
+        "title": "Depredador",
+        "original_title": "Predator",
+        "year": 1987,
+        "era": "80s",
+        "rating": 7.6,
+        "overview": "Un comando de mercenarios es contratados por la CIA para rescatar a unos pilotos apresados por las guerrillas en la selva Centroamericana. La misión resulta satisfactoria, pero durante su viaje de regreso se dan cuenta de que algo está dándoles caza uno a uno, ese algo resulta ser un cazador alienígena que se queda con las calaveras de sus víctimas como trofeos",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bzLLeqhNBNmO6WImHrrmLNyhMxi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/YL3GPOiDcNraIJOVDCZsoOBoDy.jpg",
+        "genres": [
+          "Ciencia ficción",
+          "Acción",
+          "Aventura",
+          "Suspense"
+        ]
+      },
+      {
+        "id": 13345,
+        "title": "A Chinese Odyssey Part One: Pandora's Box",
+        "original_title": "西遊記第壹佰零壹回之月光寶盒",
+        "year": 1995,
+        "era": "90s",
+        "rating": 7.5,
+        "overview": "Debido a las fechorías cometidas a lo largo de su existencia, la gran Diosa decide castigar al Rey Mono con la muerte. En el último instante, su maestro, el Monje de la Longevidad, intercede en su favor, quedando aquél confinado en un cuerpo mortal hasta que la reencarnación de su maestro acuda a restituirle su condición de dios. Quinientos años más tarde, dos mujeres demonio llegan a la zona para vengarse de tan conflictivo dios, pero el destino querrá que una de ellas, Jing Jing, se enamore de aquél que podría ser la reencarnación de su antaño enemigo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wIDDJ3FXPmVnNpxVoZOvjjcKVqj.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/cvpq5L0LSrTvLBokQ0tsFdEysJ6.jpg",
+        "genres": [
+          "Acción",
+          "Aventura",
+          "Fantasía",
+          "Comedia",
+          "Romance",
+          "Drama"
+        ]
+      },
+      {
+        "id": 11841,
+        "title": "Las 36 cámaras de Shaolin",
+        "original_title": "少林三十六房",
+        "year": 1978,
+        "era": "70s",
+        "rating": 7.5,
+        "overview": "Los patriotas anti-Ching, bajo las órdenes de Ho Kuang-han, se refugian en Cantón haciéndose pasar por maestros de escuela. Liu Yu-te, uno de los pupilos de Ho trabaja como mensajero y espía para los anti-Ching. Pero el general Manchurio Tien Ta descubre a los anti-Ching y ordena matar a Ho y al padre de Liu. Liu escapa al templo de Shaolin con la esperanza de aprender artes marciales y vengar la muerte de su padre. Liu es aceptado como alumno y es llamado San Te. Su progreso en las artes marciales es espectacular y por fin, con el consentimiento de los monjes, deja el templo para vengar a su padre y reclutar nuevos alumnos para Shaolin.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zt0315MHhD1YqNG6N6QyZpOeqvE.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/Hn10dZqkUfr18pQZYMKzCFPPCP.jpg",
+        "genres": [
+          "Acción",
+          "Aventura"
+        ]
+      },
+      {
+        "id": 10907,
+        "title": "Robin de los Bosques",
+        "original_title": "The Adventures of Robin Hood",
+        "year": 1938,
+        "era": "20s-30s",
+        "rating": 7.5,
+        "overview": "Robin de Locksey regresa a Inglaterra tras combatir contra los infieles en las Cruzadas, pero Juan sin Tierra, el hermano del Rey Ricardo I, ha usurpado el trono y gobierna como un tirano, por lo que el noble sajón decide refugiarse en el bosque de Sherwood y luchar contra él para devolverle la corona a Ricardo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bCXYN015wb10UTPgXZxcd2RAjBI.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/yjnfM8QmrXQkWl8dUimsDGl73el.jpg",
+        "genres": [
+          "Aventura",
+          "Romance",
+          "Acción"
+        ]
+      },
+      {
+        "id": 38985,
+        "title": "Carga maldita",
+        "original_title": "Sorcerer",
+        "year": 1977,
+        "era": "70s",
+        "rating": 7.5,
+        "overview": "Cuatro hombres de diferente nacionalidad, escondidos de su pasado en una remota ciudad sudamericana, se unen para transportar una peligrosa carga de dinamita a través de la selva.  Remake de \"El salario del miedo\", de Clouzot (1953).",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bQDI2LFEoNJWgmsQIaVvfV0jnOi.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/g7prwSflNODkHZI6792MYoU4qoh.jpg",
+        "genres": [
+          "Suspense",
+          "Aventura",
+          "Acción"
+        ]
+      },
+      {
+        "id": 154,
+        "title": "Star Trek II. La ira de Khan",
+        "original_title": "Star Trek II: The Wrath of Khan",
+        "year": 1982,
+        "era": "80s",
+        "rating": 7.5,
+        "overview": "El Enterprise transporta a un grupo de científicos que se disponen a poner a prueba el mayor experimento jamás imaginado por el hombre: la formación de vida en un planeta inerte.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8k93s37Z87eKboyU4n3k32HCH65.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/meqmvZjKpQ7WRhpZvIoKIAvioSD.jpg",
+        "genres": [
+          "Acción",
+          "Aventura",
+          "Ciencia ficción"
         ]
       }
     ]
@@ -1098,19 +2067,18 @@
     "name": "Colección: Cine Bélico & Grandes Crónicas",
     "genre": "Bélica",
     "tagline": "La crudeza del combate, el heroísmo y la historia humana",
-    "overview": "Historias que marcaron la historia: el desgarrador drama del Holocausto en La Lista de Schindler, el delirio bélico de Apocalypse Now y el mensaje pacifista en El Gran Dictador.",
     "poster": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
     "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
-    "count": 4,
+    "count": 18,
     "movies": [
       {
         "id": 424,
-        "title": "La Lista de Schindler",
+        "title": "La lista de Schindler",
         "original_title": "Schindler's List",
         "year": 1993,
         "era": "90s",
         "rating": 8.6,
-        "overview": "Oskar Schindler salva a más de mil judíos del holocausto empleándolos en su fábrica.",
+        "overview": "Oskar Schindler, un hombre de enorme astucia y talento para las relaciones públicas, organiza un ambicioso plan para ganarse la simpatía de los nazis. Después de la invasión de Polonia por los alemanes, consigue, gracias a sus relaciones con los nazis, la propiedad de una fábrica de Cracovia. Allí emplea a cientos de operarios judíos, cuya explotación le hace prosperar rápidamente. Su gerente, también judío, es el verdadero director en la sombra, pues Schindler no tiene el menor conocimiento industrial.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
         "genres": [
@@ -1120,17 +2088,65 @@
         ]
       },
       {
+        "id": 12477,
+        "title": "La tumba de las luciérnagas",
+        "original_title": "火垂るの墓",
+        "year": 1988,
+        "era": "80s",
+        "rating": 8.4,
+        "overview": "Verano de 1945. La aviación estadounidense somete las ciudades japonesas a continuos ataques aéreos. En uno de ellos, una incursión con bombas incendiarias convierte la ciudad de Kōbe en un infierno humeante, para los dos protagonistas (Seita, de 14 años, y su hermanita Setsuko, de 5). El joven Seita y su pequeña hermana Setsuko son hijos de un oficial de la marina japonesa. Durante la Segunda Guerra Mundial, ambos viven con su madre, pero un día, tras un bombardeo, ellos se retrasan y no consiguen llegar al búnker donde ella los espera.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xTPa9c7Bgdq1BlZee24QeIx0jyR.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg",
+        "genres": [
+          "Animación",
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 34530,
+        "title": "La condición Humana III: La plegaria del soldado",
+        "original_title": "人間の條件　完結篇",
+        "year": 1961,
+        "era": "60s",
+        "rating": 8.4,
+        "overview": "Tras ser derrotados por los rusos, Kaji y los pocos hombres de su unidad que han sobrevivido emprenden una larga marcha en un intento desesperado de llegar a territorio amigo. Tras sortear no pocas dificultades, Kaji se ve obligado a rendirse y es enviado a un campo de prisioneros en Siberia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/6TasNsbPKEG1dpCm3GRvEMbNg2j.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/h9jZQJ97PM9bumabvl81N6jJvvz.jpg",
+        "genres": [
+          "Bélica",
+          "Drama",
+          "Historia"
+        ]
+      },
+      {
         "id": 914,
-        "title": "El Gran Dictador",
+        "title": "El gran dictador",
         "original_title": "The Great Dictator",
         "year": 1940,
         "era": "40s",
         "rating": 8.3,
-        "overview": "Un barbero judío amnésico es confundido con el dictador Adenoid Hynkel.",
+        "overview": "Un humilde barbero judío tiene un parecido asombroso con el dictador de la nación Tomania, que promete sacar adelante y que culpa a los judíos de la situación del país. El dictador ataca al país fronterizo, pero es confundido con el barbero por sus propios guardias, siendo ingresado en un campo de concentración. Simultáneamente, el pobre barbero es confundido con el dictador...",
         "thumbnail": "https://image.tmdb.org/t/p/w500/aM2fdyNhsa3UYYCtkm9pGXQ0Q1R.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
         "genres": [
           "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 31439,
+        "title": "¡Vivir!",
+        "original_title": "活着",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Después de verse obligado a abandonar su casa y su familia por deudas de juego, un hombre rehace su vida como titiritero hasta que se ve envuelto en la revolución maoísta. Cuando consigue volver con su mujer y sus hijos, ya nada es como antes.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mIx0Mk2XkYS7TjLZsMcLiWv0SHy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/s7xVB5OPWw6GO40VBeEJcX9EwNt.jpg",
+        "genres": [
+          "Drama",
+          "Romance",
           "Bélica"
         ]
       },
@@ -1141,7 +2157,7 @@
         "year": 1979,
         "era": "70s",
         "rating": 8.3,
-        "overview": "Durante la guerra de Vietnam, el capitán Willard recibe la orden de eliminar al coronel Kurtz.",
+        "overview": "Durante la guerra de Vietnam, al joven Capitán Willard, un oficial de los servicios de inteligencia del ejército estadounidense, se le ha encomendado entrar en Camboya con la peligrosa misión de eliminar a Kurtz, un coronel renegado que se ha vuelto loco. El capitán deberá ir navegar por el río hasta el corazón de la selva, donde parece ser que Kurtz reina como un buda despótico sobre los miembros de la tribu Montagnard, que le adoran como a un dios.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zJXRrkJTlcb5x87v4VWN1zZX0Xk.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/49fzLedFVKgGgFChLMuulDJBY1c.jpg",
         "genres": [
@@ -1150,19 +2166,192 @@
         ]
       },
       {
-        "id": 770,
-        "title": "Lo que el viento se llevó",
-        "original_title": "Gone with the Wind",
-        "year": 1939,
-        "era": "20s-30s",
-        "rating": 7.9,
-        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+        "id": 975,
+        "title": "Senderos de gloria",
+        "original_title": "Paths of Glory",
+        "year": 1957,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Primera Guerra Mundial (1914-1918). En 1916, en Francia, el general Boulard ordena la conquista de una inexpugnable posición alemana y encarga esa misión al ambicioso general Mireau. El encargado de dirigir el ataque será el coronel Dax. La toma de la colina resulta un infierno, y el regimiento emprende la retirada hacia las trincheras. El alto mando militar, irritado por la derrota, decide imponer al regimiento un terrible castigo que sirva de ejemplo a los demás soldados.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vz8J8nTbF5JP7PQK4VNVsO8rzCy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/nbMY2UcNnaAr3jrrowzN0NaxQyr.jpg",
+        "genres": [
+          "Bélica",
+          "Drama"
+        ]
+      },
+      {
+        "id": 857,
+        "title": "Salvar al soldado Ryan",
+        "original_title": "Saving Private Ryan",
+        "year": 1998,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Segunda Guerra Mundial, 1944. Tras el desembarco de los Aliados en Normandía, a un grupo de soldados americanos se le encomienda una peligrosa misión: poner a salvo al soldado James Ryan. Los hombres de la patrulla del capitán John Miller deben arriesgar sus vidas para encontrar a este soldado, cuyos tres hermanos han muerto en la guerra. Lo único que se sabe del soldado Ryan es que se lanzó con su escuadrón de paracaidistas detrás de las líneas enemigas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dcKfD8xWf8XnS3tHVp7v331wdNT.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/rW2xRFlJRbTnBJlQTSjQmjevIwb.jpg",
+        "genres": [
+          "Bélica",
+          "Drama",
+          "Historia"
+        ]
+      },
+      {
+        "id": 34528,
+        "title": "La condición Humana II: El camino a la eternidad",
+        "original_title": "人間の條件　第３部望郷篇／第４部戦雲篇",
+        "year": 1959,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Segunda Guerra Mundial (1939-1945). Forzado a unirse al ejército japonés durante la contienda, Kaji es enviado a Manchuria. Allí entabla amistad con un soldado que simpatiza con el comunismo. Tras una breve visita de su esposa, Kaji es enviado con su unidad al campo de batalla, del que muchos de sus compañeros nunca regresarán.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3E7ZC7FzLycCGZO6skkfww019nw.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/4zNC1BtW9uyOKCjbtMZmtu5oGrt.jpg",
+        "genres": [
+          "Bélica",
+          "Drama",
+          "Historia"
+        ]
+      },
+      {
+        "id": 25237,
+        "title": "Masacre (Ven y mira)",
+        "original_title": "Иди и смотри",
+        "year": 1985,
+        "era": "80s",
+        "rating": 8.2,
+        "overview": "Tras encontrar un viejo rifle, un joven se une a las fuerzas de la resistencia soviética, que lucha por expulsar a las fuerzas nazis del frente oriental. Allí, será testigo de algunos los mayores horrores cometidos en la Segunda Guerra Mundial.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/j2hzNkmwYT184eP9qYdjViiYxCO.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3Na31ta8vDuKOgQuPLdSZLs8bCB.jpg",
         "genres": [
           "Drama",
           "Bélica",
-          "Romance"
+          "Terror",
+          "Historia"
+        ]
+      },
+      {
+        "id": 31217,
+        "title": "La condición Humana I: No hay amor más grande",
+        "original_title": "人間の條件　第１部純愛篇／第２部激怒篇",
+        "year": 1959,
+        "era": "50s",
+        "rating": 8.2,
+        "overview": "Durante la Segunda Guerra Mundial (1939-1945), Kaji, un japonés pacifista, trata de librarse del servicio militar aceptando un trabajo como supervisor laboral en las minas de la Manchuria ocupada. Kaji se dedica a mejorar las pésimas condiciones de vida de los prisioneros, pero sus esfuerzos son despreciados por el jefe del campo de concentración. Un día, el odio acumulado estalla y tiene terribles consecuencias.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eSQrc2nfBUymd1YmvA7xl3hAroE.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/d9IXxTrra12erdjVXoWUhuTVzTH.jpg",
+        "genres": [
+          "Bélica",
+          "Drama",
+          "Historia"
+        ]
+      },
+      {
+        "id": 935,
+        "title": "¿Teléfono rojo? Volamos hacia Moscú",
+        "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "year": 1964,
+        "era": "60s",
+        "rating": 8.1,
+        "overview": "Convencido de que los comunistas están contaminando los Estados Unidos, un general ordena, en un acceso de locura, un ataque aéreo nuclear sorpresa contra la Unión Soviética. Su ayudante, el capitán Mandrake, trata de encontrar la fórmula para impedir el bombardeo. Por su parte, el presidente de los EE.UU. se pone en contacto con Moscú para convencer al gobierno soviético de que el ataque no es más que un estúpido error. Mientras tanto, el asesor estadounidense, un antiguo científico nazi, el doctor Strangelove, confirma la existencia de la «Máquina del Juicio Final», un dispositivo de represalia soviético capaz de acabar con la humanidad para siempre.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/snsOoRb1d4WD6q62PRfBuGLJ8xr.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 600,
+        "title": "La chaqueta metálica",
+        "original_title": "Full Metal Jacket",
+        "year": 1987,
+        "era": "80s",
+        "rating": 8.1,
+        "overview": "Un grupo de reclutas se prepara en Parish Island, centro de entrenamiento de la marina Norteamericana. Allí está el sargento Hartmann, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, para que puedan defenderse del enemigo. Pero no todos los jóvenes soportan igual sus métodos...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/6CX7BcyD8Xd5AQ7myNs0UE4mu6c.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
+        "genres": [
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 387,
+        "title": "El submarino (Das Boot)",
+        "original_title": "Das Boot",
+        "year": 1981,
+        "era": "80s",
+        "rating": 8.1,
+        "overview": "Un submarino alemán de la Segunda Guerra Mundial es el escenario en el que un grupo de jóvenes soldados, dispuesto a defender su patria, tendrá que someterse a una dura convivencia, tras descubrir que han sido enviados a realizar una misión probablemente suicida.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qXeULeu5uHHXYHRsbITzuLN51EB.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/zzzhbZnSPMOON9uGt0LsdUJWYoC.jpg",
+        "genres": [
+          "Drama",
+          "Historia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 55823,
+        "title": "La gran guerra",
+        "original_title": "La grande guerra",
+        "year": 1959,
+        "era": "50s",
+        "rating": 8.1,
+        "overview": "Italia, 1916 (Primera Guerra Mundial). La lucha en las trincheras es una auténtica carnicería. En un regimiento italiano, los soldados Oreste y Giovanni son dos cobardes, cuya amistad se basa, sobre todo, en la búsqueda de la supervivencia. Pero, de repente, van a convertirse en un ejemplo de heroísmo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eUn3Uynf4YJVaOABqgQcLWcmsBv.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/fcH7FM74GoHgOUnKjpGAoKOxWvY.jpg",
+        "genres": [
+          "Comedia",
+          "Bélica",
+          "Drama"
+        ]
+      },
+      {
+        "id": 307,
+        "title": "Roma. Ciudad abierta",
+        "original_title": "Roma città aperta",
+        "year": 1945,
+        "era": "40s",
+        "rating": 8,
+        "overview": "Segunda Guerra Mundial (1939-1945). Estando Roma ocupada por los nazis, la temible Gestapo trata de arrestar a Manfredi, el líder del Comité Nacional de Liberación. Annie Marie ofrece refugio en su casa a Manfredi y a algunos de sus camaradas, pero los alemanes descubren su escondrijo y rodean la vivienda; algunos partisanos consiguen escapar por los tejados, pero Manfredi es apresado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mgBiTwHjd9ILQXUCSS4v3eAaCIu.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/tt1YwEB5UVDKxCYwZEtpNUaDJIi.jpg",
+        "genres": [
+          "Drama",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 947,
+        "title": "Lawrence de Arabia",
+        "original_title": "Lawrence of Arabia",
+        "year": 1962,
+        "era": "60s",
+        "rating": 8,
+        "overview": "Biografía de T.E. Lawrence. El Cairo, 1917. Un conflictivo y enigmático oficial británico es enviado al desierto árabe durante la Gran Guerra en la campaña de ayuda a Arabia contra Turquía. En el desierto, se hace amigo de Sherif Ali Ben El Kharish y pone todo su empeño en la ayuda a los árabes. Éstos creen que Lawrence es otro amante del desierto que ayuda porque cree que Arabia es débil, mientras que sus superiores británicos creen que se ha vuelto loco. Cuando los planes de Lawrence consiguen llevarse a cabo con éxito, comienza a ganarse enemigos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/UmgjvObk7ugIDLLcwJsqNF1TIC.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/eULrEMwgXnWmzdowUfegaw2YYgD.jpg",
+        "genres": [
+          "Aventura",
+          "Historia",
+          "Bélica"
+        ]
+      },
+      {
+        "id": 46592,
+        "title": "La balada del soldado",
+        "original_title": "Баллада о солдате",
+        "year": 1959,
+        "era": "50s",
+        "rating": 8,
+        "overview": "Durante la Segunda Guerra Mundial (1939-1945), el joven Alyosha, un soldado de apenas 19 años, gana una medalla como recompensa por su heroísmo en el frente de batalla. En lugar de la condecoración, Alyosha pide unos días de permiso para poder visitar a su madre. De camino a casa, en el tren conoce a una chica de la que se enamora.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/du0i0WATYldugXmUI7pI5axbcL3.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/dt580H0MCP5Epuc0sI9TxmtjqnU.jpg",
+        "genres": [
+          "Drama",
+          "Romance",
+          "Bélica"
         ]
       }
     ]
@@ -1172,19 +2361,50 @@
     "name": "Colección: Grandes Romances del Cine",
     "genre": "Romance",
     "tagline": "Amor inmortal, pasión dorada y despedidas inolvidables",
-    "overview": "Las historias de amor más icónicas de la pantalla grande: el reencuentro en Casablanca, la belleza poética de Cinema Paradiso, el amor mudo de Luces de la Ciudad y el ardor de Lo que el viento se llevó.",
-    "poster": "https://image.tmdb.org/t/p/w500/5K7cOHoay2mZusSLezBOY0Qxh8a.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
-    "count": 7,
+    "poster": "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/7VDLEHli74eLsYLNcq9djn1Gw76.jpg",
+    "count": 18,
     "movies": [
+      {
+        "id": 19404,
+        "title": "Un amor contra viento y marea",
+        "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+        "year": 1995,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Los Singh son una familia india con grandes convicciones culturales de su nación de origen, que emigraron a Reino Unido antes de nacer sus primeros hijos. Uno de ellos querrá casarse con una mujer ajena a su cultura y para ello deberá hacer todos los esfuerzos por convencer a su familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7VDLEHli74eLsYLNcq9djn1Gw76.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump",
+        "original_title": "Forrest Gump",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.5,
+        "overview": "Forrest Gump es un chico con deficiencias mentales no muy profundas y con alguna incapacidad motora que, a pesar de todo, llegará a convertirse, entre otras cosas, en un héroe durante la Guerra del Vietnam. Su persistencia y bondad le llevarán a conseguir una gran fortuna, ser objeto del clamor popular y a codearse con las más altas esferas sociales y políticas del país. Siempre sin olvidar a Jenny, su gran amor desde que era niño.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oiqKEhEfxl9knzWXvWecJKN3aj6.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
       {
         "id": 11216,
         "title": "Cinema Paradiso",
         "original_title": "Nuovo Cinema Paradiso",
         "year": 1988,
         "era": "80s",
-        "rating": 8.5,
-        "overview": "Un cineasta recuerda su infancia en un pequeño pueblo italiano y su amistad con el proyeccionista.",
+        "rating": 8.4,
+        "overview": "En un pequeño pueblo siciliano durante los años previos a la llegada de la televisión (justo al finalizar la Segunda Guerra Mundial) el joven Toto vivía fascinado por el cine. Toto trata de entablar amistad con Alfredo, el proyeccionista del cine local, una persona muy irritable pero con un gran corazón. Todos estos hechos se presentan en forma de nostálgicos recuerdos de Toto que ha crecido hasta convertirse en un cineasta de éxito, y que revive a su infancia cuando recibe la noticia de que Alfredo ha muerto.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hHwsr3t5n7VVUbPyU8VZswn0jkL.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
         "genres": [
@@ -1194,12 +2414,12 @@
       },
       {
         "id": 3082,
-        "title": "Tiempos Modernos",
+        "title": "Tiempos modernos",
         "original_title": "Modern Times",
         "year": 1936,
         "era": "20s-30s",
         "rating": 8.3,
-        "overview": "Un obrero metalúrgico lucha por sobrevivir en el mundo industrializado de la Gran Depresión.",
+        "overview": "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motín, gracias a lo cual queda en libertad. Una vez fuera, reemprende la lucha por la supervivencia en compañía de una joven huérfana a la que conoce en la calle.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/f3uOJseH4oPEo0Sq7WyQ6IwMG4l.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
         "genres": [
@@ -1209,15 +2429,63 @@
         ]
       },
       {
+        "id": 31439,
+        "title": "¡Vivir!",
+        "original_title": "活着",
+        "year": 1994,
+        "era": "90s",
+        "rating": 8.3,
+        "overview": "Después de verse obligado a abandonar su casa y su familia por deudas de juego, un hombre rehace su vida como titiritero hasta que se ve envuelto en la revolución maoísta. Cuando consigue volver con su mujer y sus hijos, ya nada es como antes.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mIx0Mk2XkYS7TjLZsMcLiWv0SHy.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/s7xVB5OPWw6GO40VBeEJcX9EwNt.jpg",
+        "genres": [
+          "Drama",
+          "Romance",
+          "Bélica"
+        ]
+      },
+      {
         "id": 901,
-        "title": "Luces de la Ciudad",
+        "title": "Luces de la ciudad",
         "original_title": "City Lights",
         "year": 1931,
         "era": "20s-30s",
         "rating": 8.3,
-        "overview": "El vagabundo se enamora de una florista ciega y hace todo lo posible por pagarle una operación.",
+        "overview": "Un pobre vagabundo (Charles Chaplin) pasa mil y un avatares para conseguir dinero y ayudar a una pobre chica ciega (Virginia Cherill) de la que se ha enamorado.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/15bnFY02iqWB6jN0sjxsxMNrmWS.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/Ma7mQsldFCaQpsZbm8zolgLfmV.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 15804,
+        "title": "Un día de verano",
+        "original_title": "牯嶺街少年殺人事件",
+        "year": 1991,
+        "era": "90s",
+        "rating": 8.2,
+        "overview": "Taiwan, años '60. Los jóvenes taiwaneses, aunque dominados por China, se sienten deslumbrados por los Estados Unidos y organizan bandas para afirmar su identidad. La versión original duraba 237 minutos, pero por motivos comerciales Yang la recortó para su exhibición hasta los 188 minutos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/gXvyDspzokDAjG0C3rSrszTj12j.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
+        "genres": [
+          "Crimen",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 284,
+        "title": "El apartamento",
+        "original_title": "The Apartment",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8.2,
+        "overview": "C.C. Baxter es un modesto pero ambicioso empleado de una compañía de seguros de Manhattan. Está soltero y vive solo en un discreto apartamento que presta ocasionalmente a sus superiores para sus citas amorosas. Tiene la esperanza de que estos favores le sirvan para mejorar su posición en la empresa. Pero la situación cambia cuando se enamora de una ascensorista que resulta ser la amante de uno de los jefes que usan su apartamento.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2kJMgHi8vNY8a0UJiBU3HEyiqOa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/vRTKNKNWLZ22fAgPa5kY8wT2b1F.jpg",
         "genres": [
           "Comedia",
           "Drama",
@@ -1228,10 +2496,10 @@
         "id": 289,
         "title": "Casablanca",
         "original_title": "Casablanca",
-        "year": 1942,
+        "year": 1943,
         "era": "40s",
-        "rating": 8.2,
-        "overview": "En la Segunda Guerra Mundial, Rick Blaine debe elegir entre su amor por Ilsa y ayudar a la resistencia.",
+        "rating": 8.1,
+        "overview": "Durante la Segunda Guerra Mundial, Casablanca era una ciudad a la que llegaban huyendo del nazismo gentes de todas partes: llegar era fácil, pero salir era casi imposible, especialmente si el nombre del fugitivo figuraba en las listas de la Gestapo. En esta ocasión el principal objetivo de la policía secreta alemana es el líder checo y héroe de la resistencia Victor Laszlo, cuya única esperanza es Rick Blaine, propietario del 'Rick’s Café' y antiguo amante de su mujer, Ilsa. Cuando Ilsa se ofrece a quedarse a cambio de un visado para sacar a Laszlo del país, Rick deberá elegir entre su propia felicidad o el idealismo que rigió su vida en el pasado.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/a7EjycGNSYw6QqJqDooD9eQGZ4r.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
         "genres": [
@@ -1245,8 +2513,8 @@
         "original_title": "Vertigo",
         "year": 1958,
         "era": "50s",
-        "rating": 8.2,
-        "overview": "Un detective retirado con acrofobia es contratado para vigilar a una misteriosa mujer.",
+        "rating": 8.1,
+        "overview": "Scottie Fergusson es un detective de la policía de San Francisco que padece de vértigo. Cuando un compañero cae al vacío desde una cornisa mientras persiguen a un delincuente, Scottie decide retirarse. Gavin Elster, un viejo amigo del colegio, lo contrata para que vigile a su esposa Madeleine, una bella mujer que está obsesionada con su pasado.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/t4kvoLhrVHW5w5Ku7AQBniVExjN.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
         "genres": [
@@ -1257,12 +2525,12 @@
       },
       {
         "id": 872,
-        "title": "Cantando bajo la Lluvia",
+        "title": "Cantando bajo la lluvia",
         "original_title": "Singin' in the Rain",
         "year": 1952,
         "era": "50s",
-        "rating": 8.2,
-        "overview": "Hollywood enfrenta la revolucionaria transición del cine mudo al sonoro.",
+        "rating": 8.1,
+        "overview": "Antes de conocer a la aspirante a actriz Cathy Seldon, el ídolo del cine mudo Don Lockwood pensaba que lo tenía todo; fama, fortuna y éxito. Pero, tras conocerla, se da cuenta de que ella es lo que realmente faltaba en su vida. Con el nacimiento del cine sonoro, Don quiere filmar los musicales con Kathy, pero entre ambos se interpone la reina del cine mudo Lina Lamont.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5r8jD5R6EzpQ5VLodbzTNhvKcGw.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
         "genres": [
@@ -1271,18 +2539,110 @@
         ]
       },
       {
-        "id": 770,
-        "title": "Lo que el viento se llevó",
-        "original_title": "Gone with the Wind",
-        "year": 1939,
-        "era": "20s-30s",
-        "rating": 7.9,
-        "overview": "La apasionada Scarlett O'Hara lucha por conservar su plantación durante la Guerra de Secesión.",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vEMSjJbenWci9TrxxtAPPtk3Mzj.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/w1280/4FHcxMtVruMr7ltU2cItWssLjTP.jpg",
+        "id": 239,
+        "title": "Con faldas y a lo loco",
+        "original_title": "Some Like It Hot",
+        "year": 1959,
+        "era": "50s",
+        "rating": 8.1,
+        "overview": "Época de la Ley Seca (1920-1933). Joe y Jerry son dos músicos del montón que se ven obligados a huir después de ser testigos de un ajuste de cuentas entre dos bandas rivales. Como no encuentran trabajo y la mafia los persigue, deciden vestirse de mujeres y tocar en una orquesta femenina. Joe para conquistar a Sugar Kane, la cantante del grupo, finge ser un magnate impotente; mientras tanto, Jerry es cortejado por un millonario que quiere casarse con él.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/y2DPBWFMiwVJeBq0vBX9Um8AqOE.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/sv2VnbZmgy2rkrtkA2nz7rzH0VK.jpg",
+        "genres": [
+          "Comedia",
+          "Romance",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 42229,
+        "title": "Una jornada particular",
+        "original_title": "Una giornata particolare",
+        "year": 1977,
+        "era": "70s",
+        "rating": 8.1,
+        "overview": "El 6 de mayo de 1938, Hitler visita Roma. Es un día de fiesta para la Italia fascista, que se vuelca en el recibimiento. En una casa de vecinos sólo quedan la portera, un ama de casa, Antonietta, y Gabriele, que teme a la policía por algún motivo desconocido. Al margen de la celebración política, Antonietta y Gabriele establecen una relación afectiva muy especial que les permite evadirse durante unas horas de la tristeza y monotonía de la vida cotidiana.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mLjWMw2tDKA4xvrGMFpY5e4TbGP.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/6d7ymk1OWX6AkfkhOnSEfwiqo2y.jpg",
         "genres": [
           "Drama",
-          "Bélica",
+          "Romance"
+        ]
+      },
+      {
+        "id": 20334,
+        "title": "El bazar de las sorpresas",
+        "original_title": "The Shop Around the Corner",
+        "year": 1940,
+        "era": "40s",
+        "rating": 8.1,
+        "overview": "Alfred Kralik es el tímido jefe de vendedores de Matuschek y Compañía, una tienda de Budapest. Todas las mañanas, los empleados esperan juntos la llegada de su jefe, Hugo Matuschek. A pesar de su timidez, Alfred responde al anuncio de un periódico y mantiene un romance por carta. Su jefe decide contratar a una tal Klara Novak en contra de la opinión de Alfred. En el trabajo, Alfred discute constantemente con ella, sin sospechar que es su corresponsal secreta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ylExFY65lH1WIg7KQrTa8Zqz6nc.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/wqgZSvgoctaadgwUdPYVsksivxn.jpg",
+        "genres": [
+          "Comedia",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 2457,
+        "title": "Los niños del paraíso",
+        "original_title": "Les Enfants du Paradis",
+        "year": 1945,
+        "era": "40s",
+        "rating": 8.1,
+        "overview": "París, 1820. Dos jóvenes artistas, Baptiste Debureau y Frédéric Lemâitre, debutan en el teatro de los Funámbulos y entablan amistad. Un día, Garance, una misteriosa y atractiva mujer, irrumpe en sus vidas. Mientras que el tímido Baptiste no se atreve a declararle su amor, Frédéric la convierte en su amante. Sin embargo, al estar implicada en una serie de crímenes, la mujer desaparece.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5JdJCE93pWWx34UtHg62fj2qJ9g.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/ubERa5VEJlBRglxDSBSL0YBG7XB.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 133919,
+        "title": "Secretos de un matrimonio",
+        "original_title": "Scener ur ett äktenskap",
+        "year": 1974,
+        "era": "70s",
+        "rating": 8,
+        "overview": "El matrimonio formado por Johan, profesor de psicología, y Marianne, abogada, recibe una noche en su casa la visita de sus amigos Peter y Katerina. Al poco tiempo, los invitados empiezan una fuerte discusión en la que los anfitriones intentan mediar sin éxito alguno. Cuando se quedan solos, Johan y Marianne empiezan a hablar de su matrimonio y de sus problemas.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/opIaj9znzDAsYh5pohuVIz6ZpwJ.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/prQE97Ds6ElKtTuemJRCvGJFlZz.jpg",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "id": 8422,
+        "title": "Rocco y sus hermanos",
+        "original_title": "Rocco e i suoi fratelli",
+        "year": 1960,
+        "era": "60s",
+        "rating": 8,
+        "overview": "Rosaria y sus cuatro hijos (Simone, Rocco, Ciro y Luca) abandonan su tierra natal, Lucania (la actual Basilicata), para emigrar a Milán en busca de trabajo y oportunidades que les permitan mejorar sus condiciones de vida. Allí encuentran a Vincenzo, el hermano mayor, que trabaja de albañil pero que está relacionado con el mundo del boxeo.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vwgfYkKflAsEvxC11zaPFPWWIfa.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/26LKQHOk5v7XjUFxm4Pv05nYgln.jpg",
+        "genres": [
+          "Drama",
+          "Romance",
+          "Crimen"
+        ]
+      },
+      {
+        "id": 55960,
+        "title": "Totò, Peppino y la mala mujer",
+        "original_title": "Totò, Peppino e la... malafemmina",
+        "year": 1956,
+        "era": "50s",
+        "rating": 8,
+        "overview": "Antonio, Peppino y Lucia son tres hermanos que viven en el campo, cerca de Nápoles. El hijo de Lucia, Gianni, se va a Nápoles a estudiar medicina, y allí conocerá a una bailarina de la que se enamora. Su madre y sus tíos no ven con buenos ojos esta relación, e intentarán separarlos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jHe65nUmr2DBuzEAAkuiFbUssYT.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/oBBtZHbtLt8wOHemA9Qv8hzcqng.jpg",
+        "genres": [
+          "Comedia",
           "Romance"
         ]
       }
@@ -1292,24 +2652,273 @@
     "id": "col-western",
     "name": "Colección: Leyendas del Western",
     "genre": "Western",
-    "tagline": "Duelos al sol, forajidos y la épica de Sergio Leone",
-    "overview": "La máxima obra cumbre del Spaghetti Western y el cine del Salvaje Oeste: El Bueno, el Malo y el Feo de Sergio Leone con Clint Eastwood y la inolvidable música de Ennio Morricone.",
+    "tagline": "Duelos al sol, forajidos y la épica de Sergio Leone y John Ford",
     "poster": "https://image.tmdb.org/t/p/w500/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg",
     "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
-    "count": 1,
+    "count": 18,
     "movies": [
       {
         "id": 429,
-        "title": "El Bueno, el Malo y el Feo",
+        "title": "El bueno, el feo y el malo",
         "original_title": "Il buono, il brutto, il cattivo",
         "year": 1966,
         "era": "60s",
         "rating": 8.5,
-        "overview": "Tres pistoleros buscan un tesoro enterrado en medio de la Guerra de Secesión estadounidense.",
+        "overview": "Durante la Guerra de Secesión, tres cazadores de recompensas se lanzan a la búsqueda de un tesoro que ninguno de los tres truhanes puede localizar sin la ayuda de los otros dos. Tuco sabe que el tesoro se encuentra en un cementerio, mientras que Joe conoce el nombre inscrito en la tumba que lo esconde. Mientras tanto, Sentenza no duda en matar a mujeres y niños para conseguir su meta. De esta forma, los tres hombres colaboran en apariencia, pero al final intentarán eliminarse mutuamente.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg",
         "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
         "genres": [
           "Western"
+        ]
+      },
+      {
+        "id": 30131,
+        "title": "El Siete Machos",
+        "original_title": "El Siete Machos",
+        "year": 1951,
+        "era": "50s",
+        "rating": 8.3,
+        "overview": "Don Guadalupe, el dueño de la hacienda \"Los Sauces\", y su fiel sirviente Florentino son asesinados por don Carmelo, un pariente del primero.  Años más tarde un peligroso salteador apodado \"El 7 Machos\" tiene aterrorizados a los habitantes de la hacienda. Allí viven además de Don Carmelo, su bella sobrina Rosario y Margarito (Cantinflas), un criado que es, sin saberlo, el hermano gemelo del bandido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/stghzuBSuhiBbvAIxrm8D0G8m1z.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/pZ6PvuFsXHgGMpWFKbXHGPNcQc3.jpg",
+        "genres": [
+          "Comedia",
+          "Western"
+        ]
+      },
+      {
+        "id": 335,
+        "title": "Hasta que llegó su hora",
+        "original_title": "C'era una volta il West",
+        "year": 1968,
+        "era": "60s",
+        "rating": 8.3,
+        "overview": "Mientras los constructores del ferrocarril avanzan imparables por el desierto de Arizona en su camino hacia el mar, Jill llega al pequeño pueblo de Flagstone con la intención de empezar una nueva vida.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/upiek8u4rHTrOJW9B0woXe4A4h7.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/u5IhDThM1SClL4pkCUp8hOmsDQJ.jpg",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "id": 938,
+        "title": "La muerte tenía un precio",
+        "original_title": "Per qualche dollaro in più",
+        "year": 1965,
+        "era": "60s",
+        "rating": 8,
+        "overview": "Dos cazadores de asesinos, rivales entre sí al principio, acaban por unirse para conseguir una misma presa, \"El Indio\", un peligroso y sanguinario bandido por el que se ofrece la más alta recompensa conocida. Cada uno tiene motivos diferentes para dar caza al bandido, uno, su obsesión por conseguir el dinero que ofrecen, y el otro, para vengar el asesinato de su hija a manos del brutal asesino. También sus estilos son distintos, aunque infalibles, uno rápido y el otro frío y técnico.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/1jYm6eU09zX3D5RlTGiCWbJzn5p.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/hs6OPto38fF589ScpGhl7uSU4MI.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 3090,
+        "title": "El tesoro de Sierra Madre",
+        "original_title": "The Treasure of the Sierra Madre",
+        "year": 1948,
+        "era": "40s",
+        "rating": 8,
+        "overview": "Fred C. Dobbs (Humphrey Bogart) decide ir a Tampico en busca de oro con la intención de dejar atrás la miseria. Emprende el viaje en compañía de otros dos vagabundos (Walter Huston y Tim Holt), pero la codicia y la envidia que surge entre ellos les creará poco a poco más problemas que cualquier otra dificultad del camino.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/6K9oljorPmH0UVxUdACazNBuAlg.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/osytHgkv86CTFKxo46l9P7ACEjm.jpg",
+        "genres": [
+          "Aventura",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "id": 33,
+        "title": "Sin perdón",
+        "original_title": "Unforgiven",
+        "year": 1992,
+        "era": "90s",
+        "rating": 7.9,
+        "overview": "William Munny es un pistolero retirado, viudo y padre de familia, que tiene dificultades económicas para sacar adelante a su hijos. Su única salida es hacer un último trabajo. En compañía de un viejo colega y de un joven inexperto, Munny tendrá que matar a dos hombres que cortaron la cara a una prostituta.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bhcVwMko4DbSELZapIQv4mmdPKY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/rvRGFevvZK48onX0PYI1eQLbuJd.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 581,
+        "title": "Bailando con lobos",
+        "original_title": "Dances with Wolves",
+        "year": 1990,
+        "era": "90s",
+        "rating": 7.8,
+        "overview": "En torno a 1860, en vísperas de la Guerra de Secesión y a punto de terminar el periodo de colonización del Oeste (1785-1890), el teniente John J. Dunbar se dirige a un lejano puesto fronterizo que ha sido abandonado por los soldados. Su soledad lo impulsa a entrar en contacto con los indios sioux y, gracias a ello, conoce a 'En pie con el puño en alto', una mujer blanca que fue adoptada por la tribu cuando era niña. Poco a poco, entre Dunbar y los sioux se establece una relación de respeto y admiración mutuos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/NYzUSchNAs0Q3K2ebPRvkPrlrs.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/ywWva4trKw7f3wtbz81Fe3FnrtC.jpg",
+        "genres": [
+          "Aventura",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "id": 391,
+        "title": "Por un puñado de dólares",
+        "original_title": "Per un pugno di dollari",
+        "year": 1964,
+        "era": "60s",
+        "rating": 7.8,
+        "overview": "Tras la muerte de Juárez, en México dominan la injusticia y el terror. Joe, un pistolero vagabundo, llega al pueblo fronterizo de San Miguel, donde dos familias se disputan el control del territorio, y entra al servicio del clan Rojo. Una noche, Joe es testigo del intercambio de oro por armas entre mexicanos y soldados de la Unión...",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/la1A6gknPnZd0bZgL6C7poN11v.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/9gMkOYzk7P9QXwndhLRAC8cMZcJ.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 11697,
+        "title": "El hombre que mató a Liberty Valance",
+        "original_title": "The Man Who Shot Liberty Valance",
+        "year": 1962,
+        "era": "60s",
+        "rating": 7.8,
+        "overview": "Un anciano senador del Congreso de los Estados Unidos, Ransom Stoddard, relata a un periodista la verdadera historia de por qué ha viajado junto a su mujer Hallie para acudir al funeral de un viejo amigo, Tom Doniphon. Todo comenzó muchos años atrás, cuando Ransom era un joven abogado del este que llegó en diligencia a Shinbone, un pequeño pueblo del Oeste, para ejercer la abogacía e imponer la ley. Poco antes de llegar a su destino, es atracado y golpeado brutalmente por el temido pistolero Liberty Valance.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/cVoQULxaEW2jO55c02RCUXEic8l.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/f6gTJLQ950dPHfFRnxQdaA6OlXJ.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 301,
+        "title": "Río Bravo",
+        "original_title": "Rio Bravo",
+        "year": 1959,
+        "era": "50s",
+        "rating": 7.8,
+        "overview": "El sheriff Chance encarcela por asesinato al hermano de un poderoso terrateniente cuyos hombres intentarán liberarlo. Para impedirlo, Chance cuenta con la colaboración de dos ayudantes: un alcohólico y un viejo tullido, a los que se une un joven y hábil pistolero llamado Colorado. Todos quedarán encerrados en la cárcel de la oficina del sheriff, roedados, incrementándose la tensión en el pueblo a la espera de que llegue la autoridad estatal para llevarse al detenido.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8lFSClr6GKKo7GAzLuyZL9bCXfD.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/38uM6QuI06znUCELfOSiVQy05CX.jpg",
+        "genres": [
+          "Western",
+          "Drama"
+        ]
+      },
+      {
+        "id": 980,
+        "title": "Incidente en Ox-Bow",
+        "original_title": "The Ox-Bow Incident",
+        "year": 1943,
+        "era": "40s",
+        "rating": 7.7,
+        "overview": "El asesinato de un ranchero rompe la aparente tranquilidad de un pueblo del oeste americano. Ausente el sheriff, los hombres del pueblo deciden formar una partida para encontrar a los culpables.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wEBu9jZCXSSdZjt01EVGisdnD87.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/dmmiwTfk4AraKkK8DwmrXYas5rS.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 3114,
+        "title": "Centauros del desierto",
+        "original_title": "The Searchers",
+        "year": 1956,
+        "era": "50s",
+        "rating": 7.7,
+        "overview": "Texas. En 1868, tres años después de la guerra de Secesión, Ethan Edwards, un hombre solitario, vuelve derrotado a su hogar. La persecución de los comanches que han raptado a una de sus sobrinas se convertirá en un modo de vida para él y para Martin, un muchacho mestizo adoptado por su familia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dmnGvL8GRP0hEG7Uph0FxXS9aiK.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/gQpNejv8i1MUasARDIHAJ7wdBMu.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 336,
+        "title": "¡Agáchate, maldito!",
+        "original_title": "Giù la testa",
+        "year": 1971,
+        "era": "70s",
+        "rating": 7.7,
+        "overview": "Juan Miranda y John Mallory, veterano del IRA, se conocen en México y planean trabajar juntos robando bancos. Un día dinamitan lo que creían que era un banco local y resulta ser una prisión. La explosión libera a los revolucionarios que estaban presos y ambos se convierten en héroes de la revolución. Poco tiempo después, las tropas del gobierno, comandadas por el coronel Gutiérrez, comienzan a seguirles los pasos.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zHzv1nA9azV2lLR0nu8dhIsmbjY.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/2ZbYjD4j3RzUZ7PvPb8toKQeF4.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 288,
+        "title": "Solo ante el peligro",
+        "original_title": "High Noon",
+        "year": 1952,
+        "era": "50s",
+        "rating": 7.7,
+        "overview": "Will Kane, el sheriff del pequeño pueblo de Hadleyville, acaba de contraer matrimonio con Amy. Los recién casados proyectan trasladarse a la ciudad y abrir un pequeño negocio; pero, de repente, empieza a correr por el pueblo la noticia de que Frank Miller, un criminal que Kane había atrapado y llevado ante la justicia, ha salido de la cárcel y llegará al pueblo en el tren del mediodía para vengarse de Kane. El tiempo va pasando lentamente, pero nadie en el pueblo está dispuesto a ayudar al sheriff.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9wGUWTtUfCvW5qVv8kHkPZBikKd.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/raYHhtIDyh3qDS6WdyRzeqjLyIK.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 642,
+        "title": "Dos hombres y un destino",
+        "original_title": "Butch Cassidy and the Sundance Kid",
+        "year": 1969,
+        "era": "60s",
+        "rating": 7.6,
+        "overview": "Un grupo de jóvenes pistoleros se dedica a asaltar los bancos del estado de Wyoming y el tren-correo de la Union Pacific. El jefe de la banda es el carismático Butch Cassidy, y Sundance Kid es su inseparable compañero. Un día, después de un atraco, el grupo se disuelve. Será entonces cuando Butch, Sundance y una joven maestra de Denver formen un trío de románticos forajidos que, huyendo de la ley, llegan hasta Bolivia.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2w6Ik8P1E20KOH5ykQlfTjawAIf.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/C6jcUqld8M6hZQmzBxgwHuQ4qT.jpg",
+        "genres": [
+          "Western",
+          "Crimen",
+          "Drama"
+        ]
+      },
+      {
+        "id": 1712,
+        "title": "Gigante",
+        "original_title": "Giant",
+        "year": 1956,
+        "era": "50s",
+        "rating": 7.6,
+        "overview": "Jordan \"Bick\" Benedict, un joven terrateniente, llega a su inmenso rancho de Texas con su flamante esposa Leslie Benedict, una rica y bella muchacha del Este. No tardan mucho en descubrir que pertenecen a mundos radicalmente opuestos y que los separa un abismo. Jett Rink es un arrogante y joven empleado de los Benedict que tiene la suerte de encontrar petróleo en unas tierras que le ha dejado en su testamento Luz, la hermana de Jordan; pero, a pesar de su inmensa fortuna, no consigue lo que realmente le importa: Leslie.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oruoMYVned5WVdd5uRBXIuRcE1B.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/sm3ErHMXQLaNdo74vbIa1JRXIXS.jpg",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "id": 995,
+        "title": "La diligencia",
+        "original_title": "Stagecoach",
+        "year": 1939,
+        "era": "20s-30s",
+        "rating": 7.6,
+        "overview": "Personajes muy variopintos emprenden un largo, duro y peligroso viaje en diligencia. Entre ellos, un fuera de la ley en busca de venganza, una prostituta a la que han echado del pueblo, un jugador, un médico, la mujer embarazada de un militar y un sheriff. Las relaciones entre ellos serán difíciles y tensas. Además, durante el viaje, tendrán que afrontar el ataque de una partida de indios apaches.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wHXgVEfvkExGzm5qNFcYKTTSY0W.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/7SYNEG50fKODsTP6h9phYM3BueV.jpg",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "id": 12501,
+        "title": "Horizontes de grandeza",
+        "original_title": "The Big Country",
+        "year": 1958,
+        "era": "50s",
+        "rating": 7.6,
+        "overview": "James McKay, un capitán naval retirado, llega, desde el Este, a las vastas llanuras de Texas para casarse con Pat Terrill, la hija de un rico ganadero. El choque entre McKay, hombre pacífico y educado, y los violentos y toscos rancheros es inevitable. No sólo tendrá que enfrentarse con el capataz Steve Leech, sino que, incluso su novia se sentirá decepcionada por su comportamiento. Mientras tanto, el padre de Pat y el clan de los Hannassey luchan encarnizadamente por el control del agua para abrevar el ganado.",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3vzl5EEaQeWwqi5ynPFpX32N4JN.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/w1280/mqMCvFJ3fRc7RXa0w6A0VRZ1b7F.jpg",
+        "genres": [
+          "Drama",
+          "Western",
+          "Romance"
         ]
       }
     ]
