@@ -185,8 +185,13 @@ body.netflix-body {
   background-size: cover;
   background-position: 25% top; /* Reducido y ajustado más a la izquierda para ver los personajes completos como en la foto */
   background-repeat: no-repeat;
-  transition: background-image 0.4s ease-in-out;
+  transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 1;
+  opacity: 1;
+}
+
+.billboard-backdrop.changing {
+  opacity: 0.35;
 }
 
 /* Gradientes cinematográficos de fundido */
@@ -486,7 +491,7 @@ body.netflix-body {
 .rows-slider {
   position: relative;
   width: 100%;
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
 }
 
@@ -534,7 +539,7 @@ body.netflix-body {
   cursor: pointer;
   border: 3px solid transparent;
   outline: none;
-  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.36s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .movie-card .movie-poster {
@@ -621,7 +626,7 @@ body.netflix-body {
   cursor: pointer;
   border: 3px solid transparent;
   outline: none;
-  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.36s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.28s ease, box-shadow 0.28s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -685,7 +690,7 @@ body.netflix-body {
 .collection-movie-card:focus {
   outline: none;
   border-color: #ee8208 !important;
-  transform: scale(1.10) !important;
+  transform: scale(1.08) !important;
   transform-origin: center center;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.95), 0 0 18px rgba(238, 130, 8, 0.75) !important;
   z-index: 40 !important;
@@ -918,11 +923,23 @@ body.netflix-body {
    VISTA DE BÚSQUEDA (RESULTADOS OK.RU)
    ------------------------------------------------------------- */
 .search-view {
-  padding: 30px 48px;
-  min-height: 100vh;
+  flex: 1;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 30px 48px 140px 48px;
   background: #0b0d12;
   position: relative;
   z-index: 20;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.search-view::-webkit-scrollbar {
+  display: none;
 }
 
 .search-header {
@@ -1049,6 +1066,7 @@ body.netflix-body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  transition: transform 0.36s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .okru-thumb-wrapper {

@@ -246,11 +246,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const netflixMainEl = document.getElementById('netflix-main');
   if (netflixMainEl) {
     netflixMainEl.addEventListener('scroll', () => {
-      if (netflixMainEl.scrollTop !== 0) netflixMainEl.scrollTop = 0;
+      // Solo forzar scrollTop = 0 cuando la vista principal de carruseles (Home) esté activa
+      if (rowsWrapper && !rowsWrapper.classList.contains('hidden')) {
+        if (netflixMainEl.scrollTop !== 0) netflixMainEl.scrollTop = 0;
+      }
     }, { passive: true });
   }
 
   // Búsqueda
+  searchInput.addEventListener('focus', () => {
+    if (searchView) searchView.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  searchBtn.addEventListener('focus', () => {
+    if (searchView) searchView.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   searchBtn.addEventListener('click', () => {
     const q = searchInput.value.trim();
     if (q) searchCustomQuery(q);
@@ -261,6 +272,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const q = searchInput.value.trim();
       if (q) searchCustomQuery(q);
     }
+  });
+
+  searchCloseBtn.addEventListener('focus', () => {
+    if (searchView) searchView.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   searchCloseBtn.addEventListener('click', closeSearchView);
@@ -326,14 +341,23 @@ async function loadNetflixHome() {
   }
 }
 
-// Actualizar dinámicamente el Hero Billboard al pasar sobre una tarjeta
+// Actualizar dinámicamente el Hero Billboard al pasar sobre una tarjeta con transición suave
 function setFeaturedMovie(movie) {
+  if (!movie) return;
   currentFeaturedMovie = movie;
   const bgImg = movie.backdrop || movie.thumbnail || '';
-  billboardBackdrop.style.backgroundImage = `url('${bgImg}')`;
-  billboardTitle.textContent = movie.title;
-  billboardYear.textContent = movie.year || '';
-  billboardRating.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
+  
+  if (billboardBackdrop) {
+    billboardBackdrop.classList.add('changing');
+    setTimeout(() => {
+      billboardBackdrop.style.backgroundImage = `url('${bgImg}')`;
+      billboardBackdrop.classList.remove('changing');
+    }, 140);
+  }
+
+  if (billboardTitle) billboardTitle.textContent = movie.title;
+  if (billboardYear) billboardYear.textContent = movie.year || '';
+  if (billboardRating) billboardRating.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
   
   if (billboardGenres) {
     billboardGenres.textContent = movie.genres && movie.genres.length ? movie.genres.join(' • ') : 'Cine Clásico';
@@ -341,9 +365,11 @@ function setFeaturedMovie(movie) {
 
   // Porcentaje estilo OK.ru (calculado en base al rating)
   const matchPct = Math.min(99, Math.max(88, Math.round((movie.rating || 8) * 11)));
-  billboardMatch.textContent = `${matchPct}% para ti`;
+  if (billboardMatch) billboardMatch.textContent = `${matchPct}% para ti`;
 
-  billboardOverview.textContent = movie.overview || 'Una de las grandes obras maestras de la historia del cine.';
+  if (billboardOverview) {
+    billboardOverview.textContent = movie.overview || 'Una de las grandes obras maestras de la historia del cine.';
+  }
   updateHeroFavButton(isMovieFavorite(movie));
 }
 
@@ -700,6 +726,7 @@ function openSearchView() {
   heroBillboard.classList.add('hidden');
   rowsWrapper.classList.add('hidden');
   searchView.classList.remove('hidden');
+  searchView.scrollTop = 0;
   searchInput.focus();
 }
 
@@ -798,6 +825,11 @@ function renderSearchGrid(movies) {
     const card = document.createElement('div');
     card.className = 'okru-result-card focusable';
     card.tabIndex = 0;
+
+    // Desplazamiento vertical fluido centrado al navegar por la cuadrícula
+    card.addEventListener('focus', () => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
 
     const qualityClass = getBadgeClass(movie.quality);
 
@@ -1234,7 +1266,12 @@ function navigateSpatial(direction) {
       if (collectionView && !collectionView.classList.contains('hidden')) {
         return inColView && el.offsetParent !== null;
       }
-      return !inPlayer && !inColView && el.offsetParent !== null;
+      const inSearchView = el.closest('#search-view');
+      if (searchView && !searchView.classList.contains('hidden')) {
+        const inSidebar = el.closest('.netflix-sidebar');
+        return (inSearchView || inSidebar) && el.offsetParent !== null;
+      }
+      return !inPlayer && !inColView && !inSearchView && el.offsetParent !== null;
     });
 
   if (!focusables.length) return;
@@ -1297,6 +1334,8 @@ function navigateSpatial(direction) {
     bestCandidate.focus();
     if (bestCandidate.closest('.row-carousel')) {
       scrollCardIntoCarouselView(bestCandidate);
+    } else if (bestCandidate.closest('#search-view')) {
+      bestCandidate.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else if (!bestCandidate.closest('#rows-slider') && !bestCandidate.closest('#rows-wrapper')) {
       bestCandidate.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
     }
