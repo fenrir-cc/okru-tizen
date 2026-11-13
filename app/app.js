@@ -215,10 +215,20 @@ document.addEventListener('DOMContentLoaded', () => {
   loadNetflixHome();
 
   // Botones del Hero Billboard
+  btnBillboardPlay.addEventListener('focus', () => {
+    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+  });
+
   btnBillboardPlay.addEventListener('click', () => {
     if (currentFeaturedMovie) {
       searchAndPlayMovie(currentFeaturedMovie);
     }
+  });
+
+  btnBillboardFav.addEventListener('focus', () => {
+    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
   });
 
   btnBillboardFav.addEventListener('click', () => {
@@ -226,6 +236,19 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFavorite(currentFeaturedMovie);
     }
   });
+
+  // Prevenir que WebKit desplace accidentalmente los contenedores en vertical
+  if (rowsWrapper) {
+    rowsWrapper.addEventListener('scroll', () => {
+      if (rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+    }, { passive: true });
+  }
+  const netflixMainEl = document.getElementById('netflix-main');
+  if (netflixMainEl) {
+    netflixMainEl.addEventListener('scroll', () => {
+      if (netflixMainEl.scrollTop !== 0) netflixMainEl.scrollTop = 0;
+    }, { passive: true });
+  }
 
   // Búsqueda
   searchBtn.addEventListener('click', () => {
@@ -421,6 +444,29 @@ function createMovieRow(rowData) {
   targetContainer.appendChild(rowEl);
 }
 
+// Desplazamiento horizontal seguro en carruseles sin alterar el scroll vertical
+function scrollCardIntoCarouselView(card) {
+  if (!card) return;
+  const carousel = card.closest('.row-carousel');
+  if (!carousel) return;
+
+  const cardLeft = card.offsetLeft;
+  const cardWidth = card.offsetWidth;
+  const carouselWidth = carousel.clientWidth;
+  const targetLeft = cardLeft - (carouselWidth / 2) + (cardWidth / 2);
+
+  carousel.scrollTo({
+    left: Math.max(0, targetLeft),
+    behavior: 'smooth'
+  });
+
+  // Prevenir que ningún contenedor vertical se mueva de scrollTop = 0
+  if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
+  const netflixMain = document.getElementById('netflix-main');
+  if (netflixMain && netflixMain.scrollTop !== 0) netflixMain.scrollTop = 0;
+  if (window.scrollY !== 0) window.scrollTo(0, 0);
+}
+
 function createMovieCard(movie) {
   const card = document.createElement('div');
   card.className = 'movie-card focusable';
@@ -454,13 +500,15 @@ function createMovieCard(movie) {
       setFeaturedMovie(movie);
     }, 120);
 
-    card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+    // Desplazamiento horizontal seguro en carrusel
+    scrollCardIntoCarouselView(card);
 
     // Desplazamiento dinámico para que la fila activa quede visible bajo el billboard
     const parentRow = card.closest('.movie-row');
     if (parentRow && rowsSlider) {
       rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
     }
+    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
   });
 
   // Click en el corazón de la tarjeta
@@ -504,12 +552,13 @@ function createCollectionCard(col) {
   `;
 
   card.addEventListener('focus', () => {
-    card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+    scrollCardIntoCarouselView(card);
 
     const parentRow = card.closest('.movie-row');
     if (parentRow && rowsSlider) {
       rowsSlider.style.transform = `translateY(-${parentRow.offsetTop}px)`;
     }
+    if (rowsWrapper && rowsWrapper.scrollTop !== 0) rowsWrapper.scrollTop = 0;
   });
 
   const onOpen = () => openCollectionView(col);
@@ -669,7 +718,6 @@ function toggleGenresPanel(show = null) {
   const shouldOpen = show !== null ? show : genresPanel.classList.contains('hidden');
   if (shouldOpen) {
     genresPanel.classList.remove('hidden');
-    genresPanel.scrollIntoView({ behavior: 'auto', block: 'nearest' });
     const activePill = genresPanel.querySelector('.genre-pill.active') || genresPanel.querySelector('.genre-pill');
     if (activePill) activePill.focus();
   } else {
@@ -799,7 +847,8 @@ function initSidebar() {
       selectGenre('all');
     }
     toggleGenresPanel(false);
-    netflixMain.scrollTo({ top: 0, behavior: 'auto' });
+    if (rowsSlider) rowsSlider.style.transform = 'translateY(0px)';
+    if (rowsWrapper) rowsWrapper.scrollTop = 0;
     const firstCard = rowsWrapper.querySelector('.movie-card, .collection-card');
     if (firstCard) firstCard.focus();
   });
@@ -811,7 +860,6 @@ function initSidebar() {
       closeCollectionView();
       const rowCol = document.getElementById('row-collections');
       if (rowCol) {
-        rowCol.scrollIntoView({ behavior: 'auto', block: 'start' });
         const card = rowCol.querySelector('.collection-card');
         if (card) card.focus();
       } else {
@@ -833,7 +881,6 @@ function initSidebar() {
     toggleGenresPanel(false);
     const row2030 = document.getElementById('row-20-30');
     if (row2030) {
-      row2030.scrollIntoView({ behavior: 'auto', block: 'start' });
       const card = row2030.querySelector('.movie-card');
       if (card) card.focus();
     }
@@ -844,7 +891,6 @@ function initSidebar() {
     toggleGenresPanel(false);
     const rowFavs = document.getElementById('row-favs');
     if (rowFavs) {
-      rowFavs.scrollIntoView({ behavior: 'auto', block: 'start' });
       const card = rowFavs.querySelector('.movie-card');
       if (card) card.focus();
     } else {
@@ -1249,7 +1295,11 @@ function navigateSpatial(direction) {
 
   if (bestCandidate) {
     bestCandidate.focus();
-    bestCandidate.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+    if (bestCandidate.closest('.row-carousel')) {
+      scrollCardIntoCarouselView(bestCandidate);
+    } else if (!bestCandidate.closest('#rows-slider') && !bestCandidate.closest('#rows-wrapper')) {
+      bestCandidate.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+    }
   }
 }
 

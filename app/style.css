@@ -479,7 +479,7 @@ body.netflix-body {
   height: calc(100vh - 52vh);
   overflow: hidden; /* Oculta filas anteriores cuando se baja para que el billboard no se tape */
   position: relative;
-  padding: 0 0 0 48px;
+  padding: 12px 0 0 48px;
   z-index: 10;
 }
 
@@ -498,7 +498,7 @@ body.netflix-body {
   font-size: 1.25rem;
   font-weight: 700;
   color: #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
@@ -510,10 +510,12 @@ body.netflix-body {
   gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 8px 40px 18px 4px;
+  padding: 24px 40px 24px 8px;
+  margin-top: -12px;
+  margin-bottom: -10px;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 .row-carousel::-webkit-scrollbar {
@@ -683,8 +685,9 @@ body.netflix-body {
 .collection-movie-card:focus {
   outline: none;
   border-color: #ee8208 !important;
-  transform: scale(1.14) !important;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.95), 0 0 24px rgba(238, 130, 8, 0.65) !important;
+  transform: scale(1.10) !important;
+  transform-origin: center center;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.95), 0 0 18px rgba(238, 130, 8, 0.75) !important;
   z-index: 40 !important;
 }
 
