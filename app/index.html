@@ -198,25 +198,66 @@
           <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
         </div>
 
-        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Ocupa ~2 pósters de ancho) -->
+        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Grande, Fijo y Completo) -->
         <aside class="collection-movie-detail-panel" id="collection-movie-detail-panel">
           <div class="panel-backdrop-wrap">
             <div class="panel-backdrop" id="panel-movie-backdrop"></div>
             <div class="panel-backdrop-vignette"></div>
-            <div class="panel-ok-badge">OK</div>
+            <div class="panel-ok-badge">OK.ru Películas</div>
+            <div class="panel-quality-pill">1080p FULL HD</div>
           </div>
           <div class="panel-body">
             <div class="panel-badges">
               <span class="panel-rating" id="panel-movie-rating">⭐ 8.0</span>
               <span class="panel-year" id="panel-movie-year">1980</span>
-              <span class="panel-era" id="panel-movie-era">80s</span>
-              <span class="panel-quality">FULL HD</span>
+              <span class="panel-era" id="panel-movie-era">Años 80</span>
+              <span class="panel-fav-tag" id="panel-movie-fav-tag">🤍 Sin guardar</span>
             </div>
+
             <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
+            <div class="panel-original-title" id="panel-movie-original-title"></div>
+
             <div class="panel-genres" id="panel-movie-genres"></div>
-            <p class="panel-overview" id="panel-movie-overview"></p>
+
+            <div class="panel-meta-grid">
+              <div class="panel-meta-item">
+                <span class="meta-icon">🎞️</span>
+                <span class="meta-label">Época:</span>
+                <span class="meta-val" id="panel-movie-decade-val">Años Dorados</span>
+              </div>
+              <div class="panel-meta-item">
+                <span class="meta-icon">🔊</span>
+                <span class="meta-label">Audio:</span>
+                <span class="meta-val">Latino / Castellano</span>
+              </div>
+              <div class="panel-meta-item">
+                <span class="meta-icon">⏱️</span>
+                <span class="meta-label">Formato:</span>
+                <span class="meta-val">Película Completa</span>
+              </div>
+              <div class="panel-meta-item">
+                <span class="meta-icon">⭐</span>
+                <span class="meta-label">Crítica:</span>
+                <span class="meta-val" id="panel-movie-verdict">Obra Maestra</span>
+              </div>
+            </div>
+
+            <div class="panel-synopsis-box">
+              <span class="panel-synopsis-title">📖 Sinopsis Completa:</span>
+              <p class="panel-overview" id="panel-movie-overview"></p>
+            </div>
+
+            <div class="panel-actions">
+              <button class="panel-btn-action btn-panel-play focusable" id="btn-panel-play" tabindex="0">
+                <span class="play-icon">▶</span> Reproducir Película
+              </button>
+              <button class="panel-btn-action btn-panel-fav focusable" id="btn-panel-fav" tabindex="0">
+                <span class="fav-icon">🤍</span> Mi Lista
+              </button>
+            </div>
+
             <div class="panel-hint">
-              <span>▶ Presiona <strong>ENTER / OK</strong> para reproducir</span>
+              <span>💡 Control TV: <strong>[OK]</strong> Reproducir · <strong>[Mantener OK]</strong> Favorito</span>
             </div>
           </div>
         </aside>

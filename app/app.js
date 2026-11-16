@@ -446,6 +446,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCloseCollection.addEventListener('click', closeCollectionView);
   }
 
+  const btnPanelPlay = document.getElementById('btn-panel-play');
+  if (btnPanelPlay) {
+    btnPanelPlay.addEventListener('click', () => {
+      if (currentDetailMovie) searchAndPlayMovie(currentDetailMovie);
+    });
+  }
+  const btnPanelFav = document.getElementById('btn-panel-fav');
+  if (btnPanelFav) {
+    btnPanelFav.addEventListener('click', () => {
+      if (currentDetailMovie) {
+        toggleFavorite(currentDetailMovie);
+        updateCollectionMovieDetail(currentDetailMovie);
+      }
+    });
+  }
+
   // Scroll progresivo hacia abajo en la vista de colección
   if (collectionView) {
     collectionView.addEventListener('scroll', () => {
@@ -1106,19 +1122,27 @@ function closeCollectionView() {
   }
 }
 
-// Actualizar data de la película enfocada en el panel lateral derecho (~2 pósters)
+let currentDetailMovie = null;
+
+// Actualizar data de la película enfocada en el panel lateral derecho (Grande y Fijo)
 function updateCollectionMovieDetail(movie) {
   if (!movie) return;
+  currentDetailMovie = movie;
   const panel = document.getElementById('collection-movie-detail-panel');
   if (!panel) return;
 
   const bgEl = document.getElementById('panel-movie-backdrop');
   const titleEl = document.getElementById('panel-movie-title');
+  const originalTitleEl = document.getElementById('panel-movie-original-title');
   const ratingEl = document.getElementById('panel-movie-rating');
   const yearEl = document.getElementById('panel-movie-year');
   const eraEl = document.getElementById('panel-movie-era');
+  const favTagEl = document.getElementById('panel-movie-fav-tag');
   const genresEl = document.getElementById('panel-movie-genres');
   const overviewEl = document.getElementById('panel-movie-overview');
+  const decadeValEl = document.getElementById('panel-movie-decade-val');
+  const verdictEl = document.getElementById('panel-movie-verdict');
+  const btnFav = document.getElementById('btn-panel-fav');
 
   const bgImg = movie.backdrop || movie.thumbnail || '';
   if (bgEl) {
@@ -1126,7 +1150,7 @@ function updateCollectionMovieDetail(movie) {
     setTimeout(() => {
       bgEl.style.backgroundImage = `url('${bgImg}')`;
       bgEl.classList.remove('changing');
-    }, 80);
+    }, 60);
   }
 
   // Actualizar también el backdrop general de la colección con un fundido suave
@@ -1135,25 +1159,79 @@ function updateCollectionMovieDetail(movie) {
   }
 
   if (titleEl) {
-    titleEl.textContent = movie.title || movie.original_title || '';
+    titleEl.textContent = movie.title || '';
   }
+
+  if (originalTitleEl) {
+    if (movie.original_title && movie.original_title.trim().toLowerCase() !== (movie.title || '').trim().toLowerCase()) {
+      originalTitleEl.textContent = `Título original: ${movie.original_title}`;
+      originalTitleEl.style.display = 'block';
+    } else {
+      originalTitleEl.style.display = 'none';
+    }
+  }
+
   if (ratingEl) {
-    ratingEl.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
+    const score = movie.rating || 8.0;
+    ratingEl.textContent = `⭐ ${score} / 10`;
   }
+
   if (yearEl) {
-    yearEl.textContent = movie.year || '';
-    yearEl.style.display = movie.year ? 'inline-block' : 'none';
+    yearEl.textContent = movie.year || 'Clásico';
   }
+
+  // Época detallada
+  const y = movie.year || 1960;
+  let decadeStr = 'Años 60';
+  let eraBadge = '60s';
+  if (y < 1940) { decadeStr = 'Años 20-30 · Los Inicios del Cine'; eraBadge = '20s-30s'; }
+  else if (y < 1950) { decadeStr = 'Años 40 · La Época de Oro'; eraBadge = '40s'; }
+  else if (y < 1960) { decadeStr = 'Años 50 · La Era Clásica Dorada'; eraBadge = '50s'; }
+  else if (y < 1970) { decadeStr = 'Años 60 · Revolución Cinematográfica'; eraBadge = '60s'; }
+  else if (y < 1980) { decadeStr = 'Años 70 · Nuevo Cine Clásico'; eraBadge = '70s'; }
+  else if (y < 1990) { decadeStr = 'Años 80 · Cine de Culto'; eraBadge = '80s'; }
+  else { decadeStr = 'Años 90 · Clásicos Contemporáneos'; eraBadge = '90s'; }
+
   if (eraEl) {
-    const eraText = movie.era || (movie.year ? `${Math.floor(movie.year / 10) * 10}s` : '');
-    eraEl.textContent = eraText;
-    eraEl.style.display = eraText ? 'inline-block' : 'none';
+    eraEl.textContent = `Años ${eraBadge}`;
   }
+  if (decadeValEl) {
+    decadeValEl.textContent = decadeStr;
+  }
+
+  // Veredicto según calificación
+  if (verdictEl) {
+    const score = movie.rating || 8.0;
+    if (score >= 8.5) verdictEl.textContent = '🏆 Obra Maestra Suprema';
+    else if (score >= 8.0) verdictEl.textContent = '⭐ Aclamada por la Crítica';
+    else verdictEl.textContent = '✨ Joya de Culto';
+  }
+
+  // Estado de favoritos
+  const isFav = isMovieFavorite(movie);
+  if (favTagEl) {
+    favTagEl.classList.toggle('active', isFav);
+    favTagEl.textContent = isFav ? '❤️ En Mi Lista' : '🤍 Sin guardar';
+  }
+  if (btnFav) {
+    btnFav.classList.toggle('active', isFav);
+    btnFav.innerHTML = isFav ? '<span class="fav-icon">❤️</span> En Mi Lista' : '<span class="fav-icon">🤍</span> Mi Lista';
+  }
+
+  // Géneros como pills
   if (genresEl) {
-    genresEl.textContent = movie.genres && movie.genres.length ? movie.genres.join(' • ') : 'Cine Clásico';
+    genresEl.innerHTML = '';
+    const genres = (movie.genres && movie.genres.length > 0) ? movie.genres : ['Cine Clásico'];
+    genres.forEach(g => {
+      const span = document.createElement('span');
+      span.className = 'panel-genre-pill';
+      span.textContent = g;
+      genresEl.appendChild(span);
+    });
   }
+
   if (overviewEl) {
-    overviewEl.textContent = movie.overview || 'Una de las grandes obras maestras clásicas del género.';
+    overviewEl.textContent = movie.overview || 'Una de las más aclamadas e influyentes obras maestras del cine clásico.';
   }
 }
 
