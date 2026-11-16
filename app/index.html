@@ -203,7 +203,7 @@
           <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
         </div>
 
-        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Fijo, Póster Landscape + Póster Normal y Sinopsis Corta) -->
+        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Fijo, Póster Landscape + Póster Vertical Grande y Data Completa) -->
         <aside class="collection-movie-detail-panel" id="collection-movie-detail-panel">
           <!-- 1. Póster Landscape (Backdrop 16:9) -->
           <div class="panel-landscape-wrap">
@@ -213,16 +213,17 @@
           </div>
 
           <div class="panel-body">
-            <!-- 2. Fila superior: Póster vertical normal + Datos principales al lado -->
+            <!-- 2. Fila superior: Póster vertical normal GRANDE + Datos principales al lado -->
             <div class="panel-poster-hero-row">
               <div class="panel-poster-normal-wrap">
-                <img id="panel-movie-poster" class="panel-poster-normal-img" src="" alt="Póster Normal" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x750/14181f/ffffff?text=Cine+Clasico';" />
+                <img id="panel-movie-poster" class="panel-poster-normal-img" src="" alt="Póster Vertical" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x750/14181f/ffffff?text=Cine+Clasico';" />
               </div>
               <div class="panel-hero-info">
                 <!-- Puntuación y Año -->
                 <div class="panel-badges">
                   <span class="panel-rating" id="panel-movie-rating">⭐ 8.0</span>
                   <span class="panel-year" id="panel-movie-year">1960</span>
+                  <span class="panel-quality-badge">1080p</span>
                 </div>
                 <!-- Nombre de la película en español latino -->
                 <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
@@ -233,16 +234,26 @@
                   <span class="panel-director-label">🎬 Dir:</span>
                   <span class="panel-director-name" id="panel-movie-director">Cargando...</span>
                 </div>
+                <!-- Audio Latino -->
+                <div class="panel-audio-row">
+                  <span class="panel-audio-tag">🔊 Audio Latino</span>
+                </div>
               </div>
             </div>
 
             <!-- Géneros -->
             <div class="panel-genres" id="panel-movie-genres"></div>
 
-            <!-- Sinopsis Corta -->
+            <!-- Sinopsis que llena el cuadro de datos -->
             <div class="panel-synopsis-box">
               <span class="panel-synopsis-title">Sinopsis</span>
               <p class="panel-overview" id="panel-movie-overview"></p>
+            </div>
+
+            <!-- Barra inferior con atajos de acción en TV -->
+            <div class="panel-action-footer">
+              <span class="panel-hint-item"><span class="panel-key-chip">OK</span> Reproducir</span>
+              <span class="panel-hint-item"><span class="panel-key-chip panel-key-fav">♥ / F</span> Mi Lista</span>
             </div>
           </div>
         </aside>

@@ -1476,10 +1476,10 @@ function updateCollectionMovieDetail(movie) {
     });
   }
 
-  // 9. Sinopsis más corta y concisa
+  // 9. Sinopsis completa que llena armónicamente el cuadro de datos
   if (overviewEl) {
     const fullText = movie.overview || 'Una de las más aclamadas e influyentes obras maestras del cine clásico.';
-    overviewEl.textContent = fullText.length > 180 ? fullText.slice(0, 177).trim() + '...' : fullText;
+    overviewEl.textContent = fullText.length > 500 ? fullText.slice(0, 497).trim() + '...' : fullText;
   }
 }
 
