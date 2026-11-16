@@ -827,40 +827,25 @@ body.netflix-body {
 }
 
 .collection-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60vh;
-  min-height: 380px;
+  position: fixed;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
+  filter: blur(28px) brightness(0.38) saturate(125%);
+  -webkit-filter: blur(28px) brightness(0.38) saturate(125%);
+  transform: scale(1.06);
   z-index: 1;
-}
-
-.collection-vignette-bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60vh;
-  min-height: 380px;
-  background: linear-gradient(0deg, #0b0d12 15%, rgba(11, 13, 18, 0.75) 60%, transparent 100%);
-  z-index: 2;
   pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
+.collection-vignette-bottom,
 .collection-vignette-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 60vh;
-  min-height: 380px;
-  background: linear-gradient(90deg, #0b0d12 0%, rgba(11, 13, 18, 0.85) 50%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+  display: none !important; /* Eliminado el difuminado oscuro sobre las filas de películas */
 }
 
 .collection-header {
@@ -871,9 +856,10 @@ body.netflix-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(180deg, rgba(11, 13, 18, 0.98) 0%, rgba(11, 13, 18, 0.82) 75%, transparent 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(11, 13, 18, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .btn-close-collection {
