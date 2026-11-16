@@ -1,6 +1,6 @@
 {
   "name": "tizenbrew-okru-movies",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Buscador y reproductor de películas de OK.ru para Samsung Tizen TV con estilo OK.ru, colecciones de las mejores películas por género y verificación de calidad",
   "main": "server.js",
   "scripts": {
@@ -16,6 +16,12 @@
     "MediaPlay",
     "MediaPause",
     "MediaFastForward",
-    "MediaRewind"
+    "MediaRewind",
+    "ColorF0Red",
+    "ColorF1Green",
+    "ColorF2Yellow",
+    "ColorF3Blue",
+    "0",
+    "Info"
   ]
 }

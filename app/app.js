@@ -766,7 +766,15 @@ function createMovieCard(movie, isHistory = false) {
   }
 
   // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru (o reanudar directamente si proviene de historial)
+  let longPressTimer = null;
+  let isLongPress = false;
+  let suppressClick = false;
+
   const onSelect = () => {
+    if (suppressClick) {
+      suppressClick = false;
+      return;
+    }
     if (isHistory && movie.id && (String(movie.id).length > 8)) {
       openPlayer(movie);
     } else {
@@ -779,15 +787,56 @@ function createMovieCard(movie, isHistory = false) {
       updateCollectionMovieDetail(movie);
     }
   });
+
+  const triggerFavoritePulse = () => {
+    toggleFavorite(movie);
+    const btn = card.querySelector('.card-fav-btn');
+    if (btn) {
+      btn.classList.add('heart-pulse');
+      setTimeout(() => btn.classList.remove('heart-pulse'), 600);
+    }
+  };
+
   card.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
+      // Si se mantiene presionado Enter en el control remoto (~600ms): marcar/desmarcar Favorito
+      if (e.repeat) return;
+      isLongPress = false;
+      suppressClick = false;
+      if (longPressTimer) clearTimeout(longPressTimer);
+      longPressTimer = setTimeout(() => {
+        isLongPress = true;
+        suppressClick = true;
+        triggerFavoritePulse();
+      }, 600);
+    } else if (isFavoriteKey(e)) {
+      // Tecla directa en control remoto (Amarillo, Verde, F o 0): Favorito instantáneo
       e.preventDefault();
-      onSelect();
+      e.stopPropagation();
+      triggerFavoritePulse();
     } else if (isHistory && (e.keyCode === 46 || e.keyCode === 8 || e.keyCode === 68 || e.keyCode === 403)) {
       // 46: Supr/Delete, 8: Backspace, 68: 'D', 403: Botón Rojo de control remoto Tizen
       e.preventDefault();
       e.stopPropagation();
       removeFromWatchHistory(movie, card);
+    }
+  });
+
+  card.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+      if (longPressTimer) {
+        clearTimeout(longPressTimer);
+        longPressTimer = null;
+      }
+      if (isLongPress) {
+        e.preventDefault();
+        e.stopPropagation();
+        setTimeout(() => { suppressClick = false; }, 350);
+        return;
+      }
+      // Pulsación corta (<600ms): reproducir o buscar normalmente
+      e.preventDefault();
+      onSelect();
     }
   });
 
@@ -1460,7 +1509,13 @@ function closePlayer() {
 // -------------------------------------------------------------
 function registerTizenKeys() {
   if (window.tizen && window.tizen.tvinputdevice) {
-    const keys = ['Return', 'Exit', 'MediaPlay', 'MediaPause', 'MediaPlayPause', 'MediaStop'];
+    const keys = [
+      'Return', 'Exit', 
+      'MediaPlay', 'MediaPause', 'MediaPlayPause', 'MediaStop',
+      'ColorF0Red', 'ColorF1Green', 'ColorF2Yellow', 'ColorF3Blue',
+      '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+      'Info'
+    ];
     keys.forEach(k => {
       try { window.tizen.tvinputdevice.registerKey(k); } catch (err) {}
     });
@@ -1478,6 +1533,25 @@ function isBackKey(e) {
     key === 'GoBack' ||
     key === 'Back' ||
     key === 'Escape'
+  );
+}
+
+function isFavoriteKey(e) {
+  const code = e.keyCode || e.which;
+  const key = e.key;
+  return (
+    code === 405 ||              // Samsung Tizen ColorF2Yellow
+    code === 404 ||              // Samsung Tizen ColorF1Green
+    code === 70 ||               // Tecla 'F' / 'f'
+    code === 102 ||              // Tecla 'f' (charCode)
+    code === 48 ||               // Tecla '0'
+    code === 10182 ||            // Samsung Info key
+    key === 'ColorF2Yellow' ||
+    key === 'ColorF1Green' ||
+    key === 'Yellow' ||
+    key === 'Green' ||
+    key === 'f' ||
+    key === 'F'
   );
 }
 
@@ -1639,6 +1713,20 @@ function initRemoteKeys() {
       return;
     }
 
+    if (isFavoriteKey(e)) {
+      const current = document.activeElement;
+      if (current && (current.classList.contains('movie-card') || current.classList.contains('collection-card'))) {
+        // Manejado en el evento keydown propio de la tarjeta
+        return;
+      }
+      if (currentFeaturedMovie) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFavorite(currentFeaturedMovie);
+        return;
+      }
+    }
+
     const key = e.keyCode || e.which;
 
     const directions = {
@@ -1673,7 +1761,7 @@ function initRemoteKeys() {
         }
       }
 
-      // 2. Navegación desde botones del Billboard hacia abajo
+      // 2. Navegación desde botones del Billboard
       if (current === btnBillboardPlay || current === btnBillboardFav) {
         if (directions[key] === 'down') {
           const firstCard = (rowsSlider || rowsWrapper).querySelector('.movie-card, .collection-card');
@@ -1682,8 +1770,16 @@ function initRemoteKeys() {
             return;
           }
         } else if (directions[key] === 'left') {
-          if (navHome) {
+          if (current === btnBillboardFav && btnBillboardPlay) {
+            btnBillboardPlay.focus();
+            return;
+          } else if (navHome) {
             navHome.focus();
+            return;
+          }
+        } else if (directions[key] === 'right') {
+          if (current === btnBillboardPlay && btnBillboardFav) {
+            btnBillboardFav.focus();
             return;
           }
         }

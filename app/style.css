@@ -615,6 +615,40 @@ body.netflix-body {
   border-color: #ffaa4d;
 }
 
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.5); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.card-fav-btn.heart-pulse {
+  animation: heartPulse 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 15px rgba(238, 130, 8, 0.9);
+}
+
+.remote-shortcut-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #d1d5db;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-left: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .remote-shortcut-hint {
+    display: none !important;
+  }
+}
+
 /* TARJETA DE COLECCIÓN / SAGA TMDB */
 .collection-card {
   flex: 0 0 250px;
