@@ -79,6 +79,54 @@ const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
 const navFavorites = document.getElementById('nav-favorites');
 const navSettings = document.getElementById('nav-settings');
+const navTheme = document.getElementById('nav-theme');
+const themeNavLabel = document.getElementById('theme-nav-label');
+
+// -------------------------------------------------------------
+// SISTEMA DE TEMAS EXTENSIBLE (Default & Liquid Glass)
+// -------------------------------------------------------------
+const THEMES = [
+  { id: 'default', name: 'Default', icon: '🎬' },
+  { id: 'liquid-glass', name: 'Liquid Glass', icon: '💎' }
+];
+const THEME_STORAGE_KEY = 'okru_app_theme';
+
+function getCurrentTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY) || 'default';
+  } catch (e) {
+    return 'default';
+  }
+}
+
+function applyTheme(themeId) {
+  const selectedTheme = THEMES.find(t => t.id === themeId) || THEMES[0];
+  document.documentElement.setAttribute('data-theme', selectedTheme.id);
+  document.body.setAttribute('data-theme', selectedTheme.id);
+
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, selectedTheme.id);
+  } catch (e) {}
+
+  const labelEl = document.getElementById('theme-nav-label');
+  if (labelEl) {
+    labelEl.textContent = `${selectedTheme.icon} ${selectedTheme.name}`;
+  }
+
+  const btnEl = document.getElementById('nav-theme');
+  if (btnEl) {
+    btnEl.setAttribute('title', `Tema: ${selectedTheme.name}`);
+  }
+}
+
+function cycleTheme() {
+  const current = getCurrentTheme();
+  const currentIndex = THEMES.findIndex(t => t.id === current);
+  const nextIndex = (currentIndex + 1) % THEMES.length;
+  const nextTheme = THEMES[nextIndex];
+  applyTheme(nextTheme.id);
+  showToast(`🎨 Tema: ${nextTheme.icon} ${nextTheme.name}`);
+}
 
 // Storage keys
 const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
@@ -582,6 +630,7 @@ function showToast(message) {
 // INICIALIZACIÓN
 // -------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
+  applyTheme(getCurrentTheme());
   initRemoteKeys();
   initSidebar();
   initGenrePills();
@@ -1344,13 +1393,14 @@ function closeCollectionView() {
 
 let currentDetailMovie = null;
 
-// Actualizar data de la película enfocada en el panel lateral derecho (Fijo, Póster Vertical y Datos Esenciales)
+// Actualizar data de la película enfocada en el panel lateral derecho (Póster Landscape + Normal y Sinopsis Corta)
 function updateCollectionMovieDetail(movie) {
   if (!movie) return;
   currentDetailMovie = movie;
   const panel = document.getElementById('collection-movie-detail-panel');
   if (!panel) return;
 
+  const landscapeEl = document.getElementById('panel-movie-landscape');
   const posterEl = document.getElementById('panel-movie-poster');
   const titleEl = document.getElementById('panel-movie-title');
   const originalTitleEl = document.getElementById('panel-movie-original-title');
@@ -1360,18 +1410,24 @@ function updateCollectionMovieDetail(movie) {
   const genresEl = document.getElementById('panel-movie-genres');
   const overviewEl = document.getElementById('panel-movie-overview');
 
-  // 1. Póster vertical de la película
+  // 1. Póster Landscape (16:9 banner)
+  if (landscapeEl) {
+    landscapeEl.src = movie.backdrop || movie.thumbnail || 'https://via.placeholder.com/1280x720/14181f/ffffff?text=OK.ru+Cine';
+    landscapeEl.alt = movie.title || 'Backdrop';
+  }
+
+  // 2. Póster normal vertical (2:3)
   if (posterEl) {
-    posterEl.src = movie.thumbnail || movie.poster || fallbackSvg;
+    posterEl.src = movie.thumbnail || movie.poster || 'https://via.placeholder.com/500x750/14181f/ffffff?text=Cine+Clasico';
     posterEl.alt = movie.title || 'Póster';
   }
 
-  // 2. Nombre de la película en español latino
+  // 3. Nombre de la película en español latino
   if (titleEl) {
     titleEl.textContent = movie.title || '';
   }
 
-  // 3. Nombre original
+  // 4. Nombre original
   if (originalTitleEl) {
     if (movie.original_title && movie.original_title.trim().toLowerCase() !== (movie.title || '').trim().toLowerCase()) {
       originalTitleEl.textContent = `Original: ${movie.original_title}`;
@@ -1381,18 +1437,18 @@ function updateCollectionMovieDetail(movie) {
     }
   }
 
-  // 4. Puntuación
+  // 5. Puntuación
   if (ratingEl) {
     const score = movie.rating || 8.0;
     ratingEl.textContent = `⭐ ${score}`;
   }
 
-  // 5. Año
+  // 6. Año
   if (yearEl) {
     yearEl.textContent = movie.year || 'Clásico';
   }
 
-  // 6. Director (con caché y carga bajo demanda)
+  // 7. Director (con caché y carga bajo demanda)
   if (directorEl) {
     if (movie.director) {
       directorEl.textContent = movie.director;
@@ -1408,7 +1464,7 @@ function updateCollectionMovieDetail(movie) {
     }
   }
 
-  // 7. Géneros al que pertenece
+  // 8. Géneros al que pertenece
   if (genresEl) {
     genresEl.innerHTML = '';
     const genres = (movie.genres && movie.genres.length > 0) ? movie.genres : ['Cine Clásico'];
@@ -1420,9 +1476,10 @@ function updateCollectionMovieDetail(movie) {
     });
   }
 
-  // 8. Sinopsis
+  // 9. Sinopsis más corta y concisa
   if (overviewEl) {
-    overviewEl.textContent = movie.overview || 'Una de las más aclamadas e influyentes obras maestras del cine clásico.';
+    const fullText = movie.overview || 'Una de las más aclamadas e influyentes obras maestras del cine clásico.';
+    overviewEl.textContent = fullText.length > 180 ? fullText.slice(0, 177).trim() + '...' : fullText;
   }
 }
 
@@ -1710,6 +1767,13 @@ function initSidebar() {
     }
   });
 
+  const navThemeBtn = document.getElementById('nav-theme');
+  if (navThemeBtn) {
+    navThemeBtn.addEventListener('click', () => {
+      cycleTheme();
+    });
+  }
+
   navSettings.addEventListener('click', () => {
     const current = getServerBaseUrl();
     const newUrl = prompt("Configurar IP del Servidor PC (ej: http://192.168.18.179:3000):", current);
@@ -1847,6 +1911,20 @@ function isFavoriteKey(e) {
     key === 'Green' ||
     key === 'f' ||
     key === 'F'
+  );
+}
+
+function isThemeKey(e) {
+  const code = e.keyCode || e.which;
+  const key = e.key;
+  return (
+    code === 406 ||              // Samsung Tizen ColorF3Blue
+    code === 84 ||               // Tecla 'T' / 't'
+    code === 116 ||              // Tecla 't' (charCode)
+    key === 'ColorF3Blue' ||
+    key === 'Blue' ||
+    key === 't' ||
+    key === 'T'
   );
 }
 
@@ -2020,6 +2098,16 @@ function initRemoteKeys() {
         toggleFavorite(currentFeaturedMovie);
         return;
       }
+    }
+
+    if (isThemeKey(e)) {
+      if (document.activeElement === searchInput) {
+        return; // No interceptar mientras escribe en el input de búsqueda
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      cycleTheme();
+      return;
     }
 
     const key = e.keyCode || e.which;

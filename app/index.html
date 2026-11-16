@@ -40,6 +40,11 @@
         <span class="sidebar-label">Mi Lista (<span id="fav-counter">0</span>)</span>
       </button>
 
+      <button class="focusable sidebar-btn" id="nav-theme" title="Tema: Default" tabindex="0">
+        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.31 19.58 10.61 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        <span class="sidebar-label" id="theme-nav-label">Temas</span>
+      </button>
+
       <button class="focusable sidebar-btn" id="nav-settings" title="Ajustes" tabindex="0">
         <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
         <span class="sidebar-label">Ajustes</span>
@@ -198,35 +203,43 @@
           <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
         </div>
 
-        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Fijo, Póster Vertical y Datos Esenciales) -->
+        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Fijo, Póster Landscape + Póster Normal y Sinopsis Corta) -->
         <aside class="collection-movie-detail-panel" id="collection-movie-detail-panel">
-          <div class="panel-poster-wrap">
-            <img id="panel-movie-poster" class="panel-poster-img" src="" alt="Póster" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x750/14181f/ffffff?text=Cine+Clasico';" />
+          <!-- 1. Póster Landscape (Backdrop 16:9) -->
+          <div class="panel-landscape-wrap">
+            <img id="panel-movie-landscape" class="panel-landscape-img" src="" alt="Backdrop" onerror="this.onerror=null; this.src='https://via.placeholder.com/1280x720/14181f/ffffff?text=OK.ru+Cine';" />
+            <div class="panel-landscape-vignette"></div>
+            <div class="panel-landscape-badge">Cine Clásico</div>
           </div>
 
           <div class="panel-body">
-            <!-- Puntuación y Año -->
-            <div class="panel-badges">
-              <span class="panel-rating" id="panel-movie-rating">⭐ 8.0</span>
-              <span class="panel-year" id="panel-movie-year">1960</span>
-            </div>
-
-            <!-- Nombre de la película en español latino -->
-            <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
-
-            <!-- Nombre original -->
-            <div class="panel-original-title" id="panel-movie-original-title"></div>
-
-            <!-- Director -->
-            <div class="panel-director-row">
-              <span class="panel-director-label">🎬 Dirección:</span>
-              <span class="panel-director-name" id="panel-movie-director">Cargando...</span>
+            <!-- 2. Fila superior: Póster vertical normal + Datos principales al lado -->
+            <div class="panel-poster-hero-row">
+              <div class="panel-poster-normal-wrap">
+                <img id="panel-movie-poster" class="panel-poster-normal-img" src="" alt="Póster Normal" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x750/14181f/ffffff?text=Cine+Clasico';" />
+              </div>
+              <div class="panel-hero-info">
+                <!-- Puntuación y Año -->
+                <div class="panel-badges">
+                  <span class="panel-rating" id="panel-movie-rating">⭐ 8.0</span>
+                  <span class="panel-year" id="panel-movie-year">1960</span>
+                </div>
+                <!-- Nombre de la película en español latino -->
+                <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
+                <!-- Nombre original -->
+                <div class="panel-original-title" id="panel-movie-original-title"></div>
+                <!-- Director -->
+                <div class="panel-director-row">
+                  <span class="panel-director-label">🎬 Dir:</span>
+                  <span class="panel-director-name" id="panel-movie-director">Cargando...</span>
+                </div>
+              </div>
             </div>
 
             <!-- Géneros -->
             <div class="panel-genres" id="panel-movie-genres"></div>
 
-            <!-- Sinopsis -->
+            <!-- Sinopsis Corta -->
             <div class="panel-synopsis-box">
               <span class="panel-synopsis-title">Sinopsis</span>
               <p class="panel-overview" id="panel-movie-overview"></p>
