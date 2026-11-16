@@ -81,6 +81,25 @@ const navFavorites = document.getElementById('nav-favorites');
 
 // Storage keys
 const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
+const HIDE_HISTORY_ROW_KEY = 'okru_hide_history_row';
+
+function isWatchHistoryRowVisible() {
+  try {
+    return localStorage.getItem(HIDE_HISTORY_ROW_KEY) !== 'true';
+  } catch (e) {
+    return true;
+  }
+}
+
+function setWatchHistoryRowVisible(visible) {
+  try {
+    if (visible) {
+      localStorage.removeItem(HIDE_HISTORY_ROW_KEY);
+    } else {
+      localStorage.setItem(HIDE_HISTORY_ROW_KEY, 'true');
+    }
+  } catch (e) {}
+}
 
 // Estado de la aplicación
 let allClassics = [];
@@ -525,6 +544,52 @@ function removeFromWatchHistory(movie, currentCardEl = null) {
   }
 }
 
+function createHistoryHeaderWrapper() {
+  const headerWrapper = document.createElement('div');
+  headerWrapper.className = 'row-header-wrapper';
+  headerWrapper.innerHTML = `
+    <h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2>
+    <div class="row-history-actions">
+      <button class="remove-carousel-btn focusable" id="btn-remove-history-row" title="Quitar este carrusel de la pantalla">✖ Quitar carrusel</button>
+      <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Vaciar historial</button>
+    </div>
+  `;
+
+  const removeBtn = headerWrapper.querySelector('#btn-remove-history-row');
+  if (removeBtn) {
+    removeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      removeWatchHistoryRow();
+    });
+  }
+
+  const clearBtn = headerWrapper.querySelector('#btn-clear-history');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      clearWatchHistory();
+    });
+  }
+
+  return headerWrapper;
+}
+
+function removeWatchHistoryRow() {
+  setWatchHistoryRowVisible(false);
+  const row = document.getElementById('row-history');
+  if (row) {
+    row.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    row.style.opacity = '0';
+    row.style.transform = 'scaleY(0.8)';
+    setTimeout(() => {
+      if (row) row.remove();
+      const firstCard = document.querySelector('.movie-card, .collection-card');
+      if (firstCard) firstCard.focus();
+    }, 250);
+  }
+  showToast('✖ Carrusel de Continuar Viendo quitado (Pulsa [Azul] o [H] para restaurarlo)');
+}
+
 function clearWatchHistory() {
   try {
     localStorage.removeItem(WATCH_HISTORY_STORAGE_KEY);
@@ -539,7 +604,7 @@ function renderWatchHistoryRow() {
   const existingRow = document.getElementById('row-history');
   const history = getWatchHistory();
 
-  if (history.length === 0) {
+  if (history.length === 0 || !isWatchHistoryRowVisible()) {
     if (existingRow) existingRow.remove();
     return;
   }
@@ -556,26 +621,14 @@ function renderWatchHistoryRow() {
     const rowEl = document.createElement('div');
     rowEl.className = 'movie-row';
     rowEl.id = 'row-history';
-    rowEl.innerHTML = `
-      <div class="row-header-wrapper">
-        <h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2>
-        <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Borrar historial</button>
-      </div>
-      <div class="row-carousel"></div>
-    `;
+    rowEl.appendChild(createHistoryHeaderWrapper());
 
-    const clearBtn = rowEl.querySelector('#btn-clear-history');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        clearWatchHistory();
-      });
-    }
-
-    const carousel = rowEl.querySelector('.row-carousel');
+    const carousel = document.createElement('div');
+    carousel.className = 'row-carousel';
     history.forEach(movie => {
       carousel.appendChild(createMovieCard(movie, true));
     });
+    rowEl.appendChild(carousel);
 
     const targetContainer = rowsSlider || rowsWrapper;
     if (targetContainer) {
@@ -945,7 +998,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
   const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.3));
 
-  const watchHistory = getWatchHistory();
+  const watchHistory = isWatchHistoryRowVisible() ? getWatchHistory() : [];
   const rowsData = [
     { id: 'row-history', title: '▶ Continuar Viendo / Vistas Recientemente', list: watchHistory, isHistoryRow: true },
     { id: 'row-vintage-top', title: '👑 Joyas Clásicas Inmortales (Años 30, 40, 50 y 60)', list: vintageTop },
@@ -978,20 +1031,7 @@ function createMovieRow(rowData) {
   rowEl.id = rowData.id;
 
   if (rowData.isHistoryRow) {
-    const headerWrapper = document.createElement('div');
-    headerWrapper.className = 'row-header-wrapper';
-    headerWrapper.innerHTML = `
-      <h2 class="row-title">${escapeHtml(rowData.title)}</h2>
-      <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Borrar historial</button>
-    `;
-    const clearBtn = headerWrapper.querySelector('#btn-clear-history');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        clearWatchHistory();
-      });
-    }
-    rowEl.appendChild(headerWrapper);
+    rowEl.appendChild(createHistoryHeaderWrapper());
   } else {
     const titleEl = document.createElement('h2');
     titleEl.className = 'row-title';
@@ -1965,6 +2005,20 @@ function isBackKey(e) {
   );
 }
 
+function isHistoryToggleKey(e) {
+  const code = e.keyCode || e.which;
+  const key = e.key;
+  return (
+    code === 406 ||              // Samsung Tizen ColorF3Blue
+    code === 72 ||               // Tecla 'H' / 'h'
+    code === 104 ||              // Tecla 'h' (charCode)
+    key === 'ColorF3Blue' ||
+    key === 'Blue' ||
+    key === 'h' ||
+    key === 'H'
+  );
+}
+
 function isFavoriteKey(e) {
   const code = e.keyCode || e.which;
   const key = e.key;
@@ -2139,6 +2193,20 @@ function initRemoteKeys() {
       e.stopPropagation();
       e.stopImmediatePropagation();
       handleBackAction();
+      return;
+    }
+
+    if (isHistoryToggleKey(e)) {
+      if (document.activeElement === searchInput) return;
+      if (!playerModal.classList.contains('hidden') || !searchView.classList.contains('hidden') || (collectionView && !collectionView.classList.contains('hidden'))) {
+        return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      const willShow = !isWatchHistoryRowVisible();
+      setWatchHistoryRowVisible(willShow);
+      renderNetflixRows(allClassics, activeGenreFilter);
+      showToast(willShow ? '▶ Carrusel de Continuar Viendo restaurado' : '✖ Carrusel de Continuar Viendo quitado');
       return;
     }
 
