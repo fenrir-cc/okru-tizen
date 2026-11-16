@@ -852,7 +852,7 @@ body.netflix-body {
   position: sticky;
   top: 0;
   z-index: 30;
-  padding: 24px 48px;
+  padding: 16px 48px 4px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -860,12 +860,12 @@ body.netflix-body {
 }
 
 .btn-close-collection {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
-  border: 2px solid transparent;
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-size: 1.15rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
   outline: none;
@@ -875,7 +875,7 @@ body.netflix-body {
 .btn-close-collection:focus {
   background: #ee8208;
   border-color: #ffffff;
-  transform: scale(1.08);
+  transform: scale(1.05);
   box-shadow: 0 0 16px rgba(238, 130, 8, 0.6);
 }
 
@@ -893,29 +893,29 @@ body.netflix-body {
 .collection-content {
   position: relative;
   z-index: 10;
-  padding: 20px 48px 50px 48px;
-  margin-top: 10vh;
+  padding: 8px 48px 50px 48px;
+  margin-top: 0;
 }
 
 .collection-info {
   max-width: calc(100% - min(490px, 36vw) - 48px);
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 .collection-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 900;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
 }
 
 .collection-meta {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 14px;
+  gap: 14px;
+  margin-bottom: 8px;
 }
 
 .collection-count {
@@ -951,7 +951,7 @@ body.netflix-body {
   display: flex;
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .collection-grid-column {
@@ -964,13 +964,13 @@ body.netflix-body {
 .collection-filters-bar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
 .collection-filter-label {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #ee8208;
   text-transform: uppercase;
@@ -983,7 +983,7 @@ body.netflix-body {
 .collection-era-pills {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
   padding: 4px 2px;
   scrollbar-width: none;
@@ -995,13 +995,13 @@ body.netflix-body {
 }
 
 .era-pill {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.09);
   color: #d1d5db;
-  border: 1.5px solid rgba(255, 255, 255, 0.16);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.88rem;
-  font-weight: 600;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px; /* Tags de los años un poco más grandes */
+  border-radius: 22px;
+  font-size: 0.98rem; /* Tipografía más grande y legible */
+  font-weight: 700;
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease;
@@ -1145,11 +1145,11 @@ body.netflix-body {
 /* Panel Lateral Derecho de Colección (Fijo, Póster Landscape + Póster Vertical Grande y Data Completa) */
 .collection-movie-detail-panel {
   position: fixed;
-  top: 90px; /* Separación limpia del encabezado para que el borde superior luzca completo */
+  top: 70px; /* Alineado con el contenido elevado de la colección */
   right: 32px;
   width: min(520px, 40vw);
-  height: calc(100vh - 110px);
-  max-height: calc(100vh - 110px);
+  height: calc(100vh - 90px);
+  max-height: calc(100vh - 90px);
   background: rgba(14, 18, 26, 0.96);
   border: 1.5px solid rgba(255, 255, 255, 0.32); /* Borde perimetral nítido */
   border-radius: 14px;
@@ -1418,18 +1418,18 @@ body.netflix-body {
 }
 
 .collection-parts-title {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .collection-parts-grid,
 .collection-parts-carousel {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 24px 18px;
-  padding: 16px 4px 60px 4px;
+  gap: 22px 18px;
+  padding: 6px 4px 60px 4px;
   overflow: visible;
 }
 
