@@ -711,8 +711,11 @@ function createCollectionCard(col) {
   card.tabIndex = 0;
   card.setAttribute('data-col-id', col.id);
 
+  const cleanName = (col.name || 'Colección').replace(/^Colección:\s*/i, '');
+  const fallbackSvg = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Crect width='100%25' height='100%25' fill='%23131720'/%3E%3Ctext x='50%25' y='50%25' fill='%23ee8208' font-family='sans-serif' font-size='26' font-weight='bold' text-anchor='middle'%3E" + encodeURIComponent(cleanName) + "%3C/text%3E%3C/svg%3E";
+
   const fallbackMovie = col.movies && col.movies.length > 0 ? (col.movies[0].thumbnail || col.movies[0].backdrop) : '';
-  const posterImg = col.poster || col.backdrop || fallbackMovie;
+  const posterImg = col.poster || col.backdrop || fallbackMovie || fallbackSvg;
 
   card.innerHTML = `
     <img 
@@ -720,6 +723,7 @@ function createCollectionCard(col) {
       src="${posterImg}" 
       alt="${escapeHtml(col.name)}" 
       loading="eager"
+      onerror="this.onerror=null; this.src='${fallbackSvg}';"
     />
     <div class="collection-card-gradient"></div>
     <div class="collection-card-info">
@@ -1183,7 +1187,7 @@ function renderSearchGrid(movies) {
         ${movie.duration ? `<span class="okru-duration-tag">${movie.duration}</span>` : ''}
       </div>
       <div class="okru-info">
-        <h3 class="okru-title">${escapeHtml(movie.title)}</h3>
+        <h3 class="okru-title" title="${escapeAttr(movie.title)}">${escapeHtml(movie.title)}</h3>
         <div class="okru-meta">
           <span>${escapeHtml(movie.author || 'OK.ru')}</span>
           <span>${movie.resolution || ''}</span>

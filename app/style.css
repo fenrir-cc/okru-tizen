@@ -1414,23 +1414,41 @@ body.netflix-body {
 
 .okru-info {
   padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .okru-title {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 8px;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 4px;
+  text-overflow: ellipsis;
+}
+
+.okru-result-card:focus .okru-title,
+.okru-result-card:hover .okru-title {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  color: #ffaa4d;
 }
 
 .okru-meta {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.82rem;
   color: #9ca3af;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 /* -------------------------------------------------------------
@@ -1907,13 +1925,17 @@ body.netflix-body {
     gap: 10px !important;
   }
 
+  .okru-info,
   .okru-result-info {
     padding: 8px 10px !important;
   }
 
+  .okru-title,
   .okru-result-title {
-    font-size: 0.82rem !important;
-    -webkit-line-clamp: 2 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+    -webkit-line-clamp: 3 !important;
+    word-break: break-word !important;
   }
 
   /* VISTA MODAL DE COLECCIÓN TMDB EN MÓVIL */
