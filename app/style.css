@@ -611,8 +611,14 @@ body.netflix-body {
 }
 
 .card-fav-btn.active {
-  background: #ee8208;
-  border-color: #ffaa4d;
+  background: #ee8208 !important;
+  border-color: #ffaa4d !important;
+  box-shadow: 0 0 10px rgba(238, 130, 8, 0.6);
+}
+
+.card-fav-btn.active svg path {
+  fill: #ffffff !important;
+  stroke: none !important;
 }
 
 @keyframes heartPulse {
