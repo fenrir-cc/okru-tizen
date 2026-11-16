@@ -79,54 +79,6 @@ const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
 const navFavorites = document.getElementById('nav-favorites');
 const navSettings = document.getElementById('nav-settings');
-const navTheme = document.getElementById('nav-theme');
-const themeNavLabel = document.getElementById('theme-nav-label');
-
-// -------------------------------------------------------------
-// SISTEMA DE TEMAS EXTENSIBLE (Default & Liquid Glass)
-// -------------------------------------------------------------
-const THEMES = [
-  { id: 'default', name: 'Default', icon: '🎬' },
-  { id: 'liquid-glass', name: 'Liquid Glass', icon: '💎' }
-];
-const THEME_STORAGE_KEY = 'okru_app_theme';
-
-function getCurrentTheme() {
-  try {
-    return localStorage.getItem(THEME_STORAGE_KEY) || 'default';
-  } catch (e) {
-    return 'default';
-  }
-}
-
-function applyTheme(themeId) {
-  const selectedTheme = THEMES.find(t => t.id === themeId) || THEMES[0];
-  document.documentElement.setAttribute('data-theme', selectedTheme.id);
-  document.body.setAttribute('data-theme', selectedTheme.id);
-
-  try {
-    localStorage.setItem(THEME_STORAGE_KEY, selectedTheme.id);
-  } catch (e) {}
-
-  const labelEl = document.getElementById('theme-nav-label');
-  if (labelEl) {
-    labelEl.textContent = `${selectedTheme.icon} ${selectedTheme.name}`;
-  }
-
-  const btnEl = document.getElementById('nav-theme');
-  if (btnEl) {
-    btnEl.setAttribute('title', `Tema: ${selectedTheme.name}`);
-  }
-}
-
-function cycleTheme() {
-  const current = getCurrentTheme();
-  const currentIndex = THEMES.findIndex(t => t.id === current);
-  const nextIndex = (currentIndex + 1) % THEMES.length;
-  const nextTheme = THEMES[nextIndex];
-  applyTheme(nextTheme.id);
-  showToast(`🎨 Tema: ${nextTheme.icon} ${nextTheme.name}`);
-}
 
 // Storage keys
 const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
@@ -724,7 +676,6 @@ function showToast(message) {
 // INICIALIZACIÓN
 // -------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  applyTheme(getCurrentTheme());
   initRemoteKeys();
   initSidebar();
   initGenrePills();
@@ -1905,13 +1856,6 @@ function initSidebar() {
     }
   });
 
-  const navThemeBtn = document.getElementById('nav-theme');
-  if (navThemeBtn) {
-    navThemeBtn.addEventListener('click', () => {
-      cycleTheme();
-    });
-  }
-
   navSettings.addEventListener('click', () => {
     const current = getServerBaseUrl();
     const newUrl = prompt("Configurar IP del Servidor PC (ej: http://192.168.18.179:3000):", current);
@@ -2049,20 +1993,6 @@ function isFavoriteKey(e) {
     key === 'Green' ||
     key === 'f' ||
     key === 'F'
-  );
-}
-
-function isThemeKey(e) {
-  const code = e.keyCode || e.which;
-  const key = e.key;
-  return (
-    code === 406 ||              // Samsung Tizen ColorF3Blue
-    code === 84 ||               // Tecla 'T' / 't'
-    code === 116 ||              // Tecla 't' (charCode)
-    key === 'ColorF3Blue' ||
-    key === 'Blue' ||
-    key === 't' ||
-    key === 'T'
   );
 }
 
@@ -2236,16 +2166,6 @@ function initRemoteKeys() {
         toggleFavorite(currentFeaturedMovie);
         return;
       }
-    }
-
-    if (isThemeKey(e)) {
-      if (document.activeElement === searchInput) {
-        return; // No interceptar mientras escribe en el input de búsqueda
-      }
-      e.preventDefault();
-      e.stopPropagation();
-      cycleTheme();
-      return;
     }
 
     const key = e.keyCode || e.which;
