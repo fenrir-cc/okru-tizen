@@ -77,9 +77,11 @@ const btnCloseCollection = document.getElementById('btn-close-collection');
 // Sidebar buttons
 const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
-const navCategories = document.getElementById('nav-categories');
 const navFavorites = document.getElementById('nav-favorites');
 const navSettings = document.getElementById('nav-settings');
+
+// Storage keys
+const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
 
 // Estado de la aplicación
 let allClassics = [];
@@ -88,6 +90,7 @@ let currentGenre = 'all';
 let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
 let currentCollection = null;
+let currentCollectionEra = 'all';
 let collectionRenderedCount = 0;
 const COLLECTION_BATCH_SIZE = 24;
 let lastFocusedElement = null;
@@ -125,6 +128,91 @@ function saveFavorites(favorites) {
     renderFavoritesRow();
   } catch (e) {
     console.error("Error guardando favoritos:", e);
+  }
+}
+
+// -------------------------------------------------------------
+// GESTIÓN DE CONTINUAR VIENDO / HISTORIAL DE REPRODUCCIÓN
+// -------------------------------------------------------------
+function getWatchHistory() {
+  try {
+    const raw = localStorage.getItem(WATCH_HISTORY_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function addToWatchHistory(movie) {
+  if (!movie) return;
+  try {
+    let history = getWatchHistory();
+    // Eliminar si ya existe previamente para moverlo al primer lugar
+    history = history.filter(m => {
+      const matchId = m.id && movie.id && String(m.id) === String(movie.id);
+      const matchTitle = m.title && movie.title && m.title.toLowerCase() === movie.title.toLowerCase();
+      return !matchId && !matchTitle;
+    });
+
+    history.unshift({
+      id: movie.id,
+      title: movie.title,
+      original_title: movie.original_title || movie.title,
+      year: movie.year || '',
+      rating: movie.rating || 8.0,
+      era: movie.era || '',
+      overview: movie.overview || '',
+      thumbnail: movie.thumbnail || movie.poster || '',
+      backdrop: movie.backdrop || '',
+      genres: movie.genres || ['Cine Clásico'],
+      quality: movie.quality || 'FULL HD',
+      playedAt: Date.now()
+    });
+
+    // Limitar a las últimas 24 películas reproducidas
+    if (history.length > 24) history = history.slice(0, 24);
+    localStorage.setItem(WATCH_HISTORY_STORAGE_KEY, JSON.stringify(history));
+    renderWatchHistoryRow();
+  } catch (e) {
+    console.error('Error guardando historial de reproducción:', e);
+  }
+}
+
+function renderWatchHistoryRow() {
+  const existingRow = document.getElementById('row-history');
+  const history = getWatchHistory();
+
+  if (history.length === 0) {
+    if (existingRow) existingRow.remove();
+    return;
+  }
+
+  if (existingRow) {
+    const carousel = existingRow.querySelector('.row-carousel');
+    if (carousel) {
+      carousel.innerHTML = '';
+      history.forEach(movie => {
+        carousel.appendChild(createMovieCard(movie, true));
+      });
+    }
+  } else {
+    const rowEl = document.createElement('div');
+    rowEl.className = 'movie-row';
+    rowEl.id = 'row-history';
+    rowEl.innerHTML = `<h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2><div class="row-carousel"></div>`;
+    const carousel = rowEl.querySelector('.row-carousel');
+    history.forEach(movie => {
+      carousel.appendChild(createMovieCard(movie, true));
+    });
+
+    const targetContainer = rowsSlider || rowsWrapper;
+    if (targetContainer) {
+      if (targetContainer.firstChild) {
+        targetContainer.insertBefore(rowEl, targetContainer.firstChild);
+      } else {
+        targetContainer.appendChild(rowEl);
+      }
+    }
   }
 }
 
@@ -214,6 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRemoteKeys();
   initSidebar();
   initGenrePills();
+  initCollectionEraFilters();
   updateFavoritesCounter();
   loadNetflixHome();
 
@@ -439,7 +528,9 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
   const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.3));
 
+  const watchHistory = getWatchHistory();
   const rowsData = [
+    { id: 'row-history', title: '▶ Continuar Viendo / Vistas Recientemente', list: watchHistory, isHistoryRow: true },
     { id: 'row-vintage-top', title: '👑 Joyas Clásicas Inmortales (Años 30, 40, 50 y 60)', list: vintageTop },
     { id: 'row-50s', title: '✨ Años 50: La Era Dorada de Hollywood y el Cine Mundial', list: era50s },
     { id: 'row-60s', title: '🚀 Años 60: Revolución Cinematográfica, Suspense y Westerns', list: era60s },
@@ -453,6 +544,7 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   ];
 
   rowsData.forEach(row => {
+    if (row.isHistoryRow && (!row.list || row.list.length === 0)) return;
     if (row.isFavRow && row.list.length === 0) return;
     if (row.isCollectionRow && (!row.list || row.list.length === 0)) return;
     createMovieRow(row);
@@ -478,13 +570,15 @@ function createMovieRow(rowData) {
 
   if (rowData.isCollectionRow) {
     rowData.list.forEach(col => {
-      const card = createCollectionCard(col);
-      carouselEl.appendChild(card);
+      carouselEl.appendChild(createCollectionCard(col));
+    });
+  } else if (rowData.isHistoryRow) {
+    rowData.list.forEach(movie => {
+      carouselEl.appendChild(createMovieCard(movie, true));
     });
   } else {
     rowData.list.forEach(movie => {
-      const card = createMovieCard(movie);
-      carouselEl.appendChild(card);
+      carouselEl.appendChild(createMovieCard(movie, false));
     });
   }
 
@@ -518,9 +612,9 @@ function scrollCardIntoCarouselView(card) {
   }
 }
 
-function createMovieCard(movie) {
+function createMovieCard(movie, isHistory = false) {
   const card = document.createElement('div');
-  card.className = 'movie-card focusable';
+  card.className = 'movie-card focusable' + (isHistory ? ' card-history' : '');
   card.tabIndex = 0;
   card.setAttribute('data-title', movie.title);
 
@@ -539,6 +633,7 @@ function createMovieCard(movie) {
       ${movie.rating ? `<span class="card-rating-badge">⭐ ${movie.rating}</span>` : ''}
       ${movie.year ? `<span class="card-year-badge">${movie.year}</span>` : ''}
     </div>
+    ${isHistory ? '<div class="card-resume-badge">▶ Reanudar</div>' : ''}
     <button class="card-fav-btn ${isFav ? 'active' : ''}" data-title="${escapeAttr(movie.title)}" title="Mi Lista">
       ${getHeartSvg(isFav)}
     </button>
@@ -585,8 +680,14 @@ function createMovieCard(movie) {
   const favBtn = card.querySelector('.card-fav-btn');
   favBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
 
-  // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru
-  const onSelect = () => searchAndPlayMovie(movie);
+  // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru (o reanudar directamente si proviene de historial)
+  const onSelect = () => {
+    if (isHistory && movie.id && (String(movie.id).length > 8)) {
+      openPlayer(movie);
+    } else {
+      searchAndPlayMovie(movie);
+    }
+  };
   card.addEventListener('click', onSelect);
   card.addEventListener('mouseenter', () => {
     if (card.closest('#collection-view')) {
@@ -654,10 +755,85 @@ function createCollectionCard(col) {
 // -------------------------------------------------------------
 // VISTA Y REPRODUCCIÓN DE COLECCIÓN TMDB
 // -------------------------------------------------------------
+function getFilteredCollectionMovies() {
+  if (!currentCollection || !currentCollection.movies) return [];
+  if (!currentCollectionEra || currentCollectionEra === 'all') return currentCollection.movies;
+
+  return currentCollection.movies.filter(m => {
+    if (currentCollectionEra === '20s-30s') {
+      return (m.year && m.year < 1940) || m.era === '20s-30s';
+    }
+    if (currentCollectionEra === '40s') {
+      return (m.year && m.year >= 1940 && m.year < 1950) || m.era === '40s';
+    }
+    if (currentCollectionEra === '50s') {
+      return (m.year && m.year >= 1950 && m.year < 1960) || m.era === '50s';
+    }
+    if (currentCollectionEra === '60s') {
+      return (m.year && m.year >= 1960 && m.year < 1970) || m.era === '60s';
+    }
+    if (currentCollectionEra === '70s') {
+      return (m.year && m.year >= 1970 && m.year < 1980) || m.era === '70s';
+    }
+    if (currentCollectionEra === '80s') {
+      return (m.year && m.year >= 1980 && m.year < 1990) || m.era === '80s';
+    }
+    if (currentCollectionEra === '90s') {
+      return (m.year && m.year >= 1990 && m.year <= 1999) || m.era === '90s';
+    }
+    return true;
+  });
+}
+
+function initCollectionEraFilters() {
+  const container = document.getElementById('collection-era-pills');
+  if (!container) return;
+
+  const pills = container.querySelectorAll('.era-pill');
+  pills.forEach(pill => {
+    const onSelectPill = () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      currentCollectionEra = pill.getAttribute('data-era') || 'all';
+      collectionRenderedCount = 0;
+      if (collectionPartsCarousel) {
+        collectionPartsCarousel.innerHTML = '';
+      }
+
+      loadMoreCollectionMovies();
+
+      const filtered = getFilteredCollectionMovies();
+      if (filtered.length > 0) {
+        updateCollectionMovieDetail(filtered[0]);
+      }
+    };
+
+    pill.addEventListener('click', onSelectPill);
+    pill.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        onSelectPill();
+      }
+    });
+  });
+}
+
 function openCollectionView(col) {
   lastFocusedElement = document.activeElement;
   currentCollection = col;
+  currentCollectionEra = 'all';
   collectionRenderedCount = 0;
+
+  // Restablecer pills de época en la colección
+  const pills = document.querySelectorAll('#collection-era-pills .era-pill');
+  pills.forEach(p => {
+    if (p.getAttribute('data-era') === 'all') {
+      p.classList.add('active');
+    } else {
+      p.classList.remove('active');
+    }
+  });
 
   if (collectionBackdrop) {
     collectionBackdrop.style.backgroundImage = `url('${col.backdrop || col.poster || ''}')`;
@@ -697,16 +873,28 @@ function openCollectionView(col) {
 }
 
 function loadMoreCollectionMovies() {
-  if (!currentCollection || !currentCollection.movies || !collectionPartsCarousel) return;
+  if (!currentCollection || !collectionPartsCarousel) return;
 
-  const movies = currentCollection.movies;
-  if (collectionRenderedCount >= movies.length) return;
+  const movies = getFilteredCollectionMovies();
+  if (collectionRenderedCount >= movies.length && movies.length > 0) return;
 
   // Remover indicadores antiguos si existen
   const oldLoading = collectionPartsCarousel.querySelector('.collection-loading-more');
   if (oldLoading) oldLoading.remove();
   const oldEnd = collectionPartsCarousel.querySelector('.collection-end-banner');
   if (oldEnd) oldEnd.remove();
+
+  if (movies.length === 0) {
+    collectionPartsCarousel.innerHTML = `
+      <div style="grid-column: 1 / -1; padding: 48px 20px; text-align: center; color: #9ca3af; font-size: 1.1rem; font-weight: 600;">
+        No hay películas disponibles para esta década en esta colección.
+      </div>
+    `;
+    if (collectionCount) {
+      collectionCount.textContent = `⭐ 0 Obras Maestras para esta época`;
+    }
+    return;
+  }
 
   const nextBatch = movies.slice(collectionRenderedCount, collectionRenderedCount + COLLECTION_BATCH_SIZE);
   nextBatch.forEach(movie => {
@@ -717,10 +905,11 @@ function loadMoreCollectionMovies() {
   collectionRenderedCount += nextBatch.length;
 
   if (collectionCount) {
+    const eraLabel = currentCollectionEra !== 'all' ? ` (Filtrado)` : '';
     if (collectionRenderedCount < movies.length) {
-      collectionCount.textContent = `⭐ Mostrando ${collectionRenderedCount} de ${movies.length} Obras Maestras (Desliza hacia abajo para ver más)`;
+      collectionCount.textContent = `⭐ Mostrando ${collectionRenderedCount} de ${movies.length} Obras Maestras${eraLabel} (Desliza hacia abajo para ver más)`;
     } else {
-      collectionCount.textContent = `⭐ ${movies.length} Obras Maestras Seleccionadas por Crítica y Rating`;
+      collectionCount.textContent = `⭐ ${movies.length} Obras Maestras Seleccionadas${eraLabel}`;
     }
   }
 
@@ -736,7 +925,7 @@ function loadMoreCollectionMovies() {
   } else {
     const endEl = document.createElement('div');
     endEl.className = 'collection-end-banner';
-    endEl.textContent = `✔ Has visto las ${movies.length} mejores películas clásicas de esta colección`;
+    endEl.textContent = `✔ Has visto las ${movies.length} obras maestras seleccionadas`;
     collectionPartsCarousel.appendChild(endEl);
   }
 }
@@ -846,6 +1035,7 @@ function renderFavoritesRow() {
 // BÚSQUEDA Y TRANSICIÓN A OK.RU
 // -------------------------------------------------------------
 function searchAndPlayMovie(movie) {
+  if (movie) addToWatchHistory(movie);
   const query = movie.year ? `${movie.title} ${movie.year}` : movie.title;
   searchInput.value = query;
   searchCustomQuery(query);
@@ -1071,20 +1261,6 @@ function initSidebar() {
     });
   }
 
-  navCategories.addEventListener('click', () => {
-    closeSearchView();
-    toggleGenresPanel(false);
-    const rowTarget = document.getElementById('row-50s') || document.getElementById('row-20-30');
-    if (rowTarget) {
-      if (window.innerWidth <= 768) {
-        rowTarget.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        const card = rowTarget.querySelector('.movie-card');
-        if (card) card.focus();
-      }
-    }
-  });
-
   navFavorites.addEventListener('click', () => {
     closeSearchView();
     toggleGenresPanel(false);
@@ -1130,6 +1306,8 @@ function showPlayerOsd() {
 function openPlayer(movie) {
   lastFocusedElement = document.activeElement;
   currentPlayingMovie = movie;
+
+  if (movie) addToWatchHistory(movie);
 
   playerTitle.textContent = `${movie.title} [${movie.quality || 'FULL HD'}]`;
   okruIframe.src = `https://ok.ru/videoembed/${movie.id}?autoplay=1`;

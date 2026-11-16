@@ -870,6 +870,93 @@ body.netflix-body {
   min-width: 0;
 }
 
+/* Barra de Filtros por Décadas en Colección */
+.collection-filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.collection-filter-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ee8208;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.collection-era-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.collection-era-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.era-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.era-pill:hover,
+.era-pill:focus {
+  background: rgba(238, 130, 8, 0.25);
+  border-color: #ee8208;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(238, 130, 8, 0.45);
+}
+
+.era-pill.active {
+  background: #ee8208 !important;
+  border-color: #ffaa4d !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(238, 130, 8, 0.5) !important;
+}
+
+/* Insignia Reanudar / Continuar Viendo en Tarjetas */
+.card-resume-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(238, 130, 8, 0.96) 0%, rgba(200, 90, 0, 0.85) 60%, transparent 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 8px 6px 4px 6px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .collection-movie-detail-panel {
   flex: 0 0 380px;
   width: 380px;

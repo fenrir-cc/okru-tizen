@@ -35,11 +35,6 @@
         <span class="sidebar-label">Géneros</span>
       </button>
 
-      <button class="focusable sidebar-btn" id="nav-categories" title="Épocas" tabindex="0">
-        <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
-        <span class="sidebar-label">Épocas</span>
-      </button>
-
       <button class="focusable sidebar-btn" id="nav-favorites" title="Mi Lista" tabindex="0">
         <svg class="sidebar-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         <span class="sidebar-label">Mi Lista (<span id="fav-counter">0</span>)</span>
@@ -181,7 +176,22 @@
       <!-- Layout dividido: Cuadrícula de películas a la izquierda + Panel de Información a la derecha -->
       <div class="collection-body-layout">
         <div class="collection-grid-column">
-          <h3 class="collection-parts-title">🎬 Obras Maestras del Género (Ordenadas por Calificación)</h3>
+          <!-- Barra de Filtros por Décadas dentro de la Colección -->
+          <div class="collection-filters-bar">
+            <span class="collection-filter-label">Época:</span>
+            <div class="collection-era-pills" id="collection-era-pills">
+              <button class="focusable era-pill active" data-era="all" tabindex="0">Todas</button>
+              <button class="focusable era-pill" data-era="20s-30s" tabindex="0">Años 20-30</button>
+              <button class="focusable era-pill" data-era="40s" tabindex="0">Años 40</button>
+              <button class="focusable era-pill" data-era="50s" tabindex="0">Años 50</button>
+              <button class="focusable era-pill" data-era="60s" tabindex="0">Años 60</button>
+              <button class="focusable era-pill" data-era="70s" tabindex="0">Años 70</button>
+              <button class="focusable era-pill" data-era="80s" tabindex="0">Años 80</button>
+              <button class="focusable era-pill" data-era="90s" tabindex="0">Años 90</button>
+            </div>
+          </div>
+
+          <h3 class="collection-parts-title" id="collection-parts-title">🎬 Obras Maestras del Género (Ordenadas por Calificación)</h3>
           <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
         </div>
 
