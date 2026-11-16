@@ -67,7 +67,10 @@
         <div class="billboard-badge">
           <span class="badge-series">🎬 CINE CLÁSICO</span>
         </div>
-        <h1 class="billboard-title" id="billboard-title">Metrópolis</h1>
+        <div class="billboard-title-wrap">
+          <img id="billboard-clearlogo" class="billboard-clearlogo hidden" src="" alt="Logo" />
+          <h1 class="billboard-title" id="billboard-title">Metrópolis</h1>
+        </div>
         
         <div class="billboard-meta">
           <span class="meta-match" id="billboard-match">98% para ti</span>
@@ -228,8 +231,11 @@
                   <span class="panel-year" id="panel-movie-year">1960</span>
                   <span class="panel-quality-badge">1080p</span>
                 </div>
-                <!-- Nombre de la película en español latino -->
-                <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
+                <!-- Nombre de la película en español latino o ClearLogo -->
+                <div class="panel-title-wrap">
+                  <img id="panel-movie-clearlogo" class="panel-clearlogo hidden" src="" alt="Logo" />
+                  <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
+                </div>
                 <!-- Nombre original -->
                 <div class="panel-original-title" id="panel-movie-original-title"></div>
                 <!-- Director -->

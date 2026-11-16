@@ -180,7 +180,7 @@ body.netflix-body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 75%;
+  width: 78%;
   height: 100%;
   background-size: cover;
   background-position: 25% top; /* Reducido y ajustado más a la izquierda para ver los personajes completos como en la foto */
@@ -188,6 +188,8 @@ body.netflix-body {
   transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 1;
   opacity: 1;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 85%, transparent 100%);
 }
 
 .billboard-backdrop.changing {
@@ -210,9 +212,9 @@ body.netflix-body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 10%;
+  width: 22%;
   height: 100%;
-  background: linear-gradient(270deg, rgba(11, 13, 18, 0.4) 0%, transparent 100%);
+  background: linear-gradient(270deg, #0b0d12 0%, rgba(11, 13, 18, 0.75) 25%, rgba(11, 13, 18, 0.3) 60%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -255,12 +257,37 @@ body.netflix-body {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
+.billboard-title-wrap {
+  display: flex;
+  align-items: flex-end;
+  min-height: 52px;
+  margin-bottom: 14px;
+}
+
+.billboard-clearlogo {
+  max-width: 440px;
+  max-height: 125px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: left bottom;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.95));
+  display: block;
+}
+
+.billboard-clearlogo.hidden,
+.panel-clearlogo.hidden,
+.billboard-title.hidden,
+.panel-title.hidden {
+  display: none !important;
+}
+
 .billboard-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 3.2rem;
   font-weight: 900;
   line-height: 1.1;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
   color: #f8fafc;
 }
@@ -1281,6 +1308,23 @@ body.netflix-body {
   font-weight: 800;
   font-size: 0.78rem;
   letter-spacing: 0.5px;
+}
+
+.panel-title-wrap {
+  display: flex;
+  align-items: flex-start;
+  min-height: 32px;
+}
+
+.panel-clearlogo {
+  max-width: 250px;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.95));
+  display: block;
 }
 
 .panel-title {

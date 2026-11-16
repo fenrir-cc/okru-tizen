@@ -174,6 +174,49 @@ async function getMovieDirector(movie) {
   return 'Director Clásico';
 }
 
+// Caché de ClearLogos para carga instantánea
+const logoCache = new Map();
+
+async function getMovieClearLogo(movie) {
+  if (!movie || !movie.id) return null;
+  if (movie.clearlogo !== undefined) return movie.clearlogo;
+  if (logoCache.has(movie.id)) return logoCache.get(movie.id);
+
+  try {
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/images?api_key=8476a7ab80ad76f0936744df0430e67c&include_image_language=es,es-MX,es-ES,en,null`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.logos && data.logos.length > 0) {
+        // 1. Prioridad: ClearLogo en español latino / español (es, es-MX, es-ES)
+        let chosen = data.logos.find(l => l.iso_639_1 === 'es' || l.iso_639_1 === 'es-MX' || l.iso_639_1 === 'es-ES');
+
+        // 2. Si no tiene en español, buscar en inglés (en) o neutro
+        if (!chosen) {
+          chosen = data.logos.find(l => l.iso_639_1 === 'en' || !l.iso_639_1);
+        }
+
+        // 3. Si aún no hay, tomar el primero si existe
+        if (!chosen && data.logos.length > 0) {
+          chosen = data.logos[0];
+        }
+
+        if (chosen && chosen.file_path) {
+          const logoUrl = `https://image.tmdb.org/t/p/w500${chosen.file_path}`;
+          logoCache.set(movie.id, logoUrl);
+          movie.clearlogo = logoUrl;
+          return logoUrl;
+        }
+      }
+    }
+  } catch (e) {
+    // Falla silenciosa para mantener la app rápida
+  }
+
+  logoCache.set(movie.id, null);
+  movie.clearlogo = null;
+  return null;
+}
+
 // SVG del icono de corazón para reusar en tarjetas (100% compatible Tizen TV con tono naranja)
 function getHeartSvg(isFav) {
   if (isFav) {
@@ -819,7 +862,30 @@ function setFeaturedMovie(movie) {
     }, 140);
   }
 
-  if (billboardTitle) billboardTitle.textContent = movie.title;
+  const billboardClearLogo = document.getElementById('billboard-clearlogo');
+  if (billboardClearLogo && billboardTitle) {
+    billboardTitle.textContent = movie.title || '';
+    billboardTitle.classList.remove('hidden');
+    billboardClearLogo.classList.add('hidden');
+    billboardClearLogo.src = '';
+
+    getMovieClearLogo(movie).then(logoUrl => {
+      if (currentFeaturedMovie && (currentFeaturedMovie.id === movie.id || currentFeaturedMovie.title === movie.title)) {
+        if (logoUrl) {
+          billboardClearLogo.src = logoUrl;
+          billboardClearLogo.alt = movie.title || '';
+          billboardClearLogo.classList.remove('hidden');
+          billboardTitle.classList.add('hidden');
+        } else {
+          billboardTitle.textContent = movie.title || '';
+          billboardTitle.classList.remove('hidden');
+          billboardClearLogo.classList.add('hidden');
+        }
+      }
+    });
+  } else if (billboardTitle) {
+    billboardTitle.textContent = movie.title;
+  }
   if (billboardYear) billboardYear.textContent = movie.year || '';
   if (billboardRating) billboardRating.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
   
@@ -1426,8 +1492,29 @@ function updateCollectionMovieDetail(movie) {
     posterEl.alt = movie.title || 'Póster';
   }
 
-  // 3. Nombre de la película en español latino
-  if (titleEl) {
+  // 3. Nombre de la película en español latino o ClearLogo
+  const panelClearLogo = document.getElementById('panel-movie-clearlogo');
+  if (panelClearLogo && titleEl) {
+    titleEl.textContent = movie.title || '';
+    titleEl.classList.remove('hidden');
+    panelClearLogo.classList.add('hidden');
+    panelClearLogo.src = '';
+
+    getMovieClearLogo(movie).then(logoUrl => {
+      if (currentDetailMovie && (currentDetailMovie.id === movie.id || currentDetailMovie.title === movie.title)) {
+        if (logoUrl) {
+          panelClearLogo.src = logoUrl;
+          panelClearLogo.alt = movie.title || '';
+          panelClearLogo.classList.remove('hidden');
+          titleEl.classList.add('hidden');
+        } else {
+          titleEl.textContent = movie.title || '';
+          titleEl.classList.remove('hidden');
+          panelClearLogo.classList.add('hidden');
+        }
+      }
+    });
+  } else if (titleEl) {
     titleEl.textContent = movie.title || '';
   }
 
