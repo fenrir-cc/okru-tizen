@@ -101,6 +101,27 @@ function setWatchHistoryRowVisible(visible) {
   } catch (e) {}
 }
 
+function updateSidebarHistoryToggleUI() {
+  const toggleBtn = document.getElementById('nav-toggle-history');
+  const statusEl = document.getElementById('sidebar-history-status');
+  const isVisible = isWatchHistoryRowVisible();
+
+  if (statusEl) {
+    statusEl.textContent = isVisible ? 'ON' : 'OFF';
+    statusEl.className = `sidebar-toggle-status ${isVisible ? 'status-on' : 'status-off'}`;
+  }
+
+  if (toggleBtn) {
+    if (isVisible) {
+      toggleBtn.classList.remove('status-disabled');
+      toggleBtn.setAttribute('title', 'Continuar Viendo: Habilitado (Pulsa para deshabilitar)');
+    } else {
+      toggleBtn.classList.add('status-disabled');
+      toggleBtn.setAttribute('title', 'Continuar Viendo: Deshabilitado (Pulsa para habilitar)');
+    }
+  }
+}
+
 // Estado de la aplicación
 let allClassics = [];
 let allCollections = [];
@@ -576,6 +597,7 @@ function createHistoryHeaderWrapper() {
 
 function removeWatchHistoryRow() {
   setWatchHistoryRowVisible(false);
+  updateSidebarHistoryToggleUI();
   const row = document.getElementById('row-history');
   if (row) {
     row.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
@@ -587,7 +609,7 @@ function removeWatchHistoryRow() {
       if (firstCard) firstCard.focus();
     }, 250);
   }
-  showToast('✖ Carrusel de Continuar Viendo quitado (Pulsa [Azul] o [H] para restaurarlo)');
+  showToast('✖ Carrusel de Continuar Viendo deshabilitado (Reactivar desde el menú lateral o tecla Azul)');
 }
 
 function clearWatchHistory() {
@@ -1894,6 +1916,38 @@ function initSidebar() {
       showToast('Aún no tienes películas guardadas en Mi Lista ❤️');
     }
   });
+
+  const navToggleHistory = document.getElementById('nav-toggle-history');
+  if (navToggleHistory) {
+    navToggleHistory.addEventListener('click', () => {
+      closeSearchView();
+      closeCollectionView();
+      toggleGenresPanel(false);
+
+      const willShow = !isWatchHistoryRowVisible();
+      setWatchHistoryRowVisible(willShow);
+      updateSidebarHistoryToggleUI();
+
+      renderNetflixRows(allClassics, activeGenreFilter);
+
+      if (willShow) {
+        showToast('▶ Carrusel de Continuar Viendo habilitado');
+        const historyRow = document.getElementById('row-history');
+        if (historyRow) {
+          if (window.innerWidth <= 768) {
+            historyRow.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            const firstCard = historyRow.querySelector('.movie-card');
+            if (firstCard) firstCard.focus();
+          }
+        }
+      } else {
+        showToast('✖ Carrusel de Continuar Viendo deshabilitado');
+      }
+    });
+  }
+
+  updateSidebarHistoryToggleUI();
 }
 
 // -------------------------------------------------------------
@@ -2205,8 +2259,9 @@ function initRemoteKeys() {
       e.stopPropagation();
       const willShow = !isWatchHistoryRowVisible();
       setWatchHistoryRowVisible(willShow);
+      updateSidebarHistoryToggleUI();
       renderNetflixRows(allClassics, activeGenreFilter);
-      showToast(willShow ? '▶ Carrusel de Continuar Viendo restaurado' : '✖ Carrusel de Continuar Viendo quitado');
+      showToast(willShow ? '▶ Carrusel de Continuar Viendo habilitado' : '✖ Carrusel de Continuar Viendo deshabilitado');
       return;
     }
 
