@@ -194,14 +194,14 @@ body.netflix-body {
   opacity: 0.35;
 }
 
-/* Gradientes cinematográficos de fundido y desenfoque perimetral en los bordes */
+/* Gradientes cinematográficos de fundido suave en los bordes (Fondos luminosos y nítidos) */
 .billboard-vignette-top {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 28%;
-  background: linear-gradient(180deg, #0b0d12 0%, rgba(11, 13, 18, 0.75) 45%, transparent 100%);
+  height: 14%;
+  background: linear-gradient(180deg, rgba(11, 13, 18, 0.45) 0%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -210,9 +210,9 @@ body.netflix-body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 25%;
+  width: 10%;
   height: 100%;
-  background: linear-gradient(270deg, #0b0d12 0%, rgba(11, 13, 18, 0.7) 45%, transparent 100%);
+  background: linear-gradient(270deg, rgba(11, 13, 18, 0.4) 0%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -221,9 +221,9 @@ body.netflix-body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 55%;
   height: 100%;
-  background: linear-gradient(90deg, #0b0d12 0%, #0b0d12 35%, rgba(11, 13, 18, 0.85) 65%, transparent 100%);
+  background: linear-gradient(90deg, #0b0d12 0%, #0b0d12 18%, rgba(11, 13, 18, 0.6) 45%, rgba(11, 13, 18, 0.15) 72%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -233,8 +233,8 @@ body.netflix-body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 65%;
-  background: linear-gradient(0deg, #0b0d12 12%, rgba(11, 13, 18, 0.82) 50%, transparent 100%);
+  height: 40%;
+  background: linear-gradient(0deg, #0b0d12 0%, rgba(11, 13, 18, 0.5) 45%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -1230,19 +1230,12 @@ body.netflix-body {
   background-color: #1a1e24;
   flex-shrink: 0;
 }
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.95);
-  border: 2.5px solid rgba(255, 255, 255, 0.32);
-  background-color: #1a1e24;
-  flex-shrink: 0;
-}
 
 .panel-poster-normal-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 .panel-hero-info {
