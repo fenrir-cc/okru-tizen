@@ -78,7 +78,6 @@ const btnCloseCollection = document.getElementById('btn-close-collection');
 const navSearch = document.getElementById('nav-search');
 const navHome = document.getElementById('nav-home');
 const navFavorites = document.getElementById('nav-favorites');
-const navSettings = document.getElementById('nav-settings');
 
 // Storage keys
 const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
@@ -1853,17 +1852,6 @@ function initSidebar() {
       }
     } else {
       showToast('Aún no tienes películas guardadas en Mi Lista ❤️');
-    }
-  });
-
-  navSettings.addEventListener('click', () => {
-    const current = getServerBaseUrl();
-    const newUrl = prompt("Configurar IP del Servidor PC (ej: http://192.168.18.179:3000):", current);
-    if (newUrl !== null && newUrl.trim() !== '') {
-      const clean = newUrl.trim().replace(/\/+$/, '');
-      localStorage.setItem(SERVER_STORAGE_KEY, clean);
-      showToast(`Servidor configurado: ${clean}`);
-      loadNetflixHome();
     }
   });
 }
