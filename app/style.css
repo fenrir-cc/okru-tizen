@@ -170,8 +170,8 @@ body.netflix-body {
   height: 52vh;
   min-height: 380px;
   display: flex;
-  align-items: flex-end;
-  padding: 0 0 20px 48px;
+  align-items: center; /* Centrado vertical para subir títulos, ClearLogo y sinopsis */
+  padding: 0 0 10px 48px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -245,6 +245,7 @@ body.netflix-body {
   position: relative;
   z-index: 5;
   max-width: 680px;
+  margin-top: -26px; /* Eleva el bloque de título, ClearLogo, metadata y sinopsis */
 }
 
 .badge-series {
@@ -589,10 +590,10 @@ body.netflix-body {
 
 /* TARJETA DE PELÍCULA VERTICAL CLÁSICA (2:3) */
 .movie-card {
-  flex: 0 0 170px;
-  height: 255px;
+  flex: 0 0 192px;
+  height: 288px;
   aspect-ratio: 2 / 3;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #1a1e24;
   position: relative;
   overflow: hidden;
@@ -717,8 +718,8 @@ body.netflix-body {
 
 /* TARJETA DE COLECCIÓN / SAGA TMDB */
 .collection-card {
-  flex: 0 0 250px;
-  height: 255px;
+  flex: 0 0 280px;
+  height: 288px;
   border-radius: 8px;
   background-color: #141822;
   position: relative;
@@ -1476,10 +1477,10 @@ body.netflix-body {
 
 /* Tarjeta individual de entrega dentro de la saga */
 .collection-movie-card {
-  flex: 0 0 170px;
-  height: 255px;
+  flex: 0 0 192px;
+  height: 288px;
   aspect-ratio: 2 / 3;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #1a1e24;
   position: relative;
   overflow: hidden;
@@ -2259,25 +2260,117 @@ body.netflix-body {
   }
 
   .collection-header {
-    padding: 14px 16px 0 16px !important;
+    padding: 12px 14px !important;
+    gap: 8px !important;
   }
 
-  .collection-main {
-    padding: 14px 16px 40px 16px !important;
-    margin-top: 6vh !important;
+  .btn-close-collection {
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .collection-badge-tag {
+    font-size: 0.75rem !important;
+    padding: 4px 8px !important;
+  }
+
+  .collection-content {
+    padding: 12px 14px 80px 14px !important;
+    margin-top: 0 !important;
+  }
+
+  .collection-info {
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
   }
 
   .collection-title {
     font-size: 1.6rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .collection-meta {
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .collection-count {
+    font-size: 0.82rem !important;
+    padding: 2px 8px !important;
+  }
+
+  .collection-hint {
+    font-size: 0.78rem !important;
   }
 
   .collection-overview {
     font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    max-width: 100% !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
   .collection-body-layout {
     flex-direction: column !important;
     gap: 0 !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+
+  .collection-grid-column {
+    margin-right: 0 !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .collection-filters-bar {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .collection-filters-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .collection-filter-label {
+    font-size: 0.82rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .collection-era-pills {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    padding: 4px 0 !important;
+    gap: 8px !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .collection-era-pills::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .era-pill {
+    padding: 5px 12px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .collection-parts-title {
+    font-size: 1rem !important;
+    margin-bottom: 12px !important;
   }
 
   .collection-movie-detail-panel {
@@ -2286,9 +2379,10 @@ body.netflix-body {
 
   .collection-parts-grid,
   .collection-parts-carousel {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)) !important;
     gap: 12px 8px !important;
-    padding: 12px 2px 84px 2px !important;
+    padding: 10px 0 84px 0 !important;
+    width: 100% !important;
   }
 
   .collection-movie-card {
