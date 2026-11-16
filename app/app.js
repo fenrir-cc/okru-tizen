@@ -198,6 +198,11 @@ function removeFromWatchHistory(movie, currentCardEl = null) {
       const first = row ? row.querySelector('.movie-card') : null;
       if (first && typeof first.focus === 'function') {
         first.focus();
+      } else {
+        const nextTarget = (rowsSlider || rowsWrapper).querySelector('.movie-card, .collection-card');
+        if (nextTarget && typeof nextTarget.focus === 'function') {
+          nextTarget.focus();
+        }
       }
     }
     showToast('🗑️ Eliminada de Continuar Viendo');
@@ -706,6 +711,7 @@ function createMovieCard(movie, isHistory = false) {
     ${isHistory ? `
       <div class="card-resume-badge">▶ Reanudar</div>
       <button class="card-remove-history-btn" data-title="${escapeAttr(movie.title)}" title="Eliminar de Continuar Viendo" aria-label="Eliminar">✕</button>
+      <div class="card-history-hint">Mantén [OK] para ✕</div>
     ` : ''}
     <button class="card-fav-btn ${isFav ? 'active' : ''}" data-title="${escapeAttr(movie.title)}" title="Mi Lista">
       ${getHeartSvg(isFav)}
@@ -799,7 +805,9 @@ function createMovieCard(movie, isHistory = false) {
 
   card.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
-      // Si se mantiene presionado Enter en el control remoto (~600ms): marcar/desmarcar Favorito
+      // Si se mantiene presionado Enter en el control remoto (~600ms):
+      // - En Continuar Viendo: Elimina la película del historial
+      // - En otras filas: Marca/desmarca como Favorito
       if (e.repeat) return;
       isLongPress = false;
       suppressClick = false;
@@ -807,7 +815,11 @@ function createMovieCard(movie, isHistory = false) {
       longPressTimer = setTimeout(() => {
         isLongPress = true;
         suppressClick = true;
-        triggerFavoritePulse();
+        if (isHistory) {
+          removeFromWatchHistory(movie, card);
+        } else {
+          triggerFavoritePulse();
+        }
       }, 600);
     } else if (isFavoriteKey(e)) {
       // Tecla directa en control remoto (Amarillo, Verde, F o 0): Favorito instantáneo

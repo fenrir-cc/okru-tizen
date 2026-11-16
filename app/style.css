@@ -1028,6 +1028,31 @@ body.netflix-body {
   outline: none;
 }
 
+/* Indicador flotante en tarjeta de Continuar Viendo */
+.card-history-hint {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(220, 38, 38, 0.92);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 12;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.movie-card.card-history:focus .card-history-hint,
+.movie-card.card-history:hover .card-history-hint {
+  opacity: 1;
+}
+
 .row-header-wrapper {
   display: flex;
   align-items: center;
@@ -1914,6 +1939,10 @@ body.netflix-body {
   .clear-history-btn {
     padding: 3px 8px !important;
     font-size: 0.72rem !important;
+  }
+
+  .card-history-hint {
+    display: none !important;
   }
 
   .row-carousel {
