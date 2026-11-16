@@ -178,12 +178,46 @@ async function getMovieDirector(movie) {
 const logoCache = new Map();
 
 async function getMovieClearLogo(movie) {
-  if (!movie || !movie.id) return null;
-  if (movie.clearlogo !== undefined) return movie.clearlogo;
-  if (logoCache.has(movie.id)) return logoCache.get(movie.id);
+  if (!movie) return null;
+  if (movie.clearlogo !== undefined && movie.clearlogo !== null) return movie.clearlogo;
+
+  // 1. Determinar el TMDB ID:
+  // - Si ya tiene tmdb_id, usarlo
+  // - Si movie.id es numérico y menor a 2,000,000 (los IDs de TMDB son menores a 2M; los de OK.ru son de 11+ dígitos)
+  let tmdbId = movie.tmdb_id;
+  if (!tmdbId && movie.id && Number.isInteger(Number(movie.id)) && Number(movie.id) < 2000000) {
+    tmdbId = Number(movie.id);
+  }
+
+  // 2. Si es de Continuar Viendo / Historial / OK.ru, resolver la película por su título
+  if (!tmdbId && movie.title) {
+    const matched = resolveMovieFromQuery(movie.title) || (movie.original_title ? resolveMovieFromQuery(movie.original_title) : null);
+    if (matched && matched.id) {
+      tmdbId = matched.id;
+      movie.tmdb_id = matched.id;
+    }
+  }
+
+  // 3. Si aún no tenemos tmdbId pero tenemos título, buscar en la API de búsqueda de TMDB
+  if (!tmdbId && movie.title) {
+    try {
+      const cleanQ = cleanLatinMovieTitle(movie.title);
+      const searchRes = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8476a7ab80ad76f0936744df0430e67c&query=${encodeURIComponent(cleanQ)}&language=es-MX`);
+      if (searchRes.ok) {
+        const searchData = await searchRes.json();
+        if (searchData.results && searchData.results.length > 0) {
+          tmdbId = searchData.results[0].id;
+          movie.tmdb_id = tmdbId;
+        }
+      }
+    } catch (e) {}
+  }
+
+  if (!tmdbId) return null;
+  if (logoCache.has(tmdbId)) return logoCache.get(tmdbId);
 
   try {
-    const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/images?api_key=8476a7ab80ad76f0936744df0430e67c&include_image_language=es,es-MX,es-ES,en,null`);
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${tmdbId}/images?api_key=8476a7ab80ad76f0936744df0430e67c&include_image_language=es,es-MX,es-ES,en,null`);
     if (res.ok) {
       const data = await res.json();
       if (data.logos && data.logos.length > 0) {
@@ -202,7 +236,7 @@ async function getMovieClearLogo(movie) {
 
         if (chosen && chosen.file_path) {
           const logoUrl = `https://image.tmdb.org/t/p/w500${chosen.file_path}`;
-          logoCache.set(movie.id, logoUrl);
+          logoCache.set(tmdbId, logoUrl);
           movie.clearlogo = logoUrl;
           return logoUrl;
         }
@@ -212,7 +246,7 @@ async function getMovieClearLogo(movie) {
     // Falla silenciosa para mantener la app rápida
   }
 
-  logoCache.set(movie.id, null);
+  logoCache.set(tmdbId, null);
   movie.clearlogo = null;
   return null;
 }
@@ -415,6 +449,15 @@ function getWatchHistory() {
       const hasNoise = /\b(1080p|1080|720p|720|480p|dvdrip|pelicula completa|webrip|bluray|audio latino|latino)\b/i.test(rawTitle);
       const hasPrefixYear = /^\d{4}\s*[-–]\s*/.test(rawTitle);
 
+      if (!item.tmdb_id && item.title) {
+        const resolved = resolveMovieFromQuery(item.title) || (item.okruTitle ? resolveMovieFromQuery(item.okruTitle) : null);
+        if (resolved && resolved.id) {
+          item.tmdb_id = resolved.id;
+          if (resolved.clearlogo) item.clearlogo = resolved.clearlogo;
+          updated = true;
+        }
+      }
+
       if (hasCyrillic || hasUpsideDown || hasNoise || hasPrefixYear) {
         const resolved = resolveMovieFromQuery(rawTitle) || (item.okruTitle ? resolveMovieFromQuery(item.okruTitle) : null);
         if (resolved) {
@@ -469,8 +512,12 @@ function addToWatchHistory(video, targetMovie = null) {
       return !matchId && !matchTitle;
     });
 
+    const tmdbId = (movieMeta && movieMeta.id && Number(movieMeta.id) < 2000000) ? Number(movieMeta.id) : null;
+
     history.unshift({
       id: video.id,
+      tmdb_id: tmdbId,
+      clearlogo: (movieMeta && movieMeta.clearlogo) || null,
       title: latinTitle,
       original_title: (movieMeta && movieMeta.original_title) || latinTitle,
       year: latinYear,
