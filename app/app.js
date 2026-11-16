@@ -100,17 +100,42 @@ let billboardUpdateTimeout = null;
 let lastNavTime = 0;
 const NAV_THROTTLE_MS = 130;
 
-// SVG del icono de corazón para reusar en tarjetas
+// Caché de directores de películas para carga rápida
+const directorCache = new Map();
+
+async function getMovieDirector(movie) {
+  if (!movie) return 'Desconocido';
+  if (movie.director) return movie.director;
+  if (!movie.id) return 'Director Clásico';
+  if (directorCache.has(movie.id)) return directorCache.get(movie.id);
+
+  try {
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=8476a7ab80ad76f0936744df0430e67c&language=es-MX`);
+    if (res.ok) {
+      const data = await res.json();
+      const directorObj = data.crew && data.crew.find(c => c.job === 'Director');
+      const name = directorObj ? directorObj.name : 'Desconocido';
+      directorCache.set(movie.id, name);
+      movie.director = name;
+      return name;
+    }
+  } catch (e) {
+    // Si falla la red, retornar valor por defecto sin bloquear la UI
+  }
+  return 'Director Clásico';
+}
+
+// SVG del icono de corazón para reusar en tarjetas (100% compatible Tizen TV)
 function getHeartSvg(isFav) {
   if (isFav) {
     return `
-      <svg style="width: 17px; height: 17px;" viewBox="0 0 24 24">
-        <path fill="#ffffff" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
       </svg>
     `;
   }
   return `
-    <svg style="width: 17px; height: 17px;" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
     </svg>
   `;
@@ -1124,101 +1149,71 @@ function closeCollectionView() {
 
 let currentDetailMovie = null;
 
-// Actualizar data de la película enfocada en el panel lateral derecho (Grande y Fijo)
+// Actualizar data de la película enfocada en el panel lateral derecho (Fijo, Póster Vertical y Datos Esenciales)
 function updateCollectionMovieDetail(movie) {
   if (!movie) return;
   currentDetailMovie = movie;
   const panel = document.getElementById('collection-movie-detail-panel');
   if (!panel) return;
 
-  const bgEl = document.getElementById('panel-movie-backdrop');
+  const posterEl = document.getElementById('panel-movie-poster');
   const titleEl = document.getElementById('panel-movie-title');
   const originalTitleEl = document.getElementById('panel-movie-original-title');
   const ratingEl = document.getElementById('panel-movie-rating');
   const yearEl = document.getElementById('panel-movie-year');
-  const eraEl = document.getElementById('panel-movie-era');
-  const favTagEl = document.getElementById('panel-movie-fav-tag');
+  const directorEl = document.getElementById('panel-movie-director');
   const genresEl = document.getElementById('panel-movie-genres');
   const overviewEl = document.getElementById('panel-movie-overview');
-  const decadeValEl = document.getElementById('panel-movie-decade-val');
-  const verdictEl = document.getElementById('panel-movie-verdict');
-  const btnFav = document.getElementById('btn-panel-fav');
 
-  const bgImg = movie.backdrop || movie.thumbnail || '';
-  if (bgEl) {
-    bgEl.classList.add('changing');
-    setTimeout(() => {
-      bgEl.style.backgroundImage = `url('${bgImg}')`;
-      bgEl.classList.remove('changing');
-    }, 60);
+  // 1. Póster vertical de la película
+  if (posterEl) {
+    posterEl.src = movie.thumbnail || movie.poster || fallbackSvg;
+    posterEl.alt = movie.title || 'Póster';
   }
 
-  // Actualizar también el backdrop general de la colección con un fundido suave
-  if (collectionBackdrop && movie.backdrop) {
-    collectionBackdrop.style.backgroundImage = `url('${movie.backdrop}')`;
-  }
-
+  // 2. Nombre de la película en español latino
   if (titleEl) {
     titleEl.textContent = movie.title || '';
   }
 
+  // 3. Nombre original
   if (originalTitleEl) {
     if (movie.original_title && movie.original_title.trim().toLowerCase() !== (movie.title || '').trim().toLowerCase()) {
-      originalTitleEl.textContent = `Título original: ${movie.original_title}`;
+      originalTitleEl.textContent = `Original: ${movie.original_title}`;
       originalTitleEl.style.display = 'block';
     } else {
       originalTitleEl.style.display = 'none';
     }
   }
 
+  // 4. Puntuación
   if (ratingEl) {
     const score = movie.rating || 8.0;
-    ratingEl.textContent = `⭐ ${score} / 10`;
+    ratingEl.textContent = `⭐ ${score}`;
   }
 
+  // 5. Año
   if (yearEl) {
     yearEl.textContent = movie.year || 'Clásico';
   }
 
-  // Época detallada
-  const y = movie.year || 1960;
-  let decadeStr = 'Años 60';
-  let eraBadge = '60s';
-  if (y < 1940) { decadeStr = 'Años 20-30 · Los Inicios del Cine'; eraBadge = '20s-30s'; }
-  else if (y < 1950) { decadeStr = 'Años 40 · La Época de Oro'; eraBadge = '40s'; }
-  else if (y < 1960) { decadeStr = 'Años 50 · La Era Clásica Dorada'; eraBadge = '50s'; }
-  else if (y < 1970) { decadeStr = 'Años 60 · Revolución Cinematográfica'; eraBadge = '60s'; }
-  else if (y < 1980) { decadeStr = 'Años 70 · Nuevo Cine Clásico'; eraBadge = '70s'; }
-  else if (y < 1990) { decadeStr = 'Años 80 · Cine de Culto'; eraBadge = '80s'; }
-  else { decadeStr = 'Años 90 · Clásicos Contemporáneos'; eraBadge = '90s'; }
-
-  if (eraEl) {
-    eraEl.textContent = `Años ${eraBadge}`;
-  }
-  if (decadeValEl) {
-    decadeValEl.textContent = decadeStr;
+  // 6. Director (con caché y carga bajo demanda)
+  if (directorEl) {
+    if (movie.director) {
+      directorEl.textContent = movie.director;
+    } else if (directorCache.has(movie.id)) {
+      directorEl.textContent = directorCache.get(movie.id);
+    } else {
+      directorEl.textContent = 'Cargando...';
+      getMovieDirector(movie).then(dirName => {
+        if (currentDetailMovie && (currentDetailMovie.id === movie.id || currentDetailMovie.title === movie.title)) {
+          directorEl.textContent = dirName;
+        }
+      });
+    }
   }
 
-  // Veredicto según calificación
-  if (verdictEl) {
-    const score = movie.rating || 8.0;
-    if (score >= 8.5) verdictEl.textContent = '🏆 Obra Maestra Suprema';
-    else if (score >= 8.0) verdictEl.textContent = '⭐ Aclamada por la Crítica';
-    else verdictEl.textContent = '✨ Joya de Culto';
-  }
-
-  // Estado de favoritos
-  const isFav = isMovieFavorite(movie);
-  if (favTagEl) {
-    favTagEl.classList.toggle('active', isFav);
-    favTagEl.textContent = isFav ? '❤️ En Mi Lista' : '🤍 Sin guardar';
-  }
-  if (btnFav) {
-    btnFav.classList.toggle('active', isFav);
-    btnFav.innerHTML = isFav ? '<span class="fav-icon">❤️</span> En Mi Lista' : '<span class="fav-icon">🤍</span> Mi Lista';
-  }
-
-  // Géneros como pills
+  // 7. Géneros al que pertenece
   if (genresEl) {
     genresEl.innerHTML = '';
     const genres = (movie.genres && movie.genres.length > 0) ? movie.genres : ['Cine Clásico'];
@@ -1230,6 +1225,7 @@ function updateCollectionMovieDetail(movie) {
     });
   }
 
+  // 8. Sinopsis
   if (overviewEl) {
     overviewEl.textContent = movie.overview || 'Una de las más aclamadas e influyentes obras maestras del cine clásico.';
   }

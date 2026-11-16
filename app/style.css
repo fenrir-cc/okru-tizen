@@ -611,14 +611,14 @@ body.netflix-body {
 }
 
 .card-fav-btn.active {
-  background: #ee8208 !important;
-  border-color: #ffaa4d !important;
-  box-shadow: 0 0 10px rgba(238, 130, 8, 0.6);
+  background: rgba(14, 18, 24, 0.92) !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6) !important;
 }
 
 .card-fav-btn.active svg path {
-  fill: #ffffff !important;
-  stroke: none !important;
+  fill: #ef4444 !important;
+  stroke: #ef4444 !important;
 }
 
 @keyframes heartPulse {
@@ -630,7 +630,7 @@ body.netflix-body {
 
 .card-fav-btn.heart-pulse {
   animation: heartPulse 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 0 15px rgba(238, 130, 8, 0.9);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.9) !important;
 }
 
 .remote-shortcut-hint {
@@ -1091,12 +1091,12 @@ body.netflix-body {
   transform: scale(1.05);
 }
 
-/* Panel Lateral Derecho de Colección (Fijo, Grande y Completo de Data) */
+/* Panel Lateral Derecho de Colección (Fijo, Póster Vertical y Datos Esenciales) */
 .collection-movie-detail-panel {
   position: fixed;
   top: 85px;
   right: 36px;
-  width: min(480px, 35vw);
+  width: min(440px, 34vw);
   height: calc(100vh - 105px);
   max-height: calc(100vh - 105px);
   background: rgba(14, 18, 26, 0.96);
@@ -1112,72 +1112,29 @@ body.netflix-body {
   transition: opacity 0.2s ease;
 }
 
-.panel-backdrop-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 190px;
-  max-height: 220px;
-  background-color: #10141d;
-  overflow: hidden;
+.panel-poster-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
   flex-shrink: 0;
 }
 
-.panel-backdrop {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center top;
-  transition: opacity 0.25s ease, transform 0.4s ease;
-}
-
-.panel-backdrop.changing {
-  opacity: 0.35;
-  transform: scale(1.03);
-}
-
-.panel-backdrop-vignette {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 75%;
-  background: linear-gradient(0deg, rgba(14, 18, 26, 1) 0%, rgba(14, 18, 26, 0.7) 50%, transparent 100%);
-  pointer-events: none;
-}
-
-.panel-ok-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #ee8208;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 900;
-  padding: 3px 8px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-  letter-spacing: 0.5px;
-}
-
-.panel-quality-pill {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 4px;
+.panel-poster-img {
+  width: 175px;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease;
 }
 
 .panel-body {
-  padding: 14px 20px 20px 20px;
+  padding: 10px 22px 24px 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   overflow-y: auto;
   flex: 1;
   scrollbar-width: thin;
@@ -1218,35 +1175,9 @@ body.netflix-body {
   font-size: 0.86rem;
 }
 
-.panel-era {
-  color: #ffaa4d;
-  background: rgba(238, 130, 8, 0.16);
-  border: 1px solid rgba(238, 130, 8, 0.35);
-  padding: 3px 10px;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 0.86rem;
-}
-
-.panel-fav-tag {
-  color: #f87171;
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  padding: 3px 10px;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 0.82rem;
-}
-
-.panel-fav-tag.active {
-  color: #ffffff;
-  background: #ee8208;
-  border-color: #ffaa4d;
-}
-
 .panel-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 900;
   color: #ffffff;
   line-height: 1.22;
@@ -1256,10 +1187,31 @@ body.netflix-body {
 }
 
 .panel-original-title {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #94a3b8;
   font-style: italic;
-  margin-top: -6px;
+  margin-top: -4px;
+}
+
+.panel-director-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-director-label {
+  color: #ffaa4d;
+  font-weight: 700;
+}
+
+.panel-director-name {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .panel-genres {
@@ -1278,37 +1230,6 @@ body.netflix-body {
   border-radius: 4px;
 }
 
-.panel-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 10px 12px;
-}
-
-.panel-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
-  color: #cbd5e1;
-}
-
-.panel-meta-item .meta-label {
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-.panel-meta-item .meta-val {
-  color: #ffffff;
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .panel-synopsis-box {
   display: flex;
   flex-direction: column;
@@ -1316,7 +1237,7 @@ body.netflix-body {
 }
 
 .panel-synopsis-title {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: #e2e8f0;
   text-transform: uppercase;
@@ -1324,75 +1245,10 @@ body.netflix-body {
 }
 
 .panel-overview {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.55;
   color: #cbd5e1;
   margin: 0;
-}
-
-.panel-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.panel-btn-action {
-  flex: 1;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 0.88rem;
-  font-weight: 800;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-  border: none;
-  outline: none;
-}
-
-.btn-panel-play {
-  background: #ee8208;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(238, 130, 8, 0.4);
-}
-
-.btn-panel-play:hover,
-.btn-panel-play:focus {
-  background: #ff9824;
-  transform: scale(1.03);
-  outline: none;
-}
-
-.btn-panel-fav {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.btn-panel-fav:hover,
-.btn-panel-fav:focus {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.03);
-  outline: none;
-}
-
-.btn-panel-fav.active {
-  background: rgba(239, 68, 68, 0.2);
-  border-color: #ef4444;
-  color: #f87171;
-}
-
-.panel-hint {
-  padding: 8px 12px;
-  background: rgba(238, 130, 8, 0.1);
-  border: 1px solid rgba(238, 130, 8, 0.3);
-  border-radius: 6px;
-  color: #ffaa4d;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1.35;
 }
 
 .collection-parts-title {

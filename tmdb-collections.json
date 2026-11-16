@@ -22,7 +22,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Irvin Kershner"
       },
       {
         "id": 105,
@@ -38,7 +39,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 18491,
@@ -56,7 +58,8 @@
           "Drama",
           "Fantasía",
           "Acción"
-        ]
+        ],
+        "director": "Kazuya Tsurumaki"
       },
       {
         "id": 603,
@@ -71,7 +74,8 @@
         "genres": [
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Lana Wachowski"
       },
       {
         "id": 11,
@@ -87,7 +91,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "George Lucas"
       },
       {
         "id": 280,
@@ -103,7 +108,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 348,
@@ -118,7 +124,8 @@
         "genres": [
           "Terror",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Ridley Scott"
       },
       {
         "id": 185,
@@ -133,7 +140,8 @@
         "genres": [
           "Ciencia ficción",
           "Crimen"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 19,
@@ -148,7 +156,8 @@
         "genres": [
           "Drama",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Fritz Lang"
       },
       {
         "id": 1091,
@@ -164,7 +173,8 @@
           "Terror",
           "Misterio",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "John Carpenter"
       },
       {
         "id": 1398,
@@ -179,7 +189,8 @@
         "genres": [
           "Ciencia ficción",
           "Drama"
-        ]
+        ],
+        "director": "Andrei Tarkovsky"
       },
       {
         "id": 62,
@@ -195,7 +206,8 @@
           "Ciencia ficción",
           "Misterio",
           "Aventura"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 329,
@@ -210,7 +222,8 @@
         "genres": [
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 679,
@@ -226,7 +239,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 10386,
@@ -244,7 +258,8 @@
           "Familia",
           "Ciencia ficción",
           "Aventura"
-        ]
+        ],
+        "director": "Brad Bird"
       },
       {
         "id": 149,
@@ -260,7 +275,8 @@
           "Animación",
           "Ciencia ficción",
           "Acción"
-        ]
+        ],
+        "director": "Katsuhiro Otomo"
       },
       {
         "id": 78,
@@ -276,7 +292,8 @@
           "Ciencia ficción",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Ridley Scott"
       },
       {
         "id": 9323,
@@ -292,7 +309,8 @@
           "Acción",
           "Animación",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Mamoru Oshii"
       },
       {
         "id": 43680,
@@ -309,7 +327,8 @@
           "Comedia",
           "Ciencia ficción",
           "Película de TV"
-        ]
+        ],
+        "director": "Vladimir Bortko"
       },
       {
         "id": 1892,
@@ -325,7 +344,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Richard Marquand"
       },
       {
         "id": 20803,
@@ -340,7 +360,8 @@
         "genres": [
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Leonid Gaidai"
       },
       {
         "id": 775,
@@ -356,7 +377,8 @@
           "Aventura",
           "Ciencia ficción",
           "Comedia"
-        ]
+        ],
+        "director": "Georges Méliès"
       },
       {
         "id": 662,
@@ -372,7 +394,8 @@
           "Drama",
           "Romance",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Chris Marker"
       },
       {
         "id": 165,
@@ -388,7 +411,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 29452,
@@ -403,7 +427,8 @@
         "genres": [
           "Drama",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Hiroshi Teshigahara"
       },
       {
         "id": 593,
@@ -419,7 +444,8 @@
           "Drama",
           "Ciencia ficción",
           "Misterio"
-        ]
+        ],
+        "director": "Andrei Tarkovsky"
       },
       {
         "id": 12561,
@@ -435,7 +461,8 @@
           "Acción",
           "Ciencia ficción",
           "Terror"
-        ]
+        ],
+        "director": "Takao Okawara"
       },
       {
         "id": 218,
@@ -451,7 +478,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 15916,
@@ -468,7 +496,8 @@
           "Fantasía",
           "Misterio",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Mamoru Oshii"
       },
       {
         "id": 871,
@@ -485,7 +514,8 @@
           "Aventura",
           "Drama",
           "Acción"
-        ]
+        ],
+        "director": "Franklin J. Schaffner"
       },
       {
         "id": 39324,
@@ -610,7 +640,8 @@
           "Suspense",
           "Terror",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Ishirō Honda"
       },
       {
         "id": 39323,
@@ -706,7 +737,8 @@
           "Ciencia ficción",
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "Luc Besson"
       },
       {
         "id": 106,
@@ -723,7 +755,8 @@
           "Acción",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "John McTiernan"
       },
       {
         "id": 782,
@@ -966,7 +999,8 @@
           "Acción",
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Nicholas Meyer"
       },
       {
         "id": 20182,
@@ -4222,7 +4256,8 @@
           "Acción",
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Paul Verhoeven"
       },
       {
         "id": 8077,
@@ -4347,7 +4382,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Frank Darabont"
       },
       {
         "id": 238,
@@ -4362,7 +4398,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 240,
@@ -4377,7 +4414,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 497,
@@ -4393,7 +4431,8 @@
           "Fantasía",
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Frank Darabont"
       },
       {
         "id": 680,
@@ -4409,7 +4448,8 @@
           "Suspense",
           "Crimen",
           "Comedia"
-        ]
+        ],
+        "director": "Quentin Tarantino"
       },
       {
         "id": 769,
@@ -4424,7 +4464,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Martin Scorsese"
       },
       {
         "id": 12493,
@@ -4441,7 +4482,8 @@
           "Crimen",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 807,
@@ -4457,7 +4499,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "David Fincher"
       },
       {
         "id": 311,
@@ -4472,7 +4515,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 274,
@@ -4488,7 +4532,8 @@
           "Crimen",
           "Suspense",
           "Drama"
-        ]
+        ],
+        "director": "Jonathan Demme"
       },
       {
         "id": 101,
@@ -4504,7 +4549,8 @@
           "Crimen",
           "Drama",
           "Acción"
-        ]
+        ],
+        "director": "Luc Besson"
       },
       {
         "id": 9702,
@@ -4520,7 +4566,8 @@
           "Crimen",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Taylor Hackford"
       },
       {
         "id": 29259,
@@ -4536,7 +4583,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Jacques Becker"
       },
       {
         "id": 37257,
@@ -4552,7 +4600,8 @@
           "Drama",
           "Misterio",
           "Crimen"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 15804,
@@ -4568,7 +4617,8 @@
           "Crimen",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Edward Yang"
       },
       {
         "id": 185,
@@ -4583,7 +4633,8 @@
         "genres": [
           "Ciencia ficción",
           "Crimen"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 629,
@@ -4599,7 +4650,8 @@
           "Drama",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Bryan Singer"
       },
       {
         "id": 111,
@@ -4615,7 +4667,8 @@
           "Acción",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Brian De Palma"
       },
       {
         "id": 103,
@@ -4630,7 +4683,8 @@
         "genres": [
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Martin Scorsese"
       },
       {
         "id": 500,
@@ -4645,7 +4699,8 @@
         "genres": [
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Quentin Tarantino"
       },
       {
         "id": 100,
@@ -4660,7 +4715,8 @@
         "genres": [
           "Comedia",
           "Crimen"
-        ]
+        ],
+        "director": "Guy Ritchie"
       },
       {
         "id": 996,
@@ -4675,7 +4731,8 @@
         "genres": [
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 24382,
@@ -4690,7 +4747,8 @@
         "genres": [
           "Comedia",
           "Crimen"
-        ]
+        ],
+        "director": "Mario Monicelli"
       },
       {
         "id": 239,
@@ -4706,7 +4764,8 @@
           "Comedia",
           "Romance",
           "Crimen"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 832,
@@ -4722,7 +4781,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Fritz Lang"
       },
       {
         "id": 800,
@@ -4737,7 +4797,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Luis Buñuel"
       },
       {
         "id": 548,
@@ -4753,7 +4814,8 @@
           "Crimen",
           "Drama",
           "Misterio"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 8422,
@@ -4769,7 +4831,8 @@
           "Drama",
           "Romance",
           "Crimen"
-        ]
+        ],
+        "director": "Luchino Visconti"
       },
       {
         "id": 9277,
@@ -4785,7 +4848,8 @@
           "Comedia",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 521,
@@ -4801,7 +4865,8 @@
           "Suspense",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 524,
@@ -4943,7 +5008,8 @@
           "Terror",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Robert Wiene"
       },
       {
         "id": 29971,
@@ -4989,7 +5055,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Roman Polanski"
       },
       {
         "id": 20271,
@@ -5177,7 +5244,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Curtis Hanson"
       },
       {
         "id": 2721,
@@ -5242,7 +5310,8 @@
           "Drama",
           "Crimen",
           "Comedia"
-        ]
+        ],
+        "director": "Juraj Herz"
       },
       {
         "id": 5511,
@@ -5384,7 +5453,8 @@
           "Misterio",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "John Huston"
       },
       {
         "id": 30588,
@@ -5480,7 +5550,8 @@
           "Suspense",
           "Misterio",
           "Crimen"
-        ]
+        ],
+        "director": "Joseph L. Mankiewicz"
       },
       {
         "id": 1632,
@@ -5497,7 +5568,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Alan Parker"
       },
       {
         "id": 25047,
@@ -7165,7 +7237,8 @@
           "Western",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 1725,
@@ -8780,7 +8853,8 @@
           "Terror",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 694,
@@ -8795,7 +8869,8 @@
         "genres": [
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 25237,
@@ -8812,7 +8887,8 @@
           "Bélica",
           "Terror",
           "Historia"
-        ]
+        ],
+        "director": "Elem Klimov"
       },
       {
         "id": 348,
@@ -8827,7 +8903,8 @@
         "genres": [
           "Terror",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Ridley Scott"
       },
       {
         "id": 1091,
@@ -8843,7 +8920,8 @@
           "Terror",
           "Misterio",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "John Carpenter"
       },
       {
         "id": 234,
@@ -8860,7 +8938,8 @@
           "Terror",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Robert Wiene"
       },
       {
         "id": 10728,
@@ -8876,7 +8955,8 @@
           "Fantasía",
           "Drama",
           "Terror"
-        ]
+        ],
+        "director": "F. W. Murnau"
       },
       {
         "id": 10242,
@@ -8891,7 +8971,8 @@
         "genres": [
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Robert Aldrich"
       },
       {
         "id": 805,
@@ -8907,7 +8988,8 @@
           "Drama",
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Roman Polanski"
       },
       {
         "id": 18352,
@@ -8924,7 +9006,8 @@
           "Drama",
           "Crimen",
           "Comedia"
-        ]
+        ],
+        "director": "Juraj Herz"
       },
       {
         "id": 14282,
@@ -8941,7 +9024,8 @@
           "Animación",
           "Acción",
           "Terror"
-        ]
+        ],
+        "director": "Yoshiaki Kawajiri"
       },
       {
         "id": 136,
@@ -8956,7 +9040,8 @@
         "genres": [
           "Drama",
           "Terror"
-        ]
+        ],
+        "director": "Tod Browning"
       },
       {
         "id": 22137,
@@ -8973,7 +9058,8 @@
           "Fantasía",
           "Terror",
           "Misterio"
-        ]
+        ],
+        "director": "Lars von Trier"
       },
       {
         "id": 9552,
@@ -8987,7 +9073,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/xcjJ5khg2yzOa282mza39Lbrm7j.jpg",
         "genres": [
           "Terror"
-        ]
+        ],
+        "director": "William Friedkin"
       },
       {
         "id": 30959,
@@ -9003,7 +9090,8 @@
           "Terror",
           "Fantasía",
           "Drama"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 58129,
@@ -9019,7 +9107,8 @@
           "Drama",
           "Fantasía",
           "Terror"
-        ]
+        ],
+        "director": "Victor Sjöström"
       },
       {
         "id": 12561,
@@ -9035,7 +9124,8 @@
           "Acción",
           "Ciencia ficción",
           "Terror"
-        ]
+        ],
+        "director": "Takao Okawara"
       },
       {
         "id": 20126,
@@ -9051,7 +9141,8 @@
           "Terror",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Dario Argento"
       },
       {
         "id": 92060,
@@ -9067,7 +9158,8 @@
           "Terror",
           "Música",
           "Suspense"
-        ]
+        ],
+        "director": "John Landis"
       },
       {
         "id": 37793,
@@ -9082,7 +9174,8 @@
         "genres": [
           "Música",
           "Terror"
-        ]
+        ],
+        "director": "Stan Winston"
       },
       {
         "id": 68627,
@@ -9098,7 +9191,8 @@
           "Misterio",
           "Terror",
           "Drama"
-        ]
+        ],
+        "director": "Carlos Enrique Taboada"
       },
       {
         "id": 28968,
@@ -9113,7 +9207,8 @@
         "genres": [
           "Fantasía",
           "Terror"
-        ]
+        ],
+        "director": "Carlos Enrique Taboada"
       },
       {
         "id": 578,
@@ -9129,7 +9224,8 @@
           "Terror",
           "Suspense",
           "Aventura"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 13151,
@@ -9146,7 +9242,8 @@
           "Misterio",
           "Familia",
           "Terror"
-        ]
+        ],
+        "director": "Jim Stenstrum"
       },
       {
         "id": 3763,
@@ -9160,7 +9257,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/AcAMkNfQ21cL7EJzs5eVx24k3H4.jpg",
         "genres": [
           "Terror"
-        ]
+        ],
+        "director": "Kaneto Shindō"
       },
       {
         "id": 653,
@@ -9175,7 +9273,8 @@
         "genres": [
           "Terror",
           "Fantasía"
-        ]
+        ],
+        "director": "F. W. Murnau"
       },
       {
         "id": 1678,
@@ -9191,7 +9290,8 @@
           "Suspense",
           "Terror",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Ishirō Honda"
       },
       {
         "id": 19035,
@@ -9209,7 +9309,8 @@
           "Drama",
           "Terror",
           "Fantasía"
-        ]
+        ],
+        "director": "Jan Švankmajer"
       },
       {
         "id": 57283,
@@ -9225,7 +9326,8 @@
           "Documental",
           "Terror",
           "Historia"
-        ]
+        ],
+        "director": "Benjamin Christensen"
       },
       {
         "id": 36095,
@@ -9241,7 +9343,8 @@
           "Terror",
           "Misterio",
           "Crimen"
-        ]
+        ],
+        "director": "Kiyoshi Kurosawa"
       },
       {
         "id": 10331,
@@ -12526,7 +12629,8 @@
           "Suspense",
           "Crimen",
           "Comedia"
-        ]
+        ],
+        "director": "Quentin Tarantino"
       },
       {
         "id": 550,
@@ -12541,7 +12645,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "David Fincher"
       },
       {
         "id": 539,
@@ -12557,7 +12662,8 @@
           "Terror",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 12493,
@@ -12574,7 +12680,8 @@
           "Crimen",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 807,
@@ -12590,7 +12697,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "David Fincher"
       },
       {
         "id": 274,
@@ -12606,7 +12714,8 @@
           "Crimen",
           "Suspense",
           "Drama"
-        ]
+        ],
+        "director": "Jonathan Demme"
       },
       {
         "id": 567,
@@ -12622,7 +12731,8 @@
           "Suspense",
           "Misterio",
           "Drama"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 10494,
@@ -12637,7 +12747,8 @@
         "genres": [
           "Animación",
           "Suspense"
-        ]
+        ],
+        "director": "Satoshi Kon"
       },
       {
         "id": 9702,
@@ -12653,7 +12764,8 @@
           "Crimen",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Taylor Hackford"
       },
       {
         "id": 29259,
@@ -12669,7 +12781,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Jacques Becker"
       },
       {
         "id": 16672,
@@ -12684,7 +12797,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Hiroshi Teshigahara"
       },
       {
         "id": 694,
@@ -12699,7 +12813,8 @@
         "genres": [
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 26451,
@@ -12714,7 +12829,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Elio Petri"
       },
       {
         "id": 280,
@@ -12730,7 +12846,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 629,
@@ -12746,7 +12863,8 @@
           "Drama",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Bryan Singer"
       },
       {
         "id": 426,
@@ -12762,7 +12880,8 @@
           "Misterio",
           "Romance",
           "Suspense"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 500,
@@ -12777,7 +12896,8 @@
         "genres": [
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Quentin Tarantino"
       },
       {
         "id": 996,
@@ -12792,7 +12912,8 @@
         "genres": [
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 745,
@@ -12808,7 +12929,8 @@
           "Misterio",
           "Suspense",
           "Drama"
-        ]
+        ],
+        "director": "M. Night Shyamalan"
       },
       {
         "id": 829,
@@ -12824,7 +12946,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Roman Polanski"
       },
       {
         "id": 1092,
@@ -12839,7 +12962,8 @@
         "genres": [
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Carol Reed"
       },
       {
         "id": 223,
@@ -12855,7 +12979,8 @@
           "Misterio",
           "Romance",
           "Suspense"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 827,
@@ -12870,7 +12995,8 @@
         "genres": [
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Henri-Georges Clouzot"
       },
       {
         "id": 2118,
@@ -12886,7 +13012,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Curtis Hanson"
       },
       {
         "id": 963,
@@ -12902,7 +13029,8 @@
           "Misterio",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "John Huston"
       },
       {
         "id": 20126,
@@ -12918,7 +13046,8 @@
           "Terror",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Dario Argento"
       },
       {
         "id": 993,
@@ -12934,7 +13063,8 @@
           "Suspense",
           "Misterio",
           "Crimen"
-        ]
+        ],
+        "director": "Joseph L. Mankiewicz"
       },
       {
         "id": 47096,
@@ -12950,7 +13080,8 @@
           "Drama",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Elio Petri"
       },
       {
         "id": 1632,
@@ -12967,7 +13098,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Alan Parker"
       },
       {
         "id": 891,
@@ -12983,7 +13115,8 @@
           "Drama",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Alan J. Pakula"
       },
       {
         "id": 25264,
@@ -14020,7 +14153,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Fritz Lang"
       },
       {
         "id": 234,
@@ -14037,7 +14171,8 @@
           "Terror",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Robert Wiene"
       },
       {
         "id": 626,
@@ -14699,7 +14834,8 @@
           "Suspense",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 845,
@@ -14826,7 +14962,8 @@
           "Suspense",
           "Terror",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Ishirō Honda"
       },
       {
         "id": 204,
@@ -15184,7 +15321,8 @@
           "Drama",
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Roman Polanski"
       },
       {
         "id": 646,
@@ -15216,7 +15354,8 @@
           "Aventura",
           "Acción",
           "Suspense"
-        ]
+        ],
+        "director": "Guy Hamilton"
       },
       {
         "id": 657,
@@ -15342,7 +15481,8 @@
         "genres": [
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Robert Aldrich"
       },
       {
         "id": 11481,
@@ -15702,7 +15842,8 @@
           "Terror",
           "Suspense",
           "Aventura"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 948,
@@ -16192,7 +16333,8 @@
           "Ciencia ficción",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Ridley Scott"
       },
       {
         "id": 218,
@@ -16208,7 +16350,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 562,
@@ -16239,7 +16382,8 @@
           "Acción",
           "Suspense",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "James Cameron"
       },
       {
         "id": 106,
@@ -16256,7 +16400,8 @@
           "Acción",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "John McTiernan"
       },
       {
         "id": 1368,
@@ -16887,7 +17032,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Frank Darabont"
       },
       {
         "id": 238,
@@ -16902,7 +17048,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 389,
@@ -16916,7 +17063,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Sidney Lumet"
       },
       {
         "id": 240,
@@ -16931,7 +17079,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 424,
@@ -16947,7 +17096,8 @@
           "Drama",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 497,
@@ -16963,7 +17113,8 @@
           "Fantasía",
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Frank Darabont"
       },
       {
         "id": 19404,
@@ -16979,7 +17130,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Aditya Chopra"
       },
       {
         "id": 14537,
@@ -16995,7 +17147,8 @@
           "Acción",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 13,
@@ -17011,7 +17164,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 769,
@@ -17026,7 +17180,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Martin Scorsese"
       },
       {
         "id": 346,
@@ -17041,7 +17196,8 @@
         "genres": [
           "Acción",
           "Drama"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 12477,
@@ -17057,7 +17213,8 @@
           "Animación",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Isao Takahata"
       },
       {
         "id": 550,
@@ -17072,7 +17229,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "David Fincher"
       },
       {
         "id": 637,
@@ -17087,7 +17245,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Roberto Benigni"
       },
       {
         "id": 11216,
@@ -17102,7 +17261,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Giuseppe Tornatore"
       },
       {
         "id": 510,
@@ -17116,7 +17276,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Miloš Forman"
       },
       {
         "id": 12493,
@@ -17133,7 +17294,8 @@
           "Crimen",
           "Suspense",
           "Misterio"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 311,
@@ -17148,7 +17310,8 @@
         "genres": [
           "Drama",
           "Crimen"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 122019,
@@ -17163,7 +17326,8 @@
         "genres": [
           "Drama",
           "Fantasía"
-        ]
+        ],
+        "director": "Roberto Gavaldón"
       },
       {
         "id": 34530,
@@ -17179,7 +17343,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 274,
@@ -17195,7 +17360,8 @@
           "Crimen",
           "Suspense",
           "Drama"
-        ]
+        ],
+        "director": "Jonathan Demme"
       },
       {
         "id": 30325,
@@ -17210,7 +17376,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Ismael Rodríguez"
       },
       {
         "id": 567,
@@ -17226,7 +17393,8 @@
           "Suspense",
           "Misterio",
           "Drama"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 45139,
@@ -17240,7 +17408,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/AoicJhQgrJWXtFfeIle0lxp1BpD.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Peter Sykes"
       },
       {
         "id": 73,
@@ -17254,7 +17423,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Tony Kaye"
       },
       {
         "id": 3782,
@@ -17268,7 +17438,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/fS4xXq5lVwu1V95qB4murKZgPFo.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 207,
@@ -17282,7 +17453,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/lFIXZpwwlF9hg8NM3RazaIJDuaj.jpg",
         "genres": [
           "Drama"
-        ]
+        ],
+        "director": "Peter Weir"
       },
       {
         "id": 3082,
@@ -17298,7 +17470,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 101,
@@ -17314,7 +17487,8 @@
           "Crimen",
           "Drama",
           "Acción"
-        ]
+        ],
+        "director": "Luc Besson"
       },
       {
         "id": 47916,
@@ -17330,7 +17504,8 @@
           "Drama",
           "Suspense",
           "Historia"
-        ]
+        ],
+        "director": "Jorge Fons"
       },
       {
         "id": 42269,
@@ -17345,7 +17520,8 @@
         "genres": [
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Ettore Scola"
       },
       {
         "id": 1585,
@@ -17409,7 +17585,8 @@
           "Drama",
           "Fantasía",
           "Acción"
-        ]
+        ],
+        "director": "Kazuya Tsurumaki"
       },
       {
         "id": 31439,
@@ -17425,7 +17602,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Zhang Yimou"
       },
       {
         "id": 335,
@@ -17440,7 +17618,8 @@
         "genres": [
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 28,
@@ -17455,7 +17634,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 975,
@@ -17470,7 +17650,8 @@
         "genres": [
           "Bélica",
           "Drama"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 901,
@@ -17486,7 +17667,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 8587,
@@ -17532,7 +17714,8 @@
           "Crimen",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Taylor Hackford"
       },
       {
         "id": 29259,
@@ -17548,7 +17731,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Jacques Becker"
       },
       {
         "id": 857,
@@ -17564,7 +17748,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 24188,
@@ -17580,7 +17765,8 @@
           "Drama",
           "Comedia",
           "Aventura"
-        ]
+        ],
+        "director": "Dino Risi"
       },
       {
         "id": 10376,
@@ -17610,7 +17796,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Hiroshi Teshigahara"
       },
       {
         "id": 34528,
@@ -17626,7 +17813,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 53510,
@@ -17656,7 +17844,8 @@
           "Drama",
           "Misterio",
           "Crimen"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 15804,
@@ -17672,7 +17861,8 @@
           "Crimen",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Edward Yang"
       },
       {
         "id": 26451,
@@ -17687,7 +17877,8 @@
         "genres": [
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Elio Petri"
       },
       {
         "id": 25237,
@@ -17704,7 +17895,8 @@
           "Bélica",
           "Terror",
           "Historia"
-        ]
+        ],
+        "director": "Elem Klimov"
       },
       {
         "id": 284,
@@ -17720,7 +17912,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 3780,
@@ -17778,7 +17971,8 @@
           "Drama",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Bryan Singer"
       },
       {
         "id": 37165,
@@ -17793,7 +17987,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Peter Weir"
       },
       {
         "id": 31217,
@@ -17809,7 +18004,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 111,
@@ -17825,7 +18021,8 @@
           "Acción",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Brian De Palma"
       },
       {
         "id": 31401,
@@ -17840,7 +18037,8 @@
         "genres": [
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Nesli Çölgeçen"
       },
       {
         "id": 18148,
@@ -17869,7 +18067,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Michael Curtiz"
       },
       {
         "id": 10098,
@@ -17884,7 +18083,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 490,
@@ -17972,7 +18172,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 666,
@@ -18001,7 +18202,8 @@
         "genres": [
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Martin Scorsese"
       },
       {
         "id": 59990,
@@ -18031,7 +18233,8 @@
           "Drama",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "Wolfgang Petersen"
       },
       {
         "id": 406,
@@ -18074,7 +18277,8 @@
         "genres": [
           "Drama",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Fritz Lang"
       },
       {
         "id": 655,
@@ -18104,7 +18308,8 @@
           "Drama",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Victor Fleming"
       },
       {
         "id": 832,
@@ -18120,7 +18325,8 @@
           "Drama",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Fritz Lang"
       },
       {
         "id": 962,
@@ -18169,7 +18375,8 @@
           "Terror",
           "Suspense",
           "Crimen"
-        ]
+        ],
+        "director": "Robert Wiene"
       },
       {
         "id": 136,
@@ -18184,7 +18391,8 @@
         "genres": [
           "Drama",
           "Terror"
-        ]
+        ],
+        "director": "Tod Browning"
       },
       {
         "id": 643,
@@ -18276,7 +18484,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 777,
@@ -18373,7 +18582,8 @@
           "Fantasía",
           "Drama",
           "Terror"
-        ]
+        ],
+        "director": "F. W. Murnau"
       },
       {
         "id": 24807,
@@ -18466,7 +18676,8 @@
           "Drama",
           "Fantasía",
           "Terror"
-        ]
+        ],
+        "director": "Victor Sjöström"
       },
       {
         "id": 13696,
@@ -18731,7 +18942,8 @@
           "Aventura",
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "John Huston"
       },
       {
         "id": 596,
@@ -18776,7 +18988,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Roberto Rossellini"
       },
       {
         "id": 1939,
@@ -18807,7 +19020,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Ernst Lubitsch"
       },
       {
         "id": 11881,
@@ -18838,7 +19052,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Emeric Pressburger"
       },
       {
         "id": 887,
@@ -19115,7 +19330,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Marcel Carné"
       },
       {
         "id": 3309,
@@ -19254,7 +19470,8 @@
           "Suspense",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 548,
@@ -19270,7 +19487,8 @@
           "Crimen",
           "Drama",
           "Misterio"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 826,
@@ -19515,7 +19733,8 @@
         "genres": [
           "Western",
           "Drama"
-        ]
+        ],
+        "director": "Howard Hawks"
       },
       {
         "id": 828,
@@ -19697,7 +19916,8 @@
         "genres": [
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "George Stevens"
       },
       {
         "id": 164,
@@ -19729,7 +19949,8 @@
           "Drama",
           "Terror",
           "Suspense"
-        ]
+        ],
+        "director": "Roman Polanski"
       },
       {
         "id": 871,
@@ -19746,7 +19967,8 @@
           "Aventura",
           "Drama",
           "Acción"
-        ]
+        ],
+        "director": "Franklin J. Schaffner"
       },
       {
         "id": 37247,
@@ -19809,7 +20031,8 @@
           "Aventura",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "John Sturges"
       },
       {
         "id": 422,
@@ -19839,7 +20062,8 @@
           "Western",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 967,
@@ -19949,7 +20173,8 @@
           "Western",
           "Acción",
           "Drama"
-        ]
+        ],
+        "director": "John Sturges"
       },
       {
         "id": 475,
@@ -20181,7 +20406,8 @@
           "Drama",
           "Romance",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Chris Marker"
       },
       {
         "id": 649,
@@ -20299,7 +20525,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Michael Cimino"
       },
       {
         "id": 703,
@@ -20377,7 +20604,8 @@
           "Comedia",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 696,
@@ -20408,7 +20636,8 @@
         "genres": [
           "Ciencia ficción",
           "Drama"
-        ]
+        ],
+        "director": "Andrei Tarkovsky"
       },
       {
         "id": 12102,
@@ -20498,7 +20727,8 @@
           "Drama",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Alan J. Pakula"
       },
       {
         "id": 11009,
@@ -20573,7 +20803,8 @@
           "Drama",
           "Ciencia ficción",
           "Misterio"
-        ]
+        ],
+        "director": "Andrei Tarkovsky"
       },
       {
         "id": 10669,
@@ -20794,7 +21025,8 @@
           "Ciencia ficción",
           "Drama",
           "Suspense"
-        ]
+        ],
+        "director": "Ridley Scott"
       },
       {
         "id": 744,
@@ -21262,7 +21494,8 @@
           "Crimen",
           "Misterio",
           "Suspense"
-        ]
+        ],
+        "director": "Alan Parker"
       },
       {
         "id": 873,
@@ -21323,7 +21556,8 @@
           "Misterio",
           "Suspense",
           "Drama"
-        ]
+        ],
+        "director": "M. Night Shyamalan"
       },
       {
         "id": 14,
@@ -21353,7 +21587,8 @@
           "Historia",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Mel Gibson"
       }
     ]
   },
@@ -21380,7 +21615,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Aditya Chopra"
       },
       {
         "id": 680,
@@ -21396,7 +21632,8 @@
           "Suspense",
           "Crimen",
           "Comedia"
-        ]
+        ],
+        "director": "Quentin Tarantino"
       },
       {
         "id": 13,
@@ -21412,7 +21649,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 637,
@@ -21427,7 +21665,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Roberto Benigni"
       },
       {
         "id": 105,
@@ -21443,7 +21682,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 3082,
@@ -21459,7 +21699,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 914,
@@ -21474,7 +21715,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 42269,
@@ -21489,7 +21731,8 @@
         "genres": [
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Ettore Scola"
       },
       {
         "id": 901,
@@ -21505,7 +21748,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 24188,
@@ -21521,7 +21765,8 @@
           "Drama",
           "Comedia",
           "Aventura"
-        ]
+        ],
+        "director": "Dino Risi"
       },
       {
         "id": 284,
@@ -21537,7 +21782,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 37165,
@@ -21552,7 +21798,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Peter Weir"
       },
       {
         "id": 10098,
@@ -21567,7 +21814,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 872,
@@ -21582,7 +21830,8 @@
         "genres": [
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Stanley Donen"
       },
       {
         "id": 935,
@@ -21597,7 +21846,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 38288,
@@ -21611,7 +21861,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/mFVGzW8a2Z37NphnuB6liChiuRv.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Arturo Brachetti"
       },
       {
         "id": 100,
@@ -21626,7 +21877,8 @@
         "genres": [
           "Comedia",
           "Crimen"
-        ]
+        ],
+        "director": "Guy Ritchie"
       },
       {
         "id": 20914,
@@ -21640,7 +21892,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/3q6XHCXII7qRZOx5EqU5NfYkVx8.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Mario Monicelli"
       },
       {
         "id": 40996,
@@ -21654,7 +21907,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/oKpAL9evr4gYzE9IfDFj3rOtyT.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Miguel M. Delgado"
       },
       {
         "id": 120301,
@@ -21670,7 +21924,8 @@
           "Comedia",
           "Música",
           "Romance"
-        ]
+        ],
+        "director": "Ismael Rodríguez"
       },
       {
         "id": 71652,
@@ -21685,7 +21940,8 @@
         "genres": [
           "Comedia",
           "Música"
-        ]
+        ],
+        "director": "Ismael Rodríguez"
       },
       {
         "id": 30325,
@@ -21700,7 +21956,8 @@
         "genres": [
           "Comedia",
           "Drama"
-        ]
+        ],
+        "director": "Ismael Rodríguez"
       },
       {
         "id": 30131,
@@ -21715,7 +21972,8 @@
         "genres": [
           "Comedia",
           "Western"
-        ]
+        ],
+        "director": "Miguel M. Delgado"
       },
       {
         "id": 69060,
@@ -21729,7 +21987,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/uO3SbVLMJDltwD7tPFeXUHvzUP5.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Juan Bustillo Oro"
       },
       {
         "id": 53206,
@@ -21744,7 +22003,8 @@
         "genres": [
           "Comedia",
           "Familia"
-        ]
+        ],
+        "director": "Orhan Aksoy"
       },
       {
         "id": 41308,
@@ -21758,7 +22018,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/9AGFKROeShI8JtO4xLro6HlyVQm.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Miguel M. Delgado"
       },
       {
         "id": 31401,
@@ -21773,7 +22034,8 @@
         "genres": [
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Nesli Çölgeçen"
       },
       {
         "id": 45189,
@@ -21787,7 +22049,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/uzIrfJUvMKFerp1s6SBzTXflWjf.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Miguel M. Delgado"
       },
       {
         "id": 74302,
@@ -21801,7 +22064,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/knG8jqXobL6StCoH5Iv4zzjrPYI.jpg",
         "genres": [
           "Comedia"
-        ]
+        ],
+        "director": "Ertem Eğilmez"
       },
       {
         "id": 24382,
@@ -21816,7 +22080,8 @@
         "genres": [
           "Comedia",
           "Crimen"
-        ]
+        ],
+        "director": "Mario Monicelli"
       },
       {
         "id": 53210,
@@ -21847,7 +22112,8 @@
           "Comedia",
           "Romance",
           "Crimen"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 82767,
@@ -21877,7 +22143,8 @@
           "Comedia",
           "Bélica",
           "Drama"
-        ]
+        ],
+        "director": "Mario Monicelli"
       },
       {
         "id": 13651,
@@ -21907,7 +22174,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Ernst Lubitsch"
       },
       {
         "id": 992,
@@ -22012,7 +22280,8 @@
           "Comedia",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 56343,
@@ -22057,7 +22326,8 @@
         "genres": [
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Camillo Mastrocinque"
       },
       {
         "id": 862,
@@ -22121,7 +22391,8 @@
           "Drama",
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Wong Kar-wai"
       },
       {
         "id": 38286,
@@ -22229,7 +22500,8 @@
           "Comedia",
           "Ciencia ficción",
           "Película de TV"
-        ]
+        ],
+        "director": "Vladimir Bortko"
       },
       {
         "id": 54561,
@@ -22292,7 +22564,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 160885,
@@ -22322,7 +22595,8 @@
           "Comedia",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Clyde Bruckman"
       },
       {
         "id": 37021,
@@ -22339,7 +22613,8 @@
           "Comedia",
           "Animación",
           "Aventura"
-        ]
+        ],
+        "director": "Iku Suzuki"
       },
       {
         "id": 8290,
@@ -22354,7 +22629,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Gérard Oury"
       },
       {
         "id": 41298,
@@ -22384,7 +22660,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Michael Radford"
       },
       {
         "id": 28971,
@@ -22400,7 +22677,8 @@
           "Romance",
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 20803,
@@ -22415,7 +22693,8 @@
         "genres": [
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Leonid Gaidai"
       },
       {
         "id": 29264,
@@ -22522,7 +22801,8 @@
           "Aventura",
           "Ciencia ficción",
           "Comedia"
-        ]
+        ],
+        "director": "Georges Méliès"
       },
       {
         "id": 11293,
@@ -24608,7 +24888,8 @@
           "Acción",
           "Comedia",
           "Western"
-        ]
+        ],
+        "director": "Enzo Barboni"
       },
       {
         "id": 9385,
@@ -24702,7 +24983,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 620,
@@ -24935,7 +25217,8 @@
           "Comedia",
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "John Landis"
       },
       {
         "id": 2280,
@@ -25525,7 +25808,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Irvin Kershner"
       },
       {
         "id": 11,
@@ -25541,7 +25825,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "George Lucas"
       },
       {
         "id": 1059,
@@ -25557,7 +25842,8 @@
           "Drama",
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "Akira Kurosawa"
       },
       {
         "id": 10515,
@@ -25575,7 +25861,8 @@
           "Animación",
           "Acción",
           "Familia"
-        ]
+        ],
+        "director": "Hayao Miyazaki"
       },
       {
         "id": 85,
@@ -25590,7 +25877,8 @@
         "genres": [
           "Aventura",
           "Acción"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 1892,
@@ -25606,7 +25894,8 @@
           "Aventura",
           "Acción",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Richard Marquand"
       },
       {
         "id": 89,
@@ -25621,7 +25910,8 @@
         "genres": [
           "Aventura",
           "Acción"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 21835,
@@ -25640,7 +25930,8 @@
           "Comedia",
           "Romance",
           "Drama"
-        ]
+        ],
+        "director": "Jeffrey Lau Chun-wai"
       },
       {
         "id": 525,
@@ -25657,7 +25948,8 @@
           "Comedia",
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "John Landis"
       },
       {
         "id": 871,
@@ -25674,7 +25966,8 @@
           "Aventura",
           "Drama",
           "Acción"
-        ]
+        ],
+        "director": "Franklin J. Schaffner"
       },
       {
         "id": 18,
@@ -25690,7 +25983,8 @@
           "Ciencia ficción",
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "Luc Besson"
       },
       {
         "id": 1654,
@@ -25706,7 +26000,8 @@
           "Acción",
           "Aventura",
           "Bélica"
-        ]
+        ],
+        "director": "Robert Aldrich"
       },
       {
         "id": 106,
@@ -25723,7 +26018,8 @@
           "Acción",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "John McTiernan"
       },
       {
         "id": 13345,
@@ -25742,7 +26038,8 @@
           "Comedia",
           "Romance",
           "Drama"
-        ]
+        ],
+        "director": "Jeffrey Lau Chun-wai"
       },
       {
         "id": 11841,
@@ -25757,7 +26054,8 @@
         "genres": [
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "Lau Kar-leung"
       },
       {
         "id": 10907,
@@ -25773,7 +26071,8 @@
           "Aventura",
           "Romance",
           "Acción"
-        ]
+        ],
+        "director": "Michael Curtiz"
       },
       {
         "id": 38985,
@@ -25789,7 +26088,8 @@
           "Suspense",
           "Aventura",
           "Acción"
-        ]
+        ],
+        "director": "William Friedkin"
       },
       {
         "id": 154,
@@ -25805,7 +26105,8 @@
           "Acción",
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Nicholas Meyer"
       },
       {
         "id": 37021,
@@ -25822,7 +26123,8 @@
           "Comedia",
           "Animación",
           "Aventura"
-        ]
+        ],
+        "director": "Iku Suzuki"
       },
       {
         "id": 44154,
@@ -25838,7 +26140,8 @@
           "Acción",
           "Aventura",
           "Fantasía"
-        ]
+        ],
+        "director": "King Hu"
       },
       {
         "id": 11416,
@@ -25855,7 +26158,8 @@
           "Drama",
           "Acción",
           "Historia"
-        ]
+        ],
+        "director": "Roland Joffé"
       },
       {
         "id": 41471,
@@ -25872,7 +26176,8 @@
           "Acción",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "Kenji Misumi"
       },
       {
         "id": 17810,
@@ -25889,7 +26194,8 @@
           "Drama",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "Kenji Misumi"
       },
       {
         "id": 104237,
@@ -25904,7 +26210,8 @@
         "genres": [
           "Acción",
           "Aventura"
-        ]
+        ],
+        "director": "King Hu"
       },
       {
         "id": 658,
@@ -25920,7 +26227,8 @@
           "Aventura",
           "Acción",
           "Suspense"
-        ]
+        ],
+        "director": "Guy Hamilton"
       },
       {
         "id": 861,
@@ -25936,7 +26244,8 @@
           "Acción",
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Paul Verhoeven"
       },
       {
         "id": 10975,
@@ -25953,7 +26262,8 @@
           "Aventura",
           "Crimen",
           "Suspense"
-        ]
+        ],
+        "director": "Jackie Chan"
       },
       {
         "id": 4034,
@@ -25969,7 +26279,8 @@
           "Aventura",
           "Acción",
           "Comedia"
-        ]
+        ],
+        "director": "Philippe de Broca"
       },
       {
         "id": 31510,
@@ -25986,7 +26297,8 @@
           "Drama",
           "Romance",
           "Acción"
-        ]
+        ],
+        "director": "Fred Niblo"
       },
       {
         "id": 199,
@@ -26003,7 +26315,8 @@
           "Acción",
           "Aventura",
           "Suspense"
-        ]
+        ],
+        "director": "Jonathan Frakes"
       },
       {
         "id": 87,
@@ -27441,7 +27754,8 @@
           "Aventura",
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "John Huston"
       },
       {
         "id": 3089,
@@ -28586,7 +28900,8 @@
           "Ciencia ficción",
           "Misterio",
           "Aventura"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 12230,
@@ -28619,7 +28934,8 @@
           "Aventura",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "David Lean"
       },
       {
         "id": 5925,
@@ -28635,7 +28951,8 @@
           "Aventura",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "John Sturges"
       },
       {
         "id": 660,
@@ -28828,7 +29145,8 @@
           "Drama",
           "Comedia",
           "Aventura"
-        ]
+        ],
+        "director": "Dino Risi"
       },
       {
         "id": 12208,
@@ -29120,7 +29438,8 @@
           "Terror",
           "Suspense",
           "Aventura"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 762,
@@ -29413,7 +29732,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 165,
@@ -29429,7 +29749,8 @@
           "Aventura",
           "Comedia",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 601,
@@ -29624,7 +29945,8 @@
         "genres": [
           "Aventura",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 1893,
@@ -29865,7 +30187,8 @@
           "Drama",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 12477,
@@ -29881,7 +30204,8 @@
           "Animación",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Isao Takahata"
       },
       {
         "id": 34530,
@@ -29897,7 +30221,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 914,
@@ -29912,7 +30237,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 31439,
@@ -29928,7 +30254,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Zhang Yimou"
       },
       {
         "id": 28,
@@ -29943,7 +30270,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Francis Ford Coppola"
       },
       {
         "id": 975,
@@ -29958,7 +30286,8 @@
         "genres": [
           "Bélica",
           "Drama"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 857,
@@ -29974,7 +30303,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Steven Spielberg"
       },
       {
         "id": 34528,
@@ -29990,7 +30320,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 25237,
@@ -30007,7 +30338,8 @@
           "Bélica",
           "Terror",
           "Historia"
-        ]
+        ],
+        "director": "Elem Klimov"
       },
       {
         "id": 31217,
@@ -30023,7 +30355,8 @@
           "Bélica",
           "Drama",
           "Historia"
-        ]
+        ],
+        "director": "Masaki Kobayashi"
       },
       {
         "id": 935,
@@ -30038,7 +30371,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 600,
@@ -30053,7 +30387,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Stanley Kubrick"
       },
       {
         "id": 387,
@@ -30069,7 +30404,8 @@
           "Drama",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "Wolfgang Petersen"
       },
       {
         "id": 55823,
@@ -30085,7 +30421,8 @@
           "Comedia",
           "Bélica",
           "Drama"
-        ]
+        ],
+        "director": "Mario Monicelli"
       },
       {
         "id": 307,
@@ -30100,7 +30437,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Roberto Rossellini"
       },
       {
         "id": 947,
@@ -30116,7 +30454,8 @@
           "Aventura",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "David Lean"
       },
       {
         "id": 46592,
@@ -30132,7 +30471,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Grigoriy Chukhray"
       },
       {
         "id": 11778,
@@ -30147,7 +30487,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Michael Cimino"
       },
       {
         "id": 197,
@@ -30163,7 +30504,8 @@
           "Historia",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Mel Gibson"
       },
       {
         "id": 77660,
@@ -30178,7 +30520,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Zoltán Fábri"
       },
       {
         "id": 38360,
@@ -30194,7 +30537,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Mikhail Kalatozov"
       },
       {
         "id": 5925,
@@ -30210,7 +30554,8 @@
           "Aventura",
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "John Sturges"
       },
       {
         "id": 961,
@@ -30226,7 +30571,8 @@
           "Comedia",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Clyde Bruckman"
       },
       {
         "id": 8290,
@@ -30241,7 +30587,8 @@
         "genres": [
           "Comedia",
           "Bélica"
-        ]
+        ],
+        "director": "Gérard Oury"
       },
       {
         "id": 770,
@@ -30257,7 +30604,8 @@
           "Drama",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Victor Fleming"
       },
       {
         "id": 50183,
@@ -30272,7 +30620,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Larisa Shepitko"
       },
       {
         "id": 17295,
@@ -30288,7 +30637,8 @@
           "Drama",
           "Bélica",
           "Historia"
-        ]
+        ],
+        "director": "Gillo Pontecorvo"
       },
       {
         "id": 42536,
@@ -30304,7 +30654,8 @@
           "Drama",
           "Historia",
           "Bélica"
-        ]
+        ],
+        "director": "Abel Gance"
       },
       {
         "id": 33319,
@@ -30319,7 +30670,8 @@
         "genres": [
           "Drama",
           "Bélica"
-        ]
+        ],
+        "director": "Kon Ichikawa"
       },
       {
         "id": 777,
@@ -30699,7 +31051,8 @@
           "Acción",
           "Aventura",
           "Bélica"
-        ]
+        ],
+        "director": "Robert Aldrich"
       },
       {
         "id": 3482,
@@ -34060,7 +34413,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Aditya Chopra"
       },
       {
         "id": 13,
@@ -34076,7 +34430,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Robert Zemeckis"
       },
       {
         "id": 11216,
@@ -34091,7 +34446,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Giuseppe Tornatore"
       },
       {
         "id": 3082,
@@ -34107,7 +34463,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 31439,
@@ -34123,7 +34480,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Zhang Yimou"
       },
       {
         "id": 901,
@@ -34139,7 +34497,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 15804,
@@ -34155,7 +34514,8 @@
           "Crimen",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Edward Yang"
       },
       {
         "id": 284,
@@ -34171,7 +34531,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 289,
@@ -34186,7 +34547,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Michael Curtiz"
       },
       {
         "id": 426,
@@ -34202,7 +34564,8 @@
           "Misterio",
           "Romance",
           "Suspense"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 872,
@@ -34217,7 +34580,8 @@
         "genres": [
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Stanley Donen"
       },
       {
         "id": 239,
@@ -34233,7 +34597,8 @@
           "Comedia",
           "Romance",
           "Crimen"
-        ]
+        ],
+        "director": "Billy Wilder"
       },
       {
         "id": 42229,
@@ -34248,7 +34613,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Ettore Scola"
       },
       {
         "id": 20334,
@@ -34264,7 +34630,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Ernst Lubitsch"
       },
       {
         "id": 2457,
@@ -34279,7 +34646,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Marcel Carné"
       },
       {
         "id": 133919,
@@ -34294,7 +34662,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Ingmar Bergman"
       },
       {
         "id": 8422,
@@ -34310,7 +34679,8 @@
           "Drama",
           "Romance",
           "Crimen"
-        ]
+        ],
+        "director": "Luchino Visconti"
       },
       {
         "id": 55960,
@@ -34325,7 +34695,8 @@
         "genres": [
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Camillo Mastrocinque"
       },
       {
         "id": 120301,
@@ -34341,7 +34712,8 @@
           "Comedia",
           "Música",
           "Romance"
-        ]
+        ],
+        "director": "Ismael Rodríguez"
       },
       {
         "id": 19542,
@@ -34356,7 +34728,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Emeric Pressburger"
       },
       {
         "id": 46592,
@@ -34372,7 +34745,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Grigoriy Chukhray"
       },
       {
         "id": 11104,
@@ -34388,7 +34762,8 @@
           "Drama",
           "Comedia",
           "Romance"
-        ]
+        ],
+        "director": "Wong Kar-wai"
       },
       {
         "id": 76,
@@ -34403,7 +34778,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Richard Linklater"
       },
       {
         "id": 40724,
@@ -34419,7 +34795,8 @@
           "Familia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Kevin Sullivan"
       },
       {
         "id": 38360,
@@ -34435,7 +34812,8 @@
           "Drama",
           "Romance",
           "Bélica"
-        ]
+        ],
+        "director": "Mikhail Kalatozov"
       },
       {
         "id": 28978,
@@ -34451,7 +34829,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 41050,
@@ -34466,7 +34845,8 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Michelangelo Antonioni"
       },
       {
         "id": 961,
@@ -34482,7 +34862,8 @@
           "Comedia",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Clyde Bruckman"
       },
       {
         "id": 11010,
@@ -34498,7 +34879,8 @@
           "Comedia",
           "Drama",
           "Romance"
-        ]
+        ],
+        "director": "Michael Radford"
       },
       {
         "id": 28971,
@@ -34514,7 +34896,8 @@
           "Romance",
           "Drama",
           "Comedia"
-        ]
+        ],
+        "director": "Charlie Chaplin"
       },
       {
         "id": 770,
@@ -34530,7 +34913,8 @@
           "Drama",
           "Bélica",
           "Romance"
-        ]
+        ],
+        "director": "Victor Fleming"
       },
       {
         "id": 597,
@@ -34577,7 +34961,8 @@
           "Misterio",
           "Romance",
           "Suspense"
-        ]
+        ],
+        "director": "Alfred Hitchcock"
       },
       {
         "id": 110,
@@ -34657,7 +35042,8 @@
           "Drama",
           "Romance",
           "Ciencia ficción"
-        ]
+        ],
+        "director": "Chris Marker"
       },
       {
         "id": 161285,
@@ -34938,7 +35324,8 @@
           "Comedia",
           "Romance",
           "Drama"
-        ]
+        ],
+        "director": "Jeffrey Lau Chun-wai"
       },
       {
         "id": 14811,
@@ -35332,7 +35719,8 @@
           "Aventura",
           "Romance",
           "Acción"
-        ]
+        ],
+        "director": "Michael Curtiz"
       },
       {
         "id": 776,
@@ -36554,7 +36942,8 @@
           "Drama",
           "Western",
           "Romance"
-        ]
+        ],
+        "director": "William Wyler"
       },
       {
         "id": 9660,
@@ -38576,7 +38965,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 30131,
@@ -38591,7 +38981,8 @@
         "genres": [
           "Comedia",
           "Western"
-        ]
+        ],
+        "director": "Miguel M. Delgado"
       },
       {
         "id": 335,
@@ -38606,7 +38997,8 @@
         "genres": [
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 938,
@@ -38620,7 +39012,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/hs6OPto38fF589ScpGhl7uSU4MI.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 3090,
@@ -38636,7 +39029,8 @@
           "Aventura",
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "John Huston"
       },
       {
         "id": 33,
@@ -38650,7 +39044,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/rvRGFevvZK48onX0PYI1eQLbuJd.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Clint Eastwood"
       },
       {
         "id": 581,
@@ -38666,7 +39061,8 @@
           "Aventura",
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "Kevin Costner"
       },
       {
         "id": 391,
@@ -38680,7 +39076,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/9gMkOYzk7P9QXwndhLRAC8cMZcJ.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 11697,
@@ -38694,7 +39091,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/f6gTJLQ950dPHfFRnxQdaA6OlXJ.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "John Ford"
       },
       {
         "id": 301,
@@ -38709,7 +39107,8 @@
         "genres": [
           "Western",
           "Drama"
-        ]
+        ],
+        "director": "Howard Hawks"
       },
       {
         "id": 980,
@@ -38723,7 +39122,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/dmmiwTfk4AraKkK8DwmrXYas5rS.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "William A. Wellman"
       },
       {
         "id": 3114,
@@ -38737,7 +39137,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/gQpNejv8i1MUasARDIHAJ7wdBMu.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "John Ford"
       },
       {
         "id": 336,
@@ -38751,7 +39152,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/2ZbYjD4j3RzUZ7PvPb8toKQeF4.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Sergio Leone"
       },
       {
         "id": 288,
@@ -38765,7 +39167,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/raYHhtIDyh3qDS6WdyRzeqjLyIK.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Fred Zinnemann"
       },
       {
         "id": 642,
@@ -38781,7 +39184,8 @@
           "Western",
           "Crimen",
           "Drama"
-        ]
+        ],
+        "director": "George Roy Hill"
       },
       {
         "id": 1712,
@@ -38796,7 +39200,8 @@
         "genres": [
           "Drama",
           "Western"
-        ]
+        ],
+        "director": "George Stevens"
       },
       {
         "id": 995,
@@ -38810,7 +39215,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/7SYNEG50fKODsTP6h9phYM3BueV.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "John Ford"
       },
       {
         "id": 12501,
@@ -38826,7 +39232,8 @@
           "Drama",
           "Western",
           "Romance"
-        ]
+        ],
+        "director": "William Wyler"
       },
       {
         "id": 576,
@@ -38840,7 +39247,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/nkgWcfOeQnVnxak5xCKvkRDLt5H.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Sam Peckinpah"
       },
       {
         "id": 11969,
@@ -38855,7 +39263,8 @@
         "genres": [
           "Western",
           "Acción"
-        ]
+        ],
+        "director": "George P. Cosmatos"
       },
       {
         "id": 42488,
@@ -38871,7 +39280,8 @@
           "Drama",
           "Western",
           "Historia"
-        ]
+        ],
+        "director": "Jan Troell"
       },
       {
         "id": 9394,
@@ -38887,7 +39297,8 @@
           "Acción",
           "Comedia",
           "Western"
-        ]
+        ],
+        "director": "Enzo Barboni"
       },
       {
         "id": 966,
@@ -38903,7 +39314,8 @@
           "Western",
           "Acción",
           "Drama"
-        ]
+        ],
+        "director": "John Sturges"
       },
       {
         "id": 9028,
@@ -38918,7 +39330,8 @@
         "genres": [
           "Western",
           "Drama"
-        ]
+        ],
+        "director": "Sergio Corbucci"
       },
       {
         "id": 3088,
@@ -38932,7 +39345,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/q4OPVRS5a55BOcUtGcQh81Idsgt.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "John Ford"
       },
       {
         "id": 10747,
@@ -38946,7 +39360,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/nEe0ziWyVhGTtuoXe2msdkz6NlO.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Clint Eastwood"
       },
       {
         "id": 40732,
@@ -38962,7 +39377,8 @@
           "Drama",
           "Historia",
           "Western"
-        ]
+        ],
+        "director": "Jan Troell"
       },
       {
         "id": 11040,
@@ -38979,7 +39395,8 @@
           "Comedia",
           "Aventura",
           "Drama"
-        ]
+        ],
+        "director": "Arthur Penn"
       },
       {
         "id": 11829,
@@ -38994,7 +39411,8 @@
         "genres": [
           "Comedia",
           "Western"
-        ]
+        ],
+        "director": "Enzo Barboni"
       },
       {
         "id": 26596,
@@ -39008,7 +39426,8 @@
         "backdrop": "https://image.tmdb.org/t/p/w1280/yiglnLtYEH6UGY1qFy4zacixCXf.jpg",
         "genres": [
           "Western"
-        ]
+        ],
+        "director": "Nicholas Ray"
       },
       {
         "id": 4476,
