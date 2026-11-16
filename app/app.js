@@ -87,6 +87,9 @@ let allCollections = [];
 let currentGenre = 'all';
 let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
+let currentCollection = null;
+let collectionRenderedCount = 0;
+const COLLECTION_BATCH_SIZE = 24;
 let lastFocusedElement = null;
 let toastTimeout = null;
 let osdTimeout = null;
@@ -287,6 +290,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Colecciones
   if (btnCloseCollection) {
     btnCloseCollection.addEventListener('click', closeCollectionView);
+  }
+
+  // Scroll progresivo hacia abajo en la vista de colección
+  if (collectionView) {
+    collectionView.addEventListener('scroll', () => {
+      if (collectionView.classList.contains('hidden')) return;
+      const scrollPos = collectionView.scrollTop + collectionView.clientHeight;
+      const scrollHeight = collectionView.scrollHeight;
+      if (scrollPos >= scrollHeight - 350) {
+        loadMoreCollectionMovies();
+      }
+    }, { passive: true });
   }
 
   // Reproductor
@@ -539,6 +554,20 @@ function createMovieCard(movie) {
     // Desplazamiento horizontal seguro en carrusel
     scrollCardIntoCarouselView(card);
 
+    // Si la tarjeta está dentro de la vista de colección (cuadrícula hacia abajo)
+    if (card.closest('#collection-view')) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Si el foco con el control remoto llega cerca del final, cargar automáticamente el siguiente lote hacia abajo
+      if (currentCollection && collectionPartsCarousel) {
+        const cards = Array.from(collectionPartsCarousel.querySelectorAll('.movie-card'));
+        const idx = cards.indexOf(card);
+        if (idx !== -1 && idx >= cards.length - 8) {
+          loadMoreCollectionMovies();
+        }
+      }
+    }
+
     // Desplazamiento dinámico para que la fila activa quede visible bajo el billboard (Solo TV/Desktop)
     if (window.innerWidth > 768) {
       const parentRow = card.closest('.movie-row');
@@ -620,6 +649,7 @@ function createCollectionCard(col) {
 function openCollectionView(col) {
   lastFocusedElement = document.activeElement;
   currentCollection = col;
+  collectionRenderedCount = 0;
 
   if (collectionBackdrop) {
     collectionBackdrop.style.backgroundImage = `url('${col.backdrop || col.poster || ''}')`;
@@ -627,21 +657,17 @@ function openCollectionView(col) {
   if (collectionTitle) {
     collectionTitle.textContent = col.name;
   }
-  if (collectionCount) {
-    collectionCount.textContent = `⭐ ${col.count} Obras Maestras Seleccionadas por Crítica y Rating`;
-  }
   if (collectionOverview) {
     collectionOverview.textContent = col.overview || col.tagline || 'Las mejores películas clásicas que definieron este género.';
   }
 
-  // Renderizar las obras maestras de la colección ordenadas por rating
+  // Limpiar cuadrícula de películas
   if (collectionPartsCarousel) {
     collectionPartsCarousel.innerHTML = '';
-    col.movies.forEach(movie => {
-      const card = createMovieCard(movie);
-      collectionPartsCarousel.appendChild(card);
-    });
   }
+
+  // Cargar primer lote de obras maestras hacia abajo (24 películas)
+  loadMoreCollectionMovies();
 
   if (collectionView) {
     collectionView.classList.remove('hidden');
@@ -657,11 +683,57 @@ function openCollectionView(col) {
   }
 }
 
+function loadMoreCollectionMovies() {
+  if (!currentCollection || !currentCollection.movies || !collectionPartsCarousel) return;
+
+  const movies = currentCollection.movies;
+  if (collectionRenderedCount >= movies.length) return;
+
+  // Remover indicadores antiguos si existen
+  const oldLoading = collectionPartsCarousel.querySelector('.collection-loading-more');
+  if (oldLoading) oldLoading.remove();
+  const oldEnd = collectionPartsCarousel.querySelector('.collection-end-banner');
+  if (oldEnd) oldEnd.remove();
+
+  const nextBatch = movies.slice(collectionRenderedCount, collectionRenderedCount + COLLECTION_BATCH_SIZE);
+  nextBatch.forEach(movie => {
+    const card = createMovieCard(movie);
+    collectionPartsCarousel.appendChild(card);
+  });
+
+  collectionRenderedCount += nextBatch.length;
+
+  if (collectionCount) {
+    if (collectionRenderedCount < movies.length) {
+      collectionCount.textContent = `⭐ Mostrando ${collectionRenderedCount} de ${movies.length} Obras Maestras (Desliza hacia abajo para ver más)`;
+    } else {
+      collectionCount.textContent = `⭐ ${movies.length} Obras Maestras Seleccionadas por Crítica y Rating`;
+    }
+  }
+
+  // Indicador de carga hacia abajo si quedan más películas
+  if (collectionRenderedCount < movies.length) {
+    const loadingEl = document.createElement('div');
+    loadingEl.className = 'collection-loading-more';
+    loadingEl.innerHTML = `
+      <div class="collection-loading-spinner"></div>
+      <span>Cargando más obras maestras hacia abajo (${collectionRenderedCount} / ${movies.length})...</span>
+    `;
+    collectionPartsCarousel.appendChild(loadingEl);
+  } else {
+    const endEl = document.createElement('div');
+    endEl.className = 'collection-end-banner';
+    endEl.textContent = `✔ Has visto las ${movies.length} mejores películas clásicas de esta colección`;
+    collectionPartsCarousel.appendChild(endEl);
+  }
+}
+
 function closeCollectionView() {
   if (collectionView) {
     collectionView.classList.add('hidden');
   }
   currentCollection = null;
+  collectionRenderedCount = 0;
   if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
     lastFocusedElement.focus();
   } else {
