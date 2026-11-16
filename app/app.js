@@ -81,46 +81,6 @@ const navFavorites = document.getElementById('nav-favorites');
 
 // Storage keys
 const WATCH_HISTORY_STORAGE_KEY = 'okru_watch_history';
-const HIDE_HISTORY_ROW_KEY = 'okru_hide_history_row';
-
-function isWatchHistoryRowVisible() {
-  try {
-    return localStorage.getItem(HIDE_HISTORY_ROW_KEY) !== 'true';
-  } catch (e) {
-    return true;
-  }
-}
-
-function setWatchHistoryRowVisible(visible) {
-  try {
-    if (visible) {
-      localStorage.removeItem(HIDE_HISTORY_ROW_KEY);
-    } else {
-      localStorage.setItem(HIDE_HISTORY_ROW_KEY, 'true');
-    }
-  } catch (e) {}
-}
-
-function updateSidebarHistoryToggleUI() {
-  const toggleBtn = document.getElementById('nav-toggle-history');
-  const statusEl = document.getElementById('sidebar-history-status');
-  const isVisible = isWatchHistoryRowVisible();
-
-  if (statusEl) {
-    statusEl.textContent = isVisible ? 'ON' : 'OFF';
-    statusEl.className = `sidebar-toggle-status ${isVisible ? 'status-on' : 'status-off'}`;
-  }
-
-  if (toggleBtn) {
-    if (isVisible) {
-      toggleBtn.classList.remove('status-disabled');
-      toggleBtn.setAttribute('title', 'Continuar Viendo: Habilitado (Pulsa para deshabilitar)');
-    } else {
-      toggleBtn.classList.add('status-disabled');
-      toggleBtn.setAttribute('title', 'Continuar Viendo: Deshabilitado (Pulsa para habilitar)');
-    }
-  }
-}
 
 // Estado de la aplicación
 let allClassics = [];
@@ -570,19 +530,8 @@ function createHistoryHeaderWrapper() {
   headerWrapper.className = 'row-header-wrapper';
   headerWrapper.innerHTML = `
     <h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2>
-    <div class="row-history-actions">
-      <button class="remove-carousel-btn focusable" id="btn-remove-history-row" title="Quitar este carrusel de la pantalla">✖ Quitar carrusel</button>
-      <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Vaciar historial</button>
-    </div>
+    <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Vaciar historial</button>
   `;
-
-  const removeBtn = headerWrapper.querySelector('#btn-remove-history-row');
-  if (removeBtn) {
-    removeBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      removeWatchHistoryRow();
-    });
-  }
 
   const clearBtn = headerWrapper.querySelector('#btn-clear-history');
   if (clearBtn) {
@@ -593,23 +542,6 @@ function createHistoryHeaderWrapper() {
   }
 
   return headerWrapper;
-}
-
-function removeWatchHistoryRow() {
-  setWatchHistoryRowVisible(false);
-  updateSidebarHistoryToggleUI();
-  const row = document.getElementById('row-history');
-  if (row) {
-    row.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
-    row.style.opacity = '0';
-    row.style.transform = 'scaleY(0.8)';
-    setTimeout(() => {
-      if (row) row.remove();
-      const firstCard = document.querySelector('.movie-card, .collection-card');
-      if (firstCard) firstCard.focus();
-    }, 250);
-  }
-  showToast('✖ Carrusel de Continuar Viendo deshabilitado (Reactivar desde el menú lateral o tecla Azul)');
 }
 
 function clearWatchHistory() {
@@ -626,7 +558,7 @@ function renderWatchHistoryRow() {
   const existingRow = document.getElementById('row-history');
   const history = getWatchHistory();
 
-  if (history.length === 0 || !isWatchHistoryRowVisible()) {
+  if (history.length === 0) {
     if (existingRow) existingRow.remove();
     return;
   }
@@ -654,8 +586,9 @@ function renderWatchHistoryRow() {
 
     const targetContainer = rowsSlider || rowsWrapper;
     if (targetContainer) {
-      if (targetContainer.firstChild) {
-        targetContainer.insertBefore(rowEl, targetContainer.firstChild);
+      const firstRow = document.getElementById('row-vintage-top') || targetContainer.firstElementChild;
+      if (firstRow && firstRow.nextSibling) {
+        targetContainer.insertBefore(rowEl, firstRow.nextSibling);
       } else {
         targetContainer.appendChild(rowEl);
       }
@@ -1020,10 +953,10 @@ function renderNetflixRows(movies, genreFilter = 'all') {
   const era80s90s = shuffleArray(movies.filter(m => m.era === '80s' || m.era === '90s'));
   const topRated = shuffleArray(movies.filter(m => (m.rating || 0) >= 8.3));
 
-  const watchHistory = isWatchHistoryRowVisible() ? getWatchHistory() : [];
+  const watchHistory = getWatchHistory();
   const rowsData = [
-    { id: 'row-history', title: '▶ Continuar Viendo / Vistas Recientemente', list: watchHistory, isHistoryRow: true },
     { id: 'row-vintage-top', title: '👑 Joyas Clásicas Inmortales (Años 30, 40, 50 y 60)', list: vintageTop },
+    { id: 'row-history', title: '▶ Continuar Viendo / Vistas Recientemente', list: watchHistory, isHistoryRow: true },
     { id: 'row-50s', title: '✨ Años 50: La Era Dorada de Hollywood y el Cine Mundial', list: era50s },
     { id: 'row-60s', title: '🚀 Años 60: Revolución Cinematográfica, Suspense y Westerns', list: era60s },
     { id: 'row-40s', title: '📽️ Años 40: Cine Negro, Suspense y Segunda Guerra Mundial', list: era40s },
@@ -1893,16 +1826,9 @@ function initSidebar() {
     });
   }
 
-  if (navGenres) {
-    navGenres.addEventListener('click', () => {
-      closeSearchView();
-      closeCollectionView();
-      toggleGenresPanel();
-    });
-  }
-
   navFavorites.addEventListener('click', () => {
     closeSearchView();
+    closeCollectionView();
     toggleGenresPanel(false);
     const rowFavs = document.getElementById('row-favs');
     if (rowFavs) {
@@ -1916,38 +1842,6 @@ function initSidebar() {
       showToast('Aún no tienes películas guardadas en Mi Lista ❤️');
     }
   });
-
-  const navToggleHistory = document.getElementById('nav-toggle-history');
-  if (navToggleHistory) {
-    navToggleHistory.addEventListener('click', () => {
-      closeSearchView();
-      closeCollectionView();
-      toggleGenresPanel(false);
-
-      const willShow = !isWatchHistoryRowVisible();
-      setWatchHistoryRowVisible(willShow);
-      updateSidebarHistoryToggleUI();
-
-      renderNetflixRows(allClassics, activeGenreFilter);
-
-      if (willShow) {
-        showToast('▶ Carrusel de Continuar Viendo habilitado');
-        const historyRow = document.getElementById('row-history');
-        if (historyRow) {
-          if (window.innerWidth <= 768) {
-            historyRow.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            const firstCard = historyRow.querySelector('.movie-card');
-            if (firstCard) firstCard.focus();
-          }
-        }
-      } else {
-        showToast('✖ Carrusel de Continuar Viendo deshabilitado');
-      }
-    });
-  }
-
-  updateSidebarHistoryToggleUI();
 }
 
 // -------------------------------------------------------------
@@ -2056,20 +1950,6 @@ function isBackKey(e) {
     key === 'GoBack' ||
     key === 'Back' ||
     key === 'Escape'
-  );
-}
-
-function isHistoryToggleKey(e) {
-  const code = e.keyCode || e.which;
-  const key = e.key;
-  return (
-    code === 406 ||              // Samsung Tizen ColorF3Blue
-    code === 72 ||               // Tecla 'H' / 'h'
-    code === 104 ||              // Tecla 'h' (charCode)
-    key === 'ColorF3Blue' ||
-    key === 'Blue' ||
-    key === 'h' ||
-    key === 'H'
   );
 }
 
@@ -2247,21 +2127,6 @@ function initRemoteKeys() {
       e.stopPropagation();
       e.stopImmediatePropagation();
       handleBackAction();
-      return;
-    }
-
-    if (isHistoryToggleKey(e)) {
-      if (document.activeElement === searchInput) return;
-      if (!playerModal.classList.contains('hidden') || !searchView.classList.contains('hidden') || (collectionView && !collectionView.classList.contains('hidden'))) {
-        return;
-      }
-      e.preventDefault();
-      e.stopPropagation();
-      const willShow = !isWatchHistoryRowVisible();
-      setWatchHistoryRowVisible(willShow);
-      updateSidebarHistoryToggleUI();
-      renderNetflixRows(allClassics, activeGenreFilter);
-      showToast(willShow ? '▶ Carrusel de Continuar Viendo habilitado' : '✖ Carrusel de Continuar Viendo deshabilitado');
       return;
     }
 
