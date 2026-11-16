@@ -856,10 +856,7 @@ body.netflix-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(11, 13, 18, 0.45);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
 }
 
 .btn-close-collection {
