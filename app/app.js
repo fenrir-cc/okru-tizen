@@ -558,6 +558,9 @@ function createMovieCard(movie) {
     if (card.closest('#collection-view')) {
       card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
+      // Actualizar la data en el panel lateral derecho (~2 pósters de ancho)
+      updateCollectionMovieDetail(movie);
+
       // Si el foco con el control remoto llega cerca del final, cargar automáticamente el siguiente lote hacia abajo
       if (currentCollection && collectionPartsCarousel) {
         const cards = Array.from(collectionPartsCarousel.querySelectorAll('.movie-card'));
@@ -585,6 +588,11 @@ function createMovieCard(movie) {
   // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru
   const onSelect = () => searchAndPlayMovie(movie);
   card.addEventListener('click', onSelect);
+  card.addEventListener('mouseenter', () => {
+    if (card.closest('#collection-view')) {
+      updateCollectionMovieDetail(movie);
+    }
+  });
   card.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -669,6 +677,11 @@ function openCollectionView(col) {
   // Cargar primer lote de obras maestras hacia abajo (24 películas)
   loadMoreCollectionMovies();
 
+  // Inicializar panel lateral con la primera película de la colección
+  if (col.movies && col.movies.length > 0) {
+    updateCollectionMovieDetail(col.movies[0]);
+  }
+
   if (collectionView) {
     collectionView.classList.remove('hidden');
     collectionView.scrollTo({ top: 0, behavior: 'auto' });
@@ -739,6 +752,57 @@ function closeCollectionView() {
   } else {
     const first = rowsWrapper.querySelector('.movie-card, .collection-card');
     if (first) first.focus();
+  }
+}
+
+// Actualizar data de la película enfocada en el panel lateral derecho (~2 pósters)
+function updateCollectionMovieDetail(movie) {
+  if (!movie) return;
+  const panel = document.getElementById('collection-movie-detail-panel');
+  if (!panel) return;
+
+  const bgEl = document.getElementById('panel-movie-backdrop');
+  const titleEl = document.getElementById('panel-movie-title');
+  const ratingEl = document.getElementById('panel-movie-rating');
+  const yearEl = document.getElementById('panel-movie-year');
+  const eraEl = document.getElementById('panel-movie-era');
+  const genresEl = document.getElementById('panel-movie-genres');
+  const overviewEl = document.getElementById('panel-movie-overview');
+
+  const bgImg = movie.backdrop || movie.thumbnail || '';
+  if (bgEl) {
+    bgEl.classList.add('changing');
+    setTimeout(() => {
+      bgEl.style.backgroundImage = `url('${bgImg}')`;
+      bgEl.classList.remove('changing');
+    }, 80);
+  }
+
+  // Actualizar también el backdrop general de la colección con un fundido suave
+  if (collectionBackdrop && movie.backdrop) {
+    collectionBackdrop.style.backgroundImage = `url('${movie.backdrop}')`;
+  }
+
+  if (titleEl) {
+    titleEl.textContent = movie.title || movie.original_title || '';
+  }
+  if (ratingEl) {
+    ratingEl.textContent = movie.rating ? `⭐ ${movie.rating}` : '⭐ 8.0';
+  }
+  if (yearEl) {
+    yearEl.textContent = movie.year || '';
+    yearEl.style.display = movie.year ? 'inline-block' : 'none';
+  }
+  if (eraEl) {
+    const eraText = movie.era || (movie.year ? `${Math.floor(movie.year / 10) * 10}s` : '');
+    eraEl.textContent = eraText;
+    eraEl.style.display = eraText ? 'inline-block' : 'none';
+  }
+  if (genresEl) {
+    genresEl.textContent = movie.genres && movie.genres.length ? movie.genres.join(' • ') : 'Cine Clásico';
+  }
+  if (overviewEl) {
+    overviewEl.textContent = movie.overview || 'Una de las grandes obras maestras clásicas del género.';
   }
 }
 

@@ -178,10 +178,35 @@
         <p class="collection-overview" id="collection-overview"></p>
       </div>
 
-      <!-- Cuadrícula de películas que integran la colección por género -->
-      <div class="collection-parts-wrapper">
-        <h3 class="collection-parts-title">🎬 Obras Maestras del Género (Ordenadas por Calificación)</h3>
-        <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
+      <!-- Layout dividido: Cuadrícula de películas a la izquierda + Panel de Información a la derecha -->
+      <div class="collection-body-layout">
+        <div class="collection-grid-column">
+          <h3 class="collection-parts-title">🎬 Obras Maestras del Género (Ordenadas por Calificación)</h3>
+          <div class="collection-parts-carousel collection-parts-grid" id="collection-parts-carousel"></div>
+        </div>
+
+        <!-- Panel Lateral Derecho con la Data de la Película Enfocada (Ocupa ~2 pósters de ancho) -->
+        <aside class="collection-movie-detail-panel" id="collection-movie-detail-panel">
+          <div class="panel-backdrop-wrap">
+            <div class="panel-backdrop" id="panel-movie-backdrop"></div>
+            <div class="panel-backdrop-vignette"></div>
+            <div class="panel-ok-badge">OK</div>
+          </div>
+          <div class="panel-body">
+            <div class="panel-badges">
+              <span class="panel-rating" id="panel-movie-rating">⭐ 8.0</span>
+              <span class="panel-year" id="panel-movie-year">1980</span>
+              <span class="panel-era" id="panel-movie-era">80s</span>
+              <span class="panel-quality">FULL HD</span>
+            </div>
+            <h2 class="panel-title" id="panel-movie-title">Cargando...</h2>
+            <div class="panel-genres" id="panel-movie-genres"></div>
+            <p class="panel-overview" id="panel-movie-overview"></p>
+            <div class="panel-hint">
+              <span>▶ Presiona <strong>ENTER / OK</strong> para reproducir</span>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
