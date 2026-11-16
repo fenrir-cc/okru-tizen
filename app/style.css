@@ -957,6 +957,76 @@ body.netflix-body {
   border-bottom-right-radius: 5px;
 }
 
+/* Botón para eliminar tarjetas de Continuar Viendo */
+.card-remove-history-btn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  opacity: 0.85;
+}
+
+.movie-card:hover .card-remove-history-btn,
+.movie-card:focus .card-remove-history-btn,
+.card-remove-history-btn:hover,
+.card-remove-history-btn:focus {
+  opacity: 1;
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: scale(1.15);
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
+  outline: none;
+}
+
+.row-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-right: 20px;
+}
+
+.row-header-wrapper .row-title {
+  margin-bottom: 0;
+}
+
+.clear-history-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-history-btn:hover,
+.clear-history-btn:focus {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #ef4444;
+  outline: none;
+  transform: scale(1.05);
+}
+
 .collection-movie-detail-panel {
   flex: 0 0 380px;
   width: 380px;
@@ -1800,6 +1870,16 @@ body.netflix-body {
     font-size: 1.05rem !important;
     margin-bottom: 6px !important;
     padding-right: 14px;
+  }
+
+  .row-header-wrapper {
+    padding-right: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .clear-history-btn {
+    padding: 3px 8px !important;
+    font-size: 0.72rem !important;
   }
 
   .row-carousel {

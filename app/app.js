@@ -178,6 +178,44 @@ function addToWatchHistory(movie) {
   }
 }
 
+function removeFromWatchHistory(movie, currentCardEl = null) {
+  try {
+    let history = getWatchHistory();
+    const targetId = typeof movie === 'object' ? movie.id : movie;
+    const targetTitle = typeof movie === 'object' ? movie.title : null;
+
+    history = history.filter(m => {
+      const matchId = targetId && m.id && String(m.id) === String(targetId);
+      const matchTitle = targetTitle && m.title && m.title.toLowerCase() === targetTitle.toLowerCase();
+      return !matchId && !matchTitle;
+    });
+
+    localStorage.setItem(WATCH_HISTORY_STORAGE_KEY, JSON.stringify(history));
+    renderWatchHistoryRow();
+
+    if (currentCardEl) {
+      const row = document.getElementById('row-history');
+      const first = row ? row.querySelector('.movie-card') : null;
+      if (first && typeof first.focus === 'function') {
+        first.focus();
+      }
+    }
+    showToast('🗑️ Eliminada de Continuar Viendo');
+  } catch (e) {
+    console.error('Error al eliminar de historial:', e);
+  }
+}
+
+function clearWatchHistory() {
+  try {
+    localStorage.removeItem(WATCH_HISTORY_STORAGE_KEY);
+    renderWatchHistoryRow();
+    showToast('🗑️ Historial de Continuar Viendo vaciado');
+  } catch (e) {
+    console.error('Error vaciando historial:', e);
+  }
+}
+
 function renderWatchHistoryRow() {
   const existingRow = document.getElementById('row-history');
   const history = getWatchHistory();
@@ -199,7 +237,22 @@ function renderWatchHistoryRow() {
     const rowEl = document.createElement('div');
     rowEl.className = 'movie-row';
     rowEl.id = 'row-history';
-    rowEl.innerHTML = `<h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2><div class="row-carousel"></div>`;
+    rowEl.innerHTML = `
+      <div class="row-header-wrapper">
+        <h2 class="row-title">▶ Continuar Viendo / Vistas Recientemente</h2>
+        <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Borrar historial</button>
+      </div>
+      <div class="row-carousel"></div>
+    `;
+
+    const clearBtn = rowEl.querySelector('#btn-clear-history');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clearWatchHistory();
+      });
+    }
+
     const carousel = rowEl.querySelector('.row-carousel');
     history.forEach(movie => {
       carousel.appendChild(createMovieCard(movie, true));
@@ -560,10 +613,27 @@ function createMovieRow(rowData) {
   rowEl.className = 'movie-row';
   rowEl.id = rowData.id;
 
-  const titleEl = document.createElement('h2');
-  titleEl.className = 'row-title';
-  titleEl.textContent = rowData.title;
-  rowEl.appendChild(titleEl);
+  if (rowData.isHistoryRow) {
+    const headerWrapper = document.createElement('div');
+    headerWrapper.className = 'row-header-wrapper';
+    headerWrapper.innerHTML = `
+      <h2 class="row-title">${escapeHtml(rowData.title)}</h2>
+      <button class="clear-history-btn focusable" id="btn-clear-history" title="Borrar todo el historial">🗑️ Borrar historial</button>
+    `;
+    const clearBtn = headerWrapper.querySelector('#btn-clear-history');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clearWatchHistory();
+      });
+    }
+    rowEl.appendChild(headerWrapper);
+  } else {
+    const titleEl = document.createElement('h2');
+    titleEl.className = 'row-title';
+    titleEl.textContent = rowData.title;
+    rowEl.appendChild(titleEl);
+  }
 
   const carouselEl = document.createElement('div');
   carouselEl.className = 'row-carousel';
@@ -633,7 +703,10 @@ function createMovieCard(movie, isHistory = false) {
       ${movie.rating ? `<span class="card-rating-badge">⭐ ${movie.rating}</span>` : ''}
       ${movie.year ? `<span class="card-year-badge">${movie.year}</span>` : ''}
     </div>
-    ${isHistory ? '<div class="card-resume-badge">▶ Reanudar</div>' : ''}
+    ${isHistory ? `
+      <div class="card-resume-badge">▶ Reanudar</div>
+      <button class="card-remove-history-btn" data-title="${escapeAttr(movie.title)}" title="Eliminar de Continuar Viendo" aria-label="Eliminar">✕</button>
+    ` : ''}
     <button class="card-fav-btn ${isFav ? 'active' : ''}" data-title="${escapeAttr(movie.title)}" title="Mi Lista">
       ${getHeartSvg(isFav)}
     </button>
@@ -680,6 +753,18 @@ function createMovieCard(movie, isHistory = false) {
   const favBtn = card.querySelector('.card-fav-btn');
   favBtn.addEventListener('click', (e) => toggleFavorite(movie, e));
 
+  // Botón eliminar de historial si es tarjeta de Continuar Viendo
+  if (isHistory) {
+    const removeBtn = card.querySelector('.card-remove-history-btn');
+    if (removeBtn) {
+      removeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        removeFromWatchHistory(movie, card);
+      });
+    }
+  }
+
   // Click o Enter en la tarjeta: Buscar y reproducir en OK.ru (o reanudar directamente si proviene de historial)
   const onSelect = () => {
     if (isHistory && movie.id && (String(movie.id).length > 8)) {
@@ -698,6 +783,11 @@ function createMovieCard(movie, isHistory = false) {
     if (e.keyCode === 13) {
       e.preventDefault();
       onSelect();
+    } else if (isHistory && (e.keyCode === 46 || e.keyCode === 8 || e.keyCode === 68 || e.keyCode === 403)) {
+      // 46: Supr/Delete, 8: Backspace, 68: 'D', 403: Botón Rojo de control remoto Tizen
+      e.preventDefault();
+      e.stopPropagation();
+      removeFromWatchHistory(movie, card);
     }
   });
 
@@ -1039,7 +1129,6 @@ function renderFavoritesRow() {
 // BÚSQUEDA Y TRANSICIÓN A OK.RU
 // -------------------------------------------------------------
 function searchAndPlayMovie(movie) {
-  if (movie) addToWatchHistory(movie);
   const query = movie.year ? `${movie.title} ${movie.year}` : movie.title;
   searchInput.value = query;
   searchCustomQuery(query);
