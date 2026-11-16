@@ -170,8 +170,8 @@ body.netflix-body {
   height: 52vh;
   min-height: 380px;
   display: flex;
-  align-items: center; /* Centrado vertical para subir títulos, ClearLogo y sinopsis */
-  padding: 0 0 10px 48px;
+  align-items: flex-end; /* Anclado firmemente a la base para estabilidad total */
+  padding: 0 0 45px 48px; /* Elevación perfecta sobre el carrusel */
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -245,7 +245,6 @@ body.netflix-body {
   position: relative;
   z-index: 5;
   max-width: 680px;
-  margin-top: -26px; /* Eleva el bloque de título, ClearLogo, metadata y sinopsis */
 }
 
 .badge-series {
@@ -261,13 +260,15 @@ body.netflix-body {
 .billboard-title-wrap {
   display: flex;
   align-items: flex-end;
-  min-height: 52px;
+  justify-content: flex-start;
+  height: 110px; /* Altura fija para que la posición no baile entre títulos cortos, largos o ClearLogo */
   margin-bottom: 14px;
+  overflow: hidden;
 }
 
 .billboard-clearlogo {
   max-width: 440px;
-  max-height: 125px;
+  max-height: 110px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -285,12 +286,16 @@ body.netflix-body {
 
 .billboard-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 3.2rem;
+  font-size: 2.85rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 0;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
   color: #f8fafc;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .billboard-meta {
@@ -299,6 +304,7 @@ body.netflix-body {
   gap: 14px;
   margin-bottom: 14px;
   font-size: 0.95rem;
+  height: 26px; /* Altura constante de la fila de metadatos */
 }
 
 .meta-match {
@@ -343,11 +349,12 @@ body.netflix-body {
 }
 
 .billboard-overview {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   line-height: 1.5;
   color: #d1d5db;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
   margin-bottom: 22px;
+  height: 4.5em; /* Altura fija para 3 líneas: elimina el rebote vertical entre sinopsis cortas y largas */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1155,16 +1162,16 @@ body.netflix-body {
 /* Panel Lateral Derecho de Colección (Fijo, Póster Landscape + Póster Vertical Grande y Data Completa) */
 .collection-movie-detail-panel {
   position: fixed;
-  top: 85px;
+  top: 90px; /* Separación limpia del encabezado para que el borde superior luzca completo */
   right: 32px;
   width: min(520px, 40vw);
-  height: calc(100vh - 105px);
-  max-height: calc(100vh - 105px);
+  height: calc(100vh - 110px);
+  max-height: calc(100vh - 110px);
   background: rgba(14, 18, 26, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.32); /* Borde perimetral nítido */
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: flex;
@@ -1181,6 +1188,8 @@ body.netflix-body {
   background-color: #10141d;
   overflow: hidden;
   flex-shrink: 0;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
 }
 
 .panel-landscape-img {
@@ -1189,12 +1198,17 @@ body.netflix-body {
   object-fit: cover;
   object-position: center 20%; /* Centrado para que la parte superior de los personajes no se recorte */
   transition: transform 0.4s ease, opacity 0.3s ease;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
 }
 
 .panel-landscape-vignette {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0%, transparent 72%, rgba(14, 18, 26, 0.55) 86%, rgba(14, 18, 26, 0.98) 100%);
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  border-top: 2px solid rgba(255, 255, 255, 0.45); /* Borde superior visible sobre la imagen */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, transparent 18%, transparent 72%, rgba(14, 18, 26, 0.55) 86%, rgba(14, 18, 26, 0.98) 100%);
   pointer-events: none;
 }
 
@@ -2029,6 +2043,12 @@ body.netflix-body {
     margin-bottom: 4px !important;
   }
 
+  .billboard-title-wrap {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 6px !important;
+  }
+
   .billboard-title {
     font-size: 1.55rem !important;
     line-height: 1.15 !important;
@@ -2040,9 +2060,11 @@ body.netflix-body {
     font-size: 0.8rem !important;
     flex-wrap: wrap !important;
     margin-bottom: 8px !important;
+    height: auto !important;
   }
 
   .billboard-overview {
+    height: auto !important;
     font-size: 0.82rem !important;
     line-height: 1.35 !important;
     -webkit-line-clamp: 2 !important;
@@ -2543,8 +2565,8 @@ body.netflix-body {
   background: rgba(12, 18, 32, 0.78) !important;
   backdrop-filter: blur(34px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(34px) saturate(190%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.45) !important;
 }
 
 [data-theme="liquid-glass"] .panel-landscape-badge {
