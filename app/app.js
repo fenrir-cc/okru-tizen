@@ -89,6 +89,7 @@ let allCollections = [];
 let currentGenre = 'all';
 let currentFeaturedMovie = null;
 let currentPlayingMovie = null;
+let activeSearchSourceMovie = null;
 let currentCollection = null;
 let currentCollectionEra = 'all';
 let collectionRenderedCount = 0;
@@ -125,11 +126,11 @@ async function getMovieDirector(movie) {
   return 'Director Clásico';
 }
 
-// SVG del icono de corazón para reusar en tarjetas (100% compatible Tizen TV)
+// SVG del icono de corazón para reusar en tarjetas (100% compatible Tizen TV con tono naranja)
 function getHeartSvg(isFav) {
   if (isFav) {
     return `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ee8208" stroke="#ee8208" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
       </svg>
     `;
@@ -164,12 +165,95 @@ function saveFavorites(favorites) {
 }
 
 // -------------------------------------------------------------
+// UTILIDADES PARA TÍTULOS EN ESPAÑOL LATINO
+// -------------------------------------------------------------
+function cleanLatinMovieTitle(raw) {
+  if (!raw) return '';
+  let t = raw;
+  if (t.includes('/')) {
+    const parts = t.split('/');
+    const hasCyrillic = /[\u0400-\u04FF]/;
+    if (hasCyrillic.test(parts[0]) && !hasCyrillic.test(parts[1])) {
+      t = parts[1];
+    } else {
+      t = parts[0];
+    }
+  }
+  t = t.replace(/\[.*?\]/g, ' ');
+  t = t.replace(/\(.*?(19\d\d|20\d\d).*?\)/g, ' ');
+  t = t.replace(/\b(19\d\d|20\d\d)\b/g, ' ');
+  t = t.replace(/\b(pel[ií]cula\s+completa|pelicula|completa|en\s+espa[ñn]ol|espa[ñn]ol|latino|castellano|audio\s+latino|dvdrip|bluray|blu-ray|webrip|web-dl|hdrip|hdtv|1080p|720p|480p|4k|2k|uhd|fhd|hd|x264|x265|hevc|aac|ac3|dvo|mvo|subtitulado|sub|subs)\b/gi, ' ');
+  t = t.replace(/[\(\)\[\]{}|\\\/_~·•\-:]+/g, ' ');
+  t = t.replace(/\s+/g, ' ').trim();
+  return t || raw;
+}
+
+function findLatinMovieMatch(queryOrTitle) {
+  if (!queryOrTitle) return null;
+  const clean = queryOrTitle.toLowerCase().replace(/[^a-z0-9áéíóúüñ\s]/gi, ' ').trim();
+  if (!clean) return null;
+  const words = clean.split(/\s+/).filter(w => w.length > 2);
+
+  const pool = [];
+  if (typeof allClassics !== 'undefined' && Array.isArray(allClassics)) {
+    pool.push(...allClassics);
+  }
+  if (typeof allCollections !== 'undefined' && Array.isArray(allCollections)) {
+    for (const c of allCollections) {
+      if (c && Array.isArray(c.movies)) pool.push(...c.movies);
+    }
+  }
+
+  // 1. Coincidencia exacta de título
+  const exact = pool.find(m => m && m.title && m.title.trim().toLowerCase() === clean);
+  if (exact) return exact;
+
+  // 2. Coincidencia si el título contiene o es contenido
+  const sub = pool.find(m => m && m.title && (m.title.toLowerCase().includes(clean) || clean.includes(m.title.toLowerCase())));
+  if (sub) return sub;
+
+  // 3. Coincidencia por palabras clave
+  if (words.length > 0) {
+    const wordMatch = pool.find(m => m && m.title && words.every(w => m.title.toLowerCase().includes(w)));
+    if (wordMatch) return wordMatch;
+  }
+
+  return null;
+}
+
+// -------------------------------------------------------------
 // GESTIÓN DE CONTINUAR VIENDO / HISTORIAL DE REPRODUCCIÓN
 // -------------------------------------------------------------
 function getWatchHistory() {
   try {
     const raw = localStorage.getItem(WATCH_HISTORY_STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
+    const list = raw ? JSON.parse(raw) : [];
+    // Sanear títulos existentes que contengan texto crudo de OK.ru
+    let updated = false;
+    for (const item of list) {
+      if (item && item.title) {
+        const hasCyrillic = /[\u0400-\u04FF]/.test(item.title);
+        const hasNoise = /\b(1080p|720p|dvdrip|pelicula completa|webrip|bluray|audio latino)\b/i.test(item.title);
+        if (hasCyrillic || hasNoise) {
+          const match = findLatinMovieMatch(item.title);
+          if (match) {
+            item.title = match.title;
+            if (!item.thumbnail || item.thumbnail.includes('ok.ru')) {
+              item.thumbnail = match.thumbnail || match.poster || item.thumbnail;
+            }
+            if (!item.year && match.year) item.year = match.year;
+            updated = true;
+          } else {
+            item.title = cleanLatinMovieTitle(item.title);
+            updated = true;
+          }
+        }
+      }
+    }
+    if (updated) {
+      localStorage.setItem(WATCH_HISTORY_STORAGE_KEY, JSON.stringify(list));
+    }
+    return list;
   } catch (e) {
     return [];
   }
@@ -179,25 +263,53 @@ function addToWatchHistory(movie) {
   if (!movie) return;
   try {
     let history = getWatchHistory();
+
+    // Determinar título en español latino limpio
+    let latinTitle = movie.title;
+    let latinThumbnail = movie.thumbnail || movie.poster || '';
+    let latinYear = movie.year || '';
+    let latinOverview = movie.overview || '';
+    let latinGenres = movie.genres || ['Cine Clásico'];
+
+    if (activeSearchSourceMovie) {
+      latinTitle = activeSearchSourceMovie.title;
+      latinThumbnail = activeSearchSourceMovie.thumbnail || activeSearchSourceMovie.poster || latinThumbnail;
+      latinYear = activeSearchSourceMovie.year || latinYear;
+      latinOverview = activeSearchSourceMovie.overview || latinOverview;
+      latinGenres = activeSearchSourceMovie.genres || latinGenres;
+    } else {
+      const match = findLatinMovieMatch(latinTitle);
+      if (match) {
+        latinTitle = match.title;
+        latinThumbnail = match.thumbnail || match.poster || latinThumbnail;
+        latinYear = match.year || latinYear;
+        latinOverview = match.overview || latinOverview;
+        latinGenres = match.genres || latinGenres;
+      } else {
+        latinTitle = cleanLatinMovieTitle(latinTitle);
+      }
+    }
+
     // Eliminar si ya existe previamente para moverlo al primer lugar
     history = history.filter(m => {
       const matchId = m.id && movie.id && String(m.id) === String(movie.id);
-      const matchTitle = m.title && movie.title && m.title.toLowerCase() === movie.title.toLowerCase();
+      const matchTitle = m.title && latinTitle && m.title.toLowerCase() === latinTitle.toLowerCase();
       return !matchId && !matchTitle;
     });
 
     history.unshift({
       id: movie.id,
-      title: movie.title,
-      original_title: movie.original_title || movie.title,
-      year: movie.year || '',
+      title: latinTitle,
+      original_title: movie.original_title || latinTitle,
+      year: latinYear,
       rating: movie.rating || 8.0,
       era: movie.era || '',
-      overview: movie.overview || '',
-      thumbnail: movie.thumbnail || movie.poster || '',
-      backdrop: movie.backdrop || '',
-      genres: movie.genres || ['Cine Clásico'],
+      overview: latinOverview,
+      thumbnail: latinThumbnail,
+      backdrop: movie.backdrop || latinThumbnail,
+      genres: latinGenres,
       quality: movie.quality || 'FULL HD',
+      okruTitle: movie.title,
       playedAt: Date.now()
     });
 
@@ -347,7 +459,7 @@ function toggleFavorite(movie, e) {
     });
     saveFavorites(favorites);
     isNowFav = true;
-    showToast(`Guardado en Mi Lista ❤️`);
+    showToast(`Guardado en Mi Lista 🧡`);
   }
 
   // Actualizar botones de favoritos visuales
@@ -369,7 +481,7 @@ function updateHeroFavButton(isFav) {
   if (!btnBillboardFav) return;
   if (isFav) {
     btnBillboardFav.classList.add('active');
-    btnBillboardFav.innerHTML = `<span class="hero-fav-icon">❤️</span> En Mi Lista`;
+    btnBillboardFav.innerHTML = `<span class="hero-fav-icon">🧡</span> En Mi Lista`;
   } else {
     btnBillboardFav.classList.remove('active');
     btnBillboardFav.innerHTML = `<span class="hero-fav-icon">🤍</span> Mi Lista`;
@@ -449,12 +561,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   searchBtn.addEventListener('click', () => {
+    activeSearchSourceMovie = null;
     const q = searchInput.value.trim();
     if (q) searchCustomQuery(q);
   });
 
   searchInput.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
+      activeSearchSourceMovie = null;
       const q = searchInput.value.trim();
       if (q) searchCustomQuery(q);
     }
@@ -1271,6 +1385,7 @@ function renderFavoritesRow() {
 // BÚSQUEDA Y TRANSICIÓN A OK.RU
 // -------------------------------------------------------------
 function searchAndPlayMovie(movie) {
+  activeSearchSourceMovie = movie;
   const query = movie.year ? `${movie.title} ${movie.year}` : movie.title;
   searchInput.value = query;
   searchCustomQuery(query);
@@ -1542,9 +1657,18 @@ function openPlayer(movie) {
   lastFocusedElement = document.activeElement;
   currentPlayingMovie = movie;
 
+  // Determinar título en español latino para OSD del reproductor
+  let displayTitle = movie.title;
+  if (activeSearchSourceMovie && activeSearchSourceMovie.title) {
+    displayTitle = activeSearchSourceMovie.title;
+  } else {
+    const match = findLatinMovieMatch(movie.title);
+    displayTitle = match ? match.title : cleanLatinMovieTitle(movie.title);
+  }
+
   if (movie) addToWatchHistory(movie);
 
-  playerTitle.textContent = `${movie.title} [${movie.quality || 'FULL HD'}]`;
+  playerTitle.textContent = `${displayTitle} [${movie.quality || 'FULL HD'}]`;
   okruIframe.src = `https://ok.ru/videoembed/${movie.id}?autoplay=1`;
 
   updatePlayerFavButton(isMovieFavorite(movie));
@@ -1567,7 +1691,7 @@ function updatePlayerFavButton(isFav) {
   if (!btnPlayerFav) return;
   if (isFav) {
     btnPlayerFav.classList.add('active');
-    btnPlayerFav.textContent = '❤️ En Mi Lista';
+    btnPlayerFav.textContent = '🧡 En Mi Lista';
   } else {
     btnPlayerFav.classList.remove('active');
     btnPlayerFav.textContent = '🤍 Mi Lista';
